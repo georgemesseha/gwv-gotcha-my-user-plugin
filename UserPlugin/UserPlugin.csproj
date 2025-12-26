@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        
+        <!-- DLLs output -->
+        <OutputPath>$(MSBuildProjectDirectory)\..\..</OutputPath>
+ 
+        <!-- Intermediate files in standard structure under obj -->
+        <IntermediateOutputPath>$(MSBuildProjectDirectory)\..\plugin_obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
+
+        <!-- Avoid extra folders in OutputPath -->
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendBuildConfigurationToOutputPath>false</AppendBuildConfigurationToOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="RecycleBin\**\*.cs" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Reference Include="Gwv.Gotcha.PluginServicesContract">
+            <HintPath>..\..\Gwv.Gotcha.PluginServicesContract.dll</HintPath>
+        </Reference>
+        <Reference Include="Gwv.Gotcha.Services.Contracts">
+            <HintPath>..\..\Gwv.Gotcha.Services.Contracts.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Content Include="RecycleBin\readme.md" />
+    </ItemGroup>
+
+</Project>

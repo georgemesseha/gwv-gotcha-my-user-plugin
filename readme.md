@@ -1,0 +1,1 @@
+This file folder is used as the instantiator folder of the user plugin csproj.

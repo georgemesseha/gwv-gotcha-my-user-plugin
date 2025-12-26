@@ -1,0 +1,18 @@
+
+partial class _e6721d0de3e7ccd9
+{
+    // Use this method to initialize the state of the child subflow to provide
+    // the initial data to work on.
+    public async Task PreExecute_45fbf0614ebcc1c2(_340b866f63df92b7 subflow)
+    {
+        subflow.SetInput("https://www.sahel.ae", "https://www.sahell.ae/api/AccountType/GetAllAccountTypesByLogo?ln=ar-EG");
+    }
+    
+    // Use this method to update the parent state with the result of the sub-flow (if needed)
+    // before moving forward with the flow
+    public async Task PostExecute_45fbf0614ebcc1c2(_340b866f63df92b7 subflow)
+    {
+        // The below code is an example using the output of the subflow
+        // this.UserName = subflow.ProvidedUserName
+    }
+}

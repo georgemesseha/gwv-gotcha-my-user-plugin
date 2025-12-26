@@ -1,0 +1,18 @@
+
+partial class _340b866f63df92b7
+{
+    // Use this method to initialize the state of the child subflow to provide
+    // the initial data to work on.
+    public async Task PreExecute_d920679c06c10be0(_b366a645d63b3d5e subflow)
+    {
+        _ = _srv.ProcessRunner.OpenUrlInDefaultBrowserAsync(this._backEndUrl);
+    }
+    
+    // Use this method to update the parent state with the result of the sub-flow (if needed)
+    // before moving forward with the flow
+    public async Task PostExecute_d920679c06c10be0(_b366a645d63b3d5e subflow)
+    {
+        // The below code is an example using the output of the subflow
+        // this.UserName = subflow.ProvidedUserName
+    }
+}

@@ -1,0 +1,1 @@
+This folder contains the files corresponding to deleted nodes from node-red designer
