@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Gotcha Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processName": "Gwv.Gotcha.Wpf"
+        }
+    ]
+}

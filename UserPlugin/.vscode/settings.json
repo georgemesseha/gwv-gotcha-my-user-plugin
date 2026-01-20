@@ -1,0 +1,6 @@
+{
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": false,
+  "workbench.editor.showTabs": "none",
+  "breadcrumbs.enabled": false,
+}

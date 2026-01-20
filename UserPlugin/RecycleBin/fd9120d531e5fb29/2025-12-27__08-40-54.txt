@@ -1,0 +1,8 @@
+
+partial class _f47dd7b3b301c58e
+{
+    public async Task<string> GenerateInfoMessage_fd9120d531e5fb29()
+    {
+       return "This is the template info message. You should change it."; // return the output port index according to your logic
+    }
+}

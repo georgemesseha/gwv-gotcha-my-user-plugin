@@ -1,0 +1,8 @@
+
+partial class _806112e81d188c25
+{
+    public async Task<int> _ea56a25beda5c2ff()
+    {
+       return 0; // return the output port index according to your logic
+    }
+}

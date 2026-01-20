@@ -1,0 +1,8 @@
+
+partial class _33b13b54da37becf
+{
+    public async Task<string> GetWhatToSpeak_dca06e2793f20d4f()
+    {
+       return "You should change this text by what you want me to speak."; 
+    }
+}
