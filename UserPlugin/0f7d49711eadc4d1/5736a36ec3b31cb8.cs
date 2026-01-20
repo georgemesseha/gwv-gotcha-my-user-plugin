@@ -8,6 +8,7 @@ partial class _0f7d49711eadc4d1
         // The sample code below assumes that you got a custom SetInitialState
         // in the subflow type.
         // subflow.SetInitialState(arg1, arg2);
+        _ = _srv.ProcessRunner.OpenUrlInDefaultBrowserAsync("https://www.google.com");
     }
     
     // Use this method to update the parent state with the result of the sub-flow (if needed)

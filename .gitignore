@@ -40,6 +40,11 @@ bld/
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 
+# Ignore all obj folders anywhere in the project
+obj/
+Debug/
+Release/
+
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
