@@ -1,9 +1,9 @@
 
-partial class _fd1e9335a9f052c3
+partial class _1a7b7e7cfa79e244
 {
     // Use this method to initialize the state of the child subflow to provide
     // the initial data to work on.
-    public async Task PreExecute_8bcd7cb372bc4fd3(_7ecbb6df9e251335 subflow)  
+    public async Task PreExecute_a86dd4bcdd22c3e8(_74cdc26507113a04 subflow)
     {
         // The sample code below assumes that you got a custom SetInitialState
         // in the subflow type.
@@ -12,7 +12,7 @@ partial class _fd1e9335a9f052c3
     
     // Use this method to update the parent state with the result of the sub-flow (if needed)
     // before moving forward with the flow
-    public async Task PostExecute_8bcd7cb372bc4fd3(_7ecbb6df9e251335 subflow)    
+    public async Task PostExecute_a86dd4bcdd22c3e8(_74cdc26507113a04 subflow)
     {
         // The below code is an example using the output of the subflow
         // this.UserName = subflow.ProvidedUserName

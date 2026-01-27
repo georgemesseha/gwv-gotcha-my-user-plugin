@@ -6,11 +6,11 @@ partial class _158fdf9f02e2801c
 
 	public string SomeProp { get; private set;}
 
-	public int AnotherProp { get; private set;}
+	public int AnotherProp { get; private set;} 
 
-	public void Input(string someProp, int anotherProp)
+	public void Input(string someProp, int anotherProp)  
 	{
-		SomeProp = someProp;
+		SomeProp = someProp;  
 		AnotherProp = anotherProp;
 	}
 }

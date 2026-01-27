@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         
         <!-- DLLs output -->
-        <OutputPath>$(MSBuildProjectDirectory)\..\..</OutputPath>
+<!--        <OutputPath>$(MSBuildProjectDirectory)\..\..</OutputPath>-->
  
         <!-- Intermediate files in standard structure under obj -->
         <IntermediateOutputPath>$(MSBuildProjectDirectory)\..\plugin_obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
@@ -20,6 +20,10 @@
         <Compile Remove="RecycleBin\**\*.cs" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    </PropertyGroup>
+
 
     <ItemGroup>
         <Reference Include="Gwv.Gotcha.PluginServicesContract">
@@ -27,6 +31,9 @@
         </Reference>
         <Reference Include="Gwv.Gotcha.Services.Contracts">
             <HintPath>..\..\Gwv.Gotcha.Services.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="VideoServicesContracts">
+            <HintPath>..\..\VideoServicesContracts.dll</HintPath>
         </Reference>
     </ItemGroup>
 

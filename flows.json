@@ -3267,11 +3267,15 @@
     ],
     "out": [
       {
-        "x": 600,
-        "y": 120,
+        "x": 620,
+        "y": 100,
         "wires": [
           {
             "id": "4f32756a43bd483b",
+            "port": 0
+          },
+          {
+            "id": "a86dd4bcdd22c3e8",
             "port": 0
           }
         ]
@@ -3341,6 +3345,67 @@
     "env": [],
     "meta": {},
     "color": "#DDAA99"
+  },
+  {
+    "id": "74cdc26507113a04",
+    "type": "subflow",
+    "name": "Video Editing",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 100,
+        "y": 60,
+        "wires": [
+          {
+            "id": "1eb0ac65877e7347"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 740,
+        "y": 140,
+        "wires": []
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "5845e6e8fe649fd8",
+    "type": "subflow",
+    "name": "Subflow 27",
+    "info": "",
+    "in": [
+      {
+        "x": 160,
+        "y": 100,
+        "wires": [
+          {
+            "id": "ef3ea057638b865a"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 780,
+        "y": 100,
+        "wires": [
+          {
+            "id": "66917a28255d1364",
+            "port": 0
+          },
+          {
+            "id": "f92df0ddc9bfdc46",
+            "port": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "c2606acf26d96cc0",
@@ -12640,6 +12705,16 @@
     ]
   },
   {
+    "id": "801c438f268d83b0",
+    "type": "subflow:5845e6e8fe649fd8",
+    "z": "8be1f3380f629301",
+    "x": 340,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
     "id": "4e54e1d9734ef9be",
     "type": "csharp-bookmark",
     "z": "cdb8754ed1d11523",
@@ -12852,7 +12927,9 @@
       [
         "4f32756a43bd483b"
       ],
-      [],
+      [
+        "a86dd4bcdd22c3e8"
+      ],
       [],
       [],
       []
@@ -12865,6 +12942,17 @@
     "name": "Violin Tuner",
     "x": 390,
     "y": 40,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a86dd4bcdd22c3e8",
+    "type": "subflow:74cdc26507113a04",
+    "z": "1a7b7e7cfa79e244",
+    "name": "Video Editing",
+    "x": 390,
+    "y": 100,
     "wires": [
       []
     ]
@@ -13104,6 +13192,114 @@
       [
         "4c887ea45460a3fa"
       ]
+    ]
+  },
+  {
+    "id": "0bbac8883f3909e5",
+    "type": "csharp-trigger",
+    "z": "74cdc26507113a04",
+    "name": "Video Editing | Create a video spliting workshop for the path on the clipboard",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 330,
+    "y": 260,
+    "wires": [
+      [
+        "e9e8999a5961782e"
+      ]
+    ]
+  },
+  {
+    "id": "1eb0ac65877e7347",
+    "type": "csharp-mcq",
+    "z": "74cdc26507113a04",
+    "name": "",
+    "outputCount": 4,
+    "outputs": 4,
+    "x": 220,
+    "y": 60,
+    "wires": [
+      [
+        "e9e8999a5961782e"
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "e9e8999a5961782e",
+    "type": "csharp-worker-concurrent",
+    "z": "74cdc26507113a04",
+    "name": "Create a video spliting workshop for the path on the clipboard",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 550,
+    "y": 40,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "61ef7831cde286f1",
+    "type": "csharp-trigger",
+    "z": "5845e6e8fe649fd8",
+    "name": "💼 Gotcha",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 120,
+    "y": 200,
+    "wires": [
+      [
+        "ef3ea057638b865a"
+      ]
+    ]
+  },
+  {
+    "id": "ef3ea057638b865a",
+    "type": "csharp-mcq",
+    "z": "5845e6e8fe649fd8",
+    "name": "",
+    "outputCount": 5,
+    "outputs": 5,
+    "x": 290,
+    "y": 100,
+    "wires": [
+      [
+        "66917a28255d1364"
+      ],
+      [
+        "f92df0ddc9bfdc46"
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "66917a28255d1364",
+    "type": "csharp-worker-concurrent",
+    "z": "5845e6e8fe649fd8",
+    "name": "Commit plugin changes",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 510,
+    "y": 60,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f92df0ddc9bfdc46",
+    "type": "csharp-worker-concurrent",
+    "z": "5845e6e8fe649fd8",
+    "name": "Open git repo in GitExtensions",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 530,
+    "y": 120,
+    "wires": [
+      []
     ]
   },
   {
@@ -20934,7 +21130,7 @@
     "outputCount": 7,
     "outputs": 7,
     "x": 540,
-    "y": 120,
+    "y": 140,
     "wires": [
       [
         "7f3176b47cbd8524"
@@ -21136,21 +21332,6 @@
     "outputCount": 1,
     "outputs": 1,
     "x": 240,
-    "y": 300,
-    "wires": [
-      [
-        "f92df0ddc9bfdc46"
-      ]
-    ]
-  },
-  {
-    "id": "f92df0ddc9bfdc46",
-    "type": "csharp-worker-concurrent",
-    "z": "b24567603cf835ad",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 470,
     "y": 300,
     "wires": [
       []
@@ -32152,8 +32333,8 @@
     "name": "George",
     "outputCount": 1,
     "outputs": 1,
-    "x": 470,
-    "y": 280,
+    "x": 490,
+    "y": 340,
     "wires": [
       [
         "9b4abbd2f2fde660"
@@ -32167,8 +32348,8 @@
     "name": "",
     "outputCount": 1,
     "outputs": 1,
-    "x": 650,
-    "y": 240,
+    "x": 670,
+    "y": 320,
     "wires": [
       []
     ]
