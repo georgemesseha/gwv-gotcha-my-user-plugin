@@ -15,7 +15,7 @@ partial class _5845e6e8fe649fd8
         var processStartInfo = new ProcessStartInfo
         {
             FileName = "cmd.exe",
-            Arguments = $"/c cd /d \"{workingDir}\" && git add . && git commit -m \"Auto commit\" && git push && echo. && echo Press any key to close... && pause >nul",
+            Arguments = $"/c cd /d \"{workingDir}\" && echo Starting git operations... && git add . && git commit -m \"Auto commit\" && git push && echo Git operations completed. && echo Press any key to close... && pause >nul",
             UseShellExecute = false,
             CreateNoWindow = false,
             RedirectStandardError = true
