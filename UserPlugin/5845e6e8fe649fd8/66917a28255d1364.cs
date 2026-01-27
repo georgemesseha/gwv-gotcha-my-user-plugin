@@ -4,28 +4,39 @@ partial class _5845e6e8fe649fd8
 {
     public async Task<int> _66917a28255d1364()
     {
-        CommitAndPush(@"D:\Projects\gwv.Gotcha\gwv.Gotcha.Wpf\bin\Debug\net8.0-windows\__USER_PLUGIN__");
-       return 0; // return the output port index according to your logic
+       bool result = CommitAndPush(@"D:\Projects\gwv.Gotcha\gwv.Gotcha.Wpf\bin\Debug\net8.0-windows\__USER_PLUGIN__");
+       return result ? 0 : 1; // return the output port index according to your logic
     }
 
-    public static void CommitAndPush(string workingDir)
+    public bool CommitAndPush(string workingDir)
     {
-        // Run all git commands in a visible console and keep it open
-        var processStartInfo = new ProcessStartInfo
+        try
         {
-            FileName = "cmd.exe",
-            Arguments = $"/c cd /d \"{workingDir}\" && echo Starting git operations... && git add . && git commit -m \"Auto commit\" && git push && echo Git operations completed. && echo Press any key to close... && pause >nul",
-            UseShellExecute = false,
-            CreateNoWindow = false
-        };
-
-        using (var process = Process.Start(processStartInfo))
-        {
-            process.WaitForExit();
-            if (process.ExitCode != 0)
+            // Run all git commands in a visible console and keep it open
+            var processStartInfo = new ProcessStartInfo
             {
-                throw new Exception("Git operations failed.");
+                FileName = "cmd.exe",
+                Arguments = $"/c cd /d \"{workingDir}\" && echo Starting git operations... && git add . && git commit -m \"Auto commit\" && git push && echo Git operations completed. && echo Press any key to close... && pause >nul",
+                UseShellExecute = false,
+                CreateNoWindow = false
+            };
+
+            using (var process = Process.Start(processStartInfo))
+            {
+                process.WaitForExit();
+                if (process.ExitCode != 0)
+                {
+                    throw new Exception("Git operations failed.");
+                }
             }
+            return true;
         }
+        catch (Exception ex)
+        {
+            _srv.Clipboard.SetText(ex.ToString());
+            _srv.TextToSpeech.Speak("Running git commands failed. Error details have been copied to clipboard.");
+            return false;
+        }
+        
     }
 }

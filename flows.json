@@ -13285,12 +13285,15 @@
     "type": "csharp-worker-concurrent",
     "z": "5845e6e8fe649fd8",
     "name": "Commit plugin changes",
-    "outputCount": 1,
-    "outputs": 1,
+    "outputCount": 2,
+    "outputs": 2,
     "x": 510,
     "y": 60,
     "wires": [
-      []
+      [],
+      [
+        "708b79ee57bb042b"
+      ]
     ]
   },
   {
@@ -13300,8 +13303,21 @@
     "name": "Open git repo in GitExtensions",
     "outputCount": 1,
     "outputs": 1,
-    "x": 530,
-    "y": 120,
+    "x": 510,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "708b79ee57bb042b",
+    "type": "csharp-speak",
+    "z": "5845e6e8fe649fd8",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 480,
+    "y": 220,
     "wires": [
       []
     ]
