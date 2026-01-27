@@ -3379,6 +3379,7 @@
     "type": "subflow",
     "name": "Subflow 27",
     "info": "",
+    "category": "",
     "in": [
       {
         "x": 160,
@@ -3405,7 +3406,10 @@
           }
         ]
       }
-    ]
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
   },
   {
     "id": "c2606acf26d96cc0",
