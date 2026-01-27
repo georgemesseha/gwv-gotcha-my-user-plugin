@@ -11,16 +11,14 @@ partial class _5845e6e8fe649fd8
 
     public static void CommitAndPush(string workingDir)
     {
-        // Change to the working directory
+        // Run all git commands in a visible console and keep it open
         var processStartInfo = new ProcessStartInfo
         {
-            FileName = "git",
-            Arguments = "add .",
-            WorkingDirectory = workingDir,
-            RedirectStandardOutput = false,
-            RedirectStandardError = true,
+            FileName = "cmd.exe",
+            Arguments = $"/c cd /d \"{workingDir}\" && git add . && git commit -m \"Auto commit\" && git push && echo. && echo Press any key to close... && pause >nul",
             UseShellExecute = false,
-            CreateNoWindow = false
+            CreateNoWindow = false,
+            RedirectStandardError = true
         };
 
         using (var process = Process.Start(processStartInfo))
@@ -28,33 +26,8 @@ partial class _5845e6e8fe649fd8
             process.WaitForExit();
             if (process.ExitCode != 0)
             {
-                throw new Exception($"Git add failed: {process.StandardError.ReadToEnd()}");
-            }
-        }
-
-        // Commit with a default message
-        processStartInfo.Arguments = "commit -m \"Auto commit\"";
-        using (var process = Process.Start(processStartInfo))
-        {
-            process.WaitForExit();
-            if (process.ExitCode != 0)
-            {
                 var error = process.StandardError.ReadToEnd();
-                if (!error.Contains("nothing to commit"))
-                {
-                    throw new Exception($"Git commit failed: {error}");
-                }
-            }
-        }
-
-        // Push
-        processStartInfo.Arguments = "push";
-        using (var process = Process.Start(processStartInfo))
-        {
-            process.WaitForExit();
-            if (process.ExitCode != 0)
-            {
-                throw new Exception($"Git push failed: {process.StandardError.ReadToEnd()}");
+                throw new Exception($"Git operations failed: {error}");
             }
         }
     }
