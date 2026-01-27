@@ -15,9 +15,12 @@
       <entry key="_D:/Projects/gwv.Gotcha/gwv.Gotcha.Wpf/bin/Debug/net8.0-windows/__USER_PLUGIN__/UserPlugin" value="38qjoOiqOrwRQLWIv6ALCSuHBoV" />
     </persistenceIdMap>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../../../Gwv.Gotcha.PluginServicesContract/IPluginServices.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="38qjoOiqOrwRQLWIv6ALCSuHBoV" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -28,6 +31,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -44,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769534169745</updated>
       <workItem from="1769534170842" duration="2447000" />
+      <workItem from="1769542881743" duration="801000" />
     </task>
     <servers />
   </component>
