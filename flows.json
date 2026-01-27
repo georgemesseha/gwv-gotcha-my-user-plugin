@@ -3396,11 +3396,11 @@
     ],
     "out": [
       {
-        "x": 780,
-        "y": 80,
+        "x": 640,
+        "y": 40,
         "wires": [
           {
-            "id": "cd5afc78b2214543",
+            "id": "e56717a403ebe654",
             "port": 0
           }
         ]
@@ -13259,19 +13259,6 @@
     ]
   },
   {
-    "id": "cd5afc78b2214543",
-    "type": "csharp-speak",
-    "z": "aabd786b0afd1857",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 670,
-    "y": 40,
-    "wires": [
-      []
-    ]
-  },
-  {
     "id": "8bd6de4f30dc5e60",
     "type": "csharp-mcq",
     "z": "aabd786b0afd1857",
@@ -13347,9 +13334,7 @@
     "x": 440,
     "y": 40,
     "wires": [
-      [
-        "cd5afc78b2214543"
-      ]
+      []
     ]
   },
   {
@@ -13359,7 +13344,7 @@
     "name": "",
     "outputCount": 1,
     "outputs": 1,
-    "x": 220,
+    "x": 270,
     "y": 300,
     "wires": [
       []
