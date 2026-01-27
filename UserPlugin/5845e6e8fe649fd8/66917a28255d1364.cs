@@ -24,7 +24,8 @@ partial class _5845e6e8fe649fd8
             using (var process = Process.Start(processStartInfo))
             {
                 process.WaitForExit();
-                if (process.ExitCode != 0)
+                // Treat STATUS_CONTROL_C_EXIT (-1073741510) as success since user dismissed the window
+                if (process.ExitCode != 0 && process.ExitCode != -1073741510)
                 {
                     throw new Exception($"Git operations failed with exit code {process.ExitCode}");
                 }
