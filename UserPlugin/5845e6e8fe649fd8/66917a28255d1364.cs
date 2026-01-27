@@ -5,7 +5,6 @@ partial class _5845e6e8fe649fd8
     public async Task<int> _66917a28255d1364()
     {
        bool result = CommitAndPush(@"D:\Projects\gwv.Gotcha\gwv.Gotcha.Wpf\bin\Debug\net8.0-windows\__USER_PLUGIN__");
-       return 1;
        return result ? 0 : 1; // return the output port index according to your logic
     }
 
