@@ -7068,23 +7068,6 @@
     "h": 202
   },
   {
-    "id": "6ec3d33d5998f407",
-    "type": "group",
-    "z": "2a4ca6049d860ca7",
-    "name": "Compare / Update Sahel configuration",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "11a5ae7c95ed42f2",
-      "a9fe2e7b81749311"
-    ],
-    "x": 614,
-    "y": 1473,
-    "w": 638,
-    "h": 214
-  },
-  {
     "id": "92a669c06a3084c6",
     "type": "group",
     "z": "2a4ca6049d860ca7",
@@ -7286,29 +7269,6 @@
     "y": 319,
     "w": 82,
     "h": 82
-  },
-  {
-    "id": "a9fe2e7b81749311",
-    "type": "group",
-    "z": "2a4ca6049d860ca7",
-    "g": "6ec3d33d5998f407",
-    "style": {
-      "stroke": "#2e333a",
-      "stroke-opacity": "1",
-      "fill": "#383c45",
-      "fill-opacity": "0.5",
-      "label": true,
-      "label-position": "nw",
-      "color": "#dddddd"
-    },
-    "nodes": [
-      "840dfa87ef783e11",
-      "6dc2128446921df0"
-    ],
-    "x": 814,
-    "y": 1499,
-    "w": 412,
-    "h": 162
   },
   {
     "id": "17e00c51a2cdcfce",
@@ -12953,49 +12913,6 @@
     ]
   },
   {
-    "id": "11a5ae7c95ed42f2",
-    "type": "subflow:4e421b677e043229",
-    "z": "2a4ca6049d860ca7",
-    "g": "6ec3d33d5998f407",
-    "name": "",
-    "x": 700,
-    "y": 1560,
-    "wires": [
-      [
-        "840dfa87ef783e11"
-      ]
-    ]
-  },
-  {
-    "id": "840dfa87ef783e11",
-    "type": "link call",
-    "z": "2a4ca6049d860ca7",
-    "g": "a9fe2e7b81749311",
-    "name": "",
-    "links": [
-      "f107a0b7f748a361"
-    ],
-    "linkType": "static",
-    "timeout": "30",
-    "x": 1020,
-    "y": 1620,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "6dc2128446921df0",
-    "type": "link out",
-    "z": "2a4ca6049d860ca7",
-    "g": "a9fe2e7b81749311",
-    "name": "link out 5",
-    "mode": "link",
-    "links": [],
-    "x": 905,
-    "y": 1540,
-    "wires": []
-  },
-  {
     "id": "460c1e446f07734d",
     "type": "link out",
     "z": "2a4ca6049d860ca7",
@@ -13020,9 +12937,7 @@
       [
         "d8dd3d0a3de9332d"
       ],
-      [
-        "6d8809da01dd897c"
-      ],
+      [],
       [
         "df5a3b1750b229d1"
       ],
@@ -22987,19 +22902,6 @@
     ]
   },
   {
-    "id": "9a8b377b52f7348e",
-    "type": "csharp-trigger",
-    "z": "3a0609fafdcf2b37",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 200,
-    "y": 280,
-    "wires": [
-      []
-    ]
-  },
-  {
     "id": "021206922467fb41",
     "type": "comment",
     "z": "fd1e9335a9f052c3",
@@ -29295,13 +29197,15 @@
     "id": "62fd927755f8d459",
     "type": "csharp-trigger",
     "z": "ca72e41fbc666054",
-    "name": "",
+    "name": "💼 Projects ...",
     "outputCount": 1,
     "outputs": 1,
-    "x": 160,
+    "x": 190,
     "y": 220,
     "wires": [
-      []
+      [
+        "9712953498f089a4"
+      ]
     ]
   }
 ]
