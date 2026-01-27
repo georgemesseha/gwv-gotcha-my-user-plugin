@@ -25,7 +25,7 @@ partial class _aabd786b0afd1857
 
             using (var process = Process.Start(processStartInfo))
             {
-                process.WaitForExit();
+                process!.WaitForExit();
                 // Treat STATUS_CONTROL_C_EXIT (-1073741510) as success since user dismissed the window
                 if (process.ExitCode != 0 && process.ExitCode != -1073741510)
                 {
