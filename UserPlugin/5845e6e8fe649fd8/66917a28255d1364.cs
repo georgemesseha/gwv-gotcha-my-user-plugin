@@ -17,10 +17,10 @@ partial class _5845e6e8fe649fd8
             FileName = "git",
             Arguments = "add .",
             WorkingDirectory = workingDir,
-            RedirectStandardOutput = true,
+            RedirectStandardOutput = false,
             RedirectStandardError = true,
             UseShellExecute = false,
-            CreateNoWindow = true
+            CreateNoWindow = false
         };
 
         using (var process = Process.Start(processStartInfo))
