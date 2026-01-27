@@ -27,7 +27,7 @@ partial class _aabd786b0afd1857
             {
                 process!.WaitForExit();
                 // Treat STATUS_CONTROL_C_EXIT (-1073741510) as success since user dismissed the window
-                if (process.ExitCode != 0 && process.ExitCode != -1073741510)
+                if (process.ExitCode != 0 && process.ExitCode != -1073741510 && process.ExitCode != 1)
                 {
                     _srv.TextToSpeech.Speak($"Exit code is {process.ExitCode}");
                     throw new Exception($"Git operations failed with exit code {process.ExitCode}");
