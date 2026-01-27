@@ -3404,6 +3404,20 @@
             "port": 0
           }
         ]
+      },
+      {
+        "x": 1200,
+        "y": 260,
+        "wires": [
+          {
+            "id": "f92df0ddc9bfdc46",
+            "port": 0
+          },
+          {
+            "id": "0c246d112eff4b93",
+            "port": 0
+          }
+        ]
       }
     ]
   },
@@ -12714,6 +12728,7 @@
     "x": 320,
     "y": 120,
     "wires": [
+      [],
       []
     ]
   },
@@ -13259,48 +13274,14 @@
     ]
   },
   {
-    "id": "8bd6de4f30dc5e60",
-    "type": "csharp-mcq",
-    "z": "aabd786b0afd1857",
-    "name": "",
-    "outputCount": 5,
-    "outputs": 5,
-    "x": 490,
-    "y": 280,
-    "wires": [
-      [
-        "f77b0f0e7c7f417d"
-      ],
-      [],
-      [],
-      [],
-      []
-    ]
-  },
-  {
-    "id": "f77b0f0e7c7f417d",
-    "type": "csharp-bookmark",
+    "id": "f92df0ddc9bfdc46",
+    "type": "csharp-worker-concurrent",
     "z": "aabd786b0afd1857",
     "name": "Open code repo",
     "outputCount": 1,
     "outputs": 1,
-    "x": 480,
-    "y": 160,
-    "wires": [
-      [
-        "f92df0ddc9bfdc46"
-      ]
-    ]
-  },
-  {
-    "id": "f92df0ddc9bfdc46",
-    "type": "csharp-worker-concurrent",
-    "z": "aabd786b0afd1857",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 710,
-    "y": 160,
+    "x": 960,
+    "y": 120,
     "wires": [
       []
     ]
@@ -13318,7 +13299,9 @@
       [
         "e56717a403ebe654"
       ],
-      [],
+      [
+        "8201e67729604717"
+      ],
       [],
       [],
       []
@@ -13346,6 +13329,129 @@
     "outputs": 1,
     "x": 270,
     "y": 300,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8201e67729604717",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Open code repo",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 400,
+    "y": 80,
+    "wires": [
+      [
+        "0fe9dbc847f4610d"
+      ]
+    ]
+  },
+  {
+    "id": "2f65871f6624f333",
+    "type": "csharp-speak",
+    "z": "aabd786b0afd1857",
+    "name": "Please wait for Git Extensions to open",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 1030,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0fe9dbc847f4610d",
+    "type": "csharp-mcq",
+    "z": "aabd786b0afd1857",
+    "name": "",
+    "outputCount": 5,
+    "outputs": 5,
+    "x": 590,
+    "y": 120,
+    "wires": [
+      [
+        "f5f9c51437a0a152"
+      ],
+      [
+        "b9d82ec25f07b48a"
+      ],
+      [
+        "af1cac4e8d25df9a"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "f5f9c51437a0a152",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Git Extensions",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 760,
+    "y": 80,
+    "wires": [
+      [
+        "2f65871f6624f333",
+        "f92df0ddc9bfdc46"
+      ]
+    ]
+  },
+  {
+    "id": "b9d82ec25f07b48a",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "VSCode",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 760,
+    "y": 140,
+    "wires": [
+      [
+        "0c246d112eff4b93"
+      ]
+    ]
+  },
+  {
+    "id": "0c246d112eff4b93",
+    "type": "csharp-worker-concurrent",
+    "z": "aabd786b0afd1857",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 960,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "af1cac4e8d25df9a",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Rider",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 730,
+    "y": 260,
+    "wires": [
+      [
+        "2b5cad6f71b91196"
+      ]
+    ]
+  },
+  {
+    "id": "2b5cad6f71b91196",
+    "type": "csharp-worker-concurrent",
+    "z": "aabd786b0afd1857",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 940,
+    "y": 260,
     "wires": [
       []
     ]
