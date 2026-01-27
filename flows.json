@@ -3285,9 +3285,14 @@
     ],
     "out": [
       {
-        "x": 740,
+        "x": 800,
         "y": 140,
-        "wires": []
+        "wires": [
+          {
+            "id": "e9e8999a5961782e",
+            "port": 0
+          }
+        ]
       }
     ],
     "env": [],
@@ -12390,8 +12395,8 @@
     "id": "0bb9351eaa6660d5",
     "type": "subflow:b366a645d63b3d5e",
     "z": "4410d79ded623b29",
-    "name": "",
-    "x": 260,
+    "name": "Open volume tuner in default browser",
+    "x": 290,
     "y": 80,
     "wires": [
       []
@@ -22523,9 +22528,7 @@
     "g": "b2d82eb2553e598d",
     "name": "Manage open windows ...",
     "mode": "link",
-    "links": [
-      "8bb3fa6d38e55690"
-    ],
+    "links": [],
     "x": 955,
     "y": 120,
     "wires": []
@@ -29808,34 +29811,6 @@
     "name": "Entertainment",
     "x": 540,
     "y": 160,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "450d3ed3698a1dfd",
-    "type": "csharp-trigger",
-    "z": "ca72e41fbc666054",
-    "name": "George",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 470,
-    "y": 280,
-    "wires": [
-      [
-        "9b4abbd2f2fde660"
-      ]
-    ]
-  },
-  {
-    "id": "9b4abbd2f2fde660",
-    "type": "csharp-speak",
-    "z": "ca72e41fbc666054",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 650,
-    "y": 240,
     "wires": [
       []
     ]
