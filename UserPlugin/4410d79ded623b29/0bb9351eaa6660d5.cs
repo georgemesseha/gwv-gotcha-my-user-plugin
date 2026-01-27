@@ -8,7 +8,7 @@ partial class _4410d79ded623b29
         // The sample code below assumes that you got a custom SetInitialState
         // in the subflow type.
         // subflow.SetInitialState(arg1, arg2);
-        subflow.Url = "https://violinlounge.com/free-online-violin-tuner-with-mic-and-tuning-notes/";
+        subflow.Input("https://violinlounge.com/free-online-violin-tuner-with-mic-and-tuning-notes/");
     }
     
     // Use this method to update the parent state with the result of the sub-flow (if needed)

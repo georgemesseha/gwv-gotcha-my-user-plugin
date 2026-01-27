@@ -1,29 +1,5 @@
 [
   {
-    "id": "d85ada7775411566",
-    "type": "tab",
-    "label": "Git | Create Void Commit",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "fa34e35f8c929634",
-    "type": "tab",
-    "label": "Sahel | Manage Configuration",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "3f55af5fab4dd56a",
-    "type": "tab",
-    "label": "Manage Project Configuration | Azure vault",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
     "id": "66dc4606b2245ab2",
     "type": "tab",
     "label": "node-RED Project",
@@ -475,14 +451,6 @@
     "id": "45e2e642be123d15",
     "type": "tab",
     "label": "Zimbabwe | VSCode",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "e835f561f7c858c6",
-    "type": "tab",
-    "label": "Commit node-RED repo changes",
     "disabled": false,
     "info": "",
     "env": []
@@ -2908,39 +2876,6 @@
     ]
   },
   {
-    "id": "e2cc7e3daa20d481",
-    "type": "subflow",
-    "name": "Sahel | Logs",
-    "info": "",
-    "category": "",
-    "in": [
-      {
-        "x": 260,
-        "y": 160,
-        "wires": [
-          {
-            "id": "0582eb8c4b39f601"
-          }
-        ]
-      }
-    ],
-    "out": [
-      {
-        "x": 980,
-        "y": 320,
-        "wires": [
-          {
-            "id": "fd9120d531e5fb29",
-            "port": 0
-          }
-        ]
-      }
-    ],
-    "env": [],
-    "meta": {},
-    "color": "#DDAA99"
-  },
-  {
     "id": "bc7ca4872b5dc309",
     "type": "subflow",
     "name": "Subflow 19",
@@ -3049,8 +2984,8 @@
     ],
     "out": [
       {
-        "x": 1160,
-        "y": 160,
+        "x": 920,
+        "y": 180,
         "wires": [
           {
             "id": "c796ed902f6d2f55",
@@ -3058,6 +2993,10 @@
           },
           {
             "id": "e505b8b561e2d5ef",
+            "port": 0
+          },
+          {
+            "id": "b80f143d8f4c612a",
             "port": 0
           }
         ]
@@ -3322,20 +3261,33 @@
     "category": "",
     "in": [
       {
-        "x": 220,
-        "y": 320,
+        "x": 160,
+        "y": 80,
         "wires": [
           {
-            "id": "bd072421a7eba38a"
+            "id": "fb5e67e37a8f75ae"
           }
         ]
       }
     ],
     "out": [
       {
-        "x": 1360,
-        "y": 520,
-        "wires": []
+        "x": 1160,
+        "y": 220,
+        "wires": [
+          {
+            "id": "1dca8a54a3e4a104",
+            "port": 0
+          },
+          {
+            "id": "943c699c7145221c",
+            "port": 0
+          },
+          {
+            "id": "ed4c2e0e26c1e010",
+            "port": 0
+          }
+        ]
       }
     ],
     "env": [],
@@ -3407,6 +3359,18 @@
           {
             "id": "2b5cad6f71b91196",
             "port": 0
+          },
+          {
+            "id": "b603a8490429dba4",
+            "port": 0
+          },
+          {
+            "id": "3e55d8557756b1da",
+            "port": 0
+          },
+          {
+            "id": "f8138324ef8cea2d",
+            "port": 0
           }
         ]
       }
@@ -3433,8 +3397,8 @@
     ],
     "out": [
       {
-        "x": 720,
-        "y": 320,
+        "x": 840,
+        "y": 400,
         "wires": [
           {
             "id": "983c9b7c785b19e2",
@@ -3448,14 +3412,6 @@
     "id": "7f14b0a4764e006a",
     "type": "subflow",
     "name": "Subflow 28",
-    "info": "",
-    "in": [],
-    "out": []
-  },
-  {
-    "id": "e098a4fcdef355e6",
-    "type": "subflow",
-    "name": "Subflow 29",
     "info": "",
     "in": [],
     "out": []
@@ -3475,6 +3431,183 @@
     "info": "",
     "in": [],
     "out": []
+  },
+  {
+    "id": "2a4ca6049d860ca7",
+    "type": "subflow",
+    "name": "Sahel | Configuration",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 100,
+        "y": 80,
+        "wires": [
+          {
+            "id": "48ba06440e54e4ca"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 1100,
+        "y": 40,
+        "wires": [
+          {
+            "id": "90fd02093777cbd7",
+            "port": 0
+          },
+          {
+            "id": "57208f5fc3e2978b",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 460,
+        "y": 280,
+        "wires": [
+          {
+            "id": "476afb601e1a0d87",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "ab6c892af4f1cd99",
+    "type": "subflow",
+    "name": "Rider | Open directory",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 140,
+        "y": 80,
+        "wires": [
+          {
+            "id": "0505a493d72aef6c"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 500,
+        "y": 60,
+        "wires": [
+          {
+            "id": "0505a493d72aef6c",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 500,
+        "y": 120,
+        "wires": [
+          {
+            "id": "0505a493d72aef6c",
+            "port": 1
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "c4601fbac7a0289f",
+    "type": "subflow",
+    "name": "VSCode | Open ",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 240,
+        "y": 100,
+        "wires": [
+          {
+            "id": "09d80c2fbcb16468"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 580,
+        "y": 80,
+        "wires": [
+          {
+            "id": "09d80c2fbcb16468",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 580,
+        "y": 140,
+        "wires": [
+          {
+            "id": "09d80c2fbcb16468",
+            "port": 1
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "steelblue",
+    "icon": "node-red/arduino.svg"
+  },
+  {
+    "id": "f37840b0923e975e",
+    "type": "subflow",
+    "name": "Run Process",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 60,
+        "y": 80,
+        "wires": [
+          {
+            "id": "7838e8436ad26c8d"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 420,
+        "y": 60,
+        "wires": [
+          {
+            "id": "7838e8436ad26c8d",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 420,
+        "y": 140,
+        "wires": [
+          {
+            "id": "7838e8436ad26c8d",
+            "port": 1
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
   },
   {
     "id": "c2606acf26d96cc0",
@@ -4017,28 +4150,6 @@
     "h": 122
   },
   {
-    "id": "ee0989e3649994c0",
-    "type": "group",
-    "z": "66dc4606b2245ab2",
-    "style": {
-      "stroke": "#2e333a",
-      "stroke-opacity": "1",
-      "fill": "#383c45",
-      "fill-opacity": "0.5",
-      "label": true,
-      "label-position": "nw",
-      "color": "#dddddd"
-    },
-    "nodes": [
-      "3e62e59c7488d222",
-      "014fb8a2f3e68ba9"
-    ],
-    "x": 614,
-    "y": 879,
-    "w": 592,
-    "h": 142
-  },
-  {
     "id": "b869d602e6e6373e",
     "type": "group",
     "z": "2176de2541256f66",
@@ -4489,23 +4600,6 @@
     "h": 82
   },
   {
-    "id": "83bd0629823474c5",
-    "type": "group",
-    "z": "80f11a886691d655",
-    "name": "Auditing in Database",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "ded2b6b949a9d154",
-      "8fbc956d837e138e"
-    ],
-    "x": 534,
-    "y": 539,
-    "w": 672,
-    "h": 82
-  },
-  {
     "id": "5f0fa4bde5d44dd5",
     "type": "group",
     "z": "88bd534164ebf0ab",
@@ -4553,25 +4647,6 @@
     "x": 454,
     "y": 339,
     "w": 412,
-    "h": 122
-  },
-  {
-    "id": "1268fceffd8c3450",
-    "type": "group",
-    "z": "80f11a886691d655",
-    "name": "Blob Storage",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "937a39e7d79e9b2b",
-      "820d6d88af8d4846",
-      "4117f6d8188670b4",
-      "244105def0d1d408"
-    ],
-    "x": 574,
-    "y": 379,
-    "w": 592,
     "h": 122
   },
   {
@@ -4858,23 +4933,6 @@
     "h": 142
   },
   {
-    "id": "a1d14da7267dcab0",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "Compare / Update Sahel configuration",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "ea14c4cab91c133d",
-      "7194efe68c05b6eb"
-    ],
-    "x": 594,
-    "y": 1313,
-    "w": 638,
-    "h": 214
-  },
-  {
     "id": "0f1bfb7416ecdecf",
     "type": "group",
     "z": "2176de2541256f66",
@@ -4911,24 +4969,6 @@
     "y": 239,
     "w": 150,
     "h": 82
-  },
-  {
-    "id": "5675eb1ef245a3b2",
-    "type": "group",
-    "z": "66dc4606b2245ab2",
-    "name": "Compare Flow to Sub-Flow",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "d4725a3cb64aba04",
-      "8e4dc77fd8a3d744",
-      "b9215edffd39115d"
-    ],
-    "x": 654,
-    "y": 539,
-    "w": 562,
-    "h": 142
   },
   {
     "id": "20b44e4a4e183684",
@@ -5058,22 +5098,6 @@
     "y": 519,
     "w": 798,
     "h": 368
-  },
-  {
-    "id": "55b4b20df3ea490c",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "Development",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "9c8c4dfec976931a"
-    ],
-    "x": 1474,
-    "y": 179,
-    "w": 91,
-    "h": 82
   },
   {
     "id": "5a6e389ec5eb597f",
@@ -5263,27 +5287,6 @@
     "y": 179,
     "w": 312,
     "h": 82
-  },
-  {
-    "id": "42ace5a90cc185bf",
-    "type": "group",
-    "z": "80f11a886691d655",
-    "name": "Insights",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "b5b3d5db0b3d4ad0",
-      "622a5005c2958ac2",
-      "bfc3b86d03a7de9b",
-      "1e5fbd6933c346b4",
-      "4c887ea45460a3fa",
-      "f638fcd0eb8ad001"
-    ],
-    "x": 594,
-    "y": 159,
-    "w": 922,
-    "h": 182
   },
   {
     "id": "0279422a2b0b5267",
@@ -5677,40 +5680,6 @@
     "h": 82
   },
   {
-    "id": "ad891c5416f7c111",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "Open configuration project",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "2d391a812b70b516",
-      "1ec44a9fff245c82",
-      "68a4efa331111cc5"
-    ],
-    "x": 934,
-    "y": 59,
-    "w": 332,
-    "h": 122
-  },
-  {
-    "id": "938fe75e09c14ff9",
-    "type": "group",
-    "z": "66dc4606b2245ab2",
-    "name": "Open flows.json",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "f0d22e5180c2e593"
-    ],
-    "x": 674,
-    "y": 439,
-    "w": 108,
-    "h": 82
-  },
-  {
     "id": "5ced112bd56e0f89",
     "type": "group",
     "z": "b24567603cf835ad",
@@ -6079,22 +6048,6 @@
     "h": 82
   },
   {
-    "id": "0828b4f80ef4b97f",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "POC",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "4b0bd9a938ae866b"
-    ],
-    "x": 1474,
-    "y": 479,
-    "w": 82,
-    "h": 82
-  },
-  {
     "id": "0939cfee324d32b3",
     "type": "group",
     "z": "83fa5debc97eaecb",
@@ -6128,52 +6081,6 @@
     "y": 359,
     "w": 472,
     "h": 202
-  },
-  {
-    "id": "60e85ef81c473b01",
-    "type": "group",
-    "z": "3f55af5fab4dd56a",
-    "name": "Read vault value",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "237cc5a8732429a8",
-      "fdf88c1ab50c7910",
-      "e8fdf658e875af79",
-      "18dcb81fad229427",
-      "b6a1ec9cb1bcd4de",
-      "484dfa672980a117"
-    ],
-    "x": 614,
-    "y": 319,
-    "w": 992,
-    "h": 202
-  },
-  {
-    "id": "4924c4682b89db3f",
-    "type": "group",
-    "z": "3f55af5fab4dd56a",
-    "name": "Read vault value",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "612436e79bd128ca",
-      "717c71b2074ab7c4",
-      "589721254f730803",
-      "d03f20d723af6c49",
-      "354c019d91b20c94",
-      "8a904eb29a5e770b",
-      "a1602114b7a54905",
-      "327a3356efc1c994",
-      "586e57ea2236c641",
-      "d70c8d4546b9bb81"
-    ],
-    "x": 474,
-    "y": 539,
-    "w": 972,
-    "h": 322
   },
   {
     "id": "88d29f45d89d7b32",
@@ -6245,28 +6152,6 @@
     "y": 599,
     "w": 452,
     "h": 142
-  },
-  {
-    "id": "9ada3be8aad7cf16",
-    "type": "group",
-    "z": "66dc4606b2245ab2",
-    "name": "Restart Node-RED",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "48286ea2d25319f7",
-      "c43686785b6d461b",
-      "1d5fadf241c29d25",
-      "703b8531de745d1f",
-      "06e880163c677239",
-      "1e34fbfe5e13c6d0",
-      "d945b0b1bb641dfb"
-    ],
-    "x": 614,
-    "y": 699,
-    "w": 1032,
-    "h": 162
   },
   {
     "id": "3d4348006d11b163",
@@ -6486,22 +6371,6 @@
     "h": 222
   },
   {
-    "id": "a5fddca31ed887d5",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "Staging",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "c2984f6d149cd3e5"
-    ],
-    "x": 1474,
-    "y": 379,
-    "w": 82,
-    "h": 82
-  },
-  {
     "id": "7cff182178556f7d",
     "type": "group",
     "z": "ac116305b673e874",
@@ -6518,22 +6387,6 @@
     "y": 39,
     "w": 432,
     "h": 142
-  },
-  {
-    "id": "166b105cdd83439c",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "Testing",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "ab100807acce3a34"
-    ],
-    "x": 1474,
-    "y": 279,
-    "w": 82,
-    "h": 82
   },
   {
     "id": "8a90e1f4484ae776",
@@ -7258,22 +7111,6 @@
     "h": 302
   },
   {
-    "id": "3d67e732741a7389",
-    "type": "group",
-    "z": "fa34e35f8c929634",
-    "name": "<<",
-    "style": {
-      "label": true
-    },
-    "nodes": [
-      "42fb2595f90aba1b"
-    ],
-    "x": 74,
-    "y": 419,
-    "w": 82,
-    "h": 82
-  },
-  {
     "id": "99986ce8175e53fd",
     "type": "group",
     "z": "e027685ebc6e189f",
@@ -7387,33 +7224,107 @@
       "4e0ab8a562041ec5",
       "d253ae20b16871b9"
     ],
-    "x": 334,
-    "y": 159,
+    "x": 454,
+    "y": 99,
     "w": 392,
     "h": 202
   },
   {
-    "id": "7194efe68c05b6eb",
+    "id": "6ec3d33d5998f407",
     "type": "group",
-    "z": "fa34e35f8c929634",
-    "g": "a1d14da7267dcab0",
+    "z": "2a4ca6049d860ca7",
+    "name": "Compare / Update Sahel configuration",
     "style": {
-      "stroke": "#2e333a",
-      "stroke-opacity": "1",
-      "fill": "#383c45",
-      "fill-opacity": "0.5",
-      "label": true,
-      "label-position": "nw",
-      "color": "#dddddd"
+      "label": true
     },
     "nodes": [
-      "7f2014f0a8830620",
-      "542e861e963f5064"
+      "11a5ae7c95ed42f2",
+      "a9fe2e7b81749311"
     ],
-    "x": 794,
-    "y": 1339,
-    "w": 412,
-    "h": 162
+    "x": 614,
+    "y": 1473,
+    "w": 638,
+    "h": 214
+  },
+  {
+    "id": "cee05c92d44fb7b2",
+    "type": "group",
+    "z": "2a4ca6049d860ca7",
+    "name": "Development",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "42a5ce0f1a80683b"
+    ],
+    "x": 1494,
+    "y": 339,
+    "w": 91,
+    "h": 82
+  },
+  {
+    "id": "8370552ddfb65d2e",
+    "type": "group",
+    "z": "2a4ca6049d860ca7",
+    "name": "POC",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "62b9d67d006d67f0"
+    ],
+    "x": 1494,
+    "y": 639,
+    "w": 82,
+    "h": 82
+  },
+  {
+    "id": "7bc0ea8dd003e017",
+    "type": "group",
+    "z": "2a4ca6049d860ca7",
+    "name": "Staging",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "0215fe7e286d697b"
+    ],
+    "x": 1494,
+    "y": 539,
+    "w": 82,
+    "h": 82
+  },
+  {
+    "id": "9aaa1d9b1053afb1",
+    "type": "group",
+    "z": "2a4ca6049d860ca7",
+    "name": "Testing",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "961ad6769aac96de"
+    ],
+    "x": 1494,
+    "y": 439,
+    "w": 82,
+    "h": 82
+  },
+  {
+    "id": "92a669c06a3084c6",
+    "type": "group",
+    "z": "2a4ca6049d860ca7",
+    "name": "<<",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "460c1e446f07734d"
+    ],
+    "x": 94,
+    "y": 579,
+    "w": 82,
+    "h": 82
   },
   {
     "id": "c815635f507e53fc",
@@ -7784,18 +7695,27 @@
     "h": 82
   },
   {
-    "id": "68a4efa331111cc5",
-    "type": "junction",
-    "z": "fa34e35f8c929634",
-    "g": "ad891c5416f7c111",
-    "x": 960,
-    "y": 120,
-    "wires": [
-      [
-        "2d391a812b70b516",
-        "1ec44a9fff245c82"
-      ]
-    ]
+    "id": "a9fe2e7b81749311",
+    "type": "group",
+    "z": "2a4ca6049d860ca7",
+    "g": "6ec3d33d5998f407",
+    "style": {
+      "stroke": "#2e333a",
+      "stroke-opacity": "1",
+      "fill": "#383c45",
+      "fill-opacity": "0.5",
+      "label": true,
+      "label-position": "nw",
+      "color": "#dddddd"
+    },
+    "nodes": [
+      "840dfa87ef783e11",
+      "6dc2128446921df0"
+    ],
+    "x": 814,
+    "y": 1499,
+    "w": 412,
+    "h": 162
   },
   {
     "id": "17e00c51a2cdcfce",
@@ -7837,21 +7757,6 @@
     ]
   },
   {
-    "id": "4c887ea45460a3fa",
-    "type": "junction",
-    "z": "80f11a886691d655",
-    "g": "42ace5a90cc185bf",
-    "x": 780,
-    "y": 260,
-    "wires": [
-      [
-        "bfc3b86d03a7de9b",
-        "622a5005c2958ac2",
-        "b5b3d5db0b3d4ad0"
-      ]
-    ]
-  },
-  {
     "id": "526220d05b70129c",
     "type": "junction",
     "z": "2a81a7a539926088",
@@ -7873,19 +7778,6 @@
       [
         "27ac28321845c57e",
         "7a2cb668afa7c024"
-      ]
-    ]
-  },
-  {
-    "id": "8fcffddc7a66b46b",
-    "type": "junction",
-    "z": "e835f561f7c858c6",
-    "x": 100,
-    "y": 240,
-    "wires": [
-      [
-        "9a76df7d63d9ec3f",
-        "918a3be9544e9a2a"
       ]
     ]
   },
@@ -8083,20 +7975,6 @@
     ]
   },
   {
-    "id": "244105def0d1d408",
-    "type": "junction",
-    "z": "80f11a886691d655",
-    "g": "1268fceffd8c3450",
-    "x": 760,
-    "y": 440,
-    "wires": [
-      [
-        "820d6d88af8d4846",
-        "937a39e7d79e9b2b"
-      ]
-    ]
-  },
-  {
     "id": "48189da27c5257e4",
     "type": "junction",
     "z": "cc912275cbacbe69",
@@ -8131,32 +8009,6 @@
       [
         "46669eecb2b0513f",
         "42939f97463b3f42"
-      ]
-    ]
-  },
-  {
-    "id": "586e57ea2236c641",
-    "type": "junction",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "x": 780,
-    "y": 760,
-    "wires": [
-      [
-        "717c71b2074ab7c4",
-        "354c019d91b20c94"
-      ]
-    ]
-  },
-  {
-    "id": "5d6066565c73c79a",
-    "type": "junction",
-    "z": "3f55af5fab4dd56a",
-    "x": 560,
-    "y": 140,
-    "wires": [
-      [
-        "e5e8b40df8fd9fdc"
       ]
     ]
   },
@@ -12145,100 +11997,6 @@
     ]
   },
   {
-    "id": "33c048ed1fb8a159",
-    "type": "csharp-bookmark",
-    "z": "e2cc7e3daa20d481",
-    "name": "Insights",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 620,
-    "y": 80,
-    "wires": [
-      [
-        "fd9120d531e5fb29"
-      ]
-    ]
-  },
-  {
-    "id": "c5482c2af195f1e2",
-    "type": "csharp-bookmark",
-    "z": "e2cc7e3daa20d481",
-    "name": "Blob Storage",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 630,
-    "y": 160,
-    "wires": [
-      [
-        "fd9120d531e5fb29"
-      ]
-    ]
-  },
-  {
-    "id": "afd9b22bc44bec04",
-    "type": "csharp-bookmark",
-    "z": "e2cc7e3daa20d481",
-    "name": "Database Logs",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 660,
-    "y": 280,
-    "wires": [
-      [
-        "fd9120d531e5fb29"
-      ]
-    ]
-  },
-  {
-    "id": "0582eb8c4b39f601",
-    "type": "csharp-mcq",
-    "z": "e2cc7e3daa20d481",
-    "name": "",
-    "outputCount": 3,
-    "outputs": 3,
-    "x": 420,
-    "y": 160,
-    "wires": [
-      [
-        "33c048ed1fb8a159"
-      ],
-      [
-        "c5482c2af195f1e2"
-      ],
-      [
-        "afd9b22bc44bec04"
-      ]
-    ]
-  },
-  {
-    "id": "fd9120d531e5fb29",
-    "type": "csharp-report-info",
-    "z": "e2cc7e3daa20d481",
-    "name": "End of text",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 930,
-    "y": 140,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "d024c2aac123a74a",
-    "type": "csharp-trigger",
-    "z": "e2cc7e3daa20d481",
-    "name": "ggg Sahel | Logs",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 220,
-    "y": 320,
-    "wires": [
-      [
-        "0582eb8c4b39f601"
-      ]
-    ]
-  },
-  {
     "id": "4861eb8f7c66245c",
     "type": "subflow:d652b8395f568b66",
     "z": "bc7ca4872b5dc309",
@@ -12647,7 +12405,9 @@
       [
         "a5920e5abf0131c7"
       ],
-      [],
+      [
+        "b80f143d8f4c612a"
+      ],
       [],
       [],
       [],
@@ -12712,8 +12472,8 @@
     "name": "Logs",
     "outputCount": 1,
     "outputs": 1,
-    "x": 410,
-    "y": 200,
+    "x": 430,
+    "y": 260,
     "wires": [
       [
         "e505b8b561e2d5ef"
@@ -12724,10 +12484,22 @@
     "id": "e505b8b561e2d5ef",
     "type": "subflow:80f11a886691d655",
     "z": "3fe642069f5f8492",
-    "name": "",
-    "x": 590,
+    "name": "Logs",
+    "x": 570,
     "y": 260,
     "wires": [
+      []
+    ]
+  },
+  {
+    "id": "b80f143d8f4c612a",
+    "type": "subflow:2a4ca6049d860ca7",
+    "z": "3fe642069f5f8492",
+    "name": "Configuration",
+    "x": 430,
+    "y": 160,
+    "wires": [
+      [],
       []
     ]
   },
@@ -12975,229 +12747,182 @@
     ]
   },
   {
-    "id": "bd072421a7eba38a",
-    "type": "subflow:4e421b677e043229",
+    "id": "fb5e67e37a8f75ae",
+    "type": "csharp-mcq",
     "z": "80f11a886691d655",
     "name": "",
-    "x": 420,
-    "y": 400,
+    "outputCount": 5,
+    "outputs": 5,
+    "x": 310,
+    "y": 80,
     "wires": [
       [
-        "e323b8a7fcd3bd5b"
-      ]
-    ]
-  },
-  {
-    "id": "df2ca27f3fb8a83c",
-    "type": "link in",
-    "z": "80f11a886691d655",
-    "name": "Sahel | Logs",
-    "links": [],
-    "x": 455,
-    "y": 340,
-    "wires": [
-      [
-        "bd072421a7eba38a"
-      ]
-    ]
-  },
-  {
-    "id": "47c3e2a0106c1f74",
-    "type": "http in",
-    "z": "80f11a886691d655",
-    "name": "Sahel | Logs ... #logging",
-    "url": "/r2g7a7l",
-    "method": "get",
-    "upload": false,
-    "swaggerDoc": "",
-    "x": 360,
-    "y": 220,
-    "wires": [
-      [
-        "bd072421a7eba38a"
-      ]
-    ]
-  },
-  {
-    "id": "e323b8a7fcd3bd5b",
-    "type": "mcq",
-    "z": "80f11a886691d655",
-    "name": "What kind of logs?",
-    "outputCount": 3,
-    "outputs": 3,
-    "x": 360,
-    "y": 560,
-    "wires": [
-      [
-        "f638fcd0eb8ad001"
+        "21cc6593fe427e95"
       ],
       [
-        "4117f6d8188670b4"
+        "6689a8c7942312de"
       ],
       [
-        "8fbc956d837e138e"
-      ]
-    ]
-  },
-  {
-    "id": "0574d78561f0ca6c",
-    "type": "subflow:e2cc7e3daa20d481",
-    "z": "80f11a886691d655",
-    "name": "",
-    "x": 620,
-    "y": 760,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "ded2b6b949a9d154",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "80f11a886691d655",
-    "g": "83bd0629823474c5",
-    "name": "\"Find a table named as Audit something in the database\"",
-    "x": 970,
-    "y": 580,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "8fbc956d837e138e",
-    "type": "subflow:4e421b677e043229",
-    "z": "80f11a886691d655",
-    "g": "83bd0629823474c5",
-    "name": "Database Logs",
-    "x": 640,
-    "y": 580,
-    "wires": [
-      [
-        "ded2b6b949a9d154"
-      ]
-    ]
-  },
-  {
-    "id": "937a39e7d79e9b2b",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "80f11a886691d655",
-    "g": "1268fceffd8c3450",
-    "name": "\"Find log container on the storage explorer\"",
-    "x": 970,
-    "y": 420,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "820d6d88af8d4846",
-    "type": "subflow:d147f856086021e2",
-    "z": "80f11a886691d655",
-    "g": "1268fceffd8c3450",
-    "name": "",
-    "env": [
-      {
-        "name": "processName",
-        "value": "\"StorageExplorer\"",
-        "type": "str"
-      }
-    ],
-    "x": 880,
-    "y": 460,
-    "wires": [
+        "5cd48fe050665be9"
+      ],
       [],
       []
     ]
   },
   {
-    "id": "4117f6d8188670b4",
-    "type": "subflow:4e421b677e043229",
+    "id": "21cc6593fe427e95",
+    "type": "csharp-bookmark",
     "z": "80f11a886691d655",
-    "g": "1268fceffd8c3450",
-    "name": "Blob Storage",
-    "x": 670,
-    "y": 440,
-    "wires": [
-      [
-        "244105def0d1d408"
-      ]
-    ]
-  },
-  {
-    "id": "b5b3d5db0b3d4ad0",
-    "type": "subflow:b23fac97ba53404f",
-    "z": "80f11a886691d655",
-    "g": "42ace5a90cc185bf",
-    "name": "",
-    "env": [
-      {
-        "name": "url",
-        "value": "\"https://portal.azure.com/#@SoftecMEA.onmicrosoft.com/resource/subscriptions/1f01a312-a6f5-4161-993d-4ef40f8ca052/resourceGroups/RG_Saaed_DevOpsTest_Sahel_UAENorth/providers/microsoft.insights/components/aca-dev-env/logs\"",
-        "type": "str"
-      }
-    ],
-    "x": 970,
-    "y": 200,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "622a5005c2958ac2",
-    "type": "subflow:b182be5bcebc47cd",
-    "z": "80f11a886691d655",
-    "g": "42ace5a90cc185bf",
-    "name": "",
-    "env": [
-      {
-        "name": "url",
-        "value": "\"https://www.notion.so/Insights-Query-Sample-Sahel-Zimbabwe-21b6ea6ef60880b4a1a1eda501049fea?source=copy_link\"",
-        "type": "str"
-      }
-    ],
-    "x": 970,
-    "y": 260,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "bfc3b86d03a7de9b",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "80f11a886691d655",
-    "g": "42ace5a90cc185bf",
-    "name": "\"Find a sample query on the side view\"",
-    "x": 1000,
-    "y": 300,
-    "wires": [
-      [
-        "1e5fbd6933c346b4"
-      ]
-    ]
-  },
-  {
-    "id": "1e5fbd6933c346b4",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "80f11a886691d655",
-    "g": "42ace5a90cc185bf",
-    "name": "\"And find the Insights page in the main browser\"",
-    "x": 1310,
-    "y": 240,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "f638fcd0eb8ad001",
-    "type": "subflow:4e421b677e043229",
-    "z": "80f11a886691d655",
-    "g": "42ace5a90cc185bf",
     "name": "Insights",
-    "x": 680,
-    "y": 260,
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 470,
+    "y": 40,
     "wires": [
       [
-        "4c887ea45460a3fa"
+        "d6d9c4c12e3ecad8"
       ]
+    ]
+  },
+  {
+    "id": "6689a8c7942312de",
+    "type": "csharp-bookmark",
+    "z": "80f11a886691d655",
+    "name": "Blob Storage",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 480,
+    "y": 80,
+    "wires": [
+      [
+        "e44865e451f7b9b6"
+      ]
+    ]
+  },
+  {
+    "id": "5cd48fe050665be9",
+    "type": "csharp-bookmark",
+    "z": "80f11a886691d655",
+    "name": "Auditing in database",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 500,
+    "y": 120,
+    "wires": [
+      [
+        "ed4c2e0e26c1e010"
+      ]
+    ]
+  },
+  {
+    "id": "d6d9c4c12e3ecad8",
+    "type": "csharp-report-info",
+    "z": "80f11a886691d655",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 650,
+    "y": 40,
+    "wires": [
+      [
+        "ded4a1a4a82301b8"
+      ]
+    ]
+  },
+  {
+    "id": "ded4a1a4a82301b8",
+    "type": "csharp-report-info",
+    "z": "80f11a886691d655",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 800,
+    "y": 40,
+    "wires": [
+      [
+        "1dca8a54a3e4a104"
+      ]
+    ]
+  },
+  {
+    "id": "1dca8a54a3e4a104",
+    "type": "subflow:b366a645d63b3d5e",
+    "z": "80f11a886691d655",
+    "name": "Open Insights in default browser",
+    "x": 1020,
+    "y": 40,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e44865e451f7b9b6",
+    "type": "subflow:f37840b0923e975e",
+    "z": "80f11a886691d655",
+    "name": "Run Storage Explorer",
+    "x": 680,
+    "y": 80,
+    "wires": [
+      [
+        "7634557facacfa85"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "943c699c7145221c",
+    "type": "csharp-report-info",
+    "z": "80f11a886691d655",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 1070,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7634557facacfa85",
+    "type": "csharp-speak",
+    "z": "80f11a886691d655",
+    "name": "Follow the instructions",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 920,
+    "y": 80,
+    "wires": [
+      [
+        "555a2b8e4df4b008"
+      ]
+    ]
+  },
+  {
+    "id": "555a2b8e4df4b008",
+    "type": "csharp-report-info",
+    "z": "80f11a886691d655",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 950,
+    "y": 140,
+    "wires": [
+      [
+        "943c699c7145221c"
+      ]
+    ]
+  },
+  {
+    "id": "ed4c2e0e26c1e010",
+    "type": "csharp-report-info",
+    "z": "80f11a886691d655",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 710,
+    "y": 140,
+    "wires": [
+      []
     ]
   },
   {
@@ -13253,8 +12978,8 @@
     "name": "💼 Gotcha",
     "outputCount": 1,
     "outputs": 1,
-    "x": 160,
-    "y": 220,
+    "x": 120,
+    "y": 160,
     "wires": [
       [
         "da6a837fe3aba7b8"
@@ -13290,9 +13015,15 @@
       [
         "8201e67729604717"
       ],
-      [],
-      [],
-      []
+      [
+        "7aa72c3a51580df0"
+      ],
+      [
+        "57f663a6febc834f"
+      ],
+      [
+        "068a925212bcd51f"
+      ]
     ]
   },
   {
@@ -13432,18 +13163,105 @@
     ]
   },
   {
+    "id": "7aa72c3a51580df0",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Open node-red user directory #folder",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 490,
+    "y": 200,
+    "wires": [
+      [
+        "b603a8490429dba4"
+      ]
+    ]
+  },
+  {
+    "id": "b603a8490429dba4",
+    "type": "subflow:c4601fbac7a0289f",
+    "z": "aabd786b0afd1857",
+    "name": "Open node-red user directory",
+    "x": 730,
+    "y": 320,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "57f663a6febc834f",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Open flows.json",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 420,
+    "y": 260,
+    "wires": [
+      [
+        "3e55d8557756b1da"
+      ]
+    ]
+  },
+  {
+    "id": "3e55d8557756b1da",
+    "type": "subflow:c4601fbac7a0289f",
+    "z": "aabd786b0afd1857",
+    "name": "Open flows.json",
+    "x": 540,
+    "y": 380,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "068a925212bcd51f",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Open node-red settings.js",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 290,
+    "y": 440,
+    "wires": [
+      [
+        "f8138324ef8cea2d"
+      ]
+    ]
+  },
+  {
+    "id": "f8138324ef8cea2d",
+    "type": "subflow:c4601fbac7a0289f",
+    "z": "aabd786b0afd1857",
+    "name": "Open flows.json",
+    "x": 520,
+    "y": 440,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
     "id": "6170a15583355a85",
     "type": "csharp-mcq",
     "z": "dfb3b1ff495d0c3f",
     "name": "Git",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 270,
+    "outputCount": 7,
+    "outputs": 7,
+    "x": 250,
     "y": 240,
     "wires": [
       [
         "d253ae20b16871b9"
-      ]
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -13454,8 +13272,8 @@
     "name": "Compose a void commit command",
     "outputCount": 1,
     "outputs": 1,
-    "x": 500,
-    "y": 320,
+    "x": 620,
+    "y": 260,
     "wires": [
       []
     ]
@@ -13468,8 +13286,8 @@
     "name": "Git | Compose a void commit #empty #blank",
     "outputCount": 1,
     "outputs": 1,
-    "x": 530,
-    "y": 200,
+    "x": 650,
+    "y": 140,
     "wires": [
       [
         "d253ae20b16871b9"
@@ -13484,8 +13302,8 @@
     "name": "Check the info in chat",
     "outputCount": 1,
     "outputs": 1,
-    "x": 460,
-    "y": 280,
+    "x": 580,
+    "y": 220,
     "wires": [
       [
         "983c9b7c785b19e2"
@@ -13500,8 +13318,8 @@
     "name": "Compose a void commit command",
     "outputCount": 1,
     "outputs": 1,
-    "x": 500,
-    "y": 240,
+    "x": 620,
+    "y": 180,
     "wires": [
       [
         "4e0ab8a562041ec5"
@@ -13515,19 +13333,6 @@
     "x": 200,
     "y": 80,
     "wires": []
-  },
-  {
-    "id": "2f91c7f1ad7ad9d0",
-    "type": "csharp-trigger",
-    "z": "e098a4fcdef355e6",
-    "name": "5555555555555555555555555555555555",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 300,
-    "y": 80,
-    "wires": [
-      []
-    ]
   },
   {
     "id": "b9c269feb7fcbca0",
@@ -13556,54 +13361,22 @@
     ]
   },
   {
-    "id": "8b211093e0934088",
-    "type": "subflow:4178eda1bbbd7002",
-    "z": "d85ada7775411566",
+    "id": "dba906dd0d1cb220",
+    "type": "subflow:4e421b677e043229",
+    "z": "2a4ca6049d860ca7",
     "name": "",
-    "env": [
-      {
-        "name": "command",
-        "value": "msg.state.gitCreateBranchCommand",
-        "type": "str"
-      },
-      {
-        "name": "workingDir",
-        "value": "msg.state.workingDirectory",
-        "type": "str"
-      },
-      {
-        "name": "detachSpawnedProcess",
-        "value": "false",
-        "type": "str"
-      }
-    ],
-    "x": 570,
-    "y": 340,
+    "x": 420,
+    "y": 380,
     "wires": [
       [
-        "e5208d3acfbcb867"
+        "f56181158d25a4b5"
       ]
     ]
   },
   {
-    "id": "e5208d3acfbcb867",
-    "type": "subflow:7dd6aa47fd337fda",
-    "z": "d85ada7775411566",
-    "name": "",
-    "x": 580,
-    "y": 440,
-    "wires": [
-      [],
-      [
-        "3f98318ddd724379",
-        "f7dc1b538c57ec41"
-      ]
-    ]
-  },
-  {
-    "id": "be276eebd7c08f4e",
+    "id": "11d80211230b9f0d",
     "type": "inject",
-    "z": "d85ada7775411566",
+    "z": "2a4ca6049d860ca7",
     "name": "",
     "props": [
       {
@@ -13621,355 +13394,18 @@
     "topic": "",
     "payload": "",
     "payloadType": "date",
-    "x": 160,
-    "y": 440,
-    "wires": [
-      [
-        "419dfe3c49c1b000"
-      ]
-    ]
-  },
-  {
-    "id": "2ad8d0d3036a2da2",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "d85ada7775411566",
-    "name": "\"Find the pull requests page in the default browser\"",
-    "x": 890,
-    "y": 500,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "4615e8254785a960",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "d85ada7775411566",
-    "name": "\"On completion, dismiss the terminal and confirm success to proceed\"",
-    "x": 750,
-    "y": 260,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "3f98318ddd724379",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "d85ada7775411566",
-    "name": "\"On completion, dismiss the terminal and confirm success to proceed\"",
-    "x": 950,
-    "y": 440,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "e124300c5e637a7e",
-    "type": "function",
-    "z": "d85ada7775411566",
-    "name": "Deduce vars",
-    "func": "const branchName = `george/void-commit-${Math.floor(Math.random() * 10000)}`;\n\nmsg.state.gitCreateBranchCommand = `git checkout ${msg.state.branch}; git pull; git checkout -b ${branchName}; git commit --allow-empty -m \"Empty commit\"`;\nmsg.state.pushCommand = `git push --set-upstream origin ${branchName}`\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 290,
+    "x": 180,
     "y": 320,
     "wires": [
       [
-        "8b211093e0934088",
-        "4615e8254785a960"
+        "dba906dd0d1cb220"
       ]
     ]
   },
   {
-    "id": "9b3eff2b992dc2e2",
-    "type": "link in",
-    "z": "d85ada7775411566",
-    "name": "Git | Create Void Commit",
-    "links": [
-      "23166e3568257769",
-      "71c8f62c2b9d3ae5"
-    ],
-    "x": 185,
-    "y": 80,
-    "wires": [
-      [
-        "b23697b4db6c687a"
-      ]
-    ]
-  },
-  {
-    "id": "f7dc1b538c57ec41",
-    "type": "subflow:4178eda1bbbd7002",
-    "z": "d85ada7775411566",
-    "name": "git push",
-    "env": [
-      {
-        "name": "command",
-        "value": "msg.state.pushCommand",
-        "type": "str"
-      },
-      {
-        "name": "workingDir",
-        "value": "msg.state.workingDirectory",
-        "type": "str"
-      },
-      {
-        "name": "detachSpawnedProcess",
-        "value": "false",
-        "type": "str"
-      }
-    ],
-    "x": 580,
-    "y": 500,
-    "wires": [
-      [
-        "32679fe17ea76ec9",
-        "2ad8d0d3036a2da2"
-      ]
-    ]
-  },
-  {
-    "id": "bea0cdd6ee39b4d6",
-    "type": "subflow:5859b3292f239f6a",
-    "z": "d85ada7775411566",
-    "name": "msg.state?.branch",
-    "x": 410,
-    "y": 120,
-    "wires": [
-      [
-        "2db850d5a6fbf7fb"
-      ]
-    ]
-  },
-  {
-    "id": "b23697b4db6c687a",
-    "type": "subflow:5859b3292f239f6a",
-    "z": "d85ada7775411566",
-    "name": "msg.state?.workingDirectory",
-    "x": 440,
-    "y": 60,
-    "wires": [
-      [
-        "bea0cdd6ee39b4d6"
-      ]
-    ]
-  },
-  {
-    "id": "2db850d5a6fbf7fb",
-    "type": "subflow:5859b3292f239f6a",
-    "z": "d85ada7775411566",
-    "name": "msg.state.prUrl",
-    "x": 360,
-    "y": 200,
-    "wires": [
-      [
-        "e124300c5e637a7e"
-      ]
-    ]
-  },
-  {
-    "id": "32679fe17ea76ec9",
-    "type": "subflow:b23fac97ba53404f",
-    "z": "d85ada7775411566",
-    "name": "Pull Requests",
-    "env": [
-      {
-        "name": "url",
-        "value": "msg.state.prUrl",
-        "type": "str"
-      }
-    ],
-    "x": 640,
-    "y": 560,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "419dfe3c49c1b000",
-    "type": "function",
-    "z": "d85ada7775411566",
-    "name": "set test values",
-    "func": "msg.state = {\n    workingDirectory: \"D:/Projects/Sahel/\",\n    branch: \"development\",\n    prUrl: `https://dev.azure.com/SoftecMEA/Sahel/_git/Sahel/pullrequests?_a=mine`\n}\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 340,
-    "y": 420,
-    "wires": [
-      [
-        "e124300c5e637a7e"
-      ]
-    ]
-  },
-  {
-    "id": "8d37d2ef276ea766",
-    "type": "inject",
-    "z": "d85ada7775411566",
-    "name": "yyyyyyyyyyyyyyyyyyyyyyyyyyy",
-    "props": [
-      {
-        "p": "payload"
-      },
-      {
-        "p": "topic",
-        "vt": "str"
-      }
-    ],
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "x": 840,
-    "y": 140,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "1d6c19907f4dc958",
-    "type": "subflow:a470c7bab53a7c30",
-    "z": "d85ada7775411566",
-    "x": 140,
-    "y": 160,
-    "wires": []
-  },
-  {
-    "id": "1ec44a9fff245c82",
-    "type": "subflow:d147f856086021e2",
-    "z": "fa34e35f8c929634",
-    "g": "ad891c5416f7c111",
-    "name": "",
-    "env": [
-      {
-        "name": "processName",
-        "value": "\"rider64\"",
-        "type": "str"
-      },
-      {
-        "name": "args",
-        "value": "\"D:/Projects/__Sahel-Config__\"",
-        "type": "str"
-      },
-      {
-        "name": "workingDirectory",
-        "value": "\"D:/Projects/__Sahel-Config__\"",
-        "type": "str"
-      }
-    ],
-    "x": 1060,
-    "y": 140,
-    "wires": [
-      [],
-      [
-        "b37537899eda8b48"
-      ]
-    ]
-  },
-  {
-    "id": "81f4fce292436d9e",
-    "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
-    "name": "",
-    "x": 400,
-    "y": 160,
-    "wires": [
-      [
-        "29f7e4ee7bbd628d"
-      ]
-    ]
-  },
-  {
-    "id": "ea14c4cab91c133d",
-    "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
-    "g": "a1d14da7267dcab0",
-    "name": "",
-    "x": 680,
-    "y": 1400,
-    "wires": [
-      [
-        "7f2014f0a8830620"
-      ]
-    ]
-  },
-  {
-    "id": "7f2014f0a8830620",
-    "type": "link call",
-    "z": "fa34e35f8c929634",
-    "g": "7194efe68c05b6eb",
-    "name": "",
-    "links": [
-      "f107a0b7f748a361"
-    ],
-    "linkType": "static",
-    "timeout": "30",
-    "x": 1000,
-    "y": 1460,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "1c63ad6e005cb137",
-    "type": "inject",
-    "z": "fa34e35f8c929634",
-    "name": "",
-    "props": [
-      {
-        "p": "payload"
-      },
-      {
-        "p": "topic",
-        "vt": "str"
-      }
-    ],
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "x": 270,
-    "y": 60,
-    "wires": [
-      [
-        "81f4fce292436d9e"
-      ]
-    ]
-  },
-  {
-    "id": "8f16a3d746ea8f11",
-    "type": "subflow:b23fac97ba53404f",
-    "z": "fa34e35f8c929634",
-    "name": "",
-    "env": [
-      {
-        "name": "url",
-        "value": "\"https://portal.azure.com/?feature.tokencaching=true&feature.internalgraphapiversion=true#@SoftecMEA.onmicrosoft.com/resource/subscriptions/1f01a312-a6f5-4161-993d-4ef40f8ca052/resourceGroups/RG_Saaed_DevOpsTest_Sahel_UAENorth/providers/Microsoft.KeyVault/vaults/sahel/secrets\"",
-        "type": "str"
-      }
-    ],
-    "x": 770,
-    "y": 820,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "3e4665772e95b2c1",
+    "id": "edfe7f88a789a2d4",
     "type": "subflow:748f24547b9582d7",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "",
     "env": [
       {
@@ -13978,47 +13414,27 @@
         "type": "str"
       }
     ],
-    "x": 1330,
-    "y": 460,
+    "x": 1350,
+    "y": 620,
     "wires": [
       [
-        "67c0123368ad091b"
+        "4d9d3f397b8072d1"
       ]
     ]
   },
   {
-    "id": "b37537899eda8b48",
-    "type": "subflow:7013a4a55722365e",
-    "z": "fa34e35f8c929634",
-    "name": "",
-    "x": 1270,
-    "y": 140,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "e22c0b869fb9a9d7",
+    "id": "43921b0c8f76b190",
     "type": "subflow:f0e3d3f2b8d18521",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "",
-    "x": 660,
-    "y": 880,
+    "x": 1290,
+    "y": 800,
     "wires": []
   },
   {
-    "id": "456f61efbf75fa03",
-    "type": "subflow:f0e3d3f2b8d18521",
-    "z": "fa34e35f8c929634",
-    "name": "",
-    "x": 1270,
-    "y": 640,
-    "wires": []
-  },
-  {
-    "id": "8df8493f6e5d3082",
+    "id": "f7ecb1d7e653a4c8",
     "type": "inject",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "",
     "props": [
       {
@@ -14036,320 +13452,191 @@
     "topic": "",
     "payload": "",
     "payloadType": "date",
-    "x": 670,
-    "y": 440,
+    "x": 690,
+    "y": 600,
     "wires": [
       [
-        "c4b4ee518c711d18"
+        "b53effbe34760759"
       ]
     ]
   },
   {
-    "id": "3e78be09fea81557",
+    "id": "7d1ffe861a6342fa",
     "type": "subflow:f0e3d3f2b8d18521",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "",
-    "x": 1270,
-    "y": 560,
+    "x": 1290,
+    "y": 720,
     "wires": []
   },
   {
-    "id": "9d1e5d93cbeed910",
+    "id": "a2db62090951aec8",
     "type": "subflow:552764fe6e0b1a84",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "\"Caution: It's the first time to examin POC branch\"",
-    "x": 1810,
-    "y": 480,
+    "x": 1830,
+    "y": 640,
     "wires": [
       []
     ]
   },
   {
-    "id": "aa4b3e6e71a29462",
+    "id": "f39021acbc682483",
     "type": "subflow:552764fe6e0b1a84",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "\"Caution: It's the first time to examin staging branch\"",
-    "x": 1800,
-    "y": 340,
+    "x": 1820,
+    "y": 500,
     "wires": [
       []
     ]
   },
   {
-    "id": "e87b24862878ff7f",
+    "id": "0cae6029dd883a62",
     "type": "subflow:552764fe6e0b1a84",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "\"Caution: It's the first time to examin tesing branch\"",
-    "x": 1790,
-    "y": 240,
+    "x": 1810,
+    "y": 400,
     "wires": [
       []
     ]
   },
   {
-    "id": "2d391a812b70b516",
+    "id": "4d9d3f397b8072d1",
     "type": "subflow:552764fe6e0b1a84",
-    "z": "fa34e35f8c929634",
-    "g": "ad891c5416f7c111",
-    "name": "\"Opening configuration project.\"",
-    "x": 1110,
-    "y": 100,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "67c0123368ad091b",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "\"See the info report on the conversation thread\"",
-    "x": 1580,
-    "y": 620,
+    "x": 1600,
+    "y": 780,
     "wires": [
       []
     ]
   },
   {
-    "id": "42fb2595f90aba1b",
-    "type": "link out",
-    "z": "fa34e35f8c929634",
-    "g": "3d67e732741a7389",
-    "name": "<<",
-    "mode": "link",
-    "links": [
-      "7ecc575c5114f21d"
-    ],
-    "x": 115,
-    "y": 460,
-    "wires": []
-  },
-  {
-    "id": "29f7e4ee7bbd628d",
+    "id": "f56181158d25a4b5",
     "type": "mcq",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Action?",
     "outputCount": 6,
     "outputs": 6,
-    "x": 560,
-    "y": 160,
+    "x": 540,
+    "y": 440,
     "wires": [
+      [],
       [
-        "eb9f8199fbebb745"
+        "d9d1a171bdef7939"
       ],
+      [],
+      [],
       [
-        "17a3137e1a9e9440"
-      ],
-      [
-        "316aac07d857ad87"
-      ],
-      [
-        "669cc7532e42475d"
-      ],
-      [
-        "42fb2595f90aba1b"
+        "460c1e446f07734d"
       ],
       []
     ]
   },
   {
-    "id": "669cc7532e42475d",
+    "id": "ad7d5e985fac092c",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
-    "name": "Branch comparisons",
-    "x": 420,
-    "y": 880,
+    "z": "2a4ca6049d860ca7",
+    "name": "Development",
+    "x": 1130,
+    "y": 380,
     "wires": [
       [
-        "e22c0b869fb9a9d7"
+        "8cd2e308cf39092e"
       ]
     ]
   },
   {
-    "id": "9c8c4dfec976931a",
-    "type": "link out",
-    "z": "fa34e35f8c929634",
-    "g": "55b4b20df3ea490c",
-    "name": "Development",
-    "mode": "link",
-    "links": [
-      "9cd2ec261a69c137"
-    ],
-    "x": 1515,
-    "y": 220,
-    "wires": []
-  },
-  {
-    "id": "5da3ee3b958e2c3c",
+    "id": "9637bb905ae94b80",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
-    "name": "Development",
-    "x": 1110,
-    "y": 220,
-    "wires": [
-      [
-        "b24db4c1c72c802a"
-      ]
-    ]
-  },
-  {
-    "id": "c2984f6d149cd3e5",
-    "type": "link out",
-    "z": "fa34e35f8c929634",
-    "g": "a5fddca31ed887d5",
-    "name": "link out 1",
-    "mode": "link",
-    "links": [
-      "9cd2ec261a69c137"
-    ],
-    "x": 1515,
-    "y": 420,
-    "wires": []
-  },
-  {
-    "id": "4b0bd9a938ae866b",
-    "type": "link out",
-    "z": "fa34e35f8c929634",
-    "g": "0828b4f80ef4b97f",
-    "name": "link out 2",
-    "mode": "link",
-    "links": [
-      "9cd2ec261a69c137"
-    ],
-    "x": 1515,
-    "y": 520,
-    "wires": []
-  },
-  {
-    "id": "542e861e963f5064",
-    "type": "link out",
-    "z": "fa34e35f8c929634",
-    "g": "7194efe68c05b6eb",
-    "name": "link out 28",
-    "mode": "link",
-    "links": [
-      "f107a0b7f748a361"
-    ],
-    "x": 885,
-    "y": 1380,
-    "wires": []
-  },
-  {
-    "id": "997241fc6830870c",
-    "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "live",
-    "x": 1090,
-    "y": 520,
+    "x": 1110,
+    "y": 680,
     "wires": [
       [
-        "3e4665772e95b2c1",
-        "456f61efbf75fa03"
+        "edfe7f88a789a2d4",
+        "43921b0c8f76b190"
       ]
     ]
   },
   {
-    "id": "316aac07d857ad87",
+    "id": "755071595f9ab8eb",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
-    "name": "Open Azure Vault #secrets",
-    "x": 460,
-    "y": 820,
-    "wires": [
-      [
-        "8f16a3d746ea8f11"
-      ]
-    ]
-  },
-  {
-    "id": "eb9f8199fbebb745",
-    "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
-    "name": "Open configuration project",
-    "x": 770,
-    "y": 120,
-    "wires": [
-      [
-        "68a4efa331111cc5"
-      ]
-    ]
-  },
-  {
-    "id": "52faa1b363e9e675",
-    "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "POC",
-    "x": 1090,
-    "y": 400,
+    "x": 1110,
+    "y": 560,
     "wires": [
       [
-        "39f6c835f71aa8f6"
+        "95cf98641fe09ed6"
       ]
     ]
   },
   {
-    "id": "17a3137e1a9e9440",
+    "id": "d9d1a171bdef7939",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Read / Write Action",
-    "x": 770,
-    "y": 180,
+    "x": 790,
+    "y": 340,
     "wires": [
       [
-        "c4b4ee518c711d18"
+        "b53effbe34760759"
       ]
     ]
   },
   {
-    "id": "e1c6de5489422ed3",
+    "id": "89d23aee3d892a89",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "saaed-stg",
-    "x": 1100,
-    "y": 460,
+    "x": 1120,
+    "y": 620,
     "wires": [
       [
-        "3e4665772e95b2c1",
-        "3e78be09fea81557"
+        "edfe7f88a789a2d4",
+        "7d1ffe861a6342fa"
       ]
     ]
   },
   {
-    "id": "591ac78ef4c0a1e5",
+    "id": "b585ef3bd1592c03",
     "type": "link in",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Sahel >> Manage Configuration",
-    "links": [
-      "f463a891cb7d283b"
-    ],
-    "x": 255,
-    "y": 160,
+    "links": [],
+    "x": 235,
+    "y": 380,
     "wires": [
       [
-        "81f4fce292436d9e"
+        "dba906dd0d1cb220"
       ]
     ]
   },
   {
-    "id": "7d9394205c50f630",
+    "id": "b5daa1a0f7b00201",
     "type": "http in",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Sahel | Manage Configuration...",
     "url": "/k4h6u0b",
     "method": "get",
     "upload": false,
     "swaggerDoc": "",
-    "x": 250,
-    "y": 220,
+    "x": 230,
+    "y": 460,
     "wires": [
       [
-        "81f4fce292436d9e"
+        "dba906dd0d1cb220"
       ]
     ]
   },
   {
-    "id": "b24db4c1c72c802a",
+    "id": "8cd2e308cf39092e",
     "type": "function",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Set context variables",
     "func": "msg.state = {\n    ... msg.state,\n    vaultCacheFolder: \"D:/Projects/__Sahel-Config__/ConfigFiles/Sahel\",\n    cacheConfigFileName: \"development.json\",\n    vaultName: \"sahel\",\n    key: \"config-dev-json\"\n}\nreturn msg;",
     "outputs": 1,
@@ -14358,18 +13645,18 @@
     "initialize": "",
     "finalize": "",
     "libs": [],
-    "x": 1320,
-    "y": 220,
+    "x": 1340,
+    "y": 380,
     "wires": [
       [
-        "9c8c4dfec976931a"
+        "42a5ce0f1a80683b"
       ]
     ]
   },
   {
-    "id": "07851f8fc3937d09",
+    "id": "ce989009e0aacceb",
     "type": "function",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Set context variables",
     "func": "msg.state = {\n    ... msg.state,\n    vaultCacheFolder: \"D:/Projects/__Sahel-Config__/ConfigFiles/Sahel\",\n    cacheConfigFileName: \"testing.json\",\n    vaultName: \"sahel\",\n    key: \"config-testing-json\"\n}\nreturn msg;",
     "outputs": 1,
@@ -14378,19 +13665,19 @@
     "initialize": "",
     "finalize": "",
     "libs": [],
-    "x": 1300,
-    "y": 280,
+    "x": 1320,
+    "y": 440,
     "wires": [
       [
-        "ab100807acce3a34",
-        "e87b24862878ff7f"
+        "961ad6769aac96de",
+        "0cae6029dd883a62"
       ]
     ]
   },
   {
-    "id": "90cd7df1804ecc6c",
+    "id": "9f157743d4f681d9",
     "type": "function",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Set context variables",
     "func": "msg.state = {\n    ... msg.state,\n    vaultCacheFolder: \"D:/Projects/__Sahel-Config__/ConfigFiles/Sahel\",\n    cacheConfigFileName: \"staging.json\",\n    vaultName: \"sahel\",\n    key: \"config-staging-json\"\n}\nreturn msg;",
     "outputs": 1,
@@ -14399,19 +13686,19 @@
     "initialize": "",
     "finalize": "",
     "libs": [],
-    "x": 1300,
-    "y": 340,
+    "x": 1320,
+    "y": 500,
     "wires": [
       [
-        "c2984f6d149cd3e5",
-        "aa4b3e6e71a29462"
+        "0215fe7e286d697b",
+        "f39021acbc682483"
       ]
     ]
   },
   {
-    "id": "39f6c835f71aa8f6",
+    "id": "95cf98641fe09ed6",
     "type": "function",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Set context variables",
     "func": "msg.state = {\n    ... msg.state,\n    vaultCacheFolder: \"D:/Projects/__Sahel-Config__/ConfigFiles/Sahel\",\n    cacheConfigFileName: \"poc.json\",\n    vaultName: \"sahel\",\n    key: \"config-poc-json\"\n}\nreturn msg;",
     "outputs": 1,
@@ -14420,494 +13707,380 @@
     "initialize": "",
     "finalize": "",
     "libs": [],
-    "x": 1280,
-    "y": 400,
+    "x": 1300,
+    "y": 560,
     "wires": [
       [
-        "4b0bd9a938ae866b",
-        "9d1e5d93cbeed910"
+        "62b9d67d006d67f0",
+        "a2db62090951aec8"
       ]
     ]
   },
   {
-    "id": "f295069e04823d54",
+    "id": "2db2575ca9eaa4bd",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Staging",
-    "x": 1100,
-    "y": 340,
+    "x": 1120,
+    "y": 500,
     "wires": [
       [
-        "90cd7df1804ecc6c"
+        "9f157743d4f681d9"
       ]
     ]
   },
   {
-    "id": "a4ba6c5fb4eac53e",
+    "id": "a1b7501ec2d52fd2",
     "type": "subflow:4e421b677e043229",
-    "z": "fa34e35f8c929634",
+    "z": "2a4ca6049d860ca7",
     "name": "Testing",
-    "x": 1100,
-    "y": 280,
-    "wires": [
-      [
-        "07851f8fc3937d09"
-      ]
-    ]
-  },
-  {
-    "id": "ab100807acce3a34",
-    "type": "link out",
-    "z": "fa34e35f8c929634",
-    "g": "166b105cdd83439c",
-    "name": "Testing",
-    "mode": "link",
-    "links": [
-      "9cd2ec261a69c137"
-    ],
-    "x": 1515,
-    "y": 320,
-    "wires": []
-  },
-  {
-    "id": "c4b4ee518c711d18",
-    "type": "mcq",
-    "z": "fa34e35f8c929634",
-    "name": "What branch?",
-    "outputCount": 6,
-    "outputs": 6,
-    "x": 860,
-    "y": 360,
-    "wires": [
-      [
-        "5da3ee3b958e2c3c"
-      ],
-      [
-        "a4ba6c5fb4eac53e"
-      ],
-      [
-        "f295069e04823d54"
-      ],
-      [
-        "52faa1b363e9e675"
-      ],
-      [
-        "e1c6de5489422ed3"
-      ],
-      [
-        "997241fc6830870c"
-      ]
-    ]
-  },
-  {
-    "id": "68ab54366251a899",
-    "type": "mcq",
-    "z": "3f55af5fab4dd56a",
-    "name": "",
-    "outputCount": 5,
-    "outputs": 5,
-    "x": 470,
+    "x": 1120,
     "y": 440,
     "wires": [
       [
-        "237cc5a8732429a8"
+        "ce989009e0aacceb"
+      ]
+    ]
+  },
+  {
+    "id": "b53effbe34760759",
+    "type": "mcq",
+    "z": "2a4ca6049d860ca7",
+    "name": "What branch?",
+    "outputCount": 6,
+    "outputs": 6,
+    "x": 880,
+    "y": 520,
+    "wires": [
+      [
+        "ad7d5e985fac092c"
       ],
       [
-        "612436e79bd128ca"
+        "a1b7501ec2d52fd2"
       ],
-      [],
-      [],
-      []
+      [
+        "2db2575ca9eaa4bd"
+      ],
+      [
+        "755071595f9ab8eb"
+      ],
+      [
+        "89d23aee3d892a89"
+      ],
+      [
+        "9637bb905ae94b80"
+      ]
     ]
   },
   {
-    "id": "fdf88c1ab50c7910",
-    "type": "subflow:230f8c320033e862",
-    "z": "3f55af5fab4dd56a",
-    "g": "60e85ef81c473b01",
+    "id": "11a5ae7c95ed42f2",
+    "type": "subflow:4e421b677e043229",
+    "z": "2a4ca6049d860ca7",
+    "g": "6ec3d33d5998f407",
     "name": "",
-    "env": [
-      {
-        "name": "vaultName",
-        "value": "msg.state.vaultName",
-        "type": "str"
-      },
-      {
-        "name": "vaultKey",
-        "value": "msg.state.key",
-        "type": "str"
-      },
-      {
-        "name": "writeToFilePath",
-        "value": "`${msg.state.vaultCacheFolder}/${msg.state.cacheConfigFileName}`",
-        "type": "str"
-      }
-    ],
-    "x": 1010,
-    "y": 420,
-    "wires": [
-      [
-        "b6a1ec9cb1bcd4de",
-        "484dfa672980a117"
-      ]
-    ]
-  },
-  {
-    "id": "cba2e1cca12bcafa",
-    "type": "inject",
-    "z": "3f55af5fab4dd56a",
-    "name": "",
-    "props": [
-      {
-        "p": "payload"
-      },
-      {
-        "p": "topic",
-        "vt": "str"
-      }
-    ],
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "x": 320,
-    "y": 140,
-    "wires": [
-      [
-        "70c39668b7a333dd"
-      ]
-    ]
-  },
-  {
-    "id": "e8fdf658e875af79",
-    "type": "delay",
-    "z": "3f55af5fab4dd56a",
-    "g": "60e85ef81c473b01",
-    "name": "",
-    "pauseType": "delay",
-    "timeout": "1",
-    "timeoutUnits": "seconds",
-    "rate": "1",
-    "nbRateUnits": "1",
-    "rateUnits": "second",
-    "randomFirst": "1",
-    "randomLast": "5",
-    "randomUnits": "seconds",
-    "drop": false,
-    "allowrate": false,
-    "outputs": 1,
-    "x": 970,
-    "y": 360,
-    "wires": [
-      [
-        "18dcb81fad229427"
-      ]
-    ]
-  },
-  {
-    "id": "b6a1ec9cb1bcd4de",
-    "type": "subflow:42c97f325b51f93a",
-    "z": "3f55af5fab4dd56a",
-    "g": "60e85ef81c473b01",
-    "name": "",
-    "env": [
-      {
-        "name": "fileOrDirPath",
-        "value": "`${msg.state.vaultCacheFolder}/${msg.state.cacheConfigFileName}`",
-        "type": "str"
-      }
-    ],
-    "x": 990,
-    "y": 480,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "717c71b2074ab7c4",
-    "type": "delay",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "",
-    "pauseType": "delay",
-    "timeout": "1",
-    "timeoutUnits": "seconds",
-    "rate": "1",
-    "nbRateUnits": "1",
-    "rateUnits": "second",
-    "randomFirst": "1",
-    "randomLast": "5",
-    "randomUnits": "seconds",
-    "drop": false,
-    "allowrate": false,
-    "outputs": 1,
-    "x": 900,
-    "y": 780,
-    "wires": [
-      [
-        "589721254f730803"
-      ]
-    ]
-  },
-  {
-    "id": "354c019d91b20c94",
-    "type": "subflow:280376d0b81ae548",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "",
-    "env": [
-      {
-        "name": "vaultName",
-        "value": "msg.state.vaultName",
-        "type": "str"
-      },
-      {
-        "name": "vaultKey",
-        "value": "msg.state.key",
-        "type": "str"
-      },
-      {
-        "name": "readFromFilePath",
-        "value": "`${msg.state.vaultCacheFolder}/${msg.state.cacheConfigFileName}`",
-        "type": "str"
-      }
-    ],
-    "x": 930,
-    "y": 820,
-    "wires": [
-      [
-        "d03f20d723af6c49"
-      ]
-    ]
-  },
-  {
-    "id": "8a904eb29a5e770b",
-    "type": "subflow:42c97f325b51f93a",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "",
-    "env": [
-      {
-        "name": "fileOrDirPath",
-        "value": "`${msg.state.vaultCacheFolder}/${msg.state.cacheConfigFileName}`",
-        "type": "str"
-      }
-    ],
-    "x": 1110,
-    "y": 680,
-    "wires": [
-      [
-        "327a3356efc1c994"
-      ]
-    ]
-  },
-  {
-    "id": "327a3356efc1c994",
-    "type": "subflow:7dd6aa47fd337fda",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "",
-    "x": 1300,
-    "y": 680,
-    "wires": [
-      [],
-      [
-        "586e57ea2236c641"
-      ]
-    ]
-  },
-  {
-    "id": "d70c8d4546b9bb81",
-    "type": "subflow:748f24547b9582d7",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "",
-    "env": [
-      {
-        "name": "infoMessage",
-        "value": "\"This will update the azure valut secret with the corresponding current one in the configuration project. You shoulld review your editing in the auto-opened file in VSCode\"",
-        "type": "str"
-      }
-    ],
-    "x": 850,
-    "y": 680,
-    "wires": [
-      [
-        "8a904eb29a5e770b",
-        "a1602114b7a54905"
-      ]
-    ]
-  },
-  {
-    "id": "d03f20d723af6c49",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "\"Done\"",
-    "x": 1150,
-    "y": 820,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "484dfa672980a117",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "3f55af5fab4dd56a",
-    "g": "60e85ef81c473b01",
-    "name": "\"Expect the configuration in a VSCode window\"",
-    "x": 1400,
-    "y": 420,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "a1602114b7a54905",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "\"Opening the file for review. Expect a VSCode window.\"",
-    "x": 1130,
-    "y": 580,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "18dcb81fad229427",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "3f55af5fab4dd56a",
-    "g": "60e85ef81c473b01",
-    "name": "\"Please dismiss terminal on completion\"",
-    "x": 1230,
-    "y": 360,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "589721254f730803",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "\"Please dismiss terminal on completion\"",
-    "x": 1260,
-    "y": 780,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "5ecf3b9b90dc20a0",
-    "type": "subflow:5859b3292f239f6a",
-    "z": "3f55af5fab4dd56a",
-    "name": "msg.state?.cacheConfigFileName",
-    "x": 740,
-    "y": 260,
-    "wires": [
-      [
-        "68ab54366251a899"
-      ]
-    ]
-  },
-  {
-    "id": "64cc963d0b87431c",
-    "type": "subflow:5859b3292f239f6a",
-    "z": "3f55af5fab4dd56a",
-    "name": "msg.state?.key",
-    "x": 680,
-    "y": 200,
-    "wires": [
-      [
-        "5ecf3b9b90dc20a0"
-      ]
-    ]
-  },
-  {
-    "id": "e5e8b40df8fd9fdc",
-    "type": "subflow:5859b3292f239f6a",
-    "z": "3f55af5fab4dd56a",
-    "name": "msg.state?.vaultCacheFolder",
     "x": 700,
-    "y": 140,
+    "y": 1560,
     "wires": [
       [
-        "64cc963d0b87431c"
+        "840dfa87ef783e11"
       ]
     ]
   },
   {
-    "id": "237cc5a8732429a8",
-    "type": "subflow:4e421b677e043229",
-    "z": "3f55af5fab4dd56a",
-    "g": "60e85ef81c473b01",
-    "name": "Read vault value",
-    "x": 730,
-    "y": 400,
-    "wires": [
-      [
-        "fdf88c1ab50c7910",
-        "e8fdf658e875af79"
-      ]
-    ]
-  },
-  {
-    "id": "9cd2ec261a69c137",
-    "type": "link in",
-    "z": "3f55af5fab4dd56a",
-    "name": "Sahel | Generic Project Configuration | Azure vault",
+    "id": "840dfa87ef783e11",
+    "type": "link call",
+    "z": "2a4ca6049d860ca7",
+    "g": "a9fe2e7b81749311",
+    "name": "",
     "links": [
-      "4b0bd9a938ae866b",
-      "9c8c4dfec976931a",
-      "ab100807acce3a34",
-      "c2984f6d149cd3e5",
-      "0ee3e3268a6784a4",
-      "69812b1d6a003049"
+      "f107a0b7f748a361"
     ],
-    "x": 465,
-    "y": 220,
+    "linkType": "static",
+    "timeout": "30",
+    "x": 1020,
+    "y": 1620,
     "wires": [
-      [
-        "5d6066565c73c79a"
-      ]
+      []
     ]
   },
   {
-    "id": "70c39668b7a333dd",
-    "type": "function",
-    "z": "3f55af5fab4dd56a",
-    "name": "Set dev context variables for test",
-    "func": "msg.state = {\n    ... msg.state,\n    vaultCacheFolder: \"D:/Projects/__Sahel-Config__/ConfigFiles/Sahel\",\n    cacheConfigFileName: \"development.json\",\n    vaultName: \"sahel\",\n    key: \"config-dev-json\"\n}\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 610,
-    "y": 60,
-    "wires": [
-      [
-        "5d6066565c73c79a"
-      ]
-    ]
+    "id": "6dc2128446921df0",
+    "type": "link out",
+    "z": "2a4ca6049d860ca7",
+    "g": "a9fe2e7b81749311",
+    "name": "link out 5",
+    "mode": "link",
+    "links": [],
+    "x": 905,
+    "y": 1540,
+    "wires": []
   },
   {
-    "id": "612436e79bd128ca",
-    "type": "subflow:4e421b677e043229",
-    "z": "3f55af5fab4dd56a",
-    "g": "4924c4682b89db3f",
-    "name": "Update the vault value",
-    "x": 600,
+    "id": "42a5ce0f1a80683b",
+    "type": "link out",
+    "z": "2a4ca6049d860ca7",
+    "g": "cee05c92d44fb7b2",
+    "name": "Development",
+    "mode": "link",
+    "links": [],
+    "x": 1535,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "62b9d67d006d67f0",
+    "type": "link out",
+    "z": "2a4ca6049d860ca7",
+    "g": "8370552ddfb65d2e",
+    "name": "link out 6",
+    "mode": "link",
+    "links": [],
+    "x": 1535,
     "y": 680,
+    "wires": []
+  },
+  {
+    "id": "0215fe7e286d697b",
+    "type": "link out",
+    "z": "2a4ca6049d860ca7",
+    "g": "7bc0ea8dd003e017",
+    "name": "link out 7",
+    "mode": "link",
+    "links": [],
+    "x": 1535,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "961ad6769aac96de",
+    "type": "link out",
+    "z": "2a4ca6049d860ca7",
+    "g": "9aaa1d9b1053afb1",
+    "name": "Testing",
+    "mode": "link",
+    "links": [],
+    "x": 1535,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "460c1e446f07734d",
+    "type": "link out",
+    "z": "2a4ca6049d860ca7",
+    "g": "92a669c06a3084c6",
+    "name": "<<",
+    "mode": "link",
+    "links": [],
+    "x": 135,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "48ba06440e54e4ca",
+    "type": "csharp-mcq",
+    "z": "2a4ca6049d860ca7",
+    "name": "",
+    "outputCount": 7,
+    "outputs": 7,
+    "x": 210,
+    "y": 80,
     "wires": [
       [
-        "d70c8d4546b9bb81"
+        "d8dd3d0a3de9332d"
+      ],
+      [
+        "6d8809da01dd897c"
+      ],
+      [
+        "df5a3b1750b229d1"
+      ],
+      [
+        "c1d53bde58b5cd23"
+      ],
+      [
+        "476afb601e1a0d87"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "d8dd3d0a3de9332d",
+    "type": "csharp-bookmark",
+    "z": "2a4ca6049d860ca7",
+    "name": "Open configuration project",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 440,
+    "y": 40,
+    "wires": [
+      [
+        "5540034011d41342"
       ]
+    ]
+  },
+  {
+    "id": "6d8809da01dd897c",
+    "type": "csharp-bookmark",
+    "z": "2a4ca6049d860ca7",
+    "name": "Read / Write Action",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 410,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "df5a3b1750b229d1",
+    "type": "csharp-bookmark",
+    "z": "2a4ca6049d860ca7",
+    "name": "Open Azure Vault #secrets",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 440,
+    "y": 120,
+    "wires": [
+      [
+        "57208f5fc3e2978b"
+      ]
+    ]
+  },
+  {
+    "id": "c1d53bde58b5cd23",
+    "type": "csharp-bookmark",
+    "z": "2a4ca6049d860ca7",
+    "name": "Branch comparisons",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 420,
+    "y": 160,
+    "wires": [
+      [
+        "cd0e80c5f3012d4f"
+      ]
+    ]
+  },
+  {
+    "id": "5540034011d41342",
+    "type": "csharp-speak",
+    "z": "2a4ca6049d860ca7",
+    "name": "Opening configuration project",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 720,
+    "y": 40,
+    "wires": [
+      [
+        "90fd02093777cbd7"
+      ]
+    ]
+  },
+  {
+    "id": "90fd02093777cbd7",
+    "type": "subflow:ab6c892af4f1cd99",
+    "z": "2a4ca6049d860ca7",
+    "name": "Open in Rider",
+    "x": 950,
+    "y": 40,
+    "wires": [
+      [],
+      [
+        "84a5e80447c903df"
+      ]
+    ]
+  },
+  {
+    "id": "84a5e80447c903df",
+    "type": "csharp-report-error",
+    "z": "2a4ca6049d860ca7",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 1130,
+    "y": 100,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "57208f5fc3e2978b",
+    "type": "subflow:b366a645d63b3d5e",
+    "z": "2a4ca6049d860ca7",
+    "name": "Open Azure Vault in browser",
+    "x": 720,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "cd0e80c5f3012d4f",
+    "type": "csharp-speak",
+    "z": "2a4ca6049d860ca7",
+    "name": "Not implemented yet",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 700,
+    "y": 180,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "476afb601e1a0d87",
+    "type": "csharp-bookmark",
+    "z": "2a4ca6049d860ca7",
+    "name": "<<",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 350,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0505a493d72aef6c",
+    "type": "csharp-worker-concurrent",
+    "z": "ab6c892af4f1cd99",
+    "name": "",
+    "outputCount": 2,
+    "outputs": 2,
+    "x": 300,
+    "y": 80,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "09d80c2fbcb16468",
+    "type": "csharp-worker-concurrent",
+    "z": "c4601fbac7a0289f",
+    "name": "",
+    "outputCount": 2,
+    "outputs": 2,
+    "x": 400,
+    "y": 100,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "7838e8436ad26c8d",
+    "type": "csharp-worker-concurrent",
+    "z": "f37840b0923e975e",
+    "name": "",
+    "outputCount": 2,
+    "outputs": 2,
+    "x": 230,
+    "y": 80,
+    "wires": [
+      [],
+      []
     ]
   },
   {
@@ -14925,85 +14098,7 @@
     "y": 180,
     "wires": [
       [
-        "7d6cd05b5191f9cf"
-      ]
-    ]
-  },
-  {
-    "id": "d4725a3cb64aba04",
-    "type": "subflow:b182be5bcebc47cd",
-    "z": "66dc4606b2245ab2",
-    "g": "5675eb1ef245a3b2",
-    "name": "",
-    "env": [
-      {
-        "name": "url",
-        "value": "\"https://www.notion.so/Node-RED-Flow-Sub-flow-Comparison-2196ea6ef60880009a63d6e5a7f85e49?source=copy_link#2196ea6ef6088037ad2cf8644de3795e\"",
-        "type": "str"
-      }
-    ],
-    "x": 1070,
-    "y": 640,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "7d6cd05b5191f9cf",
-    "type": "subflow:4e421b677e043229",
-    "z": "66dc4606b2245ab2",
-    "name": "",
-    "x": 320,
-    "y": 340,
-    "wires": [
-      [
         "09fdfe64cd506077"
-      ]
-    ]
-  },
-  {
-    "id": "c43686785b6d461b",
-    "type": "subflow:4178eda1bbbd7002",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "",
-    "env": [
-      {
-        "name": "command",
-        "value": "msg.state.command",
-        "type": "str"
-      },
-      {
-        "name": "workingDir",
-        "value": "\"C:/\"",
-        "type": "str"
-      },
-      {
-        "name": "detachSpawnedProcess",
-        "value": "false",
-        "type": "str"
-      }
-    ],
-    "x": 1530,
-    "y": 820,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "1d5fadf241c29d25",
-    "type": "subflow:7dd6aa47fd337fda",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "",
-    "x": 1090,
-    "y": 800,
-    "wires": [
-      [
-        "703b8531de745d1f"
-      ],
-      [
-        "06e880163c677239"
       ]
     ]
   },
@@ -15035,33 +14130,6 @@
     "wires": [
       [
         "32f901e6698ef452"
-      ]
-    ]
-  },
-  {
-    "id": "703b8531de745d1f",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "\"Declined\"",
-    "x": 1270,
-    "y": 760,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "06e880163c677239",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "\"Restarting node-RED\"",
-    "env": [],
-    "x": 1300,
-    "y": 820,
-    "wires": [
-      [
-        "c43686785b6d461b"
       ]
     ]
   },
@@ -15105,7 +14173,7 @@
     "y": 120,
     "wires": [
       [
-        "7d6cd05b5191f9cf"
+        "09fdfe64cd506077"
       ]
     ]
   },
@@ -15131,18 +14199,10 @@
       [
         "e5265f831ba01ebd"
       ],
-      [
-        "f0d22e5180c2e593"
-      ],
-      [
-        "8e4dc77fd8a3d744"
-      ],
-      [
-        "1e34fbfe5e13c6d0"
-      ],
-      [
-        "014fb8a2f3e68ba9"
-      ],
+      [],
+      [],
+      [],
+      [],
       [
         "5735f97f6eaade5a"
       ],
@@ -15178,26 +14238,10 @@
     "g": "733198032e9be89e",
     "name": "Commit changes to node-RED repo",
     "mode": "link",
-    "links": [
-      "9ba512984d21fac9"
-    ],
+    "links": [],
     "x": 715,
     "y": 60,
     "wires": []
-  },
-  {
-    "id": "8e4dc77fd8a3d744",
-    "type": "subflow:4e421b677e043229",
-    "z": "66dc4606b2245ab2",
-    "g": "5675eb1ef245a3b2",
-    "name": "Compare Flow to Sub-Flow",
-    "x": 800,
-    "y": 640,
-    "wires": [
-      [
-        "d4725a3cb64aba04"
-      ]
-    ]
   },
   {
     "id": "5735f97f6eaade5a",
@@ -15250,25 +14294,7 @@
     "y": 220,
     "wires": [
       [
-        "7d6cd05b5191f9cf"
-      ]
-    ]
-  },
-  {
-    "id": "b9215edffd39115d",
-    "type": "http in",
-    "z": "66dc4606b2245ab2",
-    "g": "5675eb1ef245a3b2",
-    "name": "node-RED | Compare Flow to Sub-flow #when #use",
-    "url": "/c3a0b1u",
-    "method": "get",
-    "upload": false,
-    "swaggerDoc": "",
-    "x": 870,
-    "y": 580,
-    "wires": [
-      [
-        "8e4dc77fd8a3d744"
+        "09fdfe64cd506077"
       ]
     ]
   },
@@ -15311,76 +14337,6 @@
     ]
   },
   {
-    "id": "3e62e59c7488d222",
-    "type": "http in",
-    "z": "66dc4606b2245ab2",
-    "g": "ee0989e3649994c0",
-    "name": "node-RED | Open .node-red repo folder in Explorer #.nodered ",
-    "url": "/s2i2r1l",
-    "method": "get",
-    "upload": false,
-    "skipBodyParsing": false,
-    "swaggerDoc": "",
-    "x": 860,
-    "y": 920,
-    "wires": [
-      [
-        "014fb8a2f3e68ba9"
-      ]
-    ]
-  },
-  {
-    "id": "d945b0b1bb641dfb",
-    "type": "http in",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "node-RED | Restart node-RED",
-    "url": "/k4d0x9k",
-    "method": "get",
-    "upload": false,
-    "swaggerDoc": "",
-    "x": 850,
-    "y": 740,
-    "wires": [
-      [
-        "1e34fbfe5e13c6d0"
-      ]
-    ]
-  },
-  {
-    "id": "f0d22e5180c2e593",
-    "type": "link out",
-    "z": "66dc4606b2245ab2",
-    "g": "938fe75e09c14ff9",
-    "name": "Open flows.json",
-    "mode": "link",
-    "links": [
-      "d337b2891d1ecdb9"
-    ],
-    "x": 715,
-    "y": 480,
-    "wires": []
-  },
-  {
-    "id": "014fb8a2f3e68ba9",
-    "type": "subflow:e818dee4aca0ad54",
-    "z": "66dc4606b2245ab2",
-    "g": "ee0989e3649994c0",
-    "name": "Open repo in Explorer ....",
-    "env": [
-      {
-        "name": "dirPath",
-        "value": "\"C:\\\\Users\\\\george.saeed\\\\.node-red\"",
-        "type": "str"
-      }
-    ],
-    "x": 1070,
-    "y": 980,
-    "wires": [
-      []
-    ]
-  },
-  {
     "id": "e5265f831ba01ebd",
     "type": "link out",
     "z": "66dc4606b2245ab2",
@@ -15419,41 +14375,6 @@
     "wires": [
       [
         "863baa64dcc322dc"
-      ]
-    ]
-  },
-  {
-    "id": "1e34fbfe5e13c6d0",
-    "type": "subflow:4e421b677e043229",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "Restart node-RED",
-    "x": 730,
-    "y": 800,
-    "wires": [
-      [
-        "48286ea2d25319f7"
-      ]
-    ]
-  },
-  {
-    "id": "48286ea2d25319f7",
-    "type": "function",
-    "z": "66dc4606b2245ab2",
-    "g": "9ada3be8aad7cf16",
-    "name": "set state",
-    "func": "msg.state = {\n  command: `Get-CimInstance Win32_Process -Filter \"name = 'node.exe'\" | Where-Object { $_.CommandLine -like '*node-red*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }; & \"C:/nvm4w/nodejs/node-red.ps1\"`\n}\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 920,
-    "y": 800,
-    "wires": [
-      [
-        "1d5fadf241c29d25"
       ]
     ]
   },
@@ -16311,9 +15232,7 @@
     "type": "link in",
     "z": "094bd06b2f6a954a",
     "name": "Opening node-RED flows.json",
-    "links": [
-      "f0d22e5180c2e593"
-    ],
+    "links": [],
     "x": 295,
     "y": 160,
     "wires": [
@@ -17732,9 +16651,7 @@
     "g": "ec6afc590814bd4c",
     "name": "link out 4",
     "mode": "link",
-    "links": [
-      "9b3eff2b992dc2e2"
-    ],
+    "links": [],
     "x": 985,
     "y": 1140,
     "wires": []
@@ -18923,9 +17840,7 @@
     "g": "bcc5de1d48871a1f",
     "name": "Configuration",
     "mode": "link",
-    "links": [
-      "591ac78ef4c0a1e5"
-    ],
+    "links": [],
     "x": 825,
     "y": 120,
     "wires": []
@@ -18976,8 +17891,7 @@
     "z": "2a81a7a539926088",
     "name": "Sahel",
     "links": [
-      "4fa558a20c6022e9",
-      "42fb2595f90aba1b"
+      "4fa558a20c6022e9"
     ],
     "x": 315,
     "y": 220,
@@ -28268,9 +27182,7 @@
     "g": "b883134875325026",
     "name": "Development",
     "mode": "link",
-    "links": [
-      "9cd2ec261a69c137"
-    ],
+    "links": [],
     "x": 1545,
     "y": 260,
     "wires": []
@@ -28324,9 +27236,7 @@
     "g": "71cedd7ad17c705a",
     "name": "QC",
     "mode": "link",
-    "links": [
-      "9cd2ec261a69c137"
-    ],
+    "links": [],
     "x": 1545,
     "y": 360,
     "wires": []
@@ -29078,9 +27988,7 @@
     "type": "link in",
     "z": "f4908968ee51c535",
     "name": "Sahel | Compare / Update Sahel configuration",
-    "links": [
-      "542e861e963f5064"
-    ],
+    "links": [],
     "x": 255,
     "y": 200,
     "wires": [
@@ -29720,147 +28628,6 @@
     "wires": [
       [
         "630bbe72fee49dd6"
-      ]
-    ]
-  },
-  {
-    "id": "b085c303d12d5064",
-    "type": "subflow:7dd6aa47fd337fda",
-    "z": "e835f561f7c858c6",
-    "name": "",
-    "x": 560,
-    "y": 160,
-    "wires": [
-      [
-        "043c2979a5106d55"
-      ],
-      [
-        "8fcffddc7a66b46b"
-      ]
-    ]
-  },
-  {
-    "id": "40e6698881fc26f8",
-    "type": "subflow:4e421b677e043229",
-    "z": "e835f561f7c858c6",
-    "name": "",
-    "x": 160,
-    "y": 180,
-    "wires": [
-      [
-        "b085c303d12d5064"
-      ]
-    ]
-  },
-  {
-    "id": "988d7573cc469b89",
-    "type": "subflow:4178eda1bbbd7002",
-    "z": "e835f561f7c858c6",
-    "name": "",
-    "env": [
-      {
-        "name": "command",
-        "value": "`git commit -am '${new Date().toLocaleString()}'; ${msg.state.setRemoteOrigin};  git push;`",
-        "type": "str"
-      },
-      {
-        "name": "workingDir",
-        "value": "`%userprofile%/.node-red`",
-        "type": "str"
-      },
-      {
-        "name": "detachSpawnedProcess",
-        "value": "false",
-        "type": "str"
-      }
-    ],
-    "x": 420,
-    "y": 440,
-    "wires": [
-      [
-        "c7142d4c7fd6cbd9"
-      ]
-    ]
-  },
-  {
-    "id": "c7142d4c7fd6cbd9",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "e835f561f7c858c6",
-    "name": "'Completed'",
-    "env": [],
-    "x": 610,
-    "y": 440,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "043c2979a5106d55",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "e835f561f7c858c6",
-    "name": "\"Declined\"",
-    "env": [],
-    "x": 750,
-    "y": 140,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "9a76df7d63d9ec3f",
-    "type": "subflow:552764fe6e0b1a84",
-    "z": "e835f561f7c858c6",
-    "name": "\"Dismiss terminal on completion\"",
-    "x": 400,
-    "y": 260,
-    "wires": [
-      []
-    ]
-  },
-  {
-    "id": "9ba512984d21fac9",
-    "type": "link in",
-    "z": "e835f561f7c858c6",
-    "name": "Commit node-RED repo changes",
-    "links": [
-      "62b78e0fb1de6fc0"
-    ],
-    "x": 195,
-    "y": 80,
-    "wires": [
-      [
-        "40e6698881fc26f8"
-      ]
-    ]
-  },
-  {
-    "id": "918a3be9544e9a2a",
-    "type": "subflow:1f18c5c98cde2760",
-    "z": "e835f561f7c858c6",
-    "name": "msg.state.setRemoteOrigin = \"git remote set-url  origin 'https://github.com/georgemesseha/nod-RED-personal-automation.git'\";",
-    "x": 540,
-    "y": 320,
-    "wires": [
-      [
-        "988d7573cc469b89"
-      ]
-    ]
-  },
-  {
-    "id": "d940fd02be6cbd1e",
-    "type": "http in",
-    "z": "e835f561f7c858c6",
-    "name": "node-RED | Commit the rerpo changes #push",
-    "url": "/o2l8f9j",
-    "method": "get",
-    "upload": false,
-    "skipBodyParsing": false,
-    "swaggerDoc": "",
-    "x": 430,
-    "y": 40,
-    "wires": [
-      [
-        "40e6698881fc26f8"
       ]
     ]
   },
@@ -31787,9 +30554,7 @@
     "z": "42a5305ad7bb615f",
     "g": "bed3f0eb9f7735f0",
     "name": "",
-    "links": [
-      "9b3eff2b992dc2e2"
-    ],
+    "links": [],
     "linkType": "static",
     "timeout": "30",
     "x": 850,
@@ -31949,9 +30714,7 @@
     "g": "bed3f0eb9f7735f0",
     "name": "link out 8",
     "mode": "link",
-    "links": [
-      "9b3eff2b992dc2e2"
-    ],
+    "links": [],
     "x": 755,
     "y": 1200,
     "wires": []
@@ -32593,14 +31356,5 @@
     "wires": [
       []
     ]
-  },
-  {
-    "id": "3a4778f8ab760413",
-    "type": "subflow:e098a4fcdef355e6",
-    "z": "ca72e41fbc666054",
-    "name": "",
-    "x": 200,
-    "y": 280,
-    "wires": []
   }
 ]

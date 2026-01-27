@@ -5,10 +5,7 @@ partial class _e6721d0de3e7ccd9
     // the initial data to work on.
     public async Task PreExecute_ba1f1e9f219074b1(_b366a645d63b3d5e subflow)
     {
-        subflow.Url = "https://sahel-dev.20.233.204.79.sslip.io/";
-        // The sample code below assumes that you got a custom SetInitialState
-        // in the subflow type.
-        // subflow.SetInitialState(arg1, arg2);
+        subflow.Input("https://sahel-dev.20.233.204.79.sslip.io/");
     }
     
     // Use this method to update the parent state with the result of the sub-flow (if needed)

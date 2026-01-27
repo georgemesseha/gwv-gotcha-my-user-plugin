@@ -4,13 +4,11 @@ partial class _aabd786b0afd1857
     IPluginServices _srv;
      //IExecution _exec;
 
-	public string SomeProp { get; private set;}
+	private string _nodeRedDirPath = @"D:\Projects\gwv.Gotcha\gwv.Gotcha.Wpf\bin\Debug\net8.0-windows\node-red";
+	private string _pluginRepoPath = @"D:\Projects\gwv.Gotcha\gwv.Gotcha.Wpf\bin\Debug\net8.0-windows\__USER_PLUGIN__";
 
-	public int AnotherProp { get; private set;}
-
-	public void Input(string someProp, int anotherProp)
+	public void Input()
 	{
-		SomeProp = someProp;
-		AnotherProp = anotherProp;
+		
 	}
 }
