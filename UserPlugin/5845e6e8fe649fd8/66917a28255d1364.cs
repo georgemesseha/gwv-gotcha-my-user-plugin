@@ -26,7 +26,7 @@ partial class _5845e6e8fe649fd8
                 process.WaitForExit();
                 if (process.ExitCode != 0)
                 {
-                    throw new Exception("Git operations failed.");
+                    throw new Exception($"Git operations failed with exit code {process.ExitCode}");
                 }
             }
             return true;
