@@ -1,0 +1,21 @@
+
+using System.Diagnostics;
+
+partial class _a3753787cf084e1f
+{
+    public async Task<int> _4e90caa2c393bd81()
+    {
+
+        var url = "https://www.google.com";
+
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "msedge.exe",
+            Arguments = url,
+            UseShellExecute = true
+        });
+
+        
+       return 0; // return the output port index according to your logic
+    }
+}

@@ -3007,6 +3007,10 @@
           {
             "id": "6b97dbc1e91175c6",
             "port": 0
+          },
+          {
+            "id": "17cab009b1c47edc",
+            "port": 0
           }
         ]
       }
@@ -3584,7 +3588,8 @@
     ],
     "env": [],
     "meta": {},
-    "color": "#DDAA99"
+    "color": "maroon",
+    "icon": "font-awesome/fa-window-maximize"
   },
   {
     "id": "210de7050ecbbe0d",
@@ -3661,6 +3666,120 @@
     "env": [],
     "meta": {},
     "color": "#DDAA99"
+  },
+  {
+    "id": "01baf1ee83b1a31f",
+    "type": "subflow",
+    "name": "Agentic AI Project",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 120,
+        "y": 100,
+        "wires": [
+          {
+            "id": "b5168663dd04f501"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 780,
+        "y": 120,
+        "wires": [
+          {
+            "id": "d56d991afb33271f",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "a3753787cf084e1f",
+    "type": "subflow",
+    "name": "Softec",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 120,
+        "y": 80,
+        "wires": [
+          {
+            "id": "5a90fba554eaf05a"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 780,
+        "y": 140,
+        "wires": [
+          {
+            "id": "d098640f5ad7eb4f",
+            "port": 0
+          },
+          {
+            "id": "e3df3425f642294b",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "d308dbbe2c25074e",
+    "type": "subflow",
+    "name": "Open in Edge",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 240,
+        "y": 80,
+        "wires": [
+          {
+            "id": "4e90caa2c393bd81"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 620,
+        "y": 80,
+        "wires": [
+          {
+            "id": "4e90caa2c393bd81",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 620,
+        "y": 140,
+        "wires": [
+          {
+            "id": "4e90caa2c393bd81",
+            "port": 1
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "lightblue",
+    "icon": "font-awesome/fa-chain-broken"
   },
   {
     "id": "c2606acf26d96cc0",
@@ -3819,10 +3938,10 @@
       "6d595c5a053d9acc",
       "c1c94bcab9ab1f77"
     ],
-    "x": 214,
-    "y": 219,
-    "w": 242,
-    "h": 142
+    "x": 164,
+    "y": 99,
+    "w": 232,
+    "h": 162
   },
   {
     "id": "755adc9ff02fb6e1",
@@ -12061,7 +12180,9 @@
       [
         "6b97dbc1e91175c6"
       ],
-      []
+      [
+        "17cab009b1c47edc"
+      ]
     ]
   },
   {
@@ -12093,6 +12214,17 @@
     "name": "Gotcha",
     "x": 320,
     "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "17cab009b1c47edc",
+    "type": "subflow:01baf1ee83b1a31f",
+    "z": "8be1f3380f629301",
+    "name": "Agentic-AI",
+    "x": 330,
+    "y": 180,
     "wires": [
       []
     ]
@@ -13368,13 +13500,219 @@
     ]
   },
   {
+    "id": "6c2ee20918e95442",
+    "type": "csharp-trigger",
+    "z": "01baf1ee83b1a31f",
+    "name": "💼 Agentic-AI",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 170,
+    "y": 240,
+    "wires": [
+      [
+        "b5168663dd04f501"
+      ]
+    ]
+  },
+  {
+    "id": "b5168663dd04f501",
+    "type": "csharp-mcq",
+    "z": "01baf1ee83b1a31f",
+    "name": "",
+    "outputCount": 5,
+    "outputs": 5,
+    "x": 220,
+    "y": 100,
+    "wires": [
+      [
+        "0b2f92d6d90cd31d"
+      ],
+      [
+        "d56d991afb33271f"
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "0b2f92d6d90cd31d",
+    "type": "csharp-bookmark",
+    "z": "01baf1ee83b1a31f",
+    "name": "Resources Notion Page",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 430,
+    "y": 60,
+    "wires": [
+      [
+        "e1477f17c97cec32"
+      ]
+    ]
+  },
+  {
+    "id": "e1477f17c97cec32",
+    "type": "subflow:b366a645d63b3d5e",
+    "z": "01baf1ee83b1a31f",
+    "name": "Open Notion resources page ",
+    "x": 720,
+    "y": 60,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d56d991afb33271f",
+    "type": "subflow:f37840b0923e975e",
+    "z": "01baf1ee83b1a31f",
+    "name": "Explore files #OneCommander",
+    "x": 450,
+    "y": 100,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "1a420cb600b3d3c2",
+    "type": "csharp-trigger",
+    "z": "a3753787cf084e1f",
+    "name": "📩 Softec mail",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 420,
+    "y": 20,
+    "wires": [
+      [
+        "d098640f5ad7eb4f"
+      ]
+    ]
+  },
+  {
+    "id": "5a90fba554eaf05a",
+    "type": "csharp-mcq",
+    "z": "a3753787cf084e1f",
+    "name": "",
+    "outputCount": 5,
+    "outputs": 5,
+    "x": 230,
+    "y": 80,
+    "wires": [
+      [
+        "d098640f5ad7eb4f"
+      ],
+      [
+        "315c584554d7daaa"
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "d098640f5ad7eb4f",
+    "type": "subflow:b366a645d63b3d5e",
+    "z": "a3753787cf084e1f",
+    "name": "📩 Softec mail",
+    "x": 640,
+    "y": 40,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "150d97d4bfdc52ac",
+    "type": "csharp-trigger",
+    "z": "a3753787cf084e1f",
+    "name": "🏨 Softec",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 130,
+    "y": 180,
+    "wires": [
+      [
+        "5a90fba554eaf05a"
+      ]
+    ]
+  },
+  {
+    "id": "315c584554d7daaa",
+    "type": "csharp-report-info",
+    "z": "a3753787cf084e1f",
+    "name": "🥸 Softec Portal",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 420,
+    "y": 80,
+    "wires": [
+      [
+        "2905475fedf8bd60"
+      ]
+    ]
+  },
+  {
+    "id": "2905475fedf8bd60",
+    "type": "csharp-report-info",
+    "z": "a3753787cf084e1f",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 570,
+    "y": 80,
+    "wires": [
+      [
+        "e3df3425f642294b"
+      ]
+    ]
+  },
+  {
+    "id": "0905abe1599e2cb8",
+    "type": "csharp-trigger",
+    "z": "a3753787cf084e1f",
+    "name": "🥸 Softec Portal",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 140,
+    "y": 220,
+    "wires": [
+      [
+        "315c584554d7daaa"
+      ]
+    ]
+  },
+  {
+    "id": "e3df3425f642294b",
+    "type": "subflow:d308dbbe2c25074e",
+    "z": "a3753787cf084e1f",
+    "x": 590,
+    "y": 140,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "4e90caa2c393bd81",
+    "type": "csharp-worker-concurrent",
+    "z": "d308dbbe2c25074e",
+    "name": "",
+    "outputCount": 2,
+    "outputs": 2,
+    "x": 430,
+    "y": 80,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
     "id": "c1c94bcab9ab1f77",
     "type": "subflow:73f46db8070c553e",
     "z": "818e59b2209bd485",
     "g": "9f040f1710218b42",
     "name": "",
-    "x": 415,
-    "y": 320,
+    "x": 355,
+    "y": 220,
     "wires": [
       [
         "426fe625479b1ca3"
@@ -13474,8 +13812,8 @@
     "topic": "",
     "payload": "",
     "payloadType": "date",
-    "x": 580,
-    "y": 240,
+    "x": 600,
+    "y": 180,
     "wires": [
       [
         "426fe625479b1ca3"
@@ -13506,8 +13844,8 @@
     "z": "818e59b2209bd485",
     "g": "9f040f1710218b42",
     "name": "\"Branch?\"",
-    "x": 300,
-    "y": 260,
+    "x": 260,
+    "y": 140,
     "wires": [
       [
         "6d595c5a053d9acc"
@@ -13532,8 +13870,8 @@
     "z": "818e59b2209bd485",
     "g": "9f040f1710218b42",
     "name": "\"Dev\"",
-    "x": 300,
-    "y": 320,
+    "x": 240,
+    "y": 220,
     "wires": [
       [
         "c1c94bcab9ab1f77"
@@ -13580,8 +13918,8 @@
     "upload": false,
     "skipBodyParsing": false,
     "swaggerDoc": "",
-    "x": 400,
-    "y": 160,
+    "x": 360,
+    "y": 60,
     "wires": [
       [
         "221cf773bb5d5181"
@@ -29130,10 +29468,10 @@
     "type": "csharp-mcq",
     "z": "ca72e41fbc666054",
     "name": "",
-    "outputCount": 4,
-    "outputs": 4,
+    "outputCount": 8,
+    "outputs": 8,
     "x": 250,
-    "y": 60,
+    "y": 100,
     "wires": [
       [
         "9712953498f089a4"
@@ -29146,7 +29484,13 @@
       ],
       [
         "6b33abe3f0705f50"
-      ]
+      ],
+      [
+        "e80972812cea52b4"
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -29206,6 +29550,30 @@
       [
         "9712953498f089a4"
       ]
+    ]
+  },
+  {
+    "id": "e80972812cea52b4",
+    "type": "subflow:a3753787cf084e1f",
+    "z": "ca72e41fbc666054",
+    "name": "Softec",
+    "x": 510,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d31cefbf3fc6dedd",
+    "type": "csharp-mcq",
+    "z": "ca72e41fbc666054",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 470,
+    "y": 280,
+    "wires": [
+      []
     ]
   }
 ]
