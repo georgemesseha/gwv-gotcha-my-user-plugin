@@ -3599,7 +3599,7 @@
     "category": "",
     "in": [
       {
-        "x": 180,
+        "x": 60,
         "y": 120,
         "wires": [
           {
@@ -3723,8 +3723,8 @@
     ],
     "out": [
       {
-        "x": 780,
-        "y": 140,
+        "x": 760,
+        "y": 80,
         "wires": [
           {
             "id": "d098640f5ad7eb4f",
@@ -3732,6 +3732,10 @@
           },
           {
             "id": "2ec54f1c95567cc4",
+            "port": 0
+          },
+          {
+            "id": "eb65b9b093fb04a6",
             "port": 0
           }
         ]
@@ -3870,11 +3874,11 @@
     ],
     "out": [
       {
-        "x": 440,
-        "y": 300,
+        "x": 420,
+        "y": 460,
         "wires": [
           {
-            "id": "8bcbf45c07abba9a",
+            "id": "1a1835ef2cc37631",
             "port": 0
           }
         ]
@@ -3903,11 +3907,44 @@
     ],
     "out": [
       {
-        "x": 580,
+        "x": 560,
         "y": 80,
         "wires": [
           {
             "id": "e3df3425f642294b",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "0a1a92b0f7226f67",
+    "type": "subflow",
+    "name": "Softec | document day tasks",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 100,
+        "y": 40,
+        "wires": [
+          {
+            "id": "ef8029083fc476ad"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 560,
+        "y": 180,
+        "wires": [
+          {
+            "id": "82209590dd1a6a2a",
             "port": 0
           }
         ]
@@ -13435,7 +13472,7 @@
     "name": "",
     "outputCount": 14,
     "outputs": 14,
-    "x": 280,
+    "x": 190,
     "y": 120,
     "wires": [
       [
@@ -13468,7 +13505,9 @@
       [
         "61018e56abcea77c"
       ],
-      [],
+      [
+        "9df6f2be2c9fd8cf"
+      ],
       [],
       [],
       []
@@ -13479,8 +13518,8 @@
     "type": "subflow:badeecd3b585dc48",
     "z": "210de7050ecbbe0d",
     "name": "Tile process windows",
-    "x": 700,
-    "y": 40,
+    "x": 780,
+    "y": 340,
     "wires": [
       [],
       []
@@ -13637,6 +13676,66 @@
     ]
   },
   {
+    "id": "9df6f2be2c9fd8cf",
+    "type": "csharp-worker-concurrent",
+    "z": "210de7050ecbbe0d",
+    "name": "Notion #000000000",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 470,
+    "y": 440,
+    "wires": [
+      [
+        "cb3160808e8f1cbb"
+      ]
+    ]
+  },
+  {
+    "id": "66f61f23e7938052",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Notion 000000",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 230,
+    "y": 460,
+    "wires": [
+      [
+        "9df6f2be2c9fd8cf"
+      ]
+    ]
+  },
+  {
+    "id": "d4d90499effcbe1f",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Postman 666666",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 230,
+    "y": 420,
+    "wires": [
+      [
+        "61018e56abcea77c"
+      ]
+    ]
+  },
+  {
+    "id": "e94f60e9bdb42fc8",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Lens 33333",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 200,
+    "y": 380,
+    "wires": [
+      [
+        "6d3e560ea3ab6051"
+      ]
+    ]
+  },
+  {
     "id": "9e7b1f500cbfec99",
     "type": "csharp-worker-concurrent",
     "z": "badeecd3b585dc48",
@@ -13766,9 +13865,11 @@
         "d098640f5ad7eb4f"
       ],
       [
-        "315c584554d7daaa"
+        "2ec54f1c95567cc4"
       ],
-      [],
+      [
+        "eb65b9b093fb04a6"
+      ],
       [],
       []
     ]
@@ -13778,8 +13879,8 @@
     "type": "subflow:b366a645d63b3d5e",
     "z": "a3753787cf084e1f",
     "name": "📩 Softec mail",
-    "x": 640,
-    "y": 40,
+    "x": 620,
+    "y": 20,
     "wires": [
       []
     ]
@@ -13800,36 +13901,6 @@
     ]
   },
   {
-    "id": "315c584554d7daaa",
-    "type": "csharp-report-info",
-    "z": "a3753787cf084e1f",
-    "name": "🥸 Softec Portal",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 420,
-    "y": 80,
-    "wires": [
-      [
-        "2905475fedf8bd60"
-      ]
-    ]
-  },
-  {
-    "id": "2905475fedf8bd60",
-    "type": "csharp-report-info",
-    "z": "a3753787cf084e1f",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 570,
-    "y": 80,
-    "wires": [
-      [
-        "2ec54f1c95567cc4"
-      ]
-    ]
-  },
-  {
     "id": "0905abe1599e2cb8",
     "type": "csharp-trigger",
     "z": "a3753787cf084e1f",
@@ -13840,7 +13911,7 @@
     "y": 220,
     "wires": [
       [
-        "315c584554d7daaa"
+        "2ec54f1c95567cc4"
       ]
     ]
   },
@@ -13848,9 +13919,20 @@
     "id": "2ec54f1c95567cc4",
     "type": "subflow:1bde289216f0b707",
     "z": "a3753787cf084e1f",
-    "name": "Open softec portal",
-    "x": 550,
-    "y": 160,
+    "name": "🥸 Softec Portal",
+    "x": 420,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "eb65b9b093fb04a6",
+    "type": "subflow:4f5522c46232e8b4",
+    "z": "a3753787cf084e1f",
+    "name": "✅ Morning tasks",
+    "x": 430,
+    "y": 140,
     "wires": [
       []
     ]
@@ -13967,8 +14049,8 @@
     "name": "Working Day | Morning",
     "outputCount": 1,
     "outputs": 1,
-    "x": 160,
-    "y": 260,
+    "x": 140,
+    "y": 160,
     "wires": [
       [
         "9c75cc6a0d28ea65"
@@ -13997,23 +14079,21 @@
     "name": "Next?",
     "outputCount": 1,
     "outputs": 1,
-    "x": 460,
+    "x": 450,
     "y": 180,
     "wires": [
       [
-        "8bcbf45c07abba9a"
+        "1a1835ef2cc37631"
       ]
     ]
   },
   {
-    "id": "8bcbf45c07abba9a",
-    "type": "csharp-speak",
+    "id": "1a1835ef2cc37631",
+    "type": "subflow:0a1a92b0f7226f67",
     "z": "4f5522c46232e8b4",
-    "name": "Next step should go here",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 500,
-    "y": 240,
+    "name": "Document day tasks",
+    "x": 490,
+    "y": 220,
     "wires": [
       []
     ]
@@ -14042,6 +14122,77 @@
     "wires": [
       [
         "e3df3425f642294b"
+      ]
+    ]
+  },
+  {
+    "id": "c68024527bbd9efc",
+    "type": "csharp-trigger",
+    "z": "0a1a92b0f7226f67",
+    "name": "✅ Softec Portal | Document today's tasks ",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 220,
+    "y": 300,
+    "wires": [
+      [
+        "ef8029083fc476ad"
+      ]
+    ]
+  },
+  {
+    "id": "ef8029083fc476ad",
+    "type": "subflow:f37840b0923e975e",
+    "z": "0a1a92b0f7226f67",
+    "name": "Open Notion",
+    "x": 250,
+    "y": 60,
+    "wires": [
+      [
+        "27fc4a1844c06270"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "82209590dd1a6a2a",
+    "type": "csharp-report-info",
+    "z": "0a1a92b0f7226f67",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 430,
+    "y": 180,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "21d20f85ce077253",
+    "type": "subflow:d308dbbe2c25074e",
+    "z": "0a1a92b0f7226f67",
+    "name": "Open Portal | Tasks page",
+    "x": 470,
+    "y": 120,
+    "wires": [
+      [
+        "82209590dd1a6a2a"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "27fc4a1844c06270",
+    "type": "csharp-report-info",
+    "z": "0a1a92b0f7226f67",
+    "name": "",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 410,
+    "y": 60,
+    "wires": [
+      [
+        "21d20f85ce077253"
       ]
     ]
   },
