@@ -1,0 +1,18 @@
+
+partial class _1bde289216f0b707
+{
+    // Use this method to initialize the state of the child subflow to provide
+    // the initial data to work on.
+    public async Task PreExecute_e3df3425f642294b(_d308dbbe2c25074e subflow)
+    {
+        subflow.Input("https://safecityportal.com");
+    }
+    
+    // Use this method to update the parent state with the result of the sub-flow (if needed)
+    // before moving forward with the flow
+    public async Task PostExecute_e3df3425f642294b(_d308dbbe2c25074e subflow)
+    {
+        // The below code is an example using the output of the subflow
+        // this.UserName = subflow.ProvidedUserName
+    }
+}

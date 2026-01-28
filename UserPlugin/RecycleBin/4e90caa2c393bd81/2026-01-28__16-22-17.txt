@@ -1,0 +1,24 @@
+
+using System.Diagnostics;
+
+partial class _ca30fccba613f797
+{
+    public async Task<int> _4e90caa2c393bd81()
+    {
+        if(string.IsNullOrWhiteSpace(this.Url))
+		{
+			_ = _srv.TextToSpeech.Speak("URL is empty or null. Please provide a valid URL.");
+            return 1;
+        }
+
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "msedge.exe",
+            Arguments = this.Url,
+            UseShellExecute = true
+        });
+
+        
+       return 0; // return the output port index according to your logic
+    }
+}
