@@ -12901,7 +12901,7 @@
     "outputCount": 9,
     "outputs": 9,
     "x": 230,
-    "y": 120,
+    "y": 180,
     "wires": [
       [
         "e56717a403ebe654"
@@ -13124,7 +13124,7 @@
     "outputCount": 1,
     "outputs": 1,
     "x": 290,
-    "y": 320,
+    "y": 380,
     "wires": [
       [
         "f8138324ef8cea2d"
@@ -13136,8 +13136,8 @@
     "type": "subflow:c4601fbac7a0289f",
     "z": "aabd786b0afd1857",
     "name": "Open flows.json",
-    "x": 520,
-    "y": 440,
+    "x": 700,
+    "y": 460,
     "wires": [
       [],
       []
@@ -13165,8 +13165,8 @@
     "name": "Open exe directory",
     "outputCount": 1,
     "outputs": 1,
-    "x": 170,
-    "y": 400,
+    "x": 210,
+    "y": 460,
     "wires": [
       [
         "40163127dc10720e"
@@ -13178,8 +13178,8 @@
     "type": "subflow:0b110f35afb0eb57",
     "z": "aabd786b0afd1857",
     "name": "Open exe dir",
-    "x": 300,
-    "y": 480,
+    "x": 410,
+    "y": 460,
     "wires": [
       []
     ]
@@ -13526,8 +13526,8 @@
     "name": "Tile ...",
     "outputCount": 1,
     "outputs": 1,
-    "x": 90,
-    "y": 240,
+    "x": 70,
+    "y": 220,
     "wires": [
       [
         "a7e862910c86658f"
@@ -13541,7 +13541,7 @@
     "name": "",
     "outputCount": 14,
     "outputs": 14,
-    "x": 190,
+    "x": 230,
     "y": 120,
     "wires": [
       [
@@ -13766,8 +13766,8 @@
     "name": "↗️ Notion 000000",
     "outputCount": 1,
     "outputs": 1,
-    "x": 230,
-    "y": 460,
+    "x": 250,
+    "y": 660,
     "wires": [
       [
         "9df6f2be2c9fd8cf"
@@ -13781,8 +13781,8 @@
     "name": "↗️ Postman 666666",
     "outputCount": 1,
     "outputs": 1,
-    "x": 230,
-    "y": 420,
+    "x": 250,
+    "y": 620,
     "wires": [
       [
         "61018e56abcea77c"
@@ -13796,8 +13796,8 @@
     "name": "↗️ Lens 33333",
     "outputCount": 1,
     "outputs": 1,
-    "x": 220,
-    "y": 380,
+    "x": 240,
+    "y": 580,
     "wires": [
       [
         "6d3e560ea3ab6051"
@@ -13811,8 +13811,8 @@
     "name": "↗️ Vivaldi #999999",
     "outputCount": 1,
     "outputs": 1,
-    "x": 180,
-    "y": 340,
+    "x": 170,
+    "y": 360,
     "wires": [
       [
         "33ee458fdb44f091"
@@ -13826,11 +13826,41 @@
     "name": "↗️ Teams #222222",
     "outputCount": 1,
     "outputs": 1,
-    "x": 170,
-    "y": 300,
+    "x": 190,
+    "y": 500,
     "wires": [
       [
         "22dc1dfdf853a2b4"
+      ]
+    ]
+  },
+  {
+    "id": "c2093a1934fe8b86",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Code 5555555",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 170,
+    "y": 440,
+    "wires": [
+      [
+        "66bdbe9263d899ac"
+      ]
+    ]
+  },
+  {
+    "id": "7e2b745595b8ad68",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Rider 444444",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 160,
+    "y": 300,
+    "wires": [
+      [
+        "c6b8d9f4d4ee6e35"
       ]
     ]
   },
@@ -14029,8 +14059,8 @@
     "id": "eb65b9b093fb04a6",
     "type": "subflow:4f5522c46232e8b4",
     "z": "a3753787cf084e1f",
-    "name": "✅ Clock-in tasks @morning",
-    "x": 460,
+    "name": "✅ Day start tasks @morning",
+    "x": 470,
     "y": 140,
     "wires": [
       []
@@ -14145,7 +14175,7 @@
     "id": "d0b34a9a12b53dba",
     "type": "csharp-trigger",
     "z": "4f5522c46232e8b4",
-    "name": " ✅Morning tasks #daily",
+    "name": " ✅ Day start tasks #daily #morning",
     "outputCount": 1,
     "outputs": 1,
     "x": 140,
