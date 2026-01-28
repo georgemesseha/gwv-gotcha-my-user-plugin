@@ -13457,8 +13457,8 @@
     "name": "Tile ...",
     "outputCount": 1,
     "outputs": 1,
-    "x": 130,
-    "y": 280,
+    "x": 90,
+    "y": 240,
     "wires": [
       [
         "a7e862910c86658f"
@@ -13727,11 +13727,41 @@
     "name": "↗️ Lens 33333",
     "outputCount": 1,
     "outputs": 1,
-    "x": 200,
+    "x": 220,
     "y": 380,
     "wires": [
       [
         "6d3e560ea3ab6051"
+      ]
+    ]
+  },
+  {
+    "id": "9b89af96b7e8a4f8",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Vivaldi #999999",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 180,
+    "y": 340,
+    "wires": [
+      [
+        "33ee458fdb44f091"
+      ]
+    ]
+  },
+  {
+    "id": "86540131de8d054f",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Teams #222222",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 170,
+    "y": 300,
+    "wires": [
+      [
+        "22dc1dfdf853a2b4"
       ]
     ]
   },
@@ -13930,8 +13960,8 @@
     "id": "eb65b9b093fb04a6",
     "type": "subflow:4f5522c46232e8b4",
     "z": "a3753787cf084e1f",
-    "name": "✅ Morning tasks",
-    "x": 430,
+    "name": "✅ Clock-in tasks @morning",
+    "x": 460,
     "y": 140,
     "wires": [
       []
@@ -14018,8 +14048,8 @@
     "id": "1fe7184f94488dbb",
     "type": "subflow:1bde289216f0b707",
     "z": "4f5522c46232e8b4",
-    "name": "",
-    "x": 500,
+    "name": "Clock-in",
+    "x": 460,
     "y": 80,
     "wires": [
       [
@@ -14046,10 +14076,10 @@
     "id": "d0b34a9a12b53dba",
     "type": "csharp-trigger",
     "z": "4f5522c46232e8b4",
-    "name": "Working Day | Morning",
+    "name": " ✅Morning tasks #daily",
     "outputCount": 1,
     "outputs": 1,
-    "x": 140,
+    "x": 170,
     "y": 160,
     "wires": [
       [
@@ -14129,10 +14159,10 @@
     "id": "c68024527bbd9efc",
     "type": "csharp-trigger",
     "z": "0a1a92b0f7226f67",
-    "name": "✅ Softec Portal | Document today's tasks ",
+    "name": "✅ Softec Portal | Document today's tasks #daily",
     "outputCount": 1,
     "outputs": 1,
-    "x": 220,
+    "x": 240,
     "y": 300,
     "wires": [
       [
