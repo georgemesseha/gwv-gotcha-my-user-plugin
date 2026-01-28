@@ -3352,6 +3352,10 @@
           {
             "id": "f8138324ef8cea2d",
             "port": 0
+          },
+          {
+            "id": "40163127dc10720e",
+            "port": 0
           }
         ]
       }
@@ -3945,6 +3949,39 @@
         "wires": [
           {
             "id": "82209590dd1a6a2a",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "0b110f35afb0eb57",
+    "type": "subflow",
+    "name": "Open in OneCommander",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 60,
+        "y": 80,
+        "wires": [
+          {
+            "id": "5f5324932249a1e7"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 380,
+        "y": 80,
+        "wires": [
+          {
+            "id": "5f5324932249a1e7",
             "port": 0
           }
         ]
@@ -12861,8 +12898,8 @@
     "type": "csharp-mcq",
     "z": "aabd786b0afd1857",
     "name": "",
-    "outputCount": 5,
-    "outputs": 5,
+    "outputCount": 9,
+    "outputs": 9,
     "x": 230,
     "y": 120,
     "wires": [
@@ -12880,7 +12917,13 @@
       ],
       [
         "068a925212bcd51f"
-      ]
+      ],
+      [
+        "0e734e6afb5c1801"
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -13081,7 +13124,7 @@
     "outputCount": 1,
     "outputs": 1,
     "x": 290,
-    "y": 440,
+    "y": 320,
     "wires": [
       [
         "f8138324ef8cea2d"
@@ -13113,6 +13156,32 @@
       [
         "e56717a403ebe654"
       ]
+    ]
+  },
+  {
+    "id": "0e734e6afb5c1801",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Open exe directory",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 170,
+    "y": 400,
+    "wires": [
+      [
+        "40163127dc10720e"
+      ]
+    ]
+  },
+  {
+    "id": "40163127dc10720e",
+    "type": "subflow:0b110f35afb0eb57",
+    "z": "aabd786b0afd1857",
+    "name": "Open exe dir",
+    "x": 300,
+    "y": 480,
+    "wires": [
+      []
     ]
   },
   {
@@ -14079,7 +14148,7 @@
     "name": " ✅Morning tasks #daily",
     "outputCount": 1,
     "outputs": 1,
-    "x": 170,
+    "x": 140,
     "y": 160,
     "wires": [
       [
@@ -14224,6 +14293,18 @@
       [
         "21d20f85ce077253"
       ]
+    ]
+  },
+  {
+    "id": "5f5324932249a1e7",
+    "type": "subflow:f37840b0923e975e",
+    "z": "0b110f35afb0eb57",
+    "name": "",
+    "x": 210,
+    "y": 80,
+    "wires": [
+      [],
+      []
     ]
   },
   {
