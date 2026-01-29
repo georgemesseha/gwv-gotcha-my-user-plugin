@@ -3295,6 +3295,10 @@
           {
             "id": "e9e8999a5961782e",
             "port": 0
+          },
+          {
+            "id": "54652d7c89ed3027",
+            "port": 0
           }
         ]
       }
@@ -12847,7 +12851,9 @@
       [
         "e9e8999a5961782e"
       ],
-      [],
+      [
+        "54652d7c89ed3027"
+      ],
       [],
       []
     ]
@@ -12861,6 +12867,19 @@
     "outputs": 1,
     "x": 550,
     "y": 40,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "54652d7c89ed3027",
+    "type": "csharp-worker-concurrent",
+    "z": "74cdc26507113a04",
+    "name": "Repair videos in the folder path on clipboard",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 490,
+    "y": 120,
     "wires": [
       []
     ]
