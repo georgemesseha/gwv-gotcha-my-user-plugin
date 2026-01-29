@@ -12885,6 +12885,21 @@
     ]
   },
   {
+    "id": "93dc69abd51f8782",
+    "type": "csharp-trigger",
+    "z": "74cdc26507113a04",
+    "name": "Repair videos in the folder path on clipboard",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 230,
+    "y": 200,
+    "wires": [
+      [
+        "54652d7c89ed3027"
+      ]
+    ]
+  },
+  {
     "id": "40da6371d87eae5d",
     "type": "csharp-trigger",
     "z": "aabd786b0afd1857",
