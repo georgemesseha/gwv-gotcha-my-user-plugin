@@ -3386,11 +3386,11 @@
     ],
     "out": [
       {
-        "x": 840,
-        "y": 400,
+        "x": 1280,
+        "y": 320,
         "wires": [
           {
-            "id": "983c9b7c785b19e2",
+            "id": "fa75c49a89c525ba",
             "port": 0
           }
         ]
@@ -3703,6 +3703,10 @@
           },
           {
             "id": "eb5633f1474b81b0",
+            "port": 0
+          },
+          {
+            "id": "e1477f17c97cec32",
             "port": 0
           }
         ]
@@ -11800,7 +11804,7 @@
     "id": "3ae3b6e2523132ee",
     "type": "csharp-report-info",
     "z": "340b866f63df92b7",
-    "name": "Expect a page to open in the default browser",
+    "name": "",
     "outputCount": 1,
     "outputs": 1,
     "x": 870,
@@ -13250,7 +13254,9 @@
     "x": 620,
     "y": 260,
     "wires": [
-      []
+      [
+        "f4ce660de5c514ad"
+      ]
     ]
   },
   {
@@ -13299,6 +13305,34 @@
       [
         "4e0ab8a562041ec5"
       ]
+    ]
+  },
+  {
+    "id": "f4ce660de5c514ad",
+    "type": "csharp-mcq",
+    "z": "dfb3b1ff495d0c3f",
+    "name": "Exit?",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 1000,
+    "y": 300,
+    "wires": [
+      [
+        "fa75c49a89c525ba"
+      ]
+    ]
+  },
+  {
+    "id": "fa75c49a89c525ba",
+    "type": "csharp-bookmark",
+    "z": "dfb3b1ff495d0c3f",
+    "name": "OK",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 1150,
+    "y": 300,
+    "wires": [
+      []
     ]
   },
   {
