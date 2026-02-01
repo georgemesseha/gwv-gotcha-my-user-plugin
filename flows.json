@@ -3826,6 +3826,10 @@
           {
             "id": "33a99547c8ae87e2",
             "port": 0
+          },
+          {
+            "id": "efdc9fc307e0aea2",
+            "port": 0
           }
         ]
       }
@@ -13933,6 +13937,21 @@
     ]
   },
   {
+    "id": "ce1338bd289c96f2",
+    "type": "csharp-trigger",
+    "z": "210de7050ecbbe0d",
+    "name": "↗️ Edge 88888888888",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 160,
+    "y": 260,
+    "wires": [
+      [
+        "70be77fe9f87291d"
+      ]
+    ]
+  },
+  {
     "id": "9e7b1f500cbfec99",
     "type": "csharp-worker-concurrent",
     "z": "badeecd3b585dc48",
@@ -14161,7 +14180,9 @@
       [
         "33a99547c8ae87e2"
       ],
-      [],
+      [
+        "efdc9fc307e0aea2"
+      ],
       [],
       [],
       [],
@@ -14177,6 +14198,19 @@
     "y": 60,
     "wires": [
       [],
+      []
+    ]
+  },
+  {
+    "id": "efdc9fc307e0aea2",
+    "type": "csharp-worker-concurrent",
+    "z": "4eaffb625266c66d",
+    "name": "Open the main folder in Cursor",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 420,
+    "y": 100,
+    "wires": [
       []
     ]
   },
@@ -14212,19 +14246,6 @@
     ]
   },
   {
-    "id": "1fe7184f94488dbb",
-    "type": "subflow:1bde289216f0b707",
-    "z": "4f5522c46232e8b4",
-    "name": "Clock-in",
-    "x": 460,
-    "y": 80,
-    "wires": [
-      [
-        "6de76161523174d9"
-      ]
-    ]
-  },
-  {
     "id": "9c75cc6a0d28ea65",
     "type": "csharp-report-info",
     "z": "4f5522c46232e8b4",
@@ -14235,7 +14256,7 @@
     "y": 80,
     "wires": [
       [
-        "1fe7184f94488dbb"
+        "1a1835ef2cc37631"
       ]
     ]
   },
@@ -14251,36 +14272,6 @@
     "wires": [
       [
         "9c75cc6a0d28ea65"
-      ]
-    ]
-  },
-  {
-    "id": "6de76161523174d9",
-    "type": "csharp-mcq",
-    "z": "4f5522c46232e8b4",
-    "name": "",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 450,
-    "y": 140,
-    "wires": [
-      [
-        "fbc38cf3b1e9579d"
-      ]
-    ]
-  },
-  {
-    "id": "fbc38cf3b1e9579d",
-    "type": "csharp-bookmark",
-    "z": "4f5522c46232e8b4",
-    "name": "Next?",
-    "outputCount": 1,
-    "outputs": 1,
-    "x": 450,
-    "y": 180,
-    "wires": [
-      [
-        "1a1835ef2cc37631"
       ]
     ]
   },

@@ -5,8 +5,8 @@ partial class _aabd786b0afd1857
     // the initial data to work on.
     public async Task PreExecute_3e55d8557756b1da(_c4601fbac7a0289f subflow)  
     {
-        var flowsFilePath = Path.Combine(_nodeRedDirPath, "flows.json");  
-        subflow.Input(_nodeRedDirPath, flowsFilePath);   
+        var flowsFilePath = Path.Combine(_pluginRepoPath, "flows.json");  
+        subflow.Input(_pluginRepoPath, flowsFilePath);   
     }
     
     // Use this method to update the parent state with the result of the sub-flow (if needed)
