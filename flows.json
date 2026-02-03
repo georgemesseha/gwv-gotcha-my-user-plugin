@@ -12946,7 +12946,7 @@
     "y": 180,
     "wires": [
       [
-        "e56717a403ebe654"
+        "16bbbe25111670c6"
       ],
       [
         "8201e67729604717"
@@ -12975,8 +12975,8 @@
     "name": "Commit user plugin changes",
     "outputCount": 1,
     "outputs": 1,
-    "x": 440,
-    "y": 40,
+    "x": 1300,
+    "y": 20,
     "wires": [
       []
     ]
@@ -13196,7 +13196,7 @@
     "y": 40,
     "wires": [
       [
-        "e56717a403ebe654"
+        "16bbbe25111670c6"
       ]
     ]
   },
@@ -13223,6 +13223,37 @@
     "x": 410,
     "y": 460,
     "wires": [
+      []
+    ]
+  },
+  {
+    "id": "16bbbe25111670c6",
+    "type": "csharp-bookmark",
+    "z": "aabd786b0afd1857",
+    "name": "Commit user plugin changes",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 420,
+    "y": 20,
+    "wires": [
+      [
+        "f4762bd19ce6211b"
+      ]
+    ]
+  },
+  {
+    "id": "f4762bd19ce6211b",
+    "type": "csharp-mcq",
+    "z": "aabd786b0afd1857",
+    "name": "You're about to commit and push changes in your Gotcha's repo. Are you sure?",
+    "outputCount": 2,
+    "outputs": 2,
+    "x": 850,
+    "y": 20,
+    "wires": [
+      [
+        "e56717a403ebe654"
+      ],
       []
     ]
   },
