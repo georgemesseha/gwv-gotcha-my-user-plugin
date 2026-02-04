@@ -3708,6 +3708,10 @@
           {
             "id": "e1477f17c97cec32",
             "port": 0
+          },
+          {
+            "id": "c8771e096c34b374",
+            "port": 0
           }
         ]
       }
@@ -14003,8 +14007,8 @@
     "name": "💼 Agentic-AI",
     "outputCount": 1,
     "outputs": 1,
-    "x": 170,
-    "y": 240,
+    "x": 130,
+    "y": 180,
     "wires": [
       [
         "b5168663dd04f501"
@@ -14030,7 +14034,9 @@
       [
         "eb5633f1474b81b0"
       ],
-      [],
+      [
+        "761056c1ad4dba48"
+      ],
       []
     ]
   },
@@ -14081,6 +14087,47 @@
     "y": 140,
     "wires": [
       []
+    ]
+  },
+  {
+    "id": "c8771e096c34b374",
+    "type": "subflow:b366a645d63b3d5e",
+    "z": "01baf1ee83b1a31f",
+    "name": "Open the deployed Gemini Live solution",
+    "x": 680,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "761056c1ad4dba48",
+    "type": "csharp-report-info",
+    "z": "01baf1ee83b1a31f",
+    "name": "Current Gemini model",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 400,
+    "y": 200,
+    "wires": [
+      [
+        "c8771e096c34b374"
+      ]
+    ]
+  },
+  {
+    "id": "dbc7bb300a57a0a1",
+    "type": "csharp-trigger",
+    "z": "01baf1ee83b1a31f",
+    "name": "Open deployed Gemini Live POC #url",
+    "outputCount": 1,
+    "outputs": 1,
+    "x": 160,
+    "y": 260,
+    "wires": [
+      [
+        "761056c1ad4dba48"
+      ]
     ]
   },
   {
