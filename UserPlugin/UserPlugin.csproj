@@ -29,6 +29,9 @@
         <Reference Include="Gwv.Gotcha.PluginServicesContract">
             <HintPath>..\..\Gwv.Gotcha.PluginServicesContract.dll</HintPath>
         </Reference>
+        <Reference Include="Gwv.Gotcha.PluginServicesContract">
+            <HintPath>..\..\GEng.Contracts.dll</HintPath>
+        </Reference>
         <Reference Include="Gwv.Gotcha.Services.Contracts">
             <HintPath>..\..\Gwv.Gotcha.Services.Contracts.dll</HintPath>
         </Reference>
