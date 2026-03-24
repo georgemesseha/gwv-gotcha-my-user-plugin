@@ -1,7 +1,7 @@
 
 partial class _2a4ca6049d860ca7
 {
-    IPluginServices _srv;
+    ITrn_PluginServicesPublic _srv;
      //IExecution _exec;
 
 	public string ConfigurationDirPath { get; } = @"D:\Projects\__Sahel-Config__";

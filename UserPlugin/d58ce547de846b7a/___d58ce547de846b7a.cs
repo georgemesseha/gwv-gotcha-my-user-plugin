@@ -1,7 +1,7 @@
 
 partial class _d58ce547de846b7a
 {
-    IPluginServices _srv;
+    ITrn_PluginServicesPublic _srv;
      //IExecution _exec;
 
 	public string SomeProp { get; private set;}

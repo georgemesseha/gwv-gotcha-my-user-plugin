@@ -7,7 +7,8 @@ partial class _6bc65f3eb1d12e0b
         {
             return -1;
         }
-        _srv.Execution.SetDocumentUrl(this.Url);
+        
+        // _srv.Execution.SetSideViewUrl(this.Url);
        return 0; // return the output port index according to your logic
     }
 }

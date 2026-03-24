@@ -1,6 +1,6 @@
 
 partial class _818e59b2209bd485
 {
-    IPluginServices _srv;
+    ITrn_PluginServicesPublic _srv;
      //IExecution _exec;
 }

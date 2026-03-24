@@ -2,11 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <ImplicitUsings>enable</ImplicitUsings>  
         <Nullable>enable</Nullable>
         
         <!-- DLLs output -->
-<!--        <OutputPath>$(MSBuildProjectDirectory)\..\..</OutputPath>-->
+        <OutputPath>$(GotchaBin)</OutputPath>
  
         <!-- Intermediate files in standard structure under obj -->
         <IntermediateOutputPath>$(MSBuildProjectDirectory)\..\plugin_obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
@@ -14,6 +14,8 @@
         <!-- Avoid extra folders in OutputPath -->
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendBuildConfigurationToOutputPath>false</AppendBuildConfigurationToOutputPath>
+
+
     </PropertyGroup>
 
     <ItemGroup>
@@ -26,23 +28,35 @@
 
 
     <ItemGroup>
+
+        <PackageReference  Include="Microsoft.Extensions.DependencyInjection" Version="[9.0.0,10.0.0)" />
+        <PackageReference  Include="Microsoft.Extensions.DependencyInjection.Abstractions"  Version="[9.0.0,10.0.0)"/>
+        
         <Reference Include="Gwv.Gotcha.PluginServicesContract">
-            <HintPath>..\..\Gwv.Gotcha.PluginServicesContract.dll</HintPath>
+            <HintPath>$(GotchaBin)Gwv.Gotcha.PluginServicesContract.dll</HintPath>
         </Reference>
-        <Reference Include="Gwv.Gotcha.PluginServicesContract">
-            <HintPath>..\..\GEng.Contracts.dll</HintPath>
+        <Reference Include="GEng.Contracts">
+            <HintPath>$(GotchaBin)GEng.Contracts.dll</HintPath>
         </Reference>
         <Reference Include="Gwv.Gotcha.Services.Contracts">
-            <HintPath>..\..\Gwv.Gotcha.Services.Contracts.dll</HintPath>
+            <HintPath>$(GotchaBin)Gwv.Gotcha.Services.Contracts.dll</HintPath>
+        </Reference>
+        <Reference Include="Gwv.Gotcha.Services">
+            <HintPath>$(GotchaBin)Gwv.Gotcha.Services.dll</HintPath>
         </Reference>
         <Reference Include="VideoServicesContracts">
-            <HintPath>..\..\VideoServicesContracts.dll</HintPath>
+            <HintPath>$(GotchaBin)VideoServicesContracts.dll</HintPath>
         </Reference>
     </ItemGroup>
 
 
     <ItemGroup>
       <Content Include="RecycleBin\readme.md" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="zzzCodeOnlyParadigm\Root\Projects\Sahel\Deployment\" />
     </ItemGroup>
 
 </Project>

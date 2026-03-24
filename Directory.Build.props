@@ -1,0 +1,5 @@
+<Project>
+    <PropertyGroup>
+        <HostPath>$(GotchaBin)</HostPath>
+    </PropertyGroup>
+</Project>

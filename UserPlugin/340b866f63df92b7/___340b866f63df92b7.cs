@@ -1,7 +1,7 @@
 
 partial class _340b866f63df92b7
 {
-    IPluginServices _srv;
+    ITrn_PluginServicesPublic _srv;
 
     public void SetInput(string frontEndUrl, string backEndUrl)
     {

@@ -1,7 +1,7 @@
 
 partial class _f37840b0923e975e
 {
-    IPluginServices _srv;
+    ITrn_PluginServicesPublic _srv;
      //IExecution _exec;
 
 	public string ProcessName { get; private set;}

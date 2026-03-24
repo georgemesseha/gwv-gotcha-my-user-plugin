@@ -1,7 +1,7 @@
 
 partial class _ab6c892af4f1cd99
 {
-    IPluginServices _srv;
+    ITrn_PluginServicesPublic _srv;
      //IExecution _exec;
 
 	public string DirPath { get; private set;}
