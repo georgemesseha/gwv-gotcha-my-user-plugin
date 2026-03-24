@@ -56,7 +56,7 @@
 
 
     <ItemGroup>
-      <Folder Include="zzzCodeOnlyParadigm\Root\Projects\Sahel\Deployment\" />
+      <Folder Include="0__CodeOnlyParadigm\Root\Projects\Sahel\Deployment\" />
     </ItemGroup>
 
 </Project>
