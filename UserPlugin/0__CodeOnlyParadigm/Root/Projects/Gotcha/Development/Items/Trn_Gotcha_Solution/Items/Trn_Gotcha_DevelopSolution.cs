@@ -6,5 +6,6 @@ public class Trn_Gotcha_DevelopSolution : TransientService
 	{
 		var gotchaSlnFilePath = Context.Resolve<Sng_Config_Gotcha>().GotchaSlnFilePath;
 		await Context.Resolve<Sng_OpenInRider>().OpenSolutionAsync(gotchaSlnFilePath);
+		Context.Dismiss();
 	}
 }
