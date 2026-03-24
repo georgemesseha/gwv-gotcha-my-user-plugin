@@ -5,7 +5,7 @@ using Gwv.Gotcha.Services.Plugin;
                "Arranges Vivaldi's windows",
                false)]
 
-public class ArrangeWindows_Vivaldi : TransientService
+public class Trn_ArrangeWindows_Vivaldi : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

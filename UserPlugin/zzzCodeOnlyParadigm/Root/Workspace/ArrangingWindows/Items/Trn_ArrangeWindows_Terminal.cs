@@ -4,7 +4,7 @@ using Gwv.Gotcha.Services.Plugin;
 [ManualTrigger("Arrange Terminal windows", 
                "Arranges Terminal windows #tile",
                false)]
-public class ArrangeWindows_Terminal : TransientService
+public class Trn_ArrangeWindows_Terminal : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

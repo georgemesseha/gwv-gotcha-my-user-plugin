@@ -4,7 +4,7 @@ using Gwv.Gotcha.Services.Plugin;
 [ManualTrigger("Arrange Edge windows", 
                "Arranges Edge windows #tile",
                false)]
-public class ArrangeWindows_Edge : TransientService
+public class Trn_ArrangeWindows_Edge : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

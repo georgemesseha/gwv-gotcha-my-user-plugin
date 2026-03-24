@@ -5,7 +5,7 @@ using Gwv.Gotcha.Services.Plugin;
                "Arranges VSCode's windows",
                false)]
 
-public class ArrangeWindows_VSCode : TransientService
+public class Trn_ArrangeWindows_VSCode : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

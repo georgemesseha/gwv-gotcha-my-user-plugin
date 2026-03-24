@@ -1,6 +1,4 @@
-﻿using Gwv.Gotcha.Services.Plugin;
-
-[ManualTrigger("💼 Sahel", "Sahel Project")]
+﻿[ManualTrigger("💼 Sahel", "Sahel Project")]
 public class Trn_SahelProject : TransientService
 {
 	public override async Task ExecuteAsync()

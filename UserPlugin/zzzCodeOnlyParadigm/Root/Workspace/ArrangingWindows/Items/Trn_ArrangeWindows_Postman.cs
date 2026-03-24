@@ -5,7 +5,7 @@ using Gwv.Gotcha.Services.Plugin;
                "Brings Postman's window to the front #tile",
                false)]
 
-public class ArrangeWindows_Postman : TransientService
+public class Trn_ArrangeWindows_Postman : TransientService
 {
 	public override  async Task ExecuteAsync()
 	{

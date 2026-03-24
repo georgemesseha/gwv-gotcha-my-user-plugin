@@ -5,7 +5,7 @@ using Gwv.Gotcha.Services.Plugin;
                "Arranges Teams windows #tile",
                false)]
 
-public class ArrangeWindows_Teams : TransientService
+public class Trn_ArrangeWindows_Teams : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

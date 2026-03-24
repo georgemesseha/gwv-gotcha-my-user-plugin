@@ -5,7 +5,7 @@ using Gwv.Gotcha.Services.Plugin;
                "Arranges Rider's windows #tile",
                false)]
 
-public class ArrangeWindows_Rider : TransientService
+public class Trn_ArrangeWindows_Rider : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

@@ -5,7 +5,7 @@ using Gwv.Gotcha.Services.Plugin;
                "Brings Notion's window to the front #tile",
                false)]
 
-public class ArrangeWindows_Notion : TransientService
+public class Trn_ArrangeWindows_Notion : TransientService
 {
 	
 	public override async Task ExecuteAsync()
