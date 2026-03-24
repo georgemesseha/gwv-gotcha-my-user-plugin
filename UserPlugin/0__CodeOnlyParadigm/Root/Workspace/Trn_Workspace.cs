@@ -1,5 +1,6 @@
 ﻿
-[ManualTrigger("Workspace", "Contains everyday tasks of managing the workspace.")]
+[ManualTrigger("Workspace", 
+               "Contains everyday tasks of managing the workspace.")]
 public class Trn_Workspace : TransientService
 {
 	public override async Task ExecuteAsync()

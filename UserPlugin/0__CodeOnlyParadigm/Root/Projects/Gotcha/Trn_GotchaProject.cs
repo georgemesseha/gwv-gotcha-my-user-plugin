@@ -5,7 +5,19 @@ public class Trn_GotchaProject : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
+		var options = new McqOption[]
+		{
+			new McqOption("Development", 
+			              "Gotcha Development",  
+			              Context.Resolve<Trn_GotchaDevelopment>()),
+		};
 		
-		await Context.Dialog.InfoAsync("Gotcha Project");
+		var result = await Context.Dialog.AskMcqAsync<IService>("Which one?", options);
+		if(result.isCancelled)
+		{
+			return;
+		}
+		
+		await result.optionPayload!.ExecuteAsync();
 	}
 }

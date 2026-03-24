@@ -54,9 +54,4 @@
       <Content Include="RecycleBin\readme.md" />
     </ItemGroup>
 
-
-    <ItemGroup>
-      <Folder Include="0__CodeOnlyParadigm\Root\Projects\Sahel\Deployment\" />
-    </ItemGroup>
-
 </Project>
