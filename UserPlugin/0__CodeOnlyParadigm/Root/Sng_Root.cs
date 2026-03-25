@@ -1,22 +1,31 @@
 ﻿
 using Gwv.Gotcha.Startup;
+using UserPlugin._0__CodeOnlyParadigm.Root.HabbitBuilder;
 
 [ManualTrigger(">>>", "Resembles the root point to branch out hierarically to all of your tasks")]
 public class Sng_Root : SingletonService
 {
 	public override  async Task ExecuteAsync()
 	{
-		var options = new[]
-		{
-			new McqOption("Projects", "Projects", Context.Resolve<Trn_Projects>()),
-			new McqOption("Workspace", "Workspace", Context.Resolve<Trn_Workspace>()),
-		};
+		var service = await Context.Dialog.PickServiceAsync("Category?",
+		                                              ("Projects", typeof(Trn_Projects)),
+		                                              ("Workspace", typeof(Trn_Workspace)),
+		                                              ("Softec", typeof(Trn_Softec)),
+		                                              ("Knowledge Recall", typeof(Sng_KnowledgeRecall)),
+		                                              ("Habbit Builder", typeof(Sng_HabitBuilder)));
 
-		int count = options.Length;
-		var result = await Context.Dialog.AskMcqAsync<IService>("Category?", options);
-		if (result.isCancelled) return;
-		
-		await result.optionPayload!.ExecuteAsync();
+		await service.ExecuteAsync();
+		// var options = new[]
+		// {
+		// 	new McqOption("Projects", "Projects", Context.Resolve<Trn_Projects>()),
+		// 	new McqOption("Workspace", "Workspace", Context.Resolve<Trn_Workspace>()),
+		// };
+		//
+		// int count = options.Length;
+		// var result = await Context.Dialog.AskMcqAsync<IService>("Category?", options);
+		// if (result.isCancelled) return;
+		//
+		// await result.optionPayload!.ExecuteAsync();
 
 		// Context.Dialog.AddOrActivateSideWebPage("Notion document", "https://www.notion.so");
 		// await Context.Dialog.AskMcqAsync("Press Enter when ready",  new [] { new McqOption("OK", "") });

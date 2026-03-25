@@ -1,24 +1,30 @@
 ﻿
-[ManualTrigger("Softec", "Softec managerial actions")]
+[ManualTrigger("👔 Softec", "Softec managerial actions")]
 public class Trn_Softec : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
 		Context.Dialog.AddOrActivateSideWebPage("Softec", "https://www.notion.so/Softec-2fd6ea6ef60880f6b18ce7df2c37ca97?source=copy_link");
-		
-		var options = new McqOption[]
-		{
-			new McqOption("SOD", "Start of day actions", Context.Resolve<Trn_Softec_Sod>()),
-			new McqOption("EOD", "End of day actions", Context.Resolve<Trn_Softec_Eod>()),
-		};
-		
-		var result = await Context.Dialog.AskMcqAsync<IService>("Which action do you want to perform?", options);
 
-		if (result.isCancelled)
+		while (true)
 		{
-			return;
+			var service =
+				await Context.Dialog.PickServiceAsync("Which one?",
+				                                      ("Open mail", typeof(Sng_OpenSoftecMail)),
+				                                      ("SOD", typeof(Trn_Softec_Sod)),
+				                                      ("EOD", typeof(Trn_Softec_Eod)),
+				                                      ("Vacation Request", typeof(Trn_Softec_VacationRequest))
+				                                     );
+
+			switch (service)
+			{
+				case Trn_ImDone iamDone:
+					await iamDone.ExecuteAsync();
+					return;
+				default:
+					await service.ExecuteAsync();
+					break;
+			}
 		}
-		
-		await result.optionPayload!.ExecuteAsync();
 	}
 }
