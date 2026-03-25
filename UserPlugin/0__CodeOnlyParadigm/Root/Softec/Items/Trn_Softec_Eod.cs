@@ -17,24 +17,24 @@ public class Trn_Softec_Eod : TransientService
 		
 
 		_ = Context.Dialog.SpeakAsync("Prepare your report then resume the conversation.");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		_ = Context.Dialog.SpeakAsync("Copy your report.");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		_ = Context.Dialog.SpeakAsync("Let ChatGPT polish your report!");
 		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		_ = Context.Dialog.SpeakAsync("Update the polished report in your Notion page.");
 		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SaaedDailyReport);
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		_ = Context.Dialog.SpeakAsync("Review your report.");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 
 		await Context.Resolve<Sng_Softec_OpenSafeCityPortal>().ExecuteAsync();
 		// Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
 		_ = Context.Dialog.SpeakAsync("Clock out and paste your report");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		_ = Context.Dialog.SpeakAsync("You are done. Press Enter to exit!");
-		await Context.Dialog.ShowModalMessageBox("Exit?");
+		await Context.Dialog.ShowModalMessageBoxAsync("Exit?");
 		Context.Dialog.Dismiss();
 	}
 }

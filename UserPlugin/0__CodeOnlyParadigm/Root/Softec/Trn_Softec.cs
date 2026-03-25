@@ -18,7 +18,7 @@ public class Trn_Softec : TransientService
 
 			switch (service)
 			{
-				case Trn_ImDone iamDone:
+				case Trn_Exit iamDone:
 					await iamDone.ExecuteAsync();
 					return;
 				default:

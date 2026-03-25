@@ -1,5 +1,5 @@
 ﻿
-public class Trn_ImDone : TransientService
+public class Trn_Exit : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

@@ -20,22 +20,22 @@ public class Trn_Softec_VacationRequest : TransientService
 		
 		Context.Dialog.AddOrActivateSideWebPage(tabPortalVacationRequest, commonTabs.Url_SafeCityPortal);
 		_ = Context.Dialog.SpeakAsync("Sign in if needed");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 
 		_ = Context.Dialog.SpeakAsync("Recall the UI flow on the portal on the left!");
 		Context.Dialog.AddOrActivateSideWebPage(Tab_PortalVacationRequestUIFlow, Url_PortalUiFlowOfVacationRequest);
-		await Context.Dialog.ShowModalMessageBox("Yes I recalled it");
+		await Context.Dialog.ShowModalMessageBoxAsync("Yes I recalled it");
 
 		Context.Dialog.AddOrActivateSideWebPage(tabPortalVacationRequest);
 		_ = Context.Dialog.SpeakAsync("Request the vacation.");
-		await Context.Dialog.ShowModalMessageBox("Done with request vacation?");
+		await Context.Dialog.ShowModalMessageBoxAsync("Done with request vacation?");
 
 		_ = Context.Resolve<Sng_OpenSoftecMail>().ExecuteAsync();
 		Context.Dialog.AddOrActivateSideWebPage(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
 		await Context.Dialog.SpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
 		
 		
-		await Context.Dialog.ShowModalMessageBox("You're done. Exit?");
+		await Context.Dialog.ShowModalMessageBoxAsync("You're done. Exit?");
 		Context.Dialog.Dismiss();
 
 	}

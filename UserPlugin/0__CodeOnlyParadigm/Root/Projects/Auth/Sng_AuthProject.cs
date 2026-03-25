@@ -8,7 +8,21 @@ public class Sng_AuthProject : SingletonService
 		var commonTabs = Context.Resolve<Sng_CommonTabs>();
 		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		                                        commonTabs.Url_SoftecAuthProjectMainPage);
-		
-		await Context.Dialog.InfoAsync("Auth Project");
+
+		while (true)
+		{
+			var service
+				= await Context.Dialog.PickServiceAsync("Category?",
+				                                        ("Develop", typeof(Sng_AuthProject_Development)),
+				                                        ("I'm done", typeof(Trn_Exit))
+				                                       );
+			switch (service)
+			{
+				case Trn_Exit iamDone:
+					await iamDone.ExecuteAsync();
+					return;
+			}
+			await service.ExecuteAsync();
+		}
 	}
 }

@@ -6,6 +6,9 @@ using Gwv.Gotcha.Services.Plugin;
 public class Sng_Config_Sahel : SingletonService
 {
 	public string MainProjectPath => "D:\\Projects\\Sahel";
+	public string ConfigurationProjectDir => "D:\\Projects\\__Sahel-Config__";
+	
+	
 	public string BackendDirPath => Path.Join(MainProjectPath, "Backend");
 	public string FrontendDirPath => Path.Join(MainProjectPath, "Frontend");
 	public string SlnFilePath => Path.Join(BackendDirPath, "Sahel", "Sahel.sln");

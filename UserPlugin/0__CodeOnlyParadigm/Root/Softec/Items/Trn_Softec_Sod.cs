@@ -11,12 +11,12 @@ public class Trn_Softec_Sod : TransientService
 		Context.Dialog.AddOrActivateSideWebPage(tabPortal, config.PortalUrl);
 		
 		_ = Context.Dialog.SpeakAsync("Clock in");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		
 		Context.Dialog.AddOrActivateSideWebPage(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
 		
 		_ = Context.Dialog.SpeakAsync("Recall your tasks");
-		await Context.Dialog.ShowModalMessageBox();
+		await Context.Dialog.ShowModalMessageBoxAsync();
 		
 		
 		

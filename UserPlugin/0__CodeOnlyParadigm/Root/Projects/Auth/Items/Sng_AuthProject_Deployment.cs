@@ -1,5 +1,5 @@
 ﻿
-public class Trn_AuthProject_Publishing : TransientService
+public class Sng_AuthProject_Deployment : SingletonService
 {
 
 	public override async Task ExecuteAsync()
