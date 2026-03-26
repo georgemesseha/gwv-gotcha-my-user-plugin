@@ -1,6 +1,5 @@
 ﻿
-[ManualTrigger("Develop Plugin .sln", "Develop Gotcha Plugin solution", false)]
-public class Trn_Gotcha_DevelopPlugin : TransientService
+public class Trn_Gotcha_Plugin_Develop : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

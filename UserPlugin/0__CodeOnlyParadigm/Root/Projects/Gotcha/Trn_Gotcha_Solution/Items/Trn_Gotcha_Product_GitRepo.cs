@@ -1,6 +1,5 @@
 ﻿
-[ManualTrigger("Manage Gotcha Solution Git repo", "Manage Gotcha Solution Git repo", false)]
-public class Trn_Gotcha_ManageSolutionGitRepo : TransientService
+public class Trn_Gotcha_Product_GitRepo : TransientService
 {
 	public override async Task ExecuteAsync()
 	{

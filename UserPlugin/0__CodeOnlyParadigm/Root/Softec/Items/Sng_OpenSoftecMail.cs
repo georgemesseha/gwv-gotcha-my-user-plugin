@@ -1,4 +1,5 @@
 ﻿
+
 public class Sng_OpenSoftecMail : SingletonService
 {
 	string tabSoftecMail => "Softec Mail";
@@ -8,5 +9,7 @@ public class Sng_OpenSoftecMail : SingletonService
 	{
 		var commonTabs = Context.Resolve<Sng_CommonTabs>();
 		Context.Dialog.AddOrActivateSideWebPage(tabSoftecMail, urlSoftecMail);
+
+		await Context.Dialog.ShowModalMessageBoxAsync("Done?");
 	}
 }

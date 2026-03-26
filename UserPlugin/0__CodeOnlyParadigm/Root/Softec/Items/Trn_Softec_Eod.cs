@@ -2,10 +2,6 @@
 [ManualTrigger("🌇 EOD", "End of day actions")]
 public class Trn_Softec_Eod : TransientService
 {
-	// private const string tabDailyReportNotionPage = "Daily Report";
-	// private const string tabPortal = "Portal";
-	// private const string tabChatGPT = "ChatGPT";
-	
 	public override async Task ExecuteAsync()
 	{
 		var commonTabs = Context.Resolve<Sng_CommonTabs>();
@@ -33,8 +29,8 @@ public class Trn_Softec_Eod : TransientService
 		// Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
 		_ = Context.Dialog.SpeakAsync("Clock out and paste your report");
 		await Context.Dialog.ShowModalMessageBoxAsync();
-		_ = Context.Dialog.SpeakAsync("You are done. Press Enter to exit!");
+		_ = Context.Dialog.SpeakAsync("You are done.");
 		await Context.Dialog.ShowModalMessageBoxAsync("Exit?");
-		Context.Dialog.Dismiss();
+		// Context.Dialog.Dismiss(); 
 	}
 }

@@ -25,7 +25,7 @@ public class Sng_OrganizeProjectOnNotion : SingletonService
 		await Context.Dialog.SpeakAsync("Pressing every page will open it in a popup, making it easy to reorganize later.");
 		await Context.Dialog.SpeakAsync("End of habit builder.");
 		await Context.Dialog.ShowModalMessageBoxAsync("Completed. Want to dismiss?");
-		Context.Dialog.Dismiss();
+		// Context.Dialog.Dismiss();
 		
 	}
 }

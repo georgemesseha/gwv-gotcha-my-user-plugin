@@ -36,7 +36,7 @@ public class Trn_Softec_VacationRequest : TransientService
 		
 		
 		await Context.Dialog.ShowModalMessageBoxAsync("You're done. Exit?");
-		Context.Dialog.Dismiss();
+		// Context.Dialog.Dismiss();
 
 	}
 }

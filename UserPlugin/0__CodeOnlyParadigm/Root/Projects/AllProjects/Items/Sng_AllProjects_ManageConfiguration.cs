@@ -1,6 +1,6 @@
 ﻿
-[ManualTrigger("⚙️ Projects Configuration", "Manage Sahel, Zimbabwe, and other projects' configurations")]
-public class Trn_Sahel_ManageConfiguration : TransientService
+[ManualTrigger("⚙️ Open projects configuration repo", "Manage Sahel, Zimbabwe, and other projects' configurations")]
+public class Sng_AllProjects_ManageConfiguration : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
@@ -13,7 +13,7 @@ public class Trn_Sahel_ManageConfiguration : TransientService
 		await Context.Dialog.SpeakAsync("Find a dedicated info page on the left. Edit it for augmenting knowledge when possible");
 
 		await Context.Dialog.ShowModalMessageBoxAsync("You're done. Dismiss?");
-		Context.Dialog.Dismiss();
+		// Context.Dialog.Dismiss();
 		
 	}
 }

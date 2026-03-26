@@ -7,14 +7,14 @@ public class Sng_Root : SingletonService
 {
 	public override  async Task ExecuteAsync()
 	{
-		var service = await Context.Dialog.PickServiceAsync("Category?",
-		                                              ("Projects", typeof(Trn_Projects)),
-		                                              ("Workspace", typeof(Trn_Workspace)),
-		                                              ("Softec", typeof(Trn_Softec)),
-		                                              ("Knowledge Recall", typeof(Sng_KnowledgeRecall)),
-		                                              ("Habbit Builder", typeof(Sng_HabitBuilder)));
+		await Context.Dialog.RouteAsync("Pick a life wide category?", true,
+                                          ("Projects", typeof(Trn_Projects)), 
+                                          ("Workspace", typeof(Trn_Workspace)),
+                                          ("Softec", typeof(Trn_Softec)),
+                                          ("Knowledge Recall", typeof(Sng_KnowledgeRecall)),
+                                          ("Habbit Builder", typeof(Sng_HabitBuilder)));
 
-		await service.ExecuteAsync();
+		// await service.ExecuteAsync();
 		// var options = new[]
 		// {
 		// 	new McqOption("Projects", "Projects", Context.Resolve<Trn_Projects>()),

@@ -2,8 +2,8 @@
 
 public class Trn_Sahel_Requirements : TransientService
 {
-	public override Task ExecuteAsync()
+	public override async Task ExecuteAsync()
 	{
-		throw new NotImplementedException();
+		await Context.Dialog.SpeakAsync("Under construction");
 	}
 }
