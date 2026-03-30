@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Gotcha;
+namespace UserPlugin.Gotcha.Product.Development;
 
 [ManualTrigger("Manage Git repo", "Opens Git repo in vscode")]
 public class Sng_ManageGit : SingletonService

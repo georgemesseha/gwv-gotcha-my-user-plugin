@@ -1,0 +1,16 @@
+﻿
+using UserPlugin.Gotcha.Plugin.Development;
+
+namespace UserPlugin.Gotcha.Plugin;
+
+[ManualTrigger("Overview", "Your personal Gotcha's Plugin overview")]
+public class Sng_Gotcha_Plugin : SingletonService
+{
+	public override async Task ExecuteAsync()
+	{
+		await Context.Dialog.RouteAsync("What do you want to do:", true,
+		                                ("👉🏽 Develop Plugin .sln", typeof(OpenSolution)),
+		                                ("👉🏽 Manage Git repo", typeof(Sng_Gotcha_Plugin_GitRepo))
+		                               );
+	}
+}

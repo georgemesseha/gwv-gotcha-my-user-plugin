@@ -1,0 +1,13 @@
+﻿
+namespace UserPlugin.Gotcha.Product;
+
+[ManualTrigger("Overview", "Gotcha solution Overview")]
+public class Sng_Overview : SingletonService
+{
+	public override async Task ExecuteAsync()
+	{
+		Context.Dialog.AddOrActivateSideWebPage("Gotcha Project", "https://www.notion.so/Gotcha-Project-32f6ea6ef608808ea2afed812fa63f5f?source=copy_link");
+		await Context.Dialog.ShowModalMessageBoxAsync("You're done");
+
+	}
+}

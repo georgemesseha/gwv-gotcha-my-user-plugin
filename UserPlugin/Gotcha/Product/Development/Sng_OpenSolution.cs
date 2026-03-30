@@ -1,9 +1,10 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Gotcha.Trn_Gotcha_Solution.Items;
+namespace UserPlugin.Gotcha.Product.Development;
 
-public class Trn_Gotcha_Product_Develop : TransientService
+[ManualTrigger("Open solution", "Opens Gotcha solution in rider #.sln")]
+public class Sng_OpenSolution : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
