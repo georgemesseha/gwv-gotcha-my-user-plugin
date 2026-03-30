@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Softec.Projects.Sahel.Development.Items;
+namespace UserPlugin.Softec.Projects.Sahel.Development;
 
 [ManualTrigger("Manage Sahel Git repo", 
                "Manage Sahel Git repo",

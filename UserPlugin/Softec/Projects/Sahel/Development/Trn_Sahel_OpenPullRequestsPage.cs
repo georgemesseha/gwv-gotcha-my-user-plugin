@@ -2,7 +2,7 @@
 
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Softec.Projects.Sahel.Development.Items;
+namespace UserPlugin.Softec.Projects.Sahel.Development;
 
 [ManualTrigger("Open Sahel PRs", "Open Sahel pull requests")]
 public class Trn_Sahel_OpenPullRequestsPage : TransientService

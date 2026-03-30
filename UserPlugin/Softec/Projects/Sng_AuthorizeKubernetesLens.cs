@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Softec.Projects;
 
-[ManualTrigger("Authorize Kubernetes Lens (all projects)", 
+[ManualTrigger("💻 Authorize Kubernetes Lens", 
                "Authorize Kubernetes Lens for all projects")]
 public class Sng_AuthorizeKubernetesLens : SingletonService
 {

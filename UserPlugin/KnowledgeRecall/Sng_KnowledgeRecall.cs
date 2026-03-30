@@ -20,7 +20,7 @@ public class Sng_KnowledgeRecall : SingletonService
 
 		await Context.Dialog.SpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");
 		await Context.Dialog.ShowModalMessageBoxAsync();
-		await Context.Dialog.SpeakAsync("The hierarchy should be implemented in Gotcha's Plug-in");
+		await Context.Dialog.SpeakAsync("The hierarchy navigation to actions should be implemented in Gotcha's Plug-in");
 		
 		await Context.Dialog.ShowModalMessageBoxAsync("Done. Exit?");
 		// Context.Dialog.Dismiss();

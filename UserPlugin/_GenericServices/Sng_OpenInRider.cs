@@ -25,18 +25,35 @@ public class Sng_OpenInRider : SingletonService
 		                                             null);
 	}
 
-	public async Task OpenDirectory(string dirPath)
+	public async Task OpenDirectoryAsync(string dirPath)
 	{
 		var directory = new DirectoryInfo(dirPath);
 		if (directory.Exists == false)
 		{
 			throw new
-				InvalidOperationException($"Directory path [{dirPath}] provided to {this.GetType()}.{nameof(OpenDirectory)} doesn't exist");
+				InvalidOperationException($"Directory path [{dirPath}] provided to {this.GetType()}.{nameof(OpenDirectoryAsync)} doesn't exist");
 		}
 		
 		
 		await Context.Integration.RunAsFunctionAsync($"rider \"{dirPath}\"", 
 		                                             dirPath,
+		                                             false,
+		                                             null,
+		                                             null);
+	}
+	
+	public async Task OpenFileAsync(string filePath)
+	{
+		var file = new FileInfo(filePath);
+		if (file.Exists == false)
+		{
+			throw new
+				InvalidOperationException($"File path [{filePath}] provided to {this.GetType()}.{nameof(OpenFileAsync)} doesn't exist");
+		}
+		
+		
+		await Context.Integration.RunAsFunctionAsync($"rider \"{file.FullName}\"", 
+		                                             file.DirectoryName,
 		                                             false,
 		                                             null,
 		                                             null);

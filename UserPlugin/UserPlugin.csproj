@@ -49,9 +49,4 @@
         </Reference>
     </ItemGroup>
 
-
-    <ItemGroup>
-      <Folder Include="Softec\Projects\AllProjects\" />
-    </ItemGroup>
-
 </Project>

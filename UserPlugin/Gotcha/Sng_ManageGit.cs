@@ -1,17 +1,17 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Softec.Projects.Auth.Development;
+namespace UserPlugin.Gotcha;
 
 [ManualTrigger("Manage Git repo", "Opens Git repo in vscode")]
-public class Sng_AuthProject_ManageGit : SingletonService
+public class Sng_ManageGit : SingletonService
 {
 	public override Task ExecuteAsync()
 	{
 		var vscode = Context.Resolve<Sng_OpenInVsCode>();
-		var config = Context.Resolve<Sng_Config_SoftecAuth>();
-		_ = vscode.OpenDirectory(config.MainProjectPath);
-		_ = Context.Dialog.SpeakAsync("Opening in VSCode");
+		var config = Context.Resolve<Sng_Config_Gotcha>();
+		_ = vscode.OpenDirectory(config.GotchaMainDirPath);
+		_ = Context.Dialog.SpeakAsync("Opening Gotcha repo in VSCode");
 		return Task.CompletedTask;
 	}
 }
