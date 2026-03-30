@@ -13,7 +13,6 @@ public class Sng_Root : SingletonService
 	{
 		await Context.Dialog.RouteAsync("Pick a life wide category?", true,
 		                                ("Workspace", typeof(Trn_Workspace)),
-		                                ("Softec", typeof(Trn_Softec)),
 		                                ("Knowledge Recall", typeof(Sng_KnowledgeRecall)),
 		                                ("Habbit Builder", typeof(Sng_HabitBuilder)));
 
