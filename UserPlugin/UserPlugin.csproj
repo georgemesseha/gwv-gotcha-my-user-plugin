@@ -51,14 +51,7 @@
 
 
     <ItemGroup>
-      <Content Include="RecycleBin\readme.md" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <Folder Include="0__CodeOnlyParadigm\Root\Projects\Gotcha\Development\Items\" />
-      <Folder Include="0__CodeOnlyParadigm\Root\Projects\Sahel\Trn_Sahel_ManageConfiguration\" />
-      <Folder Include="0__CodeOnlyParadigm\Root\__Common\" />
+      <Folder Include="Softec\Projects\AllProjects\" />
     </ItemGroup>
 
 </Project>
