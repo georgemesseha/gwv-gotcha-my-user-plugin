@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
-[ManualTrigger("Arrange VSCode windows", 
+[ManualTrigger("VSCode", 
                "Arranges VSCode's windows",
                false)]
 

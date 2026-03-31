@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Gotcha.Plugin.Development;
 
-[ManualTrigger("Manage Git repo", "Opens plugin Git repo in vscode")]
+[ManualTrigger("Manage Git repo", "Opens plugin Git repo in vscode #plg")]
 public class Sng_Gotcha_Plugin_GitRepo : TransientService
 {
 	public override async Task ExecuteAsync()

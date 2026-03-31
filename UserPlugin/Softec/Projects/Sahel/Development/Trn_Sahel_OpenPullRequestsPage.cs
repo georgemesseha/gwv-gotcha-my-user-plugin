@@ -4,7 +4,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.Sahel.Development;
 
-[ManualTrigger("Open Sahel PRs", "Open Sahel pull requests")]
+[ManualTrigger("Open PRs", "Open Sahel pull requests")]
 public class Trn_Sahel_OpenPullRequestsPage : TransientService
 {
 	public override async Task ExecuteAsync()

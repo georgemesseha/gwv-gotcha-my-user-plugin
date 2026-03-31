@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.Sahel.Development;
 
-[ManualTrigger("Manage Sahel Git repo", 
+[ManualTrigger("Manage Git repo", 
                "Manage Sahel Git repo",
                false )]
 

@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
-[ManualTrigger("Arrange Edge windows", 
+[ManualTrigger("Edge", 
                "Arranges Edge windows #tile",
                false)]
 public class Trn_ArrangeWindows_Edge : TransientService

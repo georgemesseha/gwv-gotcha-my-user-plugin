@@ -3,7 +3,7 @@ using UserPlugin.Gotcha.Plugin.Development;
 
 namespace UserPlugin.Gotcha.Plugin;
 
-[ManualTrigger("Overview", "Your personal Gotcha's Plugin overview")]
+[ManualTrigger("Overview", "Your personal Gotcha's Plugin overview #plg")]
 public class Sng_Gotcha_Plugin : SingletonService
 {
 	public override async Task ExecuteAsync()
