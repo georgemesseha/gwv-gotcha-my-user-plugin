@@ -8,8 +8,8 @@ public class Sng_OpenSolution : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		var gotchaSlnFilePath = Context.Resolve<Sng_Config_Gotcha>().GotchaSlnFilePath;
-		await Context.Resolve<Sng_OpenInRider>().OpenSolutionAsync(gotchaSlnFilePath);
+		var gotchaSlnFilePath = Resolve<Sng_Config_Gotcha>().GotchaSlnFilePath;
+		await Resolve<Sng_OpenInRider>().OpenSolutionAsync(gotchaSlnFilePath);
 		// Context.Dismiss();
 	}
 }

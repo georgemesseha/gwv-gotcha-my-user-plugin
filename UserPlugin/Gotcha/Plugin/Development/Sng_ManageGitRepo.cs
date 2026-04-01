@@ -8,8 +8,8 @@ public class Sng_ManageGitRepo : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		var pluginDir = Context.Resolve<Sng_Config_Gotcha>().PluginMainDirPath;
-		await Context.Resolve<Sng_OpenInVsCode>().OpenDirectory(pluginDir);
-		_ = Context.Dialog.SpeakAsync("Opening Gotcha's plugin Git repo in VSCode");
+		var pluginDir = Resolve<Sng_Config_Gotcha>().PluginMainDirPath;
+		await Resolve<Sng_OpenInVsCode>().OpenDirectory(pluginDir);
+		_ = SpeakAsync("Opening Gotcha's plugin Git repo in VSCode");
 	}
 }

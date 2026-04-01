@@ -14,7 +14,7 @@ public class Sng_Config_Sahel : SingletonService
 	public string SlnFilePath => Path.Join(BackendDirPath, "Sahel", "Sahel.sln");
 
 	
-	public string LocalConfigFile => Path.Join(Context.Resolve<Sng_AllProjectsConfig>().LocalConfigDir, "sahell.json");
+	public string LocalConfigFile => Path.Join(Resolve<Sng_AllProjectsConfig>().LocalConfigDir, "sahell.json");
 	
 
 	public string PullRequestsUrl => "https://dev.azure.com/SoftecMEA/Sahel/_git/Sahel/pullrequests?_a=mine";

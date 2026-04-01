@@ -16,30 +16,30 @@ public class Trn_Softec_VacationRequest : TransientService
 	
 	public override async Task ExecuteAsync()
 	{
-		var commonTabs = Context.Resolve<Sng_CommonTabs>();
+		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_VacationRequestInstructions, 
-		                                        commonTabs.Url_VacationRequestInstructions);
+		AddSideWebPage(commonTabs.Tab_VacationRequestInstructions, 
+		               commonTabs.Url_VacationRequestInstructions);
 		
 		
-		Context.Dialog.AddOrActivateSideWebPage(tabPortalVacationRequest, commonTabs.Url_SafeCityPortal);
-		_ = Context.Dialog.SpeakAsync("Sign in if needed");
-		await Context.Dialog.ShowModalMessageBoxAsync();
+		AddSideWebPage(tabPortalVacationRequest, commonTabs.Url_SafeCityPortal);
+		_ = SpeakAsync("Sign in if needed");
+		await PauseAsync("Done?");
 
-		_ = Context.Dialog.SpeakAsync("Recall the UI flow on the portal on the left!");
-		Context.Dialog.AddOrActivateSideWebPage(Tab_PortalVacationRequestUIFlow, Url_PortalUiFlowOfVacationRequest);
-		await Context.Dialog.ShowModalMessageBoxAsync("Yes I recalled it");
+		_ = SpeakAsync("Recall the UI flow on the portal on the left!");
+		AddSideWebPage(Tab_PortalVacationRequestUIFlow, Url_PortalUiFlowOfVacationRequest);
+		await PauseAsync("Yes I recalled it");
 
-		Context.Dialog.AddOrActivateSideWebPage(tabPortalVacationRequest);
-		_ = Context.Dialog.SpeakAsync("Request the vacation.");
-		await Context.Dialog.ShowModalMessageBoxAsync("Done with request vacation?");
+		ActivateSideTab(tabPortalVacationRequest);
+		_ = SpeakAsync("Request the vacation.");
+		await PauseAsync("Done with request vacation?");
 
-		Context.Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
-		Context.Dialog.AddOrActivateSideWebPage(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
-		await Context.Dialog.SpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
+		Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
+		AddSideWebPage(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
+		await SpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
 		
 		
-		await Context.Dialog.ShowModalMessageBoxAsync("You're done. Exit?");
+		await PauseAsync("You're done. Exit?");
 		// Context.Dialog.Dismiss();
 
 	}

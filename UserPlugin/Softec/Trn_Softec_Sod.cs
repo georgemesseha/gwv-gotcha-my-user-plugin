@@ -11,16 +11,16 @@ public class Trn_Softec_Sod : TransientService
 	
 	public override async Task ExecuteAsync()
 	{
-		var config = Context.Resolve<Sng_Config_Softec>();
-		Context.Dialog.AddOrActivateSideWebPage(tabPortal, config.PortalUrl);
+		var config = Resolve<Sng_Config_Softec>();
+		AddSideWebPage(tabPortal, config.PortalUrl);
 		
-		_ = Context.Dialog.SpeakAsync("Clock in");
-		await Context.Dialog.ShowModalMessageBoxAsync();
+		_ = SpeakAsync("Clock in");
+		await PauseAsync();
 		
-		Context.Dialog.AddOrActivateSideWebPage(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
+		AddSideWebPage(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
 		
-		_ = Context.Dialog.SpeakAsync("Recall your tasks");
-		await Context.Dialog.ShowModalMessageBoxAsync();
+		_ = SpeakAsync("Recall your tasks");
+		await PauseAsync();
 		
 		
 		

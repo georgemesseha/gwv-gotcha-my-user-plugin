@@ -9,11 +9,11 @@ public class Trn_ArrangeWindows_Teams : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		int count = await Context.Services.GlobalWindowManager.ArrangeWindowsOfProcessesAsync( "ms-teams");
+		int count = await ArrangeWindowsOfAsync( "ms-teams");
 		if (count == 0)
 		{
-			_ = Context.Dialog.SpeakAsync("Please open teams manually");
+			_ = SpeakAsync("Please open teams manually");
 		}
-		Context.StatusMessage = $"Arranged {count} Notion windows";
+		StatusMessage = $"Arranged {count} Notion windows";
 	}
 }

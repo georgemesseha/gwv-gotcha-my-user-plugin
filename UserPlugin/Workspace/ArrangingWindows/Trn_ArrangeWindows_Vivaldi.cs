@@ -9,11 +9,11 @@ public class Trn_ArrangeWindows_Vivaldi : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		int count = await Context.Services.GlobalWindowManager.ArrangeWindowsOfProcessesAsync("Vivaldi");
+		int count = await ArrangeWindowsOfAsync("Vivaldi");
 		if (count == 0)
 		{
-			_ = Context.Dialog.SpeakAsync("Please open Vivaldi manually");
+			_ = SpeakAsync("Please open Vivaldi manually");
 		}
-		Context.StatusMessage = $"Arranged {count} Notion windows";
+		StatusMessage = $"Arranged {count} Notion windows";
 	}
 }

@@ -8,10 +8,10 @@ public class Sng_ManageGit : SingletonService
 {
 	public override Task ExecuteAsync()
 	{
-		var vscode = Context.Resolve<Sng_OpenInVsCode>();
-		var config = Context.Resolve<Sng_Config_Gotcha>();
+		var vscode = Resolve<Sng_OpenInVsCode>();
+		var config = Resolve<Sng_Config_Gotcha>();
 		_ = vscode.OpenDirectory(config.GotchaMainDirPath);
-		_ = Context.Dialog.SpeakAsync("Opening Gotcha repo in VSCode");
+		_ = SpeakAsync("Opening Gotcha repo in VSCode");
 		return Task.CompletedTask;
 	}
 }

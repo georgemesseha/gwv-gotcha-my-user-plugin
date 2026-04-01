@@ -8,9 +8,9 @@ public class Sng_AuthProject_OpenSolution : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		var sngConfig = Context.Resolve<Sng_Config_SoftecAuth>();
-		var sngOpenInRider = Context.Resolve<Sng_OpenInRider>();
+		var sngConfig = Resolve<Sng_Config_SoftecAuth>();
+		var sngOpenInRider = Resolve<Sng_OpenInRider>();
 		await sngOpenInRider.OpenSolutionAsync(sngConfig.SlnFilePath);
-		_ = Context.Dialog.SpeakAsync("Opening Auth project in Rider");
+		_ = SpeakAsync("Opening Auth project in Rider");
 	}
 }

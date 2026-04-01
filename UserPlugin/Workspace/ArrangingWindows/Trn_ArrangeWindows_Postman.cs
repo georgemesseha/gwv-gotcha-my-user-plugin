@@ -9,11 +9,11 @@ public class Trn_ArrangeWindows_Postman : TransientService
 {
 	public override  async Task ExecuteAsync()
 	{
-		int count = await Context.Services.GlobalWindowManager.ArrangeWindowsOfProcessesAsync("Postman");
+		int count = await ArrangeWindowsOfAsync("Postman");
 		if (count == 0)
 		{
-			_ = Context.Dialog.SpeakAsync("Please open postman manually");
+			_ = SpeakAsync("Please open postman manually");
 		}
-		Context.StatusMessage = $"Arranged {count} Notion windows";
+		StatusMessage = $"Arranged {count} Notion windows";
 	}
 }

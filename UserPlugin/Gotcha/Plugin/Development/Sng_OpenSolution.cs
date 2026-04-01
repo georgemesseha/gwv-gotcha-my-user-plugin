@@ -8,8 +8,8 @@ public class Sng_OpenSolution : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		var plugnSlnFilePath = Context.Resolve<Sng_Config_Gotcha>().PluginSlnFilePath;
-		await Context.Resolve<Sng_OpenInRider>().OpenSolutionAsync(plugnSlnFilePath);
-		_ = Context.Dialog.SpeakAsync("Opening Gotcha's plug-in solution in Rider");
+		var plugnSlnFilePath = Resolve<Sng_Config_Gotcha>().PluginSlnFilePath;
+		await Resolve<Sng_OpenInRider>().OpenSolutionAsync(plugnSlnFilePath);
+		_ = SpeakAsync("Opening Gotcha's plug-in solution in Rider");
 	}
 }

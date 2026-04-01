@@ -9,10 +9,10 @@ public class Trn_Sahel_OpenPullRequestsPage : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		var config = Context.Resolve<Sng_Config_Sahel>();
+		var config = Resolve<Sng_Config_Sahel>();
 		var prUrl = config.PullRequestsUrl;
-		Context.Dialog.AddOrActivateSideWebPage("Sahel PRs", prUrl);
-		await Context.Dialog.ShowModalMessageBoxAsync("You're done. Exit?");
+		AddSideWebPage("Sahel PRs", prUrl);
+		await PauseAsync("You're done. Exit?");
 
 	}
 }

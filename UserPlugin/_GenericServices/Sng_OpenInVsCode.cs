@@ -18,7 +18,7 @@ public class Sng_OpenInVsCode : SingletonService
 		}
 		
 		
-		await Context.Integration.RunAsFunctionAsync($"code \"{dirPath}\"", 
+		await RunCommandAsFunctionAsync($"code \"{dirPath}\"", 
 		                                             dirPath,
 		                                             false,
 		                                             null,

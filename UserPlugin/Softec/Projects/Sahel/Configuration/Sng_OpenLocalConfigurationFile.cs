@@ -8,10 +8,10 @@ public class Sng_OpenLocalConfigurationFile : SingletonService
 {
 	public override Task ExecuteAsync()
 	{
-		var sngConfig = Context.Resolve<Sng_Config_Sahel>();
-		var sngOpenInRider = Context.Resolve<Sng_OpenInRider>();
+		var sngConfig = Resolve<Sng_Config_Sahel>();
+		var sngOpenInRider = Resolve<Sng_OpenInRider>();
 		_ = sngOpenInRider.OpenFileAsync(sngConfig.LocalConfigFile);
-		_ = Context.Dialog.SpeakAsync("Opening local configuration in Rider");
+		_ = SpeakAsync("Opening local configuration in Rider");
 		return Task.CompletedTask;
 	}
 }

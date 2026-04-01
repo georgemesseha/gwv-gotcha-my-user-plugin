@@ -8,10 +8,10 @@ public class Sng_AuthProject_ManageGit : SingletonService
 {
 	public override Task ExecuteAsync()
 	{
-		var vscode = Context.Resolve<Sng_OpenInVsCode>();
-		var config = Context.Resolve<Sng_Config_SoftecAuth>();
+		var vscode = Resolve<Sng_OpenInVsCode>();
+		var config = Resolve<Sng_Config_SoftecAuth>();
 		_ = vscode.OpenDirectory(config.MainProjectPath);
-		_ = Context.Dialog.SpeakAsync("Opening in VSCode");
+		_ = SpeakAsync("Opening in VSCode");
 		return Task.CompletedTask;
 	}
 }

@@ -8,21 +8,21 @@ public class Sng_KnowledgeRecall : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		var commonTabs = Context.Resolve<Sng_CommonTabs>();
+		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		await Context.Dialog.SpeakAsync("Your goal is to have a categorized view of your information hierarchically");
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		await Context.Dialog.SpeakAsync("You need as well an automatic way for recalling the information");
-		await Context.Dialog.ShowModalMessageBoxAsync();
+		await SpeakAsync("Your goal is to have a categorized view of your information hierarchically");
+		await PauseAsync("Done?");
+		await SpeakAsync("You need as well an automatic way for recalling the information");
+		await PauseAsync("Done?");
 		
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SoftecAuthProjectMainPage, 
-		                                        commonTabs.Url_SoftecAuthProjectMainPage);
+		AddSideWebPage(commonTabs.Tab_SoftecAuthProjectMainPage, 
+		               commonTabs.Url_SoftecAuthProjectMainPage);
 
-		await Context.Dialog.SpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		await Context.Dialog.SpeakAsync("The hierarchy navigation to actions should be implemented in Gotcha's Plug-in");
+		await SpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");
+		await PauseAsync();
+		await SpeakAsync("The hierarchy navigation to actions should be implemented in Gotcha's Plug-in");
 		
-		await Context.Dialog.ShowModalMessageBoxAsync("Done. Exit?");
+		await PauseAsync("Done. Exit?");
 		// Context.Dialog.Dismiss();
 	}
 }

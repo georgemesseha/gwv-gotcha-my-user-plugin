@@ -18,7 +18,7 @@ public class Trigger1 : TransientService
 		
 		for (int i = 0; i < 2000; i++)
 		{
-			if (Context.IsMarkedForTermination && i%20 == 0)
+			if (IsMarkedForTermination && i%20 == 0)
 			{
 				return;
 			}
@@ -26,11 +26,12 @@ public class Trigger1 : TransientService
 			Console.Beep(200, 300);
 		}
 
-		await Context.Integration.RunInTerminal("dir", "");
+		await RunCommandInTerminalAsync("dir", "");
 		// throw new Exception("This is an intended exception");
 		// Context.Services.Clipboard.SetText("This text is from the plug-in");
-		await Context.Dialog.SpeakAsync("Test");
-		Context.StatusMessage = "This is a status message written by the plug-in";
+		await SpeakAsync("Test");
+		StatusMessage = "This is a status message written by the plug-in";
+		
 		// await Context.Services.VideoEditor.CreateWorkshopForFilePathOnClipboardAsync();
 		await Task.Run(async () =>
 		               {
@@ -47,19 +48,13 @@ public class Trigger1 : TransientService
 						                            new McqOption("Yes", "Yes"),
 						                            new McqOption("No", "No")
 					                            });
-				               _ = Context.Dialog.SpeakAsync(result.selectedOption?.title ?? "Cancelled");
+				               _ = SpeakAsync(result.selectedOption?.title ?? "Cancelled");
 
-				               if (Context.IsMarkedForTermination)
+				               if (IsMarkedForTermination)
 				               {
 					               return;
 				               }
 			               }
 		               });
-		
-		
-
-		
-	
-		
 	}
 }

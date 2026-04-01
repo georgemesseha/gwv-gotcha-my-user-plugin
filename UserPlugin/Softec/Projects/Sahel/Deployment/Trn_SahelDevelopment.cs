@@ -7,8 +7,8 @@ public class Trn_SahelDeployment : TransientService
 	{
 		// var options = new McqOption[]
 		// {
-		// 	new McqOption("Open .sln", "Open backend solution file", Context.Resolve<Trn_Sahel_Rider_OpenSln>()),
-		// 	new McqOption("Manage Git repo", "Manage Git repo", Context.Resolve<Trn_Sahel_ManageGitRepo>()),
+		// 	new McqOption("Open .sln", "Open backend solution file", Resolve<Trn_Sahel_Rider_OpenSln>()),
+		// 	new McqOption("Manage Git repo", "Manage Git repo", Resolve<Trn_Sahel_ManageGitRepo>()),
 		// };
 		//
 		// var result = await Context.Dialog.AskMcqAsync<IService>("Which project are you working on?", options);

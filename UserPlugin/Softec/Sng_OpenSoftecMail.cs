@@ -12,12 +12,12 @@ public class Sng_OpenSoftecMail : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		OpenSideViewForSoftecMail();
-		await Context.Dialog.ShowModalMessageBoxAsync("Done?");
+		await PauseAsync("Done?");
 		
 	}
 	
 	public void OpenSideViewForSoftecMail()
 	{
-		Context.Dialog.AddOrActivateSideWebPage(tabSoftecMail, urlSoftecMail);
+		AddSideWebPage(tabSoftecMail, urlSoftecMail);
 	}
 }

@@ -18,7 +18,7 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await Context.Integration.RunAsFunctionAsync($"rider \"{slnFilePath}\"", 
+		await RunCommandAsFunctionAsync($"rider \"{slnFilePath}\"", 
 		                                             file.Directory!.FullName,
 		                                             false,
 		                                             null,
@@ -35,7 +35,7 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await Context.Integration.RunAsFunctionAsync($"rider \"{dirPath}\"", 
+		await RunCommandAsFunctionAsync($"rider \"{dirPath}\"", 
 		                                             dirPath,
 		                                             false,
 		                                             null,
@@ -52,7 +52,7 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await Context.Integration.RunAsFunctionAsync($"rider \"{file.FullName}\"", 
+		await RunCommandAsFunctionAsync($"rider \"{file.FullName}\"", 
 		                                             file.DirectoryName,
 		                                             false,
 		                                             null,

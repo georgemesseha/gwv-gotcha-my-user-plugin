@@ -7,10 +7,9 @@ public class Sng_HabitBuilder : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		var service = await Context.Dialog.PickServiceAsync("Pick a habit?",
-		                                                    ("Organize a project On Notion", typeof(Sng_OrganizeProjectOnNotion)),
-		                                                    ("Start a new project", typeof(Sng_StartNewProject))
-		                                                    );
-		await service.ExecuteAsync();
+		await RouteAsync("Pick a habit", false,
+		                 ("Organize a project On Notion", typeof(Sng_OrganizeProjectOnNotion)),
+		                 ("Start a new project", typeof(Sng_StartNewProject)));
+		
 	}
 }

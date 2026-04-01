@@ -8,33 +8,30 @@ public class Trn_Softec_Eod : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		var commonTabs = Context.Resolve<Sng_CommonTabs>();
+		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
-		
+		AddSideWebPage(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
+		AddSideWebPage(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
+		AddSideWebPage(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
 		
 
-		_ = Context.Dialog.SpeakAsync("Prepare your report then resume the conversation.");
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		_ = Context.Dialog.SpeakAsync("Copy your report.");
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		_ = Context.Dialog.SpeakAsync("Let ChatGPT polish your report!");
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		_ = Context.Dialog.SpeakAsync("Update the polished report in your Notion page.");
-		Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SaaedDailyReport);
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		_ = Context.Dialog.SpeakAsync("Review your report.");
-		await Context.Dialog.ShowModalMessageBoxAsync();
+		_ = SpeakAsync("Prepare your report then resume the conversation.");
+		await PauseAsync();
+		_ = SpeakAsync("Copy your report.");
+		await PauseAsync();
+		_ = SpeakAsync("Let ChatGPT polish your report!");
+		AddSideWebPage(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
+		await PauseAsync();
+		_ = SpeakAsync("Update the polished report in your Notion page.");
+		ActivateSideTab(commonTabs.Tab_SaaedDailyReport);
+		await PauseAsync();
+		_ = SpeakAsync("Review your report.");
+		await PauseAsync();
 
-		await Context.Resolve<Sng_Softec_OpenSafeCityPortal>().ExecuteAsync();
-		// Context.Dialog.AddOrActivateSideWebPage(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
-		_ = Context.Dialog.SpeakAsync("Clock out and paste your report");
-		await Context.Dialog.ShowModalMessageBoxAsync();
-		_ = Context.Dialog.SpeakAsync("You are done.");
-		await Context.Dialog.ShowModalMessageBoxAsync("Exit?");
-		// Context.Dialog.Dismiss(); 
+		await Resolve<Sng_Softec_OpenSafeCityPortal>().ExecuteAsync();
+		_ = SpeakAsync("Clock out and paste your report");
+		await PauseAsync();
+		_ = SpeakAsync("You are done.");
+		await PauseAsync("Exit?");
 	}
 }
