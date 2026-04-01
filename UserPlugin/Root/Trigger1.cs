@@ -16,9 +16,9 @@ public class Trigger1 : TransientService
 		stopwatch.Start();
 
 		
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < 2000; i++)
 		{
-			if (Context.IsMarkedForTermination)
+			if (Context.IsMarkedForTermination && i%20 == 0)
 			{
 				return;
 			}
@@ -42,12 +42,12 @@ public class Trigger1 : TransientService
 				               Thread.Sleep(5000);
 
 				               var result = await 
-					                            Context.Dialog.AskMcqAsync("Is this your first MCQ in this invention?", new[]
+					                            SelectAsync("Is this your first MCQ in this invention?", new[]
 					                            {
 						                            new McqOption("Yes", "Yes"),
 						                            new McqOption("No", "No")
 					                            });
-				               _ = Context.Dialog.SpeakAsync(result.SelectedOption?.title ?? "Cancelled");
+				               _ = Context.Dialog.SpeakAsync(result.selectedOption?.title ?? "Cancelled");
 
 				               if (Context.IsMarkedForTermination)
 				               {

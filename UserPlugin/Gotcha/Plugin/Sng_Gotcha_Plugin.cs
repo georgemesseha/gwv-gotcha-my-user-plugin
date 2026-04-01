@@ -9,8 +9,8 @@ public class Sng_Gotcha_Plugin : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		await Context.Dialog.RouteAsync("What do you want to do:", true,
-		                                ("👉🏽 Develop Plugin .sln", typeof(OpenSolution)),
-		                                ("👉🏽 Manage Git repo", typeof(Sng_Gotcha_Plugin_GitRepo))
+		                                ("👉🏽 Develop Plugin .sln", typeof(Sng_OpenSolution)),
+		                                ("👉🏽 Manage Git repo", typeof(Sng_ManageGitRepo))
 		                               );
 	}
 }

@@ -34,7 +34,7 @@ public class Trn_Softec_VacationRequest : TransientService
 		_ = Context.Dialog.SpeakAsync("Request the vacation.");
 		await Context.Dialog.ShowModalMessageBoxAsync("Done with request vacation?");
 
-		_ = Context.Resolve<Sng_OpenSoftecMail>().ExecuteAsync();
+		Context.Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
 		Context.Dialog.AddOrActivateSideWebPage(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
 		await Context.Dialog.SpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
 		
