@@ -2,7 +2,7 @@
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
 [ManualTrigger("Rider", 
-               "Arranges Rider's windows #tile",
+               "Arranges Rider's windows #tile 4444444444444444444444444444",
                false)]
 
 public class Trn_ArrangeWindows_Rider : TransientService

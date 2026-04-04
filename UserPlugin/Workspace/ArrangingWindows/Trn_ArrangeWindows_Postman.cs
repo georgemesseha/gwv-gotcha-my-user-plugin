@@ -2,7 +2,7 @@
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
 [ManualTrigger("Postman", 
-               "Brings Postman's window to the front #tile",
+               "Brings Postman's window to the front #tile 66666666666666666666666",
                false)]
 
 public class Trn_ArrangeWindows_Postman : TransientService

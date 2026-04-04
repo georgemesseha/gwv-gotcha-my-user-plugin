@@ -2,7 +2,7 @@
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
 [ManualTrigger("Notion", 
-               "Brings Notion's window to the front #tile",
+               "Brings Notion's window to the front #tile 0000000000000000000000000000000000000000",
                false)]
 
 public class Trn_ArrangeWindows_Notion : TransientService

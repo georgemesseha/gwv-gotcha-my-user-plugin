@@ -18,6 +18,6 @@ public class Sng_OpenSoftecMail : SingletonService
 	
 	public void OpenSideViewForSoftecMail()
 	{
-		AddSideWebPage(tabSoftecMail, urlSoftecMail);
+		AddOrActivateWebPageTab(tabSoftecMail, urlSoftecMail);
 	}
 }

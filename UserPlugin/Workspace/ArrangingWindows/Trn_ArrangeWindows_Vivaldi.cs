@@ -2,7 +2,7 @@
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
 [ManualTrigger("Vivaldi", 
-               "Arranges Vivaldi's windows",
+               "Arranges Vivaldi's windows 9999999999999999999999999999",
                false)]
 
 public class Trn_ArrangeWindows_Vivaldi : TransientService

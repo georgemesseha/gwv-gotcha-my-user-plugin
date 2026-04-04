@@ -11,7 +11,7 @@ public class Sng_AllProjects_ManageConfiguration : SingletonService
 		var sngRider = Resolve<Sng_OpenInRider>();
 		var sngConfig = Resolve<Sng_Config_Sahel>();
 		
-		AddSideWebPage("Projects Configuration", "https://www.notion.so/Softec-Projects-Configuration-32e6ea6ef608804ab252c1eca64c2dc9?source=copy_link");
+		AddOrActivateWebPageTab("Projects Configuration", "https://www.notion.so/Softec-Projects-Configuration-32e6ea6ef608804ab252c1eca64c2dc9?source=copy_link");
 		await sngRider.OpenDirectoryAsync(sngConfig.ConfigurationProjectDir);
 		await SpeakAsync("Configuration project is opening?");
 		await SpeakAsync("Find a dedicated info page on the left. Edit it for augmenting knowledge when possible");

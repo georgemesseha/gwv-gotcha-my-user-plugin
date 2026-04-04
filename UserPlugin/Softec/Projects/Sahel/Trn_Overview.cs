@@ -9,7 +9,7 @@ public class Trn_Overview : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		AddSideWebPage("Sahel Project Overview", "https://www.notion.so/Sahel-Project-32f6ea6ef608803bb780deacf4e51ebf?source=copy_link");
+		AddOrActivateWebPageTab("Sahel Project Overview", "https://www.notion.so/Sahel-Project-32f6ea6ef608803bb780deacf4e51ebf?source=copy_link");
 		await PauseAsync("Press Enter to exit");
 	}
 }

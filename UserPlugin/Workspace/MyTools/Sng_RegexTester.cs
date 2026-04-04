@@ -5,7 +5,7 @@ public class Sng_RegexTester : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		AddSideWebPage("Regex tester", "https://regex101.com");
+		AddOrActivateWebPageTab("Regex tester", "https://regex101.com");
 		await PauseAsync("Press Enter to exist");
 	}
 }

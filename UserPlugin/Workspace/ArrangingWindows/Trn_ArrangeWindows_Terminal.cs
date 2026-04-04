@@ -2,7 +2,7 @@
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
 [ManualTrigger("Terminal", 
-               "Arranges Terminal windows #tile",
+               "Arranges Terminal windows #tile 111111111111111111111111111111",
                false)]
 public class Trn_ArrangeWindows_Terminal : TransientService
 {

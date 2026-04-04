@@ -11,7 +11,7 @@ public class Trn_Sahel_OpenPullRequestsPage : TransientService
 	{
 		var config = Resolve<Sng_Config_Sahel>();
 		var prUrl = config.PullRequestsUrl;
-		AddSideWebPage("Sahel PRs", prUrl);
+		AddOrActivateWebPageTab("Sahel PRs", prUrl);
 		await PauseAsync("You're done. Exit?");
 
 	}
