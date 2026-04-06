@@ -21,13 +21,13 @@ public class Sng_Test : SingletonService
 		
 		AddOrActivateWebPageTab("Google", "Https://www.google.com");
 		
-		AddOrActivateWindowGrabberTab("My Company Mail", IsOutlookPwaWindow, async @delegate =>
+		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, async @delegate =>
 		                                                                     {
 			                                                                     Console.Beep();
 			                                                                     //await SpeakAsync("Window not found from the plug-in");
 		                                                                     });
 		await PauseAsync();
-		AddOrActivateWindowGrabberTab("My Company Mail", IsVivaldi, @delegate => { });
+		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsVivaldi, @delegate => { });
 		// await PauseAsync();
 		// return;
 		
@@ -48,7 +48,7 @@ public class Sng_Test : SingletonService
 		await InformAsync("This is a modeless message box from the service direct method");
 		await PauseAsync("Press OK when ready");
 		
-		AddOrActivateWindowGrabberTab("My Company Mail", IsOutlookPwaWindow, @delegate =>
+		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
 		                                                                     {
 			                                                                     Console.Beep();
 			                                                                     //SpeakAsync("Window not found from the plugin");
@@ -62,13 +62,13 @@ public class Sng_Test : SingletonService
 		// {
 			await PauseAsync($"You selected {result.selectedOption}");
 			
-			AddOrActivateWindowGrabberTab("Vivaldi", IsVivaldi, null);
+			await AddOrActivateWindowGrabberTabAsync("Vivaldi", IsVivaldi, null);
 		// }
 		await PauseAsync($"You selected {result.selectedOption}");
 		
 		
 		
-		AddOrActivateWindowGrabberTab("My Company Mail", IsOutlookPwaWindow, @delegate =>
+		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
 		                                                                     {
 			                                                                     SpeakAsync("Window not found from the plugin");
 		                                                                     });

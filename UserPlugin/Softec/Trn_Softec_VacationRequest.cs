@@ -34,7 +34,10 @@ public class Trn_Softec_VacationRequest : TransientService
 		_ = SpeakAsync("Request the vacation.");
 		await PauseAsync("Done with request vacation?");
 
-		Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
+		// Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
+		await Resolve<Sng_OpenSoftecMail>().OpenSoftecMailPwaAsync();
+		await PauseAsync();
+		
 		AddOrActivateWebPageTab(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
 		await SpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
 		

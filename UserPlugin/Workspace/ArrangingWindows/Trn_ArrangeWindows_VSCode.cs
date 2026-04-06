@@ -2,7 +2,7 @@
 namespace UserPlugin.Workspace.ArrangingWindows.Items;
 
 [ManualTrigger("VSCode", 
-               "Arranges VSCode's windows 55555555555555555555555555555555",
+               "Arranges VSCode's windows 55555555555555555555555555555555 tile",
                false)]
 
 public class Trn_ArrangeWindows_VSCode : TransientService
