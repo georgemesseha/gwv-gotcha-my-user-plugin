@@ -13,6 +13,6 @@ public class Trn_Sahel_ManageGitRepo : TransientService
 	{
 		var config = Resolve<Sng_Config_Sahel>();
 		var openInVsCode = Resolve<Sng_OpenInVsCode>();
-		await openInVsCode.OpenDirectory(config.MainProjectPath);
+		await openInVsCode.OpenDirectoryAsync(config.MainProjectPath);
 	}
 }

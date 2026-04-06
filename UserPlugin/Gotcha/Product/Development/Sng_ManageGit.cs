@@ -10,7 +10,7 @@ public class Sng_ManageGit : SingletonService
 	{
 		var vscode = Resolve<Sng_OpenInVsCode>();
 		var config = Resolve<Sng_Config_Gotcha>();
-		_ = vscode.OpenDirectory(config.GotchaMainDirPath);
+		_ = vscode.OpenDirectoryAsync(config.GotchaMainDirPath);
 		_ = SpeakAsync("Opening Gotcha repo in VSCode");
 		return Task.CompletedTask;
 	}

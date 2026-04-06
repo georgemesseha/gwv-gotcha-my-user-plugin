@@ -8,13 +8,13 @@ public class Sng_OpenInVsCode : SingletonService
 		throw new NotImplementedException(); 
 	}
 	
-	public async Task OpenDirectory(string dirPath)
+	public async Task OpenDirectoryAsync(string dirPath)
 	{
 		var directory = new DirectoryInfo(dirPath);
 		if (directory.Exists == false)
 		{
 			throw new
-				InvalidOperationException($"Directory path [{dirPath}] provided to {this.GetType()}.{nameof(OpenDirectory)} doesn't exist");
+				InvalidOperationException($"Directory path [{dirPath}] provided to {this.GetType()}.{nameof(OpenDirectoryAsync)} doesn't exist");
 		}
 		
 		

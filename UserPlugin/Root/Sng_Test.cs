@@ -20,6 +20,8 @@ public class Sng_Test : SingletonService
 		await SpeakAsync("Starting test in 5 seconds please wait");
 		
 		AddOrActivateWebPageTab("Google", "Https://www.google.com");
+		await PauseAsync();
+		
 		
 		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, async @delegate =>
 		                                                                     {
