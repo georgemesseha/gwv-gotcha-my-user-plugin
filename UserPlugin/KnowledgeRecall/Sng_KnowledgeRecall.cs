@@ -15,7 +15,7 @@ public class Sng_KnowledgeRecall : SingletonService
 		await SpeakAsync("You need as well an automatic way for recalling the information");
 		await PauseAsync("Done?");
 		
-		AddOrActivateWebPageTab(commonTabs.Tab_SoftecAuthProjectMainPage, 
+		await AddOrActivateWebPageTabAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		               commonTabs.Url_SoftecAuthProjectMainPage);
 
 		await SpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");

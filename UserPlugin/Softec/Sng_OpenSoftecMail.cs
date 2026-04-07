@@ -12,19 +12,19 @@ public class Sng_OpenSoftecMail : SingletonService
 	
 	public override async Task ExecuteAsync()
 	{
-		OpenSideViewForSoftecMail();
+		await OpenSideViewForSoftecMailAsync();
 		await PauseAsync("Done?");
 		
 	}
 	
-	public void OpenSideViewForSoftecMail()
+	public async Task OpenSideViewForSoftecMailAsync()
 	{
-		AddOrActivateWebPageTab(tabSoftecMail, urlSoftecMail);
+		await AddOrActivateWebPageTabAsync(tabSoftecMail, urlSoftecMail);
 	}
 	
 	public async Task OpenSoftecMailPwaAsync()
 	{
-		// AddOrActivateWebPageTab(tabSoftecMail, urlSoftecMail);
+		// await AddOrActivateWebPageTabAsync(tabSoftecMail, urlSoftecMail);
 		
 		// var process = Process.Start(new ProcessStartInfo
 		// {

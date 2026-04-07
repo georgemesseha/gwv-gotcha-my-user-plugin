@@ -19,7 +19,7 @@ public class Sng_Test : SingletonService
 	{
 		await SpeakAsync("Starting test in 5 seconds please wait");
 		
-		AddOrActivateWebPageTab("Google", "Https://www.google.com");
+		await AddOrActivateWebPageTabAsync("Google", "Https://www.google.com");
 		await PauseAsync();
 		
 		
@@ -75,10 +75,11 @@ public class Sng_Test : SingletonService
 			                                                                     SpeakAsync("Window not found from the plugin");
 		                                                                     });
 		
-		await ReportErrorAsync("This is an error from the service direct method");
+		// await ReportErrorAsync("This is an error from the service direct method");
 
-		throw new Exception("This is a test exception");
-		
+		// throw new Exception("This is a test exception");
+
+		await PauseAsync();
 		
 		await RouteAsync("Routing question:", true,
 		                                ("Agentic AI Project", typeof(Sng_AgenticAiProject)),

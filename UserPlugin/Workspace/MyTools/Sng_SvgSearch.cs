@@ -3,14 +3,14 @@
 [ManualTrigger("SVG Search", "Find SVG icons images #repo")]
 public class Sng_SvgSearch : SingletonService
 {
-	public void OpenSvgSearch()
+	public async Task OpenSvgSearchAsync()
 	{
-		AddOrActivateWebPageTab("SVG Search", "https://www.svgrepo.com");	
+		await AddOrActivateWebPageTabAsync("SVG Search", "https://www.svgrepo.com");	
 	}
 	
 	public override async Task ExecuteAsync()
 	{
-		OpenSvgSearch();
+		await OpenSvgSearchAsync();
 		await PauseAsync(); 
 	}
 }

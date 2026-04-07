@@ -10,9 +10,9 @@ public class Trn_Softec_Eod : TransientService
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		AddOrActivateWebPageTab(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
-		AddOrActivateWebPageTab(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
-		AddOrActivateWebPageTab(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
+		await AddOrActivateWebPageTabAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
+		await AddOrActivateWebPageTabAsync(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
+		await AddOrActivateWebPageTabAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
 		
 
 		_ = SpeakAsync("Prepare your report then resume the conversation.");
@@ -20,10 +20,10 @@ public class Trn_Softec_Eod : TransientService
 		_ = SpeakAsync("Copy your report.");
 		await PauseAsync();
 		_ = SpeakAsync("Let ChatGPT polish your report!");
-		AddOrActivateWebPageTab(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
+		await AddOrActivateWebPageTabAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
 		await PauseAsync();
 		_ = SpeakAsync("Update the polished report in your Notion page.");
-		AddOrActivateWebPageTab(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
+		await AddOrActivateWebPageTabAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
 		await PauseAsync();
 		_ = SpeakAsync("Review your report.");
 		await PauseAsync();

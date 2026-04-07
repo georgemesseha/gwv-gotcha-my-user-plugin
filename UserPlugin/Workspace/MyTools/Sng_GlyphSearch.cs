@@ -3,14 +3,14 @@
 [ManualTrigger("Glyph Search", "Find #fa #material icons images #repo")]
 public class Sng_GlyphSearch : SingletonService
 {
-	public void OpenSvgSearch()
+	public async Task OpenSvgSearchAsync()
 	{
-		AddOrActivateWebPageTab("Glyph Search", "https://glyphsearch.com/");	
+		await AddOrActivateWebPageTabAsync("Glyph Search", "https://glyphsearch.com/");	
 	}
 	
 	public override async Task ExecuteAsync()
 	{
-		OpenSvgSearch();
+		await OpenSvgSearchAsync();
 		await PauseAsync(); 
 	}
 }
