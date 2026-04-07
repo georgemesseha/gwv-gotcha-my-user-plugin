@@ -29,7 +29,7 @@ public class Sng_Test : SingletonService
 			                                                                     //await SpeakAsync("Window not found from the plug-in");
 		                                                                     });
 		await PauseAsync();
-		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsVivaldi, @delegate => { });
+		await AddOrActivateWindowGrabberTabAsync("Vivaldi", IsVivaldi, @delegate => { });
 		// await PauseAsync();
 		// return;
 		
