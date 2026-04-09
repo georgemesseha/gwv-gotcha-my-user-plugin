@@ -1,5 +1,5 @@
 ﻿
-namespace UserPlugin.Workspace.ArrangingWindows.Items;
+namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("Teams", 
                "Arranges Teams windows #tile 222222222222222222",

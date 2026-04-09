@@ -1,5 +1,5 @@
 ﻿
-namespace UserPlugin.Workspace.ArrangingWindows.Items;
+namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("Rider", 
                "Arranges Rider's windows #tile 4444444444444444444444444444",

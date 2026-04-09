@@ -1,5 +1,5 @@
 ﻿
-namespace UserPlugin.Workspace.ArrangingWindows.Items;
+namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("Terminal", 
                "Arranges Terminal windows #tile 111111111111111111111111111111",

@@ -1,5 +1,5 @@
 ﻿
-namespace UserPlugin.Workspace.ArrangingWindows.Items;
+namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("Vivaldi", 
                "Arranges Vivaldi's windows 9999999999999999999999999999",

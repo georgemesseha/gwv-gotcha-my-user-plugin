@@ -49,4 +49,9 @@
         </Reference>
     </ItemGroup>
 
+
+    <ItemGroup>
+      <Folder Include="Workspace\MyTools\Git\" />
+    </ItemGroup>
+
 </Project>

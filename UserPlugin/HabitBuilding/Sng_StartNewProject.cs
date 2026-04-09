@@ -1,5 +1,5 @@
 ﻿
-namespace UserPlugin.HabitBuilding.Items;
+namespace UserPlugin.HabitBuilding;
 
 [ManualTrigger("💻 Start a new project", "Start a new project #create #notion")]
 public class Sng_StartNewProject : SingletonService

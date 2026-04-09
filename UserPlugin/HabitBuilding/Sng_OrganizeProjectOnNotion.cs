@@ -1,7 +1,7 @@
 ﻿
 using UserPlugin._GenericServices;
 
-namespace UserPlugin.HabitBuilding.Items;
+namespace UserPlugin.HabitBuilding;
 
 [ManualTrigger("Organize a project On Notion", "Recall #learn #remember how to Organize a project On Notion")]
 public class Sng_OrganizeProjectOnNotion : SingletonService

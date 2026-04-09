@@ -1,4 +1,4 @@
-﻿namespace UserPlugin.Softec.Projects.ScanDeciever.Development;
+﻿namespace UserPlugin.Softec.Projects.ScanDeceiver.Development;
 
 [ManualTrigger("Overview", "Develop ScanDeceiver Project overview")]
 public class Sng_Overview : SingletonService

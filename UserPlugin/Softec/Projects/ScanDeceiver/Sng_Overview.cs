@@ -1,7 +1,4 @@
-﻿using UserPlugin.Softec.Projects.ScanDeciever.Development;
-using UserPlugin.Softec.Projects.ScanDeciever.Publishing;
-
-namespace UserPlugin.Softec.Projects.ScanDeciever;
+﻿namespace UserPlugin.Softec.Projects.ScanDeceiver;
 
 [ManualTrigger("Overview", "ScanDeceiver Project #veracode #ips")]
 public class Sng_Overview : SingletonService

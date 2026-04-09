@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Softec.Projects.ScanDeciever.Development;
+namespace UserPlugin.Softec.Projects.ScanDeceiver.Development;
 
 [ManualTrigger("Open Solution", "Open ScanDeceiver Solution #sln")]
 public class Sng_OpenSolution : SingletonService
