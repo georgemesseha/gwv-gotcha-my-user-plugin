@@ -1,4 +1,4 @@
-﻿namespace UserPlugin.Workspace.MyTools.npm;
+﻿namespace UserPlugin.Workspace.MyTools.NodeJS;
 
 [ManualTrigger("List package direct dependencies", "List Direct Dependencies of the current package")]
 public class Sng_ListDirectDependencies : SingletonService

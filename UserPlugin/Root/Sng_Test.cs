@@ -1,4 +1,5 @@
-﻿using UserPlugin._GenericServices.Configuration;
+﻿using UserPlugin._GenericServices;
+using UserPlugin._GenericServices.Configuration;
 using UserPlugin.Softec.Projects.AgenticAI;
 
 namespace UserPlugin.Root;
@@ -17,10 +18,18 @@ public class Sng_Test : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		await SpeakAsync("Starting test in 5 seconds please wait");
+		var video = Resolve<Sng_VideoEditor>();
+		await video.SplitVideoWhosePathOnClipboardAsync();
+		
+		var answer = await RequestStringAsync("Please enter your name");
+		await InformAsync($"Hello {answer}");
+		await PauseAsync();
+		
 		
 		await AddOrActivateWebPageTabAsync("Google", "Https://www.google.com");
 		await PauseAsync();
+		
+		
 		
 		
 		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, async @delegate =>

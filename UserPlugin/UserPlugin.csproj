@@ -51,7 +51,7 @@
 
 
     <ItemGroup>
-      <Folder Include="Workspace\MyTools\Git\" />
+      <Folder Include="Multimedia\" />
     </ItemGroup>
 
 </Project>
