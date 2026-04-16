@@ -208,7 +208,7 @@ public class Sng_VideoEditor : SingletonService
 	
 	private async Task _RunVideoSplittingInstructionsAsync(string workshopPath, string instructions)
 	{
-		string instructionsFilePath = Path.Combine(workshopPath, "instructions.csv").Replace("\\", "/");
+		// string instructionsFilePath = Path.Combine(workshopPath, "instructions.csv").Replace("\\", "/");
 		// var instructions = await File.ReadAllTextAsync(instructionsFilePath);
 		
 		var findingSrcResult = _FindSrcFilePath(workshopPath);
@@ -226,7 +226,16 @@ public class Sng_VideoEditor : SingletonService
 	public async Task SplitVideoWhosePathOnClipboardAsync()
 	{
 		var workshopPath = await this._CreateWorkshopForFilePathOnClipboardAsync();
-		var instructions = await this.RequestStringAsync("Write time periods each in a separate line in format 0:0:0, 0:0:5 ");
+		var instructions = await this.InputStringAsync("Write time periods each in a separate line in format 0:0:0, 0:0:5 ",
+		                                               input =>
+		                                               {
+			                                               if (input.EndsWith("done",
+			                                                                  StringComparison
+				                                                                  .CurrentCultureIgnoreCase))
+				                                               return string.Empty;
+			                                               else return "Please conclude your answer by adding “done” at the end.";
+		                                               });
+		instructions = instructions.Replace("done", "").Trim();
 		await this._RunVideoSplittingInstructionsAsync(workshopPath, instructions);
 	}
 	
@@ -255,7 +264,7 @@ public class Sng_VideoEditor : SingletonService
 			     commands.Append(powershellCommand);
         }
 
-        commands.Append("Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('Done splitting all!');");
+        // commands.Append("Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('Done splitting all!');");
 
         await this.AddCodeSnippetAsync("Commands going to run", commands.ToString());
         await this.AddCodeSnippetAsync("Gain dir", destinationDir);
@@ -263,9 +272,12 @@ public class Sng_VideoEditor : SingletonService
         
         _ = SpeakAsync("Dismiss on completion. And find gain directory on clipboard.");
         
-        await this.RunCommandInTerminalAsync(commands.ToString(), 
-                                              workshopPath);
-    }
+        // await this.RunCommandInTerminalAsync(commands.ToString(), 
+        //                                       workshopPath);
+        await this.RunInWindowsTerminalAsync("This is my title",
+                                             commands.ToString(),
+                                             workshopPath);
+	}
 	
 	private async Task _RepairVideosInDirectoryAsync(string dirPath)
 	{
@@ -303,12 +315,12 @@ public class Sng_VideoEditor : SingletonService
 			var dstFilePath = Path.Combine(repairedFolderPath, Path.GetFileName(filePath));
 			var powershellCommand = $@"& ffmpeg -ss 00:00:00 -to 24:00:00 -i """"{filePath}"""" -c:v libx264 -preset fast -crf 18 -c:a aac -b:a 192k """"{dstFilePath}""""; ";
 			commands.Append(powershellCommand);
-			commands.Append("Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('Done repairing all!');");
-			Clipboard.SetText($"File {fileNo} has been repaired.");
 		}
-        
+
+		await this.AddCodeSnippetAsync("Commands going to run", commands.ToString());
+		await this.AddCodeSnippetAsync("Destination directory", repairedFolderPath);
+		
 		_ = SpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
-		Clipboard.SetText(repairedFolderPath);
 		
 		await RunCommandInTerminalAsync(commands.ToString(), 
 			                                      dirPath);

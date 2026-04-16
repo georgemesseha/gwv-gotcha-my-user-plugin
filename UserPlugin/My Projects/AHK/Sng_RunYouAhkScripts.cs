@@ -1,0 +1,25 @@
+﻿
+namespace UserPlugin.My_Projects.AHK;
+
+using UserPlugin._GenericServices;
+
+
+[ManualTrigger("Run your startup AHK scripts", "Run Your Autohotkey Scripts. start, execute")]
+public class Sng_RunYouAhkScripts : SingletonService
+{
+	public override async Task ExecuteAsync()
+	{
+		var ahk = Resolve<Sng_AutoHotKey>();
+		var triggersPath = Path.Join(ahk.AhkScriptsFolderPath, "Triggers");
+		var allTriggerFiles = new DirectoryInfo(triggersPath).GetFiles("*.ahk");
+		foreach (var triggerFile in allTriggerFiles)
+		{
+			if (IsMarkedForTermination) return;
+			
+			ahk.RunAhkScript(triggerFile.FullName);
+			await this.InformAsync(triggerFile.FullName);
+		}
+		// ahk.RunAhkScript("D:\\OneDrive\\_Explicit_\\Automation\\AutoHotkey\\Triggers\\test.ahk");
+		await SpeakAsync("Done executing you ahk scripts");
+	}
+}

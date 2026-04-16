@@ -1,6 +1,6 @@
 ﻿using UserPlugin._GenericServices;
 
-namespace UserPlugin.Gotcha.LegacyTypeScriptGlobalTool;
+namespace UserPlugin.My_Projects.Gotcha.LegacyTypeScriptGlobalTool;
 
 [ManualTrigger("Legacy TypeScript Tool", "Legacy TypeScript Gotcha Global Tool")]
 public class LegacyTypeScriptTool : SingletonService

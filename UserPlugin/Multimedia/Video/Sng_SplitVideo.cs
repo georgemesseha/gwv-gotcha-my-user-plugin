@@ -9,5 +9,6 @@ public class Sng_SplitVideo : SingletonService
 	{
 		var video = Resolve<Sng_VideoEditor>();
 		await video.SplitVideoWhosePathOnClipboardAsync();
+		await PauseAsync("You're done! Dismiss?");
 	}
 }

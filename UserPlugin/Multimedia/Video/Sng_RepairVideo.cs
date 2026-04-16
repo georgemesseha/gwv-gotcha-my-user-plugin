@@ -8,6 +8,8 @@ public class Sng_RepairVideo : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		var video = Resolve<Sng_VideoEditor>();
-		await video.RepairVideosInDirectoryOnClipboardAsync();
+		_ = video.RepairVideosInDirectoryOnClipboardAsync();
+        await this.InformAsync("Repairing videos. Keep your eyes on the terminal running the process.");
+        await this.PauseAsync("Has the process in terminal completed?");
 	}
 }

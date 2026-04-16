@@ -21,7 +21,12 @@ public class Sng_Test : SingletonService
 		var video = Resolve<Sng_VideoEditor>();
 		await video.SplitVideoWhosePathOnClipboardAsync();
 		
-		var answer = await RequestStringAsync("Please enter your name");
+		var answer = await InputStringAsync("Please enter your name", input =>
+		                                                              {
+			                                                              if (string.IsNullOrWhiteSpace(input))
+				                                                              return "Your name is required";
+			                                                              else return string.Empty;
+		                                                              });
 		await InformAsync($"Hello {answer}");
 		await PauseAsync();
 		

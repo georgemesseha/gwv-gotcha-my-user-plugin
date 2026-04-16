@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.Gotcha.Plugin.Development;
+namespace UserPlugin.My_Projects.Gotcha.Plugin.Development;
 
 [ManualTrigger("Open solution", "Opens your personal Gotcha's plug-in solution in rider #.sln #plg")]
 public class Sng_OpenSolution : SingletonService
@@ -10,6 +10,6 @@ public class Sng_OpenSolution : SingletonService
 	{
 		var plugnSlnFilePath = Resolve<Sng_Config_Gotcha>().PluginSlnFilePath;
 		await Resolve<Sng_OpenInRider>().OpenSolutionAsync(plugnSlnFilePath);
-		_ = SpeakAsync("Opening Gotcha's plug-in solution in Rider");
+		_ = SpeakAsync("Opening Gotcha's plug-in in Rider");
 	}
 }

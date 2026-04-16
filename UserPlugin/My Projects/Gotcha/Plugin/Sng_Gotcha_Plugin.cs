@@ -1,7 +1,7 @@
 ﻿
-using UserPlugin.Gotcha.Plugin.Development;
+using UserPlugin.My_Projects.Gotcha.Plugin.Development;
 
-namespace UserPlugin.Gotcha.Plugin;
+namespace UserPlugin.My_Projects.Gotcha.Plugin;
 
 [ManualTrigger("Overview", "Your personal Gotcha's Plugin overview #plg")]
 public class Sng_Gotcha_Plugin : SingletonService

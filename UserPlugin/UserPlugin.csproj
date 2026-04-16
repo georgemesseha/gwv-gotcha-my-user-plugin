@@ -54,4 +54,12 @@
       <Folder Include="Multimedia\" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <None Remove="_Scripts\1vhd.bat" />
+      <Content Include="_Scripts\1vhd.bat">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
