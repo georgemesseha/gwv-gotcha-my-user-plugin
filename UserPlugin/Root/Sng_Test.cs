@@ -18,6 +18,18 @@ public class Sng_Test : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
+		await RunExternalAsync("dir", "D:\\", stdOut =>
+		                                      {
+			                                      InformAsync(stdOut);
+		                                      },
+		                       stdErr =>
+		                                      {
+			                                      ReportErrorAsync(stdErr);
+		                                      });
+		
+		
+		await PauseAsync();
+		
 		var video = Resolve<Sng_VideoEditor>();
 		await video.SplitVideoWhosePathOnClipboardAsync();
 		

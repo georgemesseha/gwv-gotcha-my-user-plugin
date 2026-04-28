@@ -16,13 +16,12 @@ public class Sng_OpenInRider : SingletonService
 			throw new
 				InvalidOperationException($"File path [{slnFilePath}] provided to {this.GetType()}.{nameof(OpenSolutionAsync)} doesn't exist");
 		}
-		
-		
-		await RunCommandAsFunctionAsync($"rider \"{slnFilePath}\"", 
-		                                             file.Directory!.FullName,
-		                                             false,
-		                                             null,
-		                                             null);
+
+		// await RunExternalAsync("notepad", "");
+
+		await RunExternalAsync($"rider64 \"{slnFilePath}\"", 
+		                        file.Directory!.FullName);
+
 	}
 
 	public async Task OpenDirectoryAsync(string dirPath)
@@ -35,7 +34,7 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await RunCommandAsFunctionAsync($"rider \"{dirPath}\"", 
+		await RunExternalAsync($"rider64 \"{dirPath}\"", 
 		                                             dirPath,
 		                                             false,
 		                                             null,
@@ -52,7 +51,7 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await RunCommandAsFunctionAsync($"rider \"{file.FullName}\"", 
+		await RunExternalAsync($"rider64 \"{file.FullName}\"", 
 		                                             file.DirectoryName,
 		                                             false,
 		                                             null,

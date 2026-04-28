@@ -18,7 +18,7 @@ public class Sng_OpenInVsCode : SingletonService
 		}
 		
 		
-		await RunCommandAsFunctionAsync($"code \"{dirPath}\"", 
+		await RunExternalAsync($"code \"{dirPath}\"", 
 		                                             dirPath,
 		                                             false,
 		                                             null,

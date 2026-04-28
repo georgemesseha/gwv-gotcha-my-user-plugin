@@ -12,7 +12,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 		int count = await ArrangeWindowsOfAsync("code");
 		if (count == 0)
 		{
-			_ = RunCommandAsFunctionAsync("code .", "C:\\", false, null, null);
+			_ = RunExternalAsync("code .", "C:\\", false, null, null);
 			_ = SpeakAsync("Creating a new instance.");
 		}
 		StatusMessage = $"Arranged {count} VSCode windows";
