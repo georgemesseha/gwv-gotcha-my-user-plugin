@@ -17,7 +17,7 @@ public class Sng_RunYouAhkScripts : SingletonService
 			if (IsMarkedForTermination) return;
 			
 			ahk.RunAhkScript(triggerFile.FullName);
-			await this.InformAsync(triggerFile.FullName);
+			await Dialog.Add.InfoAsync(triggerFile.FullName);
 		}
 		// ahk.RunAhkScript("D:\\OneDrive\\_Explicit_\\Automation\\AutoHotkey\\Triggers\\test.ahk");
 		await SpeakAsync("Done executing you ahk scripts");

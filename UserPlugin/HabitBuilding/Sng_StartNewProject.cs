@@ -34,7 +34,7 @@ public class Sng_StartNewProject : SingletonService
 		await PauseAsync("Ready?");
 		
 		_ = SpeakAsync("Use the link to in the following similar line to open the page in the project's main page execution!");
-		await InformAsync("AddOrActivateSideWebPage(\"Sample\", \"YOUR_LINK_TO_THE_VIEW\"");
+		await Dialog.Add.InfoAsync("AddOrActivateSideWebPage(\"Sample\", \"YOUR_LINK_TO_THE_VIEW\"");
 		await PauseAsync("Ready?");
 		
 		

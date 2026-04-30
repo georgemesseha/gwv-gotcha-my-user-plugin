@@ -9,7 +9,7 @@ public class Sng_OpenSolution : TransientService
 	public override async Task ExecuteAsync()
 	{
 		var gotchaSlnFilePath = Resolve<Sng_Config_Gotcha>().GotchaSlnFilePath;
-		await Resolve<Sng_OpenInRider>().OpenSolutionAsync(gotchaSlnFilePath);
-		// Context.Dismiss();
+		_ = Resolve<Sng_OpenInRider>().OpenSolutionAsync(gotchaSlnFilePath);
+		await PauseAsync();
 	}
-}
+} 

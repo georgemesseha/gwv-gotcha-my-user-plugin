@@ -18,9 +18,16 @@ public class Sng_Test : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
+		await Dialog.Add.InfoAsync("Hello World");
+		
+		
+		// await Dialog.AddCodeSnippetAsync("Hello World", "lorem ipsum dolor sit amet");
+
+		await PauseAsync("You're done");
+		
 		await RunExternalAsync("dir", "D:\\", stdOut =>
 		                                      {
-			                                      InformAsync(stdOut);
+			                                      Dialog.Add.InfoAsync(stdOut); 
 		                                      },
 		                       stdErr =>
 		                                      {
@@ -39,7 +46,7 @@ public class Sng_Test : SingletonService
 				                                                              return "Your name is required";
 			                                                              else return string.Empty;
 		                                                              });
-		await InformAsync($"Hello {answer}");
+		await Dialog.Add.InfoAsync($"Hello {answer}");
 		await PauseAsync();
 		
 		
@@ -73,7 +80,7 @@ public class Sng_Test : SingletonService
 
 		_ = SpeakAsync("This is spoken from the service direct method");
 		await WarnAsync($"You selected {result.selectedOption}");
-		await InformAsync("This is a modeless message box from the service direct method");
+		await Dialog.Add.InfoAsync("This is a modeless message box from the service direct method");
 		await PauseAsync("Press OK when ready");
 		
 		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
@@ -107,9 +114,9 @@ public class Sng_Test : SingletonService
 
 		await PauseAsync();
 		
-		await RouteAsync("Routing question:", true,
-		                                ("Agentic AI Project", typeof(Sng_AgenticAiProject)),
-		                                ("Sahel", typeof(Sng_Config_Sahel)));
+		// await RouteAsync("Routing question:", true,
+		//                                 ("Agentic AI Project", typeof(Sng_AgenticAiProject)),
+		//                                 ("Sahel", typeof(Sng_Config_Sahel)));
 	}
 
 	private bool IsVivaldi(string title, uint processId)
