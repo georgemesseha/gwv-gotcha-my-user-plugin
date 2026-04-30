@@ -5,7 +5,7 @@ public class Sng_SvgSearch : SingletonService
 {
 	public async Task OpenSvgSearchAsync()
 	{
-		await AddOrActivateWebPageTabAsync("SVG Search", "https://www.svgrepo.com");	
+		await Dialog.Add.WebPageAsync("SVG Search", "https://www.svgrepo.com");	
 	}
 	
 	public override async Task ExecuteAsync()

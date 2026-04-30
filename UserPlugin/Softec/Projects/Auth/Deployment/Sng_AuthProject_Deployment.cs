@@ -9,7 +9,7 @@ public class Sng_AuthProject_Deployment : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
-		await AddOrActivateWebPageTabAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
+		await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		               commonTabs.Url_SoftecAuthProjectMainPage);
 		
 	}

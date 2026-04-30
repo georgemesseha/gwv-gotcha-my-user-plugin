@@ -50,7 +50,7 @@ public class Sng_Test : SingletonService
 		await Dialog.PauseAsync();
 		
 		
-		await AddOrActivateWebPageTabAsync("Google", "Https://www.google.com");
+		await Dialog.Add.WebPageAsync("Google", "Https://www.google.com");
 		await Dialog.PauseAsync();
 		
 		

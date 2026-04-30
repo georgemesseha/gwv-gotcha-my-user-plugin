@@ -6,7 +6,8 @@ public class Sng_StartNewProject : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		await AddOrActivateWebPageTabAsync("Sample",
+		// await Dialog.Add.WebPageAsync()
+		await Dialog.Add.WebPageAsync("Sample",
 		               "https://www.notion.so/9d397c27567e4490a2d8b98cbe0f4640?v=32e6ea6ef608805cbd14000cf1cb5b33&source=copy_link");
 
 		await Dialog.Add.TextToSpeakAsync("Remember you almost need the following items for every project");
@@ -14,7 +15,7 @@ public class Sng_StartNewProject : SingletonService
 		await Dialog.Add.TextToSpeakAsync("2. Architecture");
 		await Dialog.Add.TextToSpeakAsync("3. Critical Key Points");
 		await Dialog.Add.TextToSpeakAsync("4. Backlog");
-		await Dialog.Add.TextToSpeakAsync("5. Reasoning and Decisions");
+		await Dialog.Add.TextToSpeakAsync("5. Reasoning and Decisions"); 
 		await Dialog.PauseAsync("Ready?");
 		
 		await Dialog.Add.TextToSpeakAsync("Remember also you decided to overview your project through a database filter on a tag.");
