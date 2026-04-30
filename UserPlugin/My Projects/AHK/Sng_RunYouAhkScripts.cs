@@ -20,6 +20,6 @@ public class Sng_RunYouAhkScripts : SingletonService
 			await Dialog.Add.InfoAsync(triggerFile.FullName);
 		}
 		// ahk.RunAhkScript("D:\\OneDrive\\_Explicit_\\Automation\\AutoHotkey\\Triggers\\test.ahk");
-		await SpeakAsync("Done executing you ahk scripts");
+		await Dialog.Add.TextToSpeakAsync("Done executing you ahk scripts");
 	}
 }

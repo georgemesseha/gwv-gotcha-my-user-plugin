@@ -29,7 +29,7 @@ public class Trigger1 : TransientService
 		await RunCommandInTerminalAsync("dir", "");
 		// throw new Exception("This is an intended exception");
 		// Context.Services.Clipboard.SetText("This text is from the plug-in");
-		await SpeakAsync("Test");
+		await Dialog.Add.TextToSpeakAsync("Test");
 		StatusMessage = "This is a status message written by the plug-in";
 		
 		// await Context.Services.VideoEditor.CreateWorkshopForFilePathOnClipboardAsync();
@@ -48,7 +48,7 @@ public class Trigger1 : TransientService
 						                            new McqOption("Yes", "Yes"),
 						                            new McqOption("No", "No")
 					                            });
-				               _ = SpeakAsync(result.selectedOption?.title ?? "Cancelled");
+				               _ = Dialog.Add.TextToSpeakAsync(result.selectedOption?.title ?? "Cancelled");
 
 				               if (IsMarkedForTermination)
 				               {

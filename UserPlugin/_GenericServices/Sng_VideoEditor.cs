@@ -33,7 +33,7 @@ public class Sng_VideoEditor : SingletonService
 		catch (Exception e)
 		{
 			ReportErrorAsync(e.ToString());
-			SpeakAsync("Couldn't start the workshop directory in VS Code.");
+			Dialog.Add.TextToSpeakAsync("Couldn't start the workshop directory in VS Code.");
 		}
 	}
 	
@@ -84,7 +84,7 @@ public class Sng_VideoEditor : SingletonService
 		// _sngClipboard.SetText(workshopDir.FullName);
 
 		await this.AddCodeSnippetAsync("Workshop Directory", workshopDir.FullName);
-		_ = SpeakAsync($"The workshop directory has been created!");
+		_ = Dialog.Add.TextToSpeakAsync($"The workshop directory has been created!");
 		
 		// try
 		// {
@@ -137,7 +137,7 @@ public class Sng_VideoEditor : SingletonService
 		if (string.IsNullOrWhiteSpace(filePath))
 		{
 			var msg = "The text on the clipboard is not a valid file path.";
-			_ = SpeakAsync(msg);
+			_ = Dialog.Add.TextToSpeakAsync(msg);
 			throw new Exception(msg);
 			
 		}
@@ -147,7 +147,7 @@ public class Sng_VideoEditor : SingletonService
 		if (File.Exists(filePath) == false)
 		{
 			var msg = "The text on the clipboard is not a valid file path.";
-			_ = SpeakAsync(msg);
+			_ = Dialog.Add.TextToSpeakAsync(msg);
 			throw new Exception(msg);
 		}
 
@@ -155,7 +155,7 @@ public class Sng_VideoEditor : SingletonService
 		if (possibleVideoFileExtensions.Any(ext => filePath.EndsWith(ext, StringComparison.OrdinalIgnoreCase)) == false)
 		{
 			var msg = "The extension of the file path on the clipboard is not of a video file.";
-			_ = SpeakAsync(msg);
+			_ = Dialog.Add.TextToSpeakAsync(msg);
 			throw new Exception(msg);
 		}
 
@@ -169,7 +169,7 @@ public class Sng_VideoEditor : SingletonService
 		var lines = instructions.Trim().Split("\n");
 		if (lines.Length < 1)
 		{
-			_ = SpeakAsync("Empty splitting instructions");
+			_ = Dialog.Add.TextToSpeakAsync("Empty splitting instructions");
 			return (false, new List<(string startTime, string endTime)>());
 			
 		}
@@ -193,13 +193,13 @@ public class Sng_VideoEditor : SingletonService
 		var files = Directory.GetFiles(workshopDirPath, "src.*", SearchOption.TopDirectoryOnly);
 		if (files.Length == 0)
 		{
-			_ = SpeakAsync("Couldn't find the source file.");
+			_ = Dialog.Add.TextToSpeakAsync("Couldn't find the source file.");
 			return (false, string.Empty);
 		}
 
 		if (files.Length > 1)
 		{
-			_ = SpeakAsync("Error: More than one file named as src. something found.");
+			_ = Dialog.Add.TextToSpeakAsync("Error: More than one file named as src. something found.");
 			return (false, string.Empty);
 		}
 		
@@ -270,7 +270,7 @@ public class Sng_VideoEditor : SingletonService
         await this.AddCodeSnippetAsync("Gain dir", destinationDir);
 		Clipboard.SetText(destinationDir);
         
-        _ = SpeakAsync("Dismiss on completion. And find gain directory on clipboard.");
+        _ = Dialog.Add.TextToSpeakAsync("Dismiss on completion. And find gain directory on clipboard.");
         
         // await this.RunCommandInTerminalAsync(commands.ToString(), 
         //                                       workshopPath);
@@ -283,7 +283,7 @@ public class Sng_VideoEditor : SingletonService
 	{
 		if (Directory.Exists(dirPath) == false)
 		{
-			_ = SpeakAsync("Invalid directory path.");
+			_ = Dialog.Add.TextToSpeakAsync("Invalid directory path.");
 			return;
 		}
 
@@ -298,7 +298,7 @@ public class Sng_VideoEditor : SingletonService
 
 		if (filePaths.Length == 0)
 		{
-			_ = SpeakAsync("No supported files found in that directory.");
+			_ = Dialog.Add.TextToSpeakAsync("No supported files found in that directory.");
 			return;
 		}
 		
@@ -320,7 +320,7 @@ public class Sng_VideoEditor : SingletonService
 		await this.AddCodeSnippetAsync("Commands going to run", commands.ToString());
 		await this.AddCodeSnippetAsync("Destination directory", repairedFolderPath);
 		
-		_ = SpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
+		_ = Dialog.Add.TextToSpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
 		
 		await RunCommandInTerminalAsync(commands.ToString(), 
 			                                      dirPath);
@@ -331,7 +331,7 @@ public class Sng_VideoEditor : SingletonService
 		var dirPath = Clipboard.GetText();
 		if (Directory.Exists(dirPath) == false)
 		{
-			_ = SpeakAsync("The text on clipboard is not a valid directory path.");
+			_ = Dialog.Add.TextToSpeakAsync("The text on clipboard is not a valid directory path.");
 			return;
 		}
 		await _RepairVideosInDirectoryAsync(dirPath);

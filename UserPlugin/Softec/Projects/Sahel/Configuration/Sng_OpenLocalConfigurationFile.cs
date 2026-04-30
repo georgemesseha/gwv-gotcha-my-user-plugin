@@ -11,7 +11,7 @@ public class Sng_OpenLocalConfigurationFile : SingletonService
 		var sngConfig = Resolve<Sng_Config_Sahel>();
 		var sngOpenInRider = Resolve<Sng_OpenInRider>();
 		_ = sngOpenInRider.OpenFileAsync(sngConfig.LocalConfigFile);
-		_ = SpeakAsync("Opening local configuration in Rider");
+		_ = Dialog.Add.TextToSpeakAsync("Opening local configuration in Rider");
 		return Task.CompletedTask;
 	}
 }

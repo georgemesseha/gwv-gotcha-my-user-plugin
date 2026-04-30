@@ -8,7 +8,7 @@ public class Sng_FolderIcons : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		_ = this.SpeakAsync("Opening Folder Icons");
+		_ = this.Dialog.Add.TextToSpeakAsync("Opening Folder Icons");
 
 		var oneDrivePath = Resolve<Sng_SpecialFoldersRecognizer>().OneDrivePath;
 		var folderIconsPath = Path.Join(oneDrivePath, "_Explicit_", "FI");

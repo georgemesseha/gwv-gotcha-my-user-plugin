@@ -23,15 +23,15 @@ public class Trn_Softec_VacationRequest : TransientService
 		
 		
 		await AddOrActivateWebPageTabAsync(tabPortalVacationRequest, commonTabs.Url_SafeCityPortal);
-		_ = SpeakAsync("Sign in if needed");
+		_ = Dialog.Add.TextToSpeakAsync("Sign in if needed");
 		await PauseAsync("Done?");
 
-		_ = SpeakAsync("Recall the UI flow on the portal on the left!");
+		_ = Dialog.Add.TextToSpeakAsync("Recall the UI flow on the portal on the left!");
 		await AddOrActivateWebPageTabAsync(Tab_PortalVacationRequestUIFlow, Url_PortalUiFlowOfVacationRequest);
 		await PauseAsync("Yes I recalled it");
 
 		await AddOrActivateWebPageTabAsync(tabPortalVacationRequest, Url_PortalVacationRequestUIFlow);
-		_ = SpeakAsync("Request the vacation.");
+		_ = Dialog.Add.TextToSpeakAsync("Request the vacation.");
 		await PauseAsync("Done with request vacation?");
 
 		// Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
@@ -39,7 +39,7 @@ public class Trn_Softec_VacationRequest : TransientService
 		await PauseAsync();
 		
 		await AddOrActivateWebPageTabAsync(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
-		await SpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
+		await Dialog.Add.TextToSpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
 		
 		
 		await PauseAsync("You're done. Exit?");

@@ -11,7 +11,7 @@ public class Trn_ArrangeWindows_Terminal : TransientService
 		int count = await ArrangeWindowsOfAsync("WindowsTerminal", "cmd");
 		if (count == 0)
 		{
-			_ = SpeakAsync("No terminal windows found");
+			_ = Dialog.Add.TextToSpeakAsync("No terminal windows found");
 		}
 		StatusMessage = $"Arranged {count} Notion windows";
 	}

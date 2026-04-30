@@ -6,6 +6,6 @@ public class Trn_Sahel_Requirements : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		await SpeakAsync("Under construction");
+		await Dialog.Add.TextToSpeakAsync("Under construction");
 	}
 }

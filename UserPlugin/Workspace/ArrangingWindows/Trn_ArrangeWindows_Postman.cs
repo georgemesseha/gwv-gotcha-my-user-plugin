@@ -12,7 +12,7 @@ public class Trn_ArrangeWindows_Postman : TransientService
 		int count = await ArrangeWindowsOfAsync("Postman");
 		if (count == 0)
 		{
-			_ = SpeakAsync("Please open postman manually");
+			_ = Dialog.Add.TextToSpeakAsync("Please open postman manually");
 		}
 		StatusMessage = $"Arranged {count} Notion windows";
 	}

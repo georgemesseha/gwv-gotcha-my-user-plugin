@@ -11,7 +11,7 @@ public class Sng_AuthProject_ManageGit : SingletonService
 		var vscode = Resolve<Sng_OpenInVsCode>();
 		var config = Resolve<Sng_Config_SoftecAuth>();
 		_ = vscode.OpenDirectoryAsync(config.MainProjectPath);
-		_ = SpeakAsync("Opening in VSCode");
+		_ = Dialog.Add.TextToSpeakAsync("Opening in VSCode");
 		return Task.CompletedTask;
 	}
 }

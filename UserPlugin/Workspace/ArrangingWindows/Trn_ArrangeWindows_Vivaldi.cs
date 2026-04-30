@@ -12,7 +12,7 @@ public class Trn_ArrangeWindows_Vivaldi : TransientService
 		int count = await ArrangeWindowsOfAsync("Vivaldi");
 		if (count == 0)
 		{
-			_ = SpeakAsync("Please open Vivaldi manually");
+			_ = Dialog.Add.TextToSpeakAsync("Please open Vivaldi manually");
 		}
 		StatusMessage = $"Arranged {count} Notion windows";
 	}

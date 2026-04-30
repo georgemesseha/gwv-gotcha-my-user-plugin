@@ -13,7 +13,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 		if (count == 0)
 		{
 			_ = RunExternalAsync("code .", "C:\\", false, null, null);
-			_ = SpeakAsync("Creating a new instance.");
+			_ = Dialog.Add.TextToSpeakAsync("Creating a new instance.");
 		}
 		StatusMessage = $"Arranged {count} VSCode windows";
 	}

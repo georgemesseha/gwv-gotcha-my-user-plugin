@@ -10,17 +10,17 @@ public class Sng_KnowledgeRecall : SingletonService
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		await SpeakAsync("Your goal is to have a categorized view of your information hierarchically");
+		await Dialog.Add.TextToSpeakAsync("Your goal is to have a categorized view of your information hierarchically");
 		await PauseAsync("Done?");
-		await SpeakAsync("You need as well an automatic way for recalling the information");
+		await Dialog.Add.TextToSpeakAsync("You need as well an automatic way for recalling the information");
 		await PauseAsync("Done?");
 		
 		await AddOrActivateWebPageTabAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		               commonTabs.Url_SoftecAuthProjectMainPage);
 
-		await SpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");
+		await Dialog.Add.TextToSpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");
 		await PauseAsync();
-		await SpeakAsync("The hierarchy navigation to actions should be implemented in Gotcha's Plug-in");
+		await Dialog.Add.TextToSpeakAsync("The hierarchy navigation to actions should be implemented in Gotcha's Plug-in");
 		
 		await PauseAsync("Done. Exit?");
 		// Context.Dialog.Dismiss();

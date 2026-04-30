@@ -12,7 +12,7 @@ public class Trn_ArrangeWindows_Teams : TransientService
 		int count = await ArrangeWindowsOfAsync( "ms-teams");
 		if (count == 0)
 		{
-			_ = SpeakAsync("Please open teams manually");
+			_ = Dialog.Add.TextToSpeakAsync("Please open teams manually");
 		}
 		StatusMessage = $"Arranged {count} Notion windows";
 	}

@@ -9,6 +9,6 @@ public class LegacyTypeScriptTool : SingletonService
 	{
 		var vscode = Resolve<Sng_OpenInVsCode>();
 		await vscode.OpenDirectoryAsync("E:\\_MyProjects\\_MyNodeProjects\\wv-gotcha");
-		await SpeakAsync("Opening in VSCode");
+		await Dialog.Add.TextToSpeakAsync("Opening in VSCode");
 	}
 }

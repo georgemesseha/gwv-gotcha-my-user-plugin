@@ -7,7 +7,7 @@ public class Sng_OpenAhkFolderInVsCode : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		_ = this.SpeakAsync("Opening your AHK scripts in vscode");
+		_ = this.Dialog.Add.TextToSpeakAsync("Opening your AHK scripts in vscode");
 		var openInVsCode = Resolve<Sng_OpenInVsCode>();
 		var ahk = Resolve<Sng_AutoHotKey>();
 		

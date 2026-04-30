@@ -10,6 +10,6 @@ public class Sng_ManageGitRepo : TransientService
 	{
 		var pluginDir = Resolve<Sng_Config_Gotcha>().PluginMainDirPath;
 		await Resolve<Sng_OpenInVsCode>().OpenDirectoryAsync(pluginDir);
-		_ = SpeakAsync("Opening Gotcha's plugin Git repo in VSCode");
+		_ = Dialog.Add.TextToSpeakAsync("Opening Gotcha's plugin Git repo in VSCode");
 	}
 }

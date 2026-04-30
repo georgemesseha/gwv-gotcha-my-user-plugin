@@ -11,7 +11,7 @@ public class Sng_OpenLocalConfigDir : SingletonService
 		var config = Resolve<Sng_AllProjectsConfig>();
 		var vscode = Resolve<Sng_OpenInVsCode>();
 		_ = vscode.OpenDirectoryAsync(config.LocalConfigDir);
-		_ = SpeakAsync("Opening local config directory in VSCode");
+		_ = Dialog.Add.TextToSpeakAsync("Opening local config directory in VSCode");
 		return Task.CompletedTask;
 	}
 }
