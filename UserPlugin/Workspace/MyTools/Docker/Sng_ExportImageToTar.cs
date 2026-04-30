@@ -6,7 +6,7 @@ public class Sng_ExportImageToTar : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		await Dialog.Add.TextToSpeakAsync("This is pending the development of asking for a string question");
-		await PauseAsync();
+		await Dialog.PauseAsync();
 	}
 	
 	

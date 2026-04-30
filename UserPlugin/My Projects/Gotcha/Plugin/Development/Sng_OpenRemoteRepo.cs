@@ -6,6 +6,6 @@ public class Sng_OpenRemoteRepo : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		await AddOrActivateWebPageTabAsync("Remote Repo", "https://github.com/georgemesseha/gwv-gotcha-my-user-plugin.git");
-		await PauseAsync("Press Enter to exit");
+		await Dialog.PauseAsync("Press Enter to exit");
 	}
 }

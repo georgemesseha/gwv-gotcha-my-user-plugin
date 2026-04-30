@@ -7,6 +7,6 @@ public class Sng_UntrackFiles : SingletonService
 	{
 		await AddOrActivateWebPageTabAsync("Untrack a folder or files",
 		                                   "https://www.notion.so/Git-How-to-untrack-files-4a4d63657f794d50ac34d9a3b87258b2?source=copy_link");
-		await PauseAsync();
+		await Dialog.PauseAsync();
 	}
 }

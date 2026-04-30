@@ -11,6 +11,6 @@ public class Sng_OpenSolution : SingletonService
 		var plugnSlnFilePath = Resolve<Sng_Config_Gotcha>().PluginSlnFilePath;
 		_ = Resolve<Sng_OpenInRider>().OpenSolutionAsync(plugnSlnFilePath);
 		_ = Dialog.Add.TextToSpeakAsync("Opening Gotcha's plug-in in Rider");
-		await PauseAsync();
+		await Dialog.PauseAsync();
 	}
 }

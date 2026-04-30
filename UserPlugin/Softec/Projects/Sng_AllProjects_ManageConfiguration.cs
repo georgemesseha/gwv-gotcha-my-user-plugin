@@ -16,7 +16,7 @@ public class Sng_AllProjects_ManageConfiguration : SingletonService
 		await Dialog.Add.TextToSpeakAsync("Configuration project is opening?");
 		await Dialog.Add.TextToSpeakAsync("Find a dedicated info page on the left. Edit it for augmenting knowledge when possible");
 
-		await PauseAsync("You're done. Dismiss?");
+		await Dialog.PauseAsync("You're done. Dismiss?");
 		// Context.Dialog.Dismiss();
 		
 	}

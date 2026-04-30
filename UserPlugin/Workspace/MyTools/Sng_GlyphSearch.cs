@@ -11,6 +11,6 @@ public class Sng_GlyphSearch : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		await OpenSvgSearchAsync();
-		await PauseAsync(); 
+		await Dialog.PauseAsync(); 
 	}
 }

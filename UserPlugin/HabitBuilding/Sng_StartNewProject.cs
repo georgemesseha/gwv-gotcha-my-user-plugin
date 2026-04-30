@@ -15,32 +15,32 @@ public class Sng_StartNewProject : SingletonService
 		await Dialog.Add.TextToSpeakAsync("3. Critical Key Points");
 		await Dialog.Add.TextToSpeakAsync("4. Backlog");
 		await Dialog.Add.TextToSpeakAsync("5. Reasoning and Decisions");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?");
 		
 		await Dialog.Add.TextToSpeakAsync("Remember also you decided to overview your project through a database filter on a tag.");
 		await Dialog.Add.TextToSpeakAsync("As the sample on the left shows, start your project by creating only the Repos with the project's tag. Then add the other pages from the DB filter later.");
 		await Dialog.Add.TextToSpeakAsync("Create a new page in Notion, and start by writing /linked to link the MainDB");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?");
 		await Dialog.Add.TextToSpeakAsync("Create a filter for the tag that you will create in the same process");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?"); 
 		
 		await Dialog.Add.TextToSpeakAsync("Copy a link to your database view");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?");
 		
 		await Dialog.Add.TextToSpeakAsync("In your Gotcha's plug-in. Go to Projects and create Sng_MyNewProject as a service and add it to the Sng_Projects options.");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?");
 		
 		await Dialog.Add.TextToSpeakAsync("Now the result of the filter is empty. Press the plus sign button to add pages to that view");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?");
 		
 		_ = Dialog.Add.TextToSpeakAsync("Use the link to in the following similar line to open the page in the project's main page execution!");
 		await Dialog.Add.InfoAsync("AddOrActivateSideWebPage(\"Sample\", \"YOUR_LINK_TO_THE_VIEW\"");
-		await PauseAsync("Ready?");
+		await Dialog.PauseAsync("Ready?");
 		
 		
 		await Dialog.Add.TextToSpeakAsync("Recall that you may add any other page in a rush and refine them later.");
 
-		await PauseAsync("You're done. Dismiss?");
+		await Dialog.PauseAsync("You're done. Dismiss?");
 		// Context.Dismiss();
 
 

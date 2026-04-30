@@ -23,7 +23,7 @@ public class Sng_Test : SingletonService
 		await Dialog.Add.TextToSpeakAsync("Hello World");
 		// await Dialog.AddCodeSnippetAsync("Hello World", "lorem ipsum dolor sit amet");
 
-		await PauseAsync("You're done");
+		await Dialog.PauseAsync("You're done");
 		
 		await RunExternalAsync("dir", "D:\\", stdOut =>
 		                                      {
@@ -35,7 +35,7 @@ public class Sng_Test : SingletonService
 		                                      });
 		
 		
-		await PauseAsync();
+		await Dialog.PauseAsync();
 		
 		var video = Resolve<Sng_VideoEditor>();
 		await video.SplitVideoWhosePathOnClipboardAsync();
@@ -47,11 +47,11 @@ public class Sng_Test : SingletonService
 			                                                              else return string.Empty;
 		                                                              });
 		await Dialog.Add.InfoAsync($"Hello {answer}");
-		await PauseAsync();
+		await Dialog.PauseAsync();
 		
 		
 		await AddOrActivateWebPageTabAsync("Google", "Https://www.google.com");
-		await PauseAsync();
+		await Dialog.PauseAsync();
 		
 		
 		
@@ -61,9 +61,9 @@ public class Sng_Test : SingletonService
 			                                                                     Console.Beep();
 			                                                                     //await Dialog.Add.TextToSpeakAsync("Window not found from the plug-in");
 		                                                                     });
-		await PauseAsync();
+		await Dialog.PauseAsync();
 		await AddOrActivateWindowGrabberTabAsync("Vivaldi", IsVivaldi, @delegate => { });
-		// await PauseAsync();
+		// await Dialog.PauseAsync();
 		// return;
 		
 		
@@ -81,7 +81,7 @@ public class Sng_Test : SingletonService
 		_ = Dialog.Add.TextToSpeakAsync("This is spoken from the service direct method");
 		await Dialog.Add.WarningAsync($"You selected {result.selectedOption}");
 		await Dialog.Add.InfoAsync("This is a modeless message box from the service direct method");
-		await PauseAsync("Press OK when ready");
+		await Dialog.PauseAsync("Press OK when ready");
 		
 		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
 		                                                                     {
@@ -95,11 +95,11 @@ public class Sng_Test : SingletonService
 		// }
 		// else
 		// {
-			await PauseAsync($"You selected {result.selectedOption}");
+			await Dialog.PauseAsync($"You selected {result.selectedOption}");
 			
 			await AddOrActivateWindowGrabberTabAsync("Vivaldi", IsVivaldi, null);
 		// }
-		await PauseAsync($"You selected {result.selectedOption}");
+		await Dialog.PauseAsync($"You selected {result.selectedOption}");
 		
 		
 		
@@ -112,7 +112,7 @@ public class Sng_Test : SingletonService
 
 		// throw new Exception("This is a test exception");
 
-		await PauseAsync();
+		await Dialog.PauseAsync();
 		
 		// await RouteAsync("Routing question:", true,
 		//                                 ("Agentic AI Project", typeof(Sng_AgenticAiProject)),

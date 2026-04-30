@@ -10,6 +10,6 @@ public class Trn_Overview : TransientService
 	public override async Task ExecuteAsync()
 	{
 		await AddOrActivateWebPageTabAsync("Sahel Project Overview", "https://www.notion.so/Sahel-Project-32f6ea6ef608803bb780deacf4e51ebf?source=copy_link");
-		await PauseAsync("Press Enter to exit");
+		await Dialog.PauseAsync("Press Enter to exit");
 	}
 }

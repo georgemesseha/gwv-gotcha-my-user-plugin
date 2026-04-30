@@ -7,7 +7,7 @@ public class Sng_Overview : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		await AddOrActivateWebPageTabAsync("Gotcha Project", "https://www.notion.so/Gotcha-Project-32f6ea6ef608808ea2afed812fa63f5f?source=copy_link");
-		await PauseAsync("You're done");
+		await Dialog.PauseAsync("You're done");
 
 	}
 }

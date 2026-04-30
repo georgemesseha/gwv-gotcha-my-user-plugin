@@ -9,7 +9,7 @@ public class Sng_Overview : SingletonService
 		// await RouteAsync("Action?", false,
 		//                  ("Open Solution", typeof(Sng_OpenSolution))
 		//                 );
-		await PauseAsync("You're done"); 
+		await Dialog.PauseAsync("You're done"); 
 		
 		
 	}

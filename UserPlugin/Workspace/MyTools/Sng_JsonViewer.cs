@@ -6,6 +6,6 @@ public class Sng_JsonViewer : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		await AddOrActivateWebPageTabAsync("Json viewer", "https://jsoneditoronline.org/#left=local.kezuqa");
-		await PauseAsync("Press Enter to exit");
+		await Dialog.PauseAsync("Press Enter to exit");
 	}
 }

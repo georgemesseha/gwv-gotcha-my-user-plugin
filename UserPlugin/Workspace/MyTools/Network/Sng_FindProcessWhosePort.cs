@@ -9,6 +9,6 @@ public class Sng_FindProcessWhosePort : SingletonService
 	{
 		var network = Resolve<Sng_Network>();
 		await network.PrintCommand_FindProcessWhosePort();
-		await PauseAsync();
+		await Dialog.PauseAsync();
 	}
 }

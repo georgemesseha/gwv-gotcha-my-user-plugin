@@ -6,7 +6,7 @@ public class Sng_Git : SingletonService
 	public async Task GetRemoteReposAsync(string workingDir)
 	{
 		await PrintCommand_GetRemoteReposAsync();
-		await PauseAsync();
+		await Dialog.PauseAsync();
 		
 	}
 	
@@ -14,7 +14,7 @@ public class Sng_Git : SingletonService
 	{
 		await PrintCommand_SetRemoteOriginAsync();
 		// await RunCommandInTerminalAsync("git remote set-url origin", workingDir);
-		await PauseAsync();
+		await Dialog.PauseAsync();
 	}
 	
 	public async Task PrintCommand_GetRemoteReposAsync()

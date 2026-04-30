@@ -11,6 +11,6 @@ public class Sng_Overview : SingletonService
 		//                  ("Develop", typeof(Development.Sng_Overview)),
 		//                  ("Publish", typeof(Publishing.Sng_Overview))
 		//                 );
-		await PauseAsync("You're done");
+		await Dialog.PauseAsync("You're done");
 	}
 }
