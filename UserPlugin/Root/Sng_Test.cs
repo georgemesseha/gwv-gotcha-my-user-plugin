@@ -21,7 +21,7 @@ public class Sng_Test : SingletonService
 		await Dialog.Add.InfoAsync("Hello World");
 		
 		await Dialog.Add.TextToSpeakAsync("Hello World");
-		// await Dialog.AddCodeSnippetAsync("Hello World", "lorem ipsum dolor sit amet");
+		// await Dialog.Dialog.Add.CodeSnippetAsync("Hello World", "lorem ipsum dolor sit amet");
 
 		await Dialog.PauseAsync("You're done");
 		
@@ -68,7 +68,7 @@ public class Sng_Test : SingletonService
 		
 		
 		
-		await AddCodeSnippetAsync("Test code snippet", """
+		await Dialog.Add.CodeSnippetAsync("Test code snippet", """
 		                                               This is a test code snippet. It's a random text with no specific meaning. The purpose of this text is to test the code snippet feature of Gotcha. The text is written in a lorem ipsum style, with a mix of short and long sentences. The text is filled with words that are not part of the specific context of the test, but are common in the English language. The text is not grammatically correct, but it's not intended to be. The text is meant to be a random collection of words, without any specific meaning or structure. The text is not intended to be read or understood by anyone.
 		                                               """);
 		

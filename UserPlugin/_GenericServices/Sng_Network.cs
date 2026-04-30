@@ -9,6 +9,6 @@ public class Sng_Network : SingletonService
 
 	public async Task PrintCommand_FindProcessWhosePort()
 	{
-		await this.AddCodeSnippetAsync("To find the process reserving a port", "netstat -aon | findstr :<PORT>");
+		await this.Dialog.Add.CodeSnippetAsync("To find the process reserving a port", "netstat -aon | findstr :<PORT>");
 	}
 }

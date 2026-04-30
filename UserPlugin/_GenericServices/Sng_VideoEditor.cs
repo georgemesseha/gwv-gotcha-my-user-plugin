@@ -83,7 +83,8 @@ public class Sng_VideoEditor : SingletonService
 		//
 		// _sngClipboard.SetText(workshopDir.FullName);
 
-		await this.AddCodeSnippetAsync("Workshop Directory", workshopDir.FullName);
+		
+		await this.Dialog.Add.CodeSnippetAsync("Workshop Directory", workshopDir.FullName);
 		_ = Dialog.Add.TextToSpeakAsync($"The workshop directory has been created!");
 		
 		// try
@@ -266,8 +267,8 @@ public class Sng_VideoEditor : SingletonService
 
         // commands.Append("Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('Done splitting all!');");
 
-        await this.AddCodeSnippetAsync("Commands going to run", commands.ToString());
-        await this.AddCodeSnippetAsync("Gain dir", destinationDir);
+        await this.Dialog.Add.CodeSnippetAsync("Commands going to run", commands.ToString());
+        await this.Dialog.Add.CodeSnippetAsync("Gain dir", destinationDir);
 		Clipboard.SetText(destinationDir);
         
         _ = Dialog.Add.TextToSpeakAsync("Dismiss on completion. And find gain directory on clipboard.");
@@ -317,8 +318,8 @@ public class Sng_VideoEditor : SingletonService
 			commands.Append(powershellCommand);
 		}
 
-		await this.AddCodeSnippetAsync("Commands going to run", commands.ToString());
-		await this.AddCodeSnippetAsync("Destination directory", repairedFolderPath);
+		await this.Dialog.Add.CodeSnippetAsync("Commands going to run", commands.ToString());
+		await this.Dialog.Add.CodeSnippetAsync("Destination directory", repairedFolderPath);
 		
 		_ = Dialog.Add.TextToSpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
 		

@@ -19,12 +19,12 @@ public class Sng_Git : SingletonService
 	
 	public async Task PrintCommand_GetRemoteReposAsync()
 	{
-		await this.AddCodeSnippetAsync("To get the current remote repo",
+		await this.Dialog.Add.CodeSnippetAsync("To get the current remote repo",
 		                               "git remote -v");
 	}
 	public async Task PrintCommand_SetRemoteOriginAsync()
 	{
-		await this.AddCodeSnippetAsync("To set the remote origin",
+		await this.Dialog.Add.CodeSnippetAsync("To set the remote origin",
 		                               $"git remote set-url origin <url>");
 	}
 }
