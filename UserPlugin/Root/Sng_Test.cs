@@ -79,7 +79,7 @@ public class Sng_Test : SingletonService
 		                               ]);
 
 		_ = Dialog.Add.TextToSpeakAsync("This is spoken from the service direct method");
-		await WarnAsync($"You selected {result.selectedOption}");
+		await Dialog.Add.WarningAsync($"You selected {result.selectedOption}");
 		await Dialog.Add.InfoAsync("This is a modeless message box from the service direct method");
 		await PauseAsync("Press OK when ready");
 		
