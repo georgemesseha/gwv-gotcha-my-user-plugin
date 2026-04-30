@@ -32,7 +32,7 @@ public class Sng_VideoEditor : SingletonService
 		}
 		catch (Exception e)
 		{
-			ReportErrorAsync(e.ToString());
+			Dialog.Add.ErrorMessageAsync(e.ToString());
 			Dialog.Add.TextToSpeakAsync("Couldn't start the workshop directory in VS Code.");
 		}
 	}

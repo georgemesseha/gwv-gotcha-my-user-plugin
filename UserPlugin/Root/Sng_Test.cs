@@ -31,7 +31,7 @@ public class Sng_Test : SingletonService
 		                                      },
 		                       stdErr =>
 		                                      {
-			                                      ReportErrorAsync(stdErr);
+			                                      Dialog.Add.ErrorMessageAsync(stdErr);
 		                                      });
 		
 		
