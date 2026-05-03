@@ -43,7 +43,7 @@ public class Trigger1 : TransientService
 				               Thread.Sleep(5000);
 
 				               var result = await 
-					                            SelectAsync("Is this your first MCQ in this invention?", new[]
+					                            Dialog.AskUser.McqAsync("Is this your first MCQ in this invention?", new[]
 					                            {
 						                            new McqOption("Yes", "Yes"),
 						                            new McqOption("No", "No")

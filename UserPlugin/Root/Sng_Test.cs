@@ -7,7 +7,7 @@ namespace UserPlugin.Root;
 
 public class MyOption(string Title)
 {
-	public override string ToString()
+	public override string ToString() 
 	{
 		return Title;
 	}
@@ -31,7 +31,7 @@ public class Sng_Test : SingletonService
 		                                      },
 		                       stdErr =>
 		                                      {
-			                                      Dialog.Add.ErrorMessageAsync(stdErr);
+			                                      Dialog.Add.ErrorNotationAsync(stdErr);
 		                                      });
 		
 		
@@ -40,7 +40,7 @@ public class Sng_Test : SingletonService
 		var video = Resolve<Sng_VideoEditor>();
 		await video.SplitVideoWhosePathOnClipboardAsync();
 		
-		var answer = await InputStringAsync("Please enter your name", input =>
+		var answer = await Dialog.AskUser.ForStringAsync("Please enter your name", input =>
 		                                                              {
 			                                                              if (string.IsNullOrWhiteSpace(input))
 				                                                              return "Your name is required";
@@ -72,7 +72,7 @@ public class Sng_Test : SingletonService
 		                                               This is a test code snippet. It's a random text with no specific meaning. The purpose of this text is to test the code snippet feature of Gotcha. The text is written in a lorem ipsum style, with a mix of short and long sentences. The text is filled with words that are not part of the specific context of the test, but are common in the English language. The text is not grammatically correct, but it's not intended to be. The text is meant to be a random collection of words, without any specific meaning or structure. The text is not intended to be read or understood by anyone.
 		                                               """);
 		
-		var result = await SelectAsync("Which one?",
+		var result = await Dialog.AskUser.McqAsync("Which one?",
 		                               [
 			                               new MyOption("Mine"), 
 			                               new MyOption("Yours")
@@ -101,7 +101,7 @@ public class Sng_Test : SingletonService
 		// }
 		await Dialog.PauseAsync($"You selected {result.selectedOption}");
 		
-		
+		  
 		
 		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
 		                                    {

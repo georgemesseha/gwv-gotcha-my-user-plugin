@@ -14,7 +14,7 @@ public class Sng_OpenAhkFolderInVsCode : SingletonService
 		var ahkFolderPath = ahk.AhkScriptsFolderPath;
 		if(ahkFolderPath == null) 
 		{
-			await Dialog.Add.ErrorMessageAsync("Your AHK scripts folder doesn't exist");
+			await Dialog.Add.ErrorNotationAsync("Your AHK scripts folder doesn't exist");
 			return;
 		}
 		

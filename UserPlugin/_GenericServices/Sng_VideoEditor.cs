@@ -32,7 +32,7 @@ public class Sng_VideoEditor : SingletonService
 		}
 		catch (Exception e)
 		{
-			Dialog.Add.ErrorMessageAsync(e.ToString());
+			Dialog.Add.ErrorNotationAsync(e.ToString());
 			Dialog.Add.TextToSpeakAsync("Couldn't start the workshop directory in VS Code.");
 		}
 	}
@@ -227,9 +227,9 @@ public class Sng_VideoEditor : SingletonService
 	public async Task SplitVideoWhosePathOnClipboardAsync()
 	{
 		var workshopPath = await this._CreateWorkshopForFilePathOnClipboardAsync();
-		var instructions = await this.InputStringAsync("Write time periods each in a separate line in format 0:0:0, 0:0:5 ",
+		var instructions = await this.Dialog.AskUser.ForStringAsync("Write time periods each in a separate line in format 0:0:0, 0:0:5 ",
 		                                               input =>
-		                                               {
+		                                               { 
 			                                               if (input.EndsWith("done",
 			                                                                  StringComparison
 				                                                                  .CurrentCultureIgnoreCase))
