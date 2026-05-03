@@ -10,7 +10,7 @@ public class Trn_ArrangeWindows_Notion : TransientService
 	
 	public override async Task ExecuteAsync()
 	{
-		int count = await ArrangeWindowsOfAsync("Notion");
+		int count = await base.Integration.ArrangeWindowsOfAsync("Notion");
 		StatusMessage = $"Arranged {count} Notion windows";
 	}
 }

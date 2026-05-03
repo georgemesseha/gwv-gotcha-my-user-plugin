@@ -9,7 +9,7 @@ public class Trn_ArrangeWindows_Teams : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		int count = await ArrangeWindowsOfAsync( "ms-teams");
+		int count = await base.Integration.ArrangeWindowsOfAsync( "ms-teams");
 		if (count == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("Please open teams manually");

@@ -8,7 +8,7 @@ public class Trn_ArrangeWindows_Edge : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		int count = await ArrangeWindowsOfAsync("msedge");
+		int count = await base.Integration.ArrangeWindowsOfAsync("msedge");
 		if (count == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("No Edge windows found");

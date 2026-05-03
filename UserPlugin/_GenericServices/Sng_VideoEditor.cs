@@ -325,10 +325,11 @@ public class Sng_VideoEditor : SingletonService
 		
 		await RunCommandInTerminalAsync(commands.ToString(), 
 			                                      dirPath);
-	}
+	} 
 
 	public async Task RepairVideosInDirectoryOnClipboardAsync()
 	{
+		
 		var dirPath = this.Integration.Clipboard.GetText();
 		if (Directory.Exists(dirPath) == false)
 		{

@@ -8,7 +8,7 @@ public class Trn_ArrangeWindows_Terminal : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		int count = await ArrangeWindowsOfAsync("WindowsTerminal", "cmd");
+		int count = await base.Integration.ArrangeWindowsOfAsync("WindowsTerminal", "cmd");
 		if (count == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("No terminal windows found");
