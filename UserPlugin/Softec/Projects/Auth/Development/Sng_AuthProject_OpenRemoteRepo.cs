@@ -6,6 +6,6 @@ public class Sng_AuthProject_OpenRemoteRepo : SingletonService
 	public override async Task ExecuteAsync()
 	{
 		_ = Dialog.Add.TextToSpeakAsync("Opening Auth remote repo in Vivaldi");
-		OpenInDefaultBrowser("https://dev.azure.com/SoftecMEA/SaaedI/_git/SaaedAuth");
+		_ = Integration.OpenInDefaultBrowserAsync("https://dev.azure.com/SoftecMEA/SaaedI/_git/SaaedAuth");
 	}
 }

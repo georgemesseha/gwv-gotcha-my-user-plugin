@@ -3,7 +3,7 @@ namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("VSCode", 
                "Arranges VSCode's windows 55555555555555555555555555555555 tile",
-               false)]
+               true)]
 
 public class Trn_ArrangeWindows_VSCode : TransientService
 {
@@ -12,7 +12,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 		int count = await base.Integration.ArrangeWindowsOfAsync("code");
 		if (count == 0)
 		{
-			_ = RunExternalAsync("code .", "C:\\", false, null, null);
+			_ = Integration.RunProcessAsync("code .", "C:\\", null, null);
 			_ = Dialog.Add.TextToSpeakAsync("Creating a new instance.");
 		}
 		StatusMessage = $"Arranged {count} VSCode windows";

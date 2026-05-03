@@ -5,7 +5,8 @@ public class Sng_IsDownForMeOnly : SingletonService
 {
 	public override Task ExecuteAsync()
 	{
-		OpenInDefaultBrowser("https://downforeveryoneorjustme.com");
-		return Task.CompletedTask;
+			
+		_ = Integration.OpenInDefaultBrowserAsync("https://downforeveryoneorjustme.com");
+		return Task.CompletedTask; 
 	}
 }

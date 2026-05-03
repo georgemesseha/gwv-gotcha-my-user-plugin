@@ -5,6 +5,6 @@ public class Sng_RemoteRepo : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		OpenInDefaultBrowser("https://dev.azure.com/SoftecMEA/SaaedI/_git/Saaed-Agentic-AI");
+		_ = base.Integration.OpenInDefaultBrowserAsync("https://dev.azure.com/SoftecMEA/SaaedI/_git/Saaed-Agentic-AI");
 	}
 }

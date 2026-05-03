@@ -5,9 +5,9 @@ public class Sng_LocalRepo : SingletonService
 {
 	public override async Task ExecuteAsync()
 	{
-		await RunExternalAsync("cursor .",
-		                                "D:\\Projects\\Agentic-AI\\Saaed-Agentic-AI",
-		                                false,
-		                                null, null);
+		await Integration.RunProcessAsync("cursor .",
+		                                  "D:\\Projects\\Agentic-AI\\Saaed-Agentic-AI",
+		                                  null,
+		                                  null);
 	}
 }

@@ -25,7 +25,7 @@ public class Sng_Test : SingletonService
 
 		await Dialog.PauseAsync("You're done");
 		
-		await RunExternalAsync("dir", "D:\\", stdOut =>
+		await Integration.RunProcessAsync("dir", "D:\\", stdOut =>
 		                                      {
 			                                      Dialog.Add.InfoAsync(stdOut); 
 		                                      },
@@ -35,7 +35,7 @@ public class Sng_Test : SingletonService
 		                                      });
 		
 		
-		await Dialog.PauseAsync();
+		await Dialog.PauseAsync(); 
 		
 		var video = Resolve<Sng_VideoEditor>();
 		await video.SplitVideoWhosePathOnClipboardAsync();

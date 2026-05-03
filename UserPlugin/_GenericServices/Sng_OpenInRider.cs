@@ -19,7 +19,7 @@ public class Sng_OpenInRider : SingletonService
 
 		// await RunExternalAsync("notepad", "");
 
-		await RunExternalAsync($"rider64 \"{slnFilePath}\"", 
+		await Integration.RunProcessAsync($"rider64 \"{slnFilePath}\"", 
 		                        file.Directory!.FullName);
 
 	}
@@ -34,9 +34,8 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await RunExternalAsync($"rider64 \"{dirPath}\"", 
+		await Integration.RunProcessAsync($"rider64 \"{dirPath}\"", 
 		                                             dirPath,
-		                                             false,
 		                                             null,
 		                                             null);
 	}
@@ -51,9 +50,8 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await RunExternalAsync($"rider64 \"{file.FullName}\"", 
+		await Integration.RunProcessAsync($"rider64 \"{file.FullName}\"", 
 		                                             file.DirectoryName,
-		                                             false,
 		                                             null,
 		                                             null);
 	}
