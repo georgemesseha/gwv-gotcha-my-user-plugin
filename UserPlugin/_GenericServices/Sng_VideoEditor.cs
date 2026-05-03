@@ -134,7 +134,7 @@ public class Sng_VideoEditor : SingletonService
 
 	private async Task<string> _CreateWorkshopForFilePathOnClipboardAsync()
 	{
-		var filePath = Clipboard.GetText();
+		var filePath = Integration.Clipboard.GetText();
 		if (string.IsNullOrWhiteSpace(filePath))
 		{
 			var msg = "The text on the clipboard is not a valid file path.";
@@ -269,7 +269,7 @@ public class Sng_VideoEditor : SingletonService
 
         await this.Dialog.Add.CodeSnippetAsync("Commands going to run", commands.ToString());
         await this.Dialog.Add.CodeSnippetAsync("Gain dir", destinationDir);
-		Clipboard.SetText(destinationDir);
+		this.Integration.Clipboard.SetText(destinationDir);
         
         _ = Dialog.Add.TextToSpeakAsync("Dismiss on completion. And find gain directory on clipboard.");
         
@@ -329,7 +329,7 @@ public class Sng_VideoEditor : SingletonService
 
 	public async Task RepairVideosInDirectoryOnClipboardAsync()
 	{
-		var dirPath = Clipboard.GetText();
+		var dirPath = this.Integration.Clipboard.GetText();
 		if (Directory.Exists(dirPath) == false)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("The text on clipboard is not a valid directory path.");

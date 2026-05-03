@@ -12,7 +12,7 @@ public class Trigger1 : TransientService
 {
 	public override async Task ExecuteAsync()
 	{
-		Stopwatch stopwatch = new();
+		Stopwatch stopwatch = new(); 
 		stopwatch.Start();
 
 		
@@ -41,7 +41,7 @@ public class Trigger1 : TransientService
 
 				               
 				               Thread.Sleep(5000);
-
+ 
 				               var result = await 
 					                            Dialog.AskUser.McqAsync("Is this your first MCQ in this invention?", new[]
 					                            {
