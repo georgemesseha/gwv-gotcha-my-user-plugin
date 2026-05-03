@@ -83,7 +83,7 @@ public class Sng_VideoEditor : SingletonService
 		//
 		// _sngClipboard.SetText(workshopDir.FullName);
 
-		
+		 
 		await this.Dialog.Add.CodeSnippetAsync("Workshop Directory", workshopDir.FullName);
 		_ = Dialog.Add.TextToSpeakAsync($"The workshop directory has been created!");
 		

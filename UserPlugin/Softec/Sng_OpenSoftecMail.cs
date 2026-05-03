@@ -33,7 +33,7 @@ public class Sng_OpenSoftecMail : SingletonService
 		// 	UseShellExecute = true
 		// });
 		// process?.WaitForInputIdle();
-		await AddOrActivateWindowGrabberTabAsync("Softec Mail", IsSoftecMailPwa, null);
+		await Dialog.Add.WindowGrabberAsync("Softec Mail", IsSoftecMailPwa, null);
 	}
 
 	private bool IsSoftecMailPwa(string title, uint processId)

@@ -56,13 +56,13 @@ public class Sng_Test : SingletonService
 		
 		
 		
-		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, async @delegate =>
-		                                                                     {
-			                                                                     Console.Beep();
-			                                                                     //await Dialog.Add.TextToSpeakAsync("Window not found from the plug-in");
-		                                                                     });
+		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, async @delegate =>
+		                                    {
+			                                    Console.Beep();
+			                                    //await Dialog.Add.TextToSpeakAsync("Window not found from the plug-in");
+		                                    });
 		await Dialog.PauseAsync();
-		await AddOrActivateWindowGrabberTabAsync("Vivaldi", IsVivaldi, @delegate => { });
+		await Dialog.Add.WindowGrabberAsync("Vivaldi", IsVivaldi, @delegate => { });
 		// await Dialog.PauseAsync();
 		// return;
 		
@@ -83,11 +83,11 @@ public class Sng_Test : SingletonService
 		await Dialog.Add.InfoAsync("This is a modeless message box from the service direct method");
 		await Dialog.PauseAsync("Press OK when ready");
 		
-		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
-		                                                                     {
-			                                                                     Console.Beep();
-			                                                                     //Dialog.Add.TextToSpeakAsync("Window not found from the plugin");
-		                                                                     });
+		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
+		                                    {
+			                                    Console.Beep();
+			                                    //Dialog.Add.TextToSpeakAsync("Window not found from the plugin");
+		                                    });
 		
 		// if (result.isSkipped)
 		// {
@@ -97,16 +97,16 @@ public class Sng_Test : SingletonService
 		// {
 			await Dialog.PauseAsync($"You selected {result.selectedOption}");
 			
-			await AddOrActivateWindowGrabberTabAsync("Vivaldi", IsVivaldi, null);
+			await Dialog.Add.WindowGrabberAsync("Vivaldi", IsVivaldi, null);
 		// }
 		await Dialog.PauseAsync($"You selected {result.selectedOption}");
 		
 		
 		
-		await AddOrActivateWindowGrabberTabAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
-		                                                                     {
-			                                                                     Dialog.Add.TextToSpeakAsync("Window not found from the plugin");
-		                                                                     });
+		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
+		                                    {
+			                                    Dialog.Add.TextToSpeakAsync("Window not found from the plugin");
+		                                    });
 		
 		// await ReportErrorAsync("This is an error from the service direct method");
 
