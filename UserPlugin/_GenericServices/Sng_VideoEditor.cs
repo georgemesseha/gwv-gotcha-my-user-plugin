@@ -273,11 +273,12 @@ public class Sng_VideoEditor : SingletonService
         
         _ = Dialog.Add.TextToSpeakAsync("Dismiss on completion. And find gain directory on clipboard.");
         
-        // await this.RunCommandInTerminalAsync(commands.ToString(), 
-        //                                       workshopPath);
-        await this.RunInWindowsTerminalAsync("This is my title",
-                                             commands.ToString(),
-                                             workshopPath);
+
+        // await this.RunInWindowsTerminalAsync("This is my title",
+        //                                      commands.ToString(),
+        //                                      workshopPath);
+        
+        await Integration.RunProcessAsync(commands.ToString() + "\"", workshopPath);
 	}
 	
 	private async Task _RepairVideosInDirectoryAsync(string dirPath)

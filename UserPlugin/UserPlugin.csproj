@@ -52,6 +52,7 @@
 
     <ItemGroup>
       <Folder Include="Multimedia\" />
+      <Folder Include="Softec\Projects\Sahel\Security\Sast\" />
     </ItemGroup>
 
 

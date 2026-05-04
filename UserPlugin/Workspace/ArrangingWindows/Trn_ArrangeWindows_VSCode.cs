@@ -9,6 +9,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 {
 	public override async Task ExecuteAsync()  
 	{
+		
 		int count = await base.Integration.ArrangeWindowsOfAsync("code");
 		if (count == 0)
 		{
