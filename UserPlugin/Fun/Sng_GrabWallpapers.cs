@@ -5,7 +5,7 @@ namespace UserPlugin.Fun;
 [ManualTrigger("Grab wallpapers", "Grabs wallpapers from the lock screen")]
 public class Sng_GrabWallpapers : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		string userProfileFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 		var spotListDirPath = Path.Join(userProfileFolder, @"AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets");

@@ -324,7 +324,7 @@ public class Sng_VideoEditor : SingletonService
 		
 		_ = Dialog.Add.TextToSpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
 		
-		await RunCommandInTerminalAsync(commands.ToString(), 
+		await Integration.RunInTerminalAsync(commands.ToString(), 
 			                                      dirPath);
 	} 
 

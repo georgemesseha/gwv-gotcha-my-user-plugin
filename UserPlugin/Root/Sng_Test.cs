@@ -16,7 +16,7 @@ public class MyOption(string Title)
 [ManualTrigger("tttttttttttttTest", "Test")]
 public class Sng_Test : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await Dialog.Add.InfoAsync("Hello World");
 		

@@ -4,7 +4,7 @@ public class Sng_Network : SingletonService
 {
 	public async Task FindProcessWhosePortAsync(int port)
 	{
-		await RunCommandInTerminalAsync($"netstat -aon | findstr :{port}", "C:\\");
+		await Integration.RunInTerminalAsync($"netstat -aon | findstr :{port}", "C:\\");
 	}
 
 	public async Task PrintCommand_FindProcessWhosePort()

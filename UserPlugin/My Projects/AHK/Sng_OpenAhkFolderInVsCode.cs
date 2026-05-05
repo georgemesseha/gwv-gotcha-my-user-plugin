@@ -5,7 +5,7 @@ namespace UserPlugin.My_Projects.AHK;
 [ManualTrigger("Open AHK Folder in VSCode", "Open AutoHotkey Folder in VSCode. Automation")]
 public class Sng_OpenAhkFolderInVsCode : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		_ = this.Dialog.Add.TextToSpeakAsync("Opening your AHK scripts in vscode");
 		var openInVsCode = Resolve<Sng_OpenInVsCode>();

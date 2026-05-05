@@ -6,7 +6,7 @@ namespace UserPlugin.Workspace;
 [ManualTrigger("Folder Icons", "Folder Icons, FI")]
 public class Sng_FolderIcons : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		_ = this.Dialog.Add.TextToSpeakAsync("Opening Folder Icons");
 

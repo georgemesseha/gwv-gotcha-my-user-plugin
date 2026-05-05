@@ -6,7 +6,7 @@ namespace UserPlugin.Softec;
 [ManualTrigger("🌇 EOD", "End of day actions")]
 public class Trn_Softec_Eod : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
@@ -28,7 +28,7 @@ public class Trn_Softec_Eod : TransientService
 		_ = Dialog.Add.TextToSpeakAsync("Review your report.");
 		await Dialog.PauseAsync();
 
-		await Resolve<Sng_Softec_OpenSafeCityPortal>().ExecuteAsync();
+		await Resolve<Sng_Softec_OpenSafeCityPortal>().OpenAsync(); 
 		_ = Dialog.Add.TextToSpeakAsync("Clock out and paste your report");
 		await Dialog.PauseAsync();
 		

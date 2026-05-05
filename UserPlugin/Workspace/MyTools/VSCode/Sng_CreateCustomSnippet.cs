@@ -3,7 +3,7 @@
 [ManualTrigger("Create custom snippet", "Creates a custom snippet in VSCode")]
 public class Sng_CreateCustomSnippet : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await Dialog.Add.WebPageAsync("How to create a VSCode snippet",
 		                                   "https://www.notion.so/vscode-code-snippets-syntax-06411fd9411549c4aadbe118e100f682?source=copy_link");

@@ -8,7 +8,7 @@ public class Sng_SvgSearch : SingletonService
 		await Dialog.Add.WebPageAsync("SVG Search", "https://www.svgrepo.com");	
 	}
 	
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await OpenSvgSearchAsync();
 		await Dialog.PauseAsync(); 

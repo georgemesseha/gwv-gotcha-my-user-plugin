@@ -14,7 +14,7 @@ public class Trn_Softec_VacationRequest : TransientService
 	string Url_PortalVacationRequestUIFlow => "https://www.notion.so/Saaed-Portal-Vacation-Request-UI-Flow-32e6ea6ef608806c941bd2ca1d65e5b7?source=copy_link";
 	string Url_PortalUiFlowOfVacationRequest => "https://www.notion.so/Softec-Send-vacation-request-email-1ba6ea6ef608800d9948c82b21e362f4?source=copy_link#32e6ea6ef60880888e40db1c93c3ff0a";
 	
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		

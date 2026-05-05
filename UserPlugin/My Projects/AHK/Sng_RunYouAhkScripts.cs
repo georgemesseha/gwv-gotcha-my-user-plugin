@@ -7,7 +7,7 @@ using UserPlugin._GenericServices;
 [ManualTrigger("Run your startup AHK scripts", "Run Your Autohotkey Scripts. start, execute")]
 public class Sng_RunYouAhkScripts : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var ahk = Resolve<Sng_AutoHotKey>();
 		var triggersPath = Path.Join(ahk.AhkScriptsFolderPath, "Triggers");

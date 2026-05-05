@@ -3,7 +3,7 @@
 [ManualTrigger("Regex tester", "Opens regex tester")]
 public class Sng_RegexTester : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await Dialog.Add.WebPageAsync("Regex tester", "https://regex101.com");
 		await Dialog.PauseAsync("Press Enter to exist");

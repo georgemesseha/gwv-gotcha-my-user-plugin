@@ -3,7 +3,7 @@
 [ManualTrigger("Open remote repo", "Open Softec.Auth Package remote repo")]
 public class Sng_AuthProject_OpenRemoteRepo : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		_ = Dialog.Add.TextToSpeakAsync("Opening Auth remote repo in Vivaldi");
 		_ = Integration.OpenInDefaultBrowserAsync("https://dev.azure.com/SoftecMEA/SaaedI/_git/SaaedAuth");

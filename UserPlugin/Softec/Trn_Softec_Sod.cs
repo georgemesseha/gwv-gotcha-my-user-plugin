@@ -9,7 +9,7 @@ public class Trn_Softec_Sod : TransientService
 	private const string tabPortal = "Portal";
 	private const string tabTasks = "Tasks";
 	
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var config = Resolve<Sng_Config_Softec>();
 		await Dialog.Add.WebPageAsync(tabPortal, config.PortalUrl);

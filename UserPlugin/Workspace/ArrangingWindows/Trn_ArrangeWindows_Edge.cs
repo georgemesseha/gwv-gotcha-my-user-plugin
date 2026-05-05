@@ -6,7 +6,7 @@ namespace UserPlugin.Workspace.ArrangingWindows;
                false)]
 public class Trn_ArrangeWindows_Edge : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		int count = await base.Integration.ArrangeWindowsOfAsync("msedge");
 		if (count == 0)

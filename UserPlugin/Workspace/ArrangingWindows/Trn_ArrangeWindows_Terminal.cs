@@ -6,7 +6,7 @@ namespace UserPlugin.Workspace.ArrangingWindows;
                false)]
 public class Trn_ArrangeWindows_Terminal : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		int count = await base.Integration.ArrangeWindowsOfAsync("WindowsTerminal", "cmd");
 		if (count == 0)

@@ -10,7 +10,7 @@ namespace UserPlugin.Root;
 [ManualTrigger("This is a powerful trigger", "This is a manual trigger")]
 public class Trigger1 : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		Stopwatch stopwatch = new(); 
 		stopwatch.Start();
@@ -26,7 +26,7 @@ public class Trigger1 : TransientService
 			Console.Beep(200, 300);
 		}
 
-		await RunCommandInTerminalAsync("dir", "");
+		await Integration.RunInTerminalAsync("dir", "");
 		// throw new Exception("This is an intended exception");
 		// Context.Services.Clipboard.SetText("This text is from the plug-in");
 		await Dialog.Add.TextToSpeakAsync("Test");

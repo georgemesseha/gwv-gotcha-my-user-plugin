@@ -13,7 +13,7 @@ public class Sng_Config_Gotcha : SingletonService
 	public string PluginSlnFilePath => Path.Join(PluginMainDirPath, "__USER_PLUGIN__.sln");
 
 
-	public override Task ExecuteAsync()
+	protected override Task ExecuteAsync()
 	{
 		throw new NotImplementedException();
 	}

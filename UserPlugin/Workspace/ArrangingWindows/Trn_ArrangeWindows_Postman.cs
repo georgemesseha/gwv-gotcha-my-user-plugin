@@ -7,7 +7,7 @@ namespace UserPlugin.Workspace.ArrangingWindows;
 
 public class Trn_ArrangeWindows_Postman : TransientService
 {
-	public override  async Task ExecuteAsync()
+	protected override  async Task ExecuteAsync()
 	{
 		int count = await base.Integration.ArrangeWindowsOfAsync("Postman");
 		if (count == 0)

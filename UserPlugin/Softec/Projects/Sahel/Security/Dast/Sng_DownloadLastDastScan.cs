@@ -3,7 +3,7 @@
 [ManualTrigger("Download Last Dast Scan", "Downloads the last Dast scan")]
 public class Sng_DownloadLastDastScan : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await Integration.OpenInDefaultBrowserAsync("https://web.analysiscenter.veracode.com");
 		await Dialog.Add.InfoAsync("Use the information on the right side, on the page opened in the default browser");

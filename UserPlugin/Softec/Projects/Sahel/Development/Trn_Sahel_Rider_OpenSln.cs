@@ -9,7 +9,7 @@ namespace UserPlugin.Softec.Projects.Sahel.Development;
 
 public class Trn_Sahel_Rider_OpenSln : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var config = Resolve<Sng_Config_Sahel>();
 		var openInRider = Resolve<Sng_OpenInRider>();

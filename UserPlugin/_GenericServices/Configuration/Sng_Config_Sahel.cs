@@ -18,10 +18,4 @@ public class Sng_Config_Sahel : SingletonService
 	
 
 	public string PullRequestsUrl => "https://dev.azure.com/SoftecMEA/Sahel/_git/Sahel/pullrequests?_a=mine";
-
-
-	public override Task ExecuteAsync()
-	{
-		throw new NotImplementedException();
-	}
 }

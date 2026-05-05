@@ -1,9 +1,9 @@
 ﻿
 namespace UserPlugin.Softec.Projects.Sahel.Deployment;
 
-public class Trn_SahelDeployment : TransientService
+public class Sng_Overview : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		// var options = new McqOption[]
 		// {

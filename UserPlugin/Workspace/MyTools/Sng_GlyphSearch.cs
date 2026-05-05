@@ -8,7 +8,7 @@ public class Sng_GlyphSearch : SingletonService
 		await Dialog.Add.WebPageAsync("Glyph Search", "https://glyphsearch.com/");	
 	}
 	
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await OpenSvgSearchAsync();
 		await Dialog.PauseAsync(); 

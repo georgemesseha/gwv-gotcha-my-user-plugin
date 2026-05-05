@@ -3,7 +3,7 @@
 [ManualTrigger("⌛ Export image to tar", "Exports a Docker image to a tar file")]
 public class Sng_ExportImageToTar : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await Dialog.Add.TextToSpeakAsync("This is pending the development of asking for a string question");
 		await Dialog.PauseAsync();

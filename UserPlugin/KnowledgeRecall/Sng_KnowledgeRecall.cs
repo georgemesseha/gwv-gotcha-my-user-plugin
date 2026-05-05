@@ -6,7 +6,7 @@ namespace UserPlugin.KnowledgeRecall;
 [ManualTrigger("💁🏽‍ Knowledge Recall", "Recall #learn #remember how your information are organized")]
 public class Sng_KnowledgeRecall : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		

@@ -7,7 +7,7 @@ namespace UserPlugin.Workspace.ArrangingWindows;
 
 public class Trn_ArrangeWindows_Teams : TransientService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		int count = await base.Integration.ArrangeWindowsOfAsync( "ms-teams");
 		if (count == 0)

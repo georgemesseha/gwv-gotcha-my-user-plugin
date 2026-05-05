@@ -3,7 +3,7 @@
 [ManualTrigger("Do Dast Scan", "Runs a Dast scan")]
 public class Sng_DoDastScan : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await Dialog.Add.WebPageAsync("Sahell DAST Overview",
 		                              "https://www.notion.so/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link");

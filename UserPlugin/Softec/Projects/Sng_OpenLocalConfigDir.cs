@@ -6,7 +6,7 @@ namespace UserPlugin.Softec.Projects;
 [ManualTrigger("📂 Open local config dir", "Opens local config dir in VSCode")]
 public class Sng_OpenLocalConfigDir : SingletonService
 {
-	public override Task ExecuteAsync()
+	protected override Task ExecuteAsync()
 	{
 		var config = Resolve<Sng_AllProjectsConfig>();
 		var vscode = Resolve<Sng_OpenInVsCode>();

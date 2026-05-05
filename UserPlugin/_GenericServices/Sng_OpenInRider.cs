@@ -3,11 +3,6 @@ namespace UserPlugin._GenericServices;
 
 public class Sng_OpenInRider : SingletonService
 {
-	public override Task ExecuteAsync()
-	{
-		throw new NotImplementedException(); 
-	}
-	
 	public async Task OpenSolutionAsync(string slnFilePath)
 	{
 		var file = new FileInfo(slnFilePath);

@@ -13,7 +13,7 @@ public class Sng_Git : SingletonService
 	public async Task SetRemoteOriginAsync(string workingDir, string url)
 	{
 		await PrintCommand_SetRemoteOriginAsync();
-		// await RunCommandInTerminalAsync("git remote set-url origin", workingDir);
+		// await Integration.RunInTerminalAsync("git remote set-url origin", workingDir);
 		await Dialog.PauseAsync();
 	}
 	

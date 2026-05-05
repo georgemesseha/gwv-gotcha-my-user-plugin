@@ -6,7 +6,7 @@ namespace UserPlugin.Fun;
 [ManualTrigger("VHD", "VHD")]
 public class Sng_Vhd : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await RunVhdAsync();
 		await RunDesktopsAsync();

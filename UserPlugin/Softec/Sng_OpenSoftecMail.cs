@@ -10,7 +10,7 @@ public class Sng_OpenSoftecMail : SingletonService
 	string tabSoftecMail => "Softec Mail";
 	string urlSoftecMail => "https://outlook.office.com/mail/";
 	
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		await OpenSideViewForSoftecMailAsync();
 		await Dialog.PauseAsync("Done?");

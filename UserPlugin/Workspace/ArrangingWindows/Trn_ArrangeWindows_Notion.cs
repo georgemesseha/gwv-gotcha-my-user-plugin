@@ -8,7 +8,7 @@ namespace UserPlugin.Workspace.ArrangingWindows;
 public class Trn_ArrangeWindows_Notion : TransientService
 {
 	
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		int count = await base.Integration.ArrangeWindowsOfAsync("Notion");
 		StatusMessage = $"Arranged {count} Notion windows";

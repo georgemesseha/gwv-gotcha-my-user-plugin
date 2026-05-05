@@ -6,7 +6,7 @@ namespace UserPlugin.Softec.Projects;
 [ManualTrigger("⚙️ Open deployment configuration repo", "Manage Sahel, Zimbabwe, and other projects' configurations")]
 public class Sng_AllProjects_ManageConfiguration : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var sngRider = Resolve<Sng_OpenInRider>();
 		var sngConfig = Resolve<Sng_Config_Sahel>();

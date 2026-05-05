@@ -4,7 +4,7 @@ namespace UserPlugin.HabitBuilding;
 [ManualTrigger("💻 Start a new project", "Start a new project #create #notion")]
 public class Sng_StartNewProject : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		// await Dialog.Add.WebPageAsync()
 		await Dialog.Add.WebPageAsync("Sample",

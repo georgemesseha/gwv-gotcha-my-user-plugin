@@ -3,7 +3,7 @@ namespace UserPlugin._GenericServices;
 
 public class Sng_OpenInVsCode : SingletonService
 {
-	public override Task ExecuteAsync()
+	protected override Task ExecuteAsync()
 	{
 		throw new NotImplementedException(); 
 	}

@@ -6,7 +6,7 @@ namespace UserPlugin.HabitBuilding;
 [ManualTrigger("Organize a project On Notion", "Recall #learn #remember how to Organize a project On Notion")]
 public class Sng_OrganizeProjectOnNotion : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, commonTabs.Url_SoftecAuthProjectMainPage);

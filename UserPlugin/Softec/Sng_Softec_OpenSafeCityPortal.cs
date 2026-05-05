@@ -5,7 +5,7 @@ namespace UserPlugin.Softec;
 
 public class Sng_Softec_OpenSafeCityPortal : SingletonService
 {
-	public override async Task ExecuteAsync()
+	public async Task OpenAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		await Dialog.Add.WebPageAsync(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);		

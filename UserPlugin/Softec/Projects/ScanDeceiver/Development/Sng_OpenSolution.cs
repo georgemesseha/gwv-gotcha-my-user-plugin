@@ -6,7 +6,7 @@ namespace UserPlugin.Softec.Projects.ScanDeceiver.Development;
 [ManualTrigger("Open Solution", "Open ScanDeceiver Solution #sln")]
 public class Sng_OpenSolution : SingletonService
 {
-	public override async Task ExecuteAsync()
+	protected override async Task ExecuteAsync()
 	{
 		var config = Resolve<Sng_Config_ScanDeceiver>();
 		var rider = Resolve<Sng_OpenInRider>();

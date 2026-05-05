@@ -2,7 +2,7 @@
 
 public class Sng_AllProjectsConfig : SingletonService
 {
-	public override Task ExecuteAsync()
+	protected override Task ExecuteAsync()
 	{
 		throw new NotImplementedException();
 	}
