@@ -18,9 +18,18 @@ public class Sng_OpenInVsCode : SingletonService
 		}
 		
 		
-		await Integration.ExecNonInteractiveAsync($"code \"{dirPath}\"", 
-		                                          dirPath,
-		                                          null,
-		                                          null);
+		// await this.Run.Command.NonInteractiveAsync($"code \"{dirPath}\"", 
+		//                                            dirPath,
+		//                                            null,
+		//                                            null); 
+		
+		await this.Run.Command.InteractiveAsync($"code \"{dirPath}\"", 
+		                                           dirPath); 
+		
+		//
+		// await Run.Command.NonInteractiveAsync($"code \"{dirPath}\"", 
+		//                                           dirPath,
+		//                                           null,
+		//                                           null);
 	}
 }

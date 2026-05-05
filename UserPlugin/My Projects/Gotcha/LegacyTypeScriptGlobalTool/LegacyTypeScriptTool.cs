@@ -7,8 +7,9 @@ public class LegacyTypeScriptTool : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+		_ = Dialog.Add.TextToSpeakAsync("Opening in VSCode");
 		var vscode = Resolve<Sng_OpenInVsCode>();
-		await vscode.OpenDirectoryAsync("E:\\_MyProjects\\_MyNodeProjects\\wv-gotcha");
-		await Dialog.Add.TextToSpeakAsync("Opening in VSCode");
+		_ = vscode.OpenDirectoryAsync("E:\\_MyProjects\\_MyNodeProjects\\wv-gotcha");
+		await Dialog.PauseAsync();
 	}
 }

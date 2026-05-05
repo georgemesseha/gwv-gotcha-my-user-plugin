@@ -25,7 +25,7 @@ public class Sng_Test : SingletonService
 
 		await Dialog.PauseAsync("You're done");
 		
-		await Integration.ExecNonInteractiveAsync("dir", "D:\\", stdOut =>
+		await Run.Command.NonInteractiveAsync("dir", "D:\\", stdOut =>
 		                                                         {
 			                                                         Dialog.Add.InfoAsync(stdOut); 
 		                                                         },

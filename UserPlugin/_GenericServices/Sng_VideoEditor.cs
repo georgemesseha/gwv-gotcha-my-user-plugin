@@ -278,7 +278,7 @@ public class Sng_VideoEditor : SingletonService
         //                                      commands.ToString(),
         //                                      workshopPath);
         
-        await Integration.ExecNonInteractiveAsync(commands.ToString() + "\"", workshopPath);
+        await Run.Command.NonInteractiveAsync(commands.ToString() + "\"", workshopPath);
 	}
 	
 	private async Task _RepairVideosInDirectoryAsync(string dirPath)
@@ -324,7 +324,7 @@ public class Sng_VideoEditor : SingletonService
 		
 		_ = Dialog.Add.TextToSpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
 		
-		await Integration.RunInTerminalAsync(commands.ToString(), 
+		await Run.Command.InteractiveAsync(commands.ToString(), 
 			                                      dirPath);
 	} 
 

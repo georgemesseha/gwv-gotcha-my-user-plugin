@@ -26,7 +26,7 @@ public class Trigger1 : TransientService
 			Console.Beep(200, 300);
 		}
 
-		await Integration.RunInTerminalAsync("dir", "");
+		await Run.Command.InteractiveAsync("dir", "");
 		// throw new Exception("This is an intended exception");
 		// Context.Services.Clipboard.SetText("This text is from the plug-in");
 		await Dialog.Add.TextToSpeakAsync("Test");

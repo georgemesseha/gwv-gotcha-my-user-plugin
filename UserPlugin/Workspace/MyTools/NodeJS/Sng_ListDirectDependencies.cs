@@ -5,6 +5,6 @@ public class Sng_ListDirectDependencies : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Integration.RunInTerminalAsync("npm list --depth=0", "C:\\");
+		await Run.Command.InteractiveAsync("npm list --depth=0", "C:\\");
 	}
 }

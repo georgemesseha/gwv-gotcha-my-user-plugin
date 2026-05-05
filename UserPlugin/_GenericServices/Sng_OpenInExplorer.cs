@@ -4,6 +4,6 @@ public class Sng_OpenInExplorer : SingletonService
 {
 	public async Task OpenFolderAsync(string path)
 	{
-		await Integration.ExecNonInteractiveAsync("explorer .", path, null, null);
+		await Run.Command.NonInteractiveAsync("explorer .", path, null, null);
 	}
 }

@@ -5,7 +5,8 @@ public class Sng_ListGloballyInstalledPackages : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		
-		await Integration.RunInTerminalAsync("npm list -g", "C:\\");
+
+		await Run.Command.InteractiveAsync("npm list -g", "C:\\");
+		// await Run.Command.InteractiveAsync("npm list -g", "C:\\");
 	}
 }
