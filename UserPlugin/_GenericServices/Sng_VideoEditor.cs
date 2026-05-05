@@ -278,7 +278,7 @@ public class Sng_VideoEditor : SingletonService
         //                                      commands.ToString(),
         //                                      workshopPath);
         
-        await Integration.RunProcessAsync(commands.ToString() + "\"", workshopPath);
+        await Integration.ExecNonInteractiveAsync(commands.ToString() + "\"", workshopPath);
 	}
 	
 	private async Task _RepairVideosInDirectoryAsync(string dirPath)

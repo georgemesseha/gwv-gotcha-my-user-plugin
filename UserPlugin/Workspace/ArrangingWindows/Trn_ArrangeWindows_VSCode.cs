@@ -13,7 +13,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 		int count = await base.Integration.ArrangeWindowsOfAsync("code");
 		if (count == 0)
 		{
-			_ = Integration.RunProcessAsync("code .", "C:\\", null, null);
+			_ = Integration.ExecNonInteractiveAsync("code .", "C:\\", null, null);
 			_ = Dialog.Add.TextToSpeakAsync("Creating a new instance.");
 		}
 		StatusMessage = $"Arranged {count} VSCode windows";

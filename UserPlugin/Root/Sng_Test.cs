@@ -25,14 +25,14 @@ public class Sng_Test : SingletonService
 
 		await Dialog.PauseAsync("You're done");
 		
-		await Integration.RunProcessAsync("dir", "D:\\", stdOut =>
-		                                      {
-			                                      Dialog.Add.InfoAsync(stdOut); 
-		                                      },
-		                       stdErr =>
-		                                      {
-			                                      Dialog.Add.ErrorNotationAsync(stdErr);
-		                                      });
+		await Integration.ExecNonInteractiveAsync("dir", "D:\\", stdOut =>
+		                                                         {
+			                                                         Dialog.Add.InfoAsync(stdOut); 
+		                                                         },
+		                                          stdErr =>
+		                                          {
+			                                          Dialog.Add.ErrorNotationAsync(stdErr);
+		                                          });
 		
 		
 		await Dialog.PauseAsync(); 
