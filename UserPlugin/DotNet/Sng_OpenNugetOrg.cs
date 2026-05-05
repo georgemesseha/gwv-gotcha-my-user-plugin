@@ -5,7 +5,7 @@ public class Sng_OpenNugetOrg : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		_ = Integration.OpenInDefaultBrowserAsync("https://nuget.org");
+		_ = DefaultBrowser.OpenAsync("https://nuget.org");
 		
 	}
 }

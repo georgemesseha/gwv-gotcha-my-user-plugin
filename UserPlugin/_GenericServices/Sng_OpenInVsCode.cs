@@ -23,7 +23,7 @@ public class Sng_OpenInVsCode : SingletonService
 		//                                            null,
 		//                                            null); 
 		
-		await this.Run.Command.InteractiveAsync($"code \"{dirPath}\"", 
+		await this.Run.Command.NonInteractiveAsync($"code \"{dirPath}\"", 
 		                                           dirPath); 
 		
 		//
