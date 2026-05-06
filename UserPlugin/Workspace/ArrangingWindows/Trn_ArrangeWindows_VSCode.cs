@@ -11,6 +11,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 	{
 		var windows = await base.WindowManager.ArrangeWindowsAsync(w => w.Process.ProcessName.ToLower() == "code");
 		
+		
 		// int count = await base.WindowManager.ArrangeWindowsOfAsync("code");
 		if (windows.Length == 0)
 		{
