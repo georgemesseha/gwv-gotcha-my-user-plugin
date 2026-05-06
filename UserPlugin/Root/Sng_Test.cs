@@ -18,12 +18,14 @@ public class Sng_Test : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+		var test = await Clipboard.GetTextAsync(); 
 		await Dialog.Add.InfoAsync("Hello World");
 		
 		await Dialog.Add.TextToSpeakAsync("Hello World");
 		// await Dialog.Dialog.Add.CodeSnippetAsync("Hello World", "lorem ipsum dolor sit amet");
 
 		await Dialog.PauseAsync("You're done");
+		var teste = await Clipboard.GetTextAsync(); 
 		
 		await Run.Command.NonInteractiveAsync("dir", "D:\\", stdOut =>
 		                                                         {
