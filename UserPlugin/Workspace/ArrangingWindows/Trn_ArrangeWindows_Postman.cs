@@ -9,7 +9,7 @@ public class Trn_ArrangeWindows_Postman : TransientService
 {
 	protected override  async Task ExecuteAsync()
 	{
-		int count = await base.Integration.ArrangeWindowsOfAsync("Postman");
+		int count = await base.WindowManager.ArrangeWindowsOfAsync("Postman");
 		if (count == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("Please open postman manually");

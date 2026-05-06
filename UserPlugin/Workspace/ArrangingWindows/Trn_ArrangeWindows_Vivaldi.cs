@@ -9,7 +9,7 @@ public class Trn_ArrangeWindows_Vivaldi : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		int count = await base.Integration.ArrangeWindowsOfAsync("Vivaldi");
+		int count = await base.WindowManager.ArrangeWindowsOfAsync("Vivaldi");
 		if (count == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("Please open Vivaldi manually");

@@ -8,11 +8,13 @@ public class Trn_ArrangeWindows_Edge : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		int count = await base.Integration.ArrangeWindowsOfAsync("msedge");
+		int count = await base.WindowManager.ArrangeWindowsOfAsync("msedge");
 		if (count == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("No Edge windows found");
 		}
 		StatusMessage = $"Arranged {count} Notion windows";
+		
+		
 	}
 }

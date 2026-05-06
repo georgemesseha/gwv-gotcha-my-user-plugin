@@ -10,7 +10,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 	protected override async Task ExecuteAsync()  
 	{
 		
-		int count = await base.Integration.ArrangeWindowsOfAsync("code");
+		int count = await base.WindowManager.ArrangeWindowsOfAsync("code");
 		if (count == 0)
 		{
 			_ = Run.Command.NonInteractiveAsync("code .", "C:\\", null, null);

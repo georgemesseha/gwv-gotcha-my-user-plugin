@@ -9,7 +9,7 @@ public class Trn_ArrangeWindows_Rider : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		int count = await base.Integration.ArrangeWindowsOfAsync("rider64", "java");
+		int count = await base.WindowManager.ArrangeWindowsOfAsync("rider64", "java");
 		StatusMessage = $"Arranged {count} Notion windows";
 	}
 }
