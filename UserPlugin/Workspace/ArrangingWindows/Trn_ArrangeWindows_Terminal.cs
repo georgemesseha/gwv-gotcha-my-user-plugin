@@ -1,4 +1,6 @@
 ﻿
+using Gwv.Gotcha.Services;
+
 namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("Terminal", 
@@ -8,11 +10,17 @@ public class Trn_ArrangeWindows_Terminal : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		int count = await base.WindowManager.ArrangeWindowsOfAsync("WindowsTerminal", "cmd");
-		if (count == 0)
+		bool isTargetWindow(IWindow window)
+		{
+			return new string[] { "windowsterminal", "cmd" }.Any(name => window.Process.ProcessName.ToLower() == name);
+		}
+		var windows = await base.WindowManager.ArrangeWindowsAsync(isTargetWindow);
+		
+		// int count = await base.WindowManager.ArrangeWindowsOfAsync("WindowsTerminal", "cmd");
+		if (windows.Length == 0)
 		{
 			_ = Dialog.Add.TextToSpeakAsync("No terminal windows found");
 		}
-		StatusMessage = $"Arranged {count} Notion windows";
+		StatusMessage = $"Arranged {windows.Length} Notion windows";
 	}
 }

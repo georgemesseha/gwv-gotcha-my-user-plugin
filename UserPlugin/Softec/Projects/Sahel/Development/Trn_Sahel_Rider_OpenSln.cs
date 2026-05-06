@@ -12,7 +12,7 @@ public class Trn_Sahel_Rider_OpenSln : TransientService
 	protected override async Task ExecuteAsync()
 	{
 		var config = Resolve<Sng_Config_Sahel>();
-		var openInRider = Resolve<Sng_OpenInRider>();
+		var openInRider = Resolve<Sng_OpenInRider>(); 
 		await openInRider.OpenSolutionAsync(config.SlnFilePath);
 	}
 }

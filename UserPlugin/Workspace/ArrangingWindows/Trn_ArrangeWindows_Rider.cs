@@ -1,4 +1,6 @@
 ﻿
+using Gwv.Gotcha.Services;
+
 namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("Rider", 
@@ -9,7 +11,13 @@ public class Trn_ArrangeWindows_Rider : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		int count = await base.WindowManager.ArrangeWindowsOfAsync("rider64", "java");
-		StatusMessage = $"Arranged {count} Notion windows";
+		bool isTargetWindow(IWindow window)
+		{
+			return new string[] { "rider64", "java" }.Any(name => window.Process.ProcessName.ToLower() == name);
+		}
+		var windows = await base.WindowManager.ArrangeWindowsAsync(isTargetWindow);
+		
+		// int count = await base.WindowManager.ArrangeWindowsOfAsync("rider64", "java");
+		StatusMessage = $"Arranged {windows.Length} Notion windows";
 	}
 }
