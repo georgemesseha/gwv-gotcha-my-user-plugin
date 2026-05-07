@@ -1,6 +1,6 @@
 namespace UserPlugin.Workspace.MyTools.Git;
 
-[ManualTrigger("Edit global git config", "Edits the global git config")]
+[ManualTrigger("uv6c7i3r", "Edit global git config", "Edits the global git config")]
 public class Sng_Git_EditGlobalConfiguration : SingletonService
 {
 	protected override async Task ExecuteAsync()

@@ -2,7 +2,7 @@
 
 namespace UserPlugin.My_Projects.Gotcha.LegacyTypeScriptGlobalTool;
 
-[ManualTrigger("Legacy TypeScript Tool", "Legacy TypeScript Gotcha Global Tool")]
+[ManualTrigger("m8k2s5w", "Legacy TypeScript Tool", "Legacy TypeScript Gotcha Global Tool")]
 public class LegacyTypeScriptTool : SingletonService
 {
 	protected override async Task ExecuteAsync()

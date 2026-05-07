@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.My_Projects.Youtuber;
 
-[ManualTrigger("Overview", "Overview")]
+[ManualTrigger("u0s1r6f", "Overview", "Overview")]
 public class Sng_Overview : SingletonService
 {
 	protected override async Task ExecuteAsync()

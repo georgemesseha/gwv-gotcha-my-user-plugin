@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.My_Projects.Gotcha.Product.Development;
 
-[ManualTrigger("Manage Git repo", "Opens Git repo in vscode")]
+[ManualTrigger("g1r4l3j", "Manage Git repo", "Opens Git repo in vscode")]
 public class Sng_ManageGit : SingletonService
 {
 	protected override Task ExecuteAsync()

@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Workspace.ArrangingWindows;
 
-[ManualTrigger("VSCode", 
+[ManualTrigger("y5g5l2m", "VSCode", 
                "Arranges VSCode's windows 55555555555555555555555555555555 tile",
                true)]
 

@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("Json viewer", "Opens json viewer")]
+[ManualTrigger("t7vn1q", "Json viewer", "Opens json viewer")]
 public class Sng_JsonViewer : SingletonService
 {
 	protected override async Task ExecuteAsync()

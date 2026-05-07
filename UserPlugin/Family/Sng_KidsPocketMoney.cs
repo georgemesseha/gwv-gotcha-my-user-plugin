@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Family;
 
-[ManualTrigger("Kids Pocket Money", "Manage kids pocket money")]
+[ManualTrigger("h9t9f3s", "Kids Pocket Money", "Manage kids pocket money")]
 public class Sng_KidsPocketMoney : SingletonService
 {
 	protected override async Task ExecuteAsync()

@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.Sahel.Deployment.Interface.Testing;
 
-[ManualTrigger("Backend", "Open testing Backend in browser")]
+[ManualTrigger("v4p2r7w", "Backend", "Open testing Backend in browser")]
 public class Sng_Backend : SingletonService
 {
 	protected override async Task ExecuteAsync()

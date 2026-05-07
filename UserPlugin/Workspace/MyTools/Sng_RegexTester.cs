@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("Regex tester", "Opens regex tester")]
+[ManualTrigger("p2a9s1x", "Regex tester", "Opens regex tester")]
 public class Sng_RegexTester : SingletonService
 {
 	protected override async Task ExecuteAsync()

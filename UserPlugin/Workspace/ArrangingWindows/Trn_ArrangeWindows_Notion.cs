@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Workspace.ArrangingWindows;
 
-[ManualTrigger("Notion", 
+[ManualTrigger("v5b3u6s", "Notion", 
                "Brings Notion's window to the front #tile 0000000000000000000000000000000000000000",
                false)]
 

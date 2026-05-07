@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects;
 
-[ManualTrigger("📂 Open local config dir", "Opens local config dir in VSCode")]
+[ManualTrigger("6d1h4y", "📂 Open local config dir", "Opens local config dir in VSCode")]
 public class Sng_OpenLocalConfigDir : SingletonService
 {
 	protected override Task ExecuteAsync()

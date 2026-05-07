@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Fun;
 
-[ManualTrigger("Open Violin tuner", "Opens violin tuner")]
+[ManualTrigger("p1l0o7d", "Open Violin tuner", "Opens violin tuner")]
 public class Sng_ViolinTuner : SingletonService
 {
 	protected override async Task ExecuteAsync()

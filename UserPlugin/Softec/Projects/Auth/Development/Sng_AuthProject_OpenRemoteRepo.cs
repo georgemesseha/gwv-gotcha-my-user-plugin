@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.Auth.Development;
 
-[ManualTrigger("Open remote repo", "Open Softec.Auth Package remote repo")]
+[ManualTrigger("m5j9g6f", "Open remote repo", "Open Softec.Auth Package remote repo")]
 public class Sng_AuthProject_OpenRemoteRepo : SingletonService
 {
 	protected override async Task ExecuteAsync()

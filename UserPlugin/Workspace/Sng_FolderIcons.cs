@@ -3,7 +3,7 @@ using UserPlugin._GenericServices;
 
 namespace UserPlugin.Workspace;
 
-[ManualTrigger("Folder Icons", "Folder Icons, FI")]
+[ManualTrigger("b4v5f7n", "Folder Icons", "Folder Icons, FI")]
 public class Sng_FolderIcons : SingletonService
 {
 	protected override async Task ExecuteAsync()
@@ -11,7 +11,7 @@ public class Sng_FolderIcons : SingletonService
 		_ = this.Dialog.Add.TextToSpeakAsync("Opening Folder Icons");
 
 		var oneDrivePath = Resolve<Sng_SpecialFoldersRecognizer>().OneDrivePath;
-		var folderIconsPath = Path.Join(oneDrivePath, "_Explicit_", "FI");
+		var folderIconsPath = Path.Join(oneDrivePath, "_Explicit_", "FI"); 
 		var startInfo = new ProcessStartInfo
 		{
 			FileName = "cmd.exe",

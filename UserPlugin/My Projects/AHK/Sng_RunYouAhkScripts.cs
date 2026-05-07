@@ -4,7 +4,7 @@ namespace UserPlugin.My_Projects.AHK;
 using UserPlugin._GenericServices;
 
 
-[ManualTrigger("Run your startup AHK scripts", "Run Your Autohotkey Scripts. start, execute")]
+[ManualTrigger("o5j9q2r", "Run your startup AHK scripts", "Run Your Autohotkey Scripts. start, execute")]
 public class Sng_RunYouAhkScripts : SingletonService
 {
 	protected override async Task ExecuteAsync()

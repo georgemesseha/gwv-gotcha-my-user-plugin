@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.Sahel.Configuration;
 
-[ManualTrigger("Open local config", "Opens local configuration file in Rider")]
+[ManualTrigger("n2m6s7s", "Open local config", "Opens local configuration file in Rider")]
 public class Sng_OpenLocalConfigurationFile : SingletonService
 {
 	protected override Task ExecuteAsync()

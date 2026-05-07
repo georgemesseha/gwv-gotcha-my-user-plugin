@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.AgenticAI;
 
-[ManualTrigger("Local Repo", "Opens Agentic AI local repo")]
+[ManualTrigger("ub9d90c", "Local Repo", "Opens Agentic AI local repo")]
 public class Sng_LocalRepo : SingletonService
 {
 	protected override async Task ExecuteAsync()

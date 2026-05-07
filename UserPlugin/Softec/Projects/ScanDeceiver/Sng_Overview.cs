@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.ScanDeceiver;
 
-[ManualTrigger("Overview", 
+[ManualTrigger("u8p7s5r", "Overview", 
                "ScanDeceiver Project #veracode #ips")]
 public class Sng_Overview : SingletonService
 {

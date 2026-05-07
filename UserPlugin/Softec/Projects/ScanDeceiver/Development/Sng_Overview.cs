@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.ScanDeceiver.Development;
 
-[ManualTrigger("Overview", "Develop ScanDeceiver Project overview")]
+[ManualTrigger("p4q0x6t", "Overview", "Develop ScanDeceiver Project overview")]
 public class Sng_Overview : SingletonService
 {
 	protected override async Task ExecuteAsync()

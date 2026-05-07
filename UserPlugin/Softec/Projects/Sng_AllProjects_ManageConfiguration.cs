@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects;
 
-[ManualTrigger("⚙️ Open deployment configuration repo", "Manage Sahel, Zimbabwe, and other projects' configurations")]
+[ManualTrigger("l9s2k7o", "⚙️ Open deployment configuration repo", "Manage Sahel, Zimbabwe, and other projects' configurations")]
 public class Sng_AllProjects_ManageConfiguration : SingletonService
 {
 	protected override async Task ExecuteAsync()

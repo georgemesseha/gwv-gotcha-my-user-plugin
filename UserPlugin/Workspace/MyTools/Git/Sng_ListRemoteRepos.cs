@@ -2,7 +2,7 @@
 
 namespace UserPlugin.Workspace.MyTools.Git;
 
-[ManualTrigger("List remote repos", "Lists all remote repos")]
+[ManualTrigger("t5f1y3i", "List remote repos", "Lists all remote repos")]
 public class Sng_ListRemoteRepos : SingletonService
 {
 	protected override async Task ExecuteAsync()

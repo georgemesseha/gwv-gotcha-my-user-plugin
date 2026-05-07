@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.HabitBuilding;
 
-[ManualTrigger("💻 Start a new project", "Start a new project #create #notion")]
+[ManualTrigger("o1s6c7a", "💻 Start a new project", "Start a new project #create #notion")]
 public class Sng_StartNewProject : SingletonService
 {
 	protected override async Task ExecuteAsync()

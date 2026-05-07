@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("Base64 Encoder/Decoder", "Encode/Decode Base64")]
+[ManualTrigger("d2m9i9m", "Base64 Encoder/Decoder", "Encode/Decode Base64")]
 public class Sng_Base64EncoderDecoder : SingletonService
 {
 	protected override async Task ExecuteAsync()

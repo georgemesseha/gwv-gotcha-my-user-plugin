@@ -3,7 +3,7 @@ using UserPlugin._GenericServices;
 
 namespace UserPlugin.KnowledgeRecall;
 
-[ManualTrigger("💁🏽‍ Knowledge Recall", "Recall #learn #remember how your information are organized")]
+[ManualTrigger("q1m6y3i", "💁🏽‍ Knowledge Recall", "Recall #learn #remember how your information are organized")]
 public class Sng_KnowledgeRecall : SingletonService
 {
 	protected override async Task ExecuteAsync()

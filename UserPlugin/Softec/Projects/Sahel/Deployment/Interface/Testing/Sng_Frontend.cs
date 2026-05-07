@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.Sahel.Deployment.Interface.Testing;
 
-[ManualTrigger("Frontend", "Open testing Frontend in browser")]
+[ManualTrigger("e2i8h8s", "Frontend", "Open testing Frontend in browser")]
 public class Sng_Frontend : SingletonService
 {
 	protected override async Task ExecuteAsync()

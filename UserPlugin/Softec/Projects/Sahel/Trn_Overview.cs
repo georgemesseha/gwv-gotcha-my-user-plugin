@@ -4,7 +4,7 @@ using UserPlugin.Softec.Projects.Sahel.Requirements;
 
 namespace UserPlugin.Softec.Projects.Sahel;
 
-[ManualTrigger("Overview", "Sahel Project")]
+[ManualTrigger("w4e1c7l", "Overview", "Sahel Project")]
 public class Trn_Overview : TransientService
 {
 	protected override async Task ExecuteAsync()

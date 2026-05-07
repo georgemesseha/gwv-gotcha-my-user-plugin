@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools.Docker;
 
-[ManualTrigger("⌛ Export image to tar", "Exports a Docker image to a tar file")]
+[ManualTrigger("u0q1s7o", "⌛ Export image to tar", "Exports a Docker image to a tar file")]
 public class Sng_ExportImageToTar : SingletonService
 {
 	protected override async Task ExecuteAsync()

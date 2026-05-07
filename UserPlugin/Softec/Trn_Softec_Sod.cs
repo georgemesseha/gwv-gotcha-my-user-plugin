@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec;
 
-[ManualTrigger("🌞 SOD", "Start of day actions")]
+[ManualTrigger("e2f4i1h", "🌞 SOD", "Start of day actions")]
 public class Trn_Softec_Sod : TransientService
 {
 	private const string tabPortal = "Portal";

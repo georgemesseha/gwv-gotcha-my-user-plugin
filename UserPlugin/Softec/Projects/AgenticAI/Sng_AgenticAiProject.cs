@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Softec.Projects.AgenticAI;
 
-[ManualTrigger("Overview", "AgenticAI Project")]
+[ManualTrigger("a3u6p5x", "Overview", "AgenticAI Project")]
 public class Sng_AgenticAiProject : SingletonService
 {
 	protected override async Task ExecuteAsync()

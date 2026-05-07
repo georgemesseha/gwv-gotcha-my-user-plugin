@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools.VSCode;
 
-[ManualTrigger("Create custom snippet", "Creates a custom snippet in VSCode")]
+[ManualTrigger("o4p61l", "Create custom snippet", "Creates a custom snippet in VSCode")]
 public class Sng_CreateCustomSnippet : SingletonService
 {
 	protected override async Task ExecuteAsync()

@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.PersonalLaptop;
 
-[ManualTrigger("Download Drivers", "Downloads drivers, update, install, Dell")]
+[ManualTrigger("w6l8c6t", "Download Drivers", "Downloads drivers, update, install, Dell")]
 public class Sng_DownloadDrivers : SingletonService
 {
 	protected override async Task ExecuteAsync()

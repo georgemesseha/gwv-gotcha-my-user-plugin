@@ -3,7 +3,7 @@ using UserPlugin._GenericServices;
 
 namespace UserPlugin.Softec;
 
-[ManualTrigger("🌴 Vacation Request", "Start of day actions")]
+[ManualTrigger("r3i1k4e", "🌴 Vacation Request", "Start of day actions")]
 public class Trn_Softec_VacationRequest : TransientService
 {
 	private const string tabPortalVacationRequest = "Portal: Vacation Request";

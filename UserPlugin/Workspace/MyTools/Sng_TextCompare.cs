@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("Compare text", "Compares text")]
+[ManualTrigger("d6o1v2f", "Compare text", "Compares text")]
 public class Sng_TextCompare : SingletonService
 {
 	protected override async Task ExecuteAsync()

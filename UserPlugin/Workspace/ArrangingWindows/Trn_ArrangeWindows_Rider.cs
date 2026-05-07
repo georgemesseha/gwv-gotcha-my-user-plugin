@@ -3,7 +3,7 @@ using Gwv.Gotcha.Services;
 
 namespace UserPlugin.Workspace.ArrangingWindows;
 
-[ManualTrigger("Rider", 
+[ManualTrigger("k5p1i2c", "Rider", 
                "Arranges Rider's windows #tile 4444444444444444444444444444",
                false)]
 

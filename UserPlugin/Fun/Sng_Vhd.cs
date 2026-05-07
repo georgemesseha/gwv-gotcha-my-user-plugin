@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace UserPlugin.Fun;
 
-[ManualTrigger("VHD", "VHD")]
+[ManualTrigger("o1q1r4v", "VHD", "VHD")]
 public class Sng_Vhd : SingletonService
 {
 	protected override async Task ExecuteAsync()

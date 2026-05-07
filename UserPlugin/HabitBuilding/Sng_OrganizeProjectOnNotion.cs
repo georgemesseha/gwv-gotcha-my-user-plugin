@@ -3,7 +3,7 @@ using UserPlugin._GenericServices;
 
 namespace UserPlugin.HabitBuilding;
 
-[ManualTrigger("Organize a project On Notion", "Recall #learn #remember how to Organize a project On Notion")]
+[ManualTrigger("y8f6r7", "Organize a project On Notion", "Recall #learn #remember how to Organize a project On Notion")]
 public class Sng_OrganizeProjectOnNotion : SingletonService
 {
 	protected override async Task ExecuteAsync()

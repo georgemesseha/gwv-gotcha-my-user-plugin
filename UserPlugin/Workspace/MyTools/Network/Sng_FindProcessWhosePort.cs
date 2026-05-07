@@ -2,7 +2,7 @@
 
 namespace UserPlugin.Workspace.MyTools.Network;
 
-[ManualTrigger("Find process whose port ...", "Finds the process that is using a specific port")]
+[ManualTrigger("p1n7h7k", "Find process whose port ...", "Finds the process that is using a specific port")]
 public class Sng_FindProcessWhosePort : SingletonService
 {
 	protected override async Task ExecuteAsync()

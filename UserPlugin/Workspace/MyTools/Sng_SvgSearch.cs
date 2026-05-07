@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("SVG Search", "Find SVG icons images #repo")]
+[ManualTrigger("l3k3y7y", "SVG Search", "Find SVG icons images #repo")]
 public class Sng_SvgSearch : SingletonService
 {
 	public async Task OpenSvgSearchAsync()

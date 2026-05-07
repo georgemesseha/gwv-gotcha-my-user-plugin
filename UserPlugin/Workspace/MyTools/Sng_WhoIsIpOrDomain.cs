@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("Who is domain/IP", "Get WhoIs info for an IP or domain")]
+[ManualTrigger("a9g7a8b", "Who is domain/IP", "Get WhoIs info for an IP or domain")]
 public class Sng_WhoIsIpOrDomain : SingletonService
 {
 	protected override async Task ExecuteAsync()

@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools;
 
-[ManualTrigger("Glyph Search", "Find #fa #material icons images #repo")]
+[ManualTrigger("v3f4y2j", "Glyph Search", "Find #fa #material icons images #repo")]
 public class Sng_GlyphSearch : SingletonService
 {
 	public async Task OpenSvgSearchAsync()

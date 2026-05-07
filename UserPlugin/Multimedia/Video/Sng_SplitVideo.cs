@@ -2,7 +2,7 @@
 
 namespace UserPlugin.Multimedia.Video;
 
-[ManualTrigger("Split Video", "Split Video, trim, cut, clip")]
+[ManualTrigger("b8x7x9i", "Split Video", "Split Video, trim, cut, clip")]
 public class Sng_SplitVideo : SingletonService
 {
 	protected override async Task ExecuteAsync()

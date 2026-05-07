@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.ScanDeceiver.Development;
 
-[ManualTrigger("Open Solution", "Open ScanDeceiver Solution #sln")]
+[ManualTrigger("b0j5b5w", "Open Solution", "Open ScanDeceiver Solution #sln")]
 public class Sng_OpenSolution : SingletonService
 {
 	protected override async Task ExecuteAsync()

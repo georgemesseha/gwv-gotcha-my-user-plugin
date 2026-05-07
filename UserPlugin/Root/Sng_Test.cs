@@ -13,7 +13,7 @@ public class MyOption(string Title)
 	}
 }
 
-[ManualTrigger("tttttttttttttTest", "Test")]
+[ManualTrigger("k6v3l2o", "tttttttttttttTest", "Test")]
 public class Sng_Test : SingletonService
 {
 	protected override async Task ExecuteAsync()

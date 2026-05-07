@@ -3,7 +3,7 @@ using Gwv.Gotcha.Services;
 
 namespace UserPlugin.Workspace.ArrangingWindows;
 
-[ManualTrigger("Terminal", 
+[ManualTrigger("v9k3a4k", "Terminal", 
                "Arranges Terminal windows #tile 111111111111111111111111111111",
                false)]
 public class Trn_ArrangeWindows_Terminal : TransientService

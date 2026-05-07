@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools.Git;
 
-[ManualTrigger("Untrack a folder or files", "Untracks a folder files from git")]
+[ManualTrigger("m7l4s3c", "Untrack a folder or files", "Untracks a folder files from git")]
 public class Sng_UntrackFiles : SingletonService
 {
 	protected override async Task ExecuteAsync()

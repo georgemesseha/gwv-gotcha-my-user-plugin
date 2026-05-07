@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Workspace.MyTools.NodeJS;
 
-[ManualTrigger("List package direct dependencies", "List Direct Dependencies of the current package")]
+[ManualTrigger("ug1i0l2l", "List package direct dependencies", "List Direct Dependencies of the current package")]
 public class Sng_ListDirectDependencies : SingletonService
 {
 	protected override async Task ExecuteAsync()

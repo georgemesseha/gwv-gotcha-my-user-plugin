@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Workspace.ArrangingWindows;
 
-[ManualTrigger("Postman", 
+[ManualTrigger("v6r3t1l", "Postman", 
                "Brings Postman's window to the front #tile 66666666666666666666666",
                false)]
 

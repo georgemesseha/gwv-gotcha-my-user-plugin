@@ -2,7 +2,7 @@
 
 namespace UserPlugin.Fun;
 
-[ManualTrigger("Grab wallpapers", "Grabs wallpapers from the lock screen")]
+[ManualTrigger("c5o9r0j", "Grab wallpapers", "Grabs wallpapers from the lock screen")]
 public class Sng_GrabWallpapers : SingletonService
 {
 	protected override async Task ExecuteAsync()

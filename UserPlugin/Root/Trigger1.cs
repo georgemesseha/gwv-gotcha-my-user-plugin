@@ -7,7 +7,7 @@ using Gwv.Gotcha.Startup;
 
 namespace UserPlugin.Root;
 
-[ManualTrigger("This is a powerful trigger", "This is a manual trigger")]
+[ManualTrigger("u7x0o9t", "This is a powerful trigger", "This is a manual trigger")]
 public class Trigger1 : TransientService
 {
 	protected override async Task ExecuteAsync()

@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.Auth.Development;
 
-[ManualTrigger("Open solution", "Open solution #.sln")]
+[ManualTrigger("k5c1e0p", "Open solution", "Open solution #.sln")]
 public class Sng_AuthProject_OpenSolution : SingletonService
 {
 	protected override async Task ExecuteAsync()

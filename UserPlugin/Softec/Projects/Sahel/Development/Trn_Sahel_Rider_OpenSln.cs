@@ -3,7 +3,7 @@ using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.Sahel.Development;
 
-[ManualTrigger("Open Solution", 
+[ManualTrigger("f3x8i6m", "Open Solution", 
                "Open Sahel backend solution in Rider",
                false)]
 

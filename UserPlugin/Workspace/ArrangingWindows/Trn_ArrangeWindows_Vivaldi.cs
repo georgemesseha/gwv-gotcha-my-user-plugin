@@ -1,7 +1,7 @@
 ﻿
 namespace UserPlugin.Workspace.ArrangingWindows;
 
-[ManualTrigger("Vivaldi", 
+[ManualTrigger("o7n80q", "Vivaldi", 
                "Arranges Vivaldi's windows 9999999999999999999999999999",
                false)]
 

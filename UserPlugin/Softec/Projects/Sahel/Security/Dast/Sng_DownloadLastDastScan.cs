@@ -1,6 +1,6 @@
 ﻿namespace UserPlugin.Softec.Projects.Sahel.Security.Dast;
 
-[ManualTrigger("Download Last Dast Scan", "Downloads the last Dast scan")]
+[ManualTrigger("y4k7v8x", "Download Last Dast Scan", "Downloads the last Dast scan")]
 public class Sng_DownloadLastDastScan : SingletonService
 {
 	protected override async Task ExecuteAsync()

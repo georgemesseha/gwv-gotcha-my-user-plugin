@@ -3,7 +3,7 @@ using UserPlugin._GenericServices;
 
 namespace UserPlugin.Softec;
 
-[ManualTrigger("🌇 EOD", "End of day actions")]
+[ManualTrigger("n6x6s7s", "🌇 EOD", "End of day actions")]
 public class Trn_Softec_Eod : TransientService
 {
 	protected override async Task ExecuteAsync()

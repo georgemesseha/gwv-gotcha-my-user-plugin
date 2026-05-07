@@ -2,7 +2,7 @@
 
 namespace UserPlugin.Multimedia.Video;
 
-[ManualTrigger("Repair Video", "Repair Video, fix, repair, fix video")]
+[ManualTrigger("k1p9q2f", "Repair Video", "Repair Video, fix, repair, fix video")]
 public class Sng_RepairVideo : SingletonService
 {
 	protected override async Task ExecuteAsync()
