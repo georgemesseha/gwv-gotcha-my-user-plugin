@@ -5,6 +5,8 @@ public class Sng_SvgSearch : SingletonService
 {
 	public async Task OpenSvgSearchAsync()
 	{
+		
+		await Dialog.Add.WebPageAsync("UX Wing", "https://uxwing.com");	
 		await Dialog.Add.WebPageAsync("SVG Search", "https://www.svgrepo.com");	
 	}
 	
