@@ -5,8 +5,8 @@ namespace UserPlugin.Softec.Projects.Sahel.Development;
 
 [ManualTrigger("t55p0f", "Manage Git repo", 
                "Manage Sahel Git repo",
-               false )]
-
+               false )] 
+  
 public class Trn_Sahel_ManageGitRepo : TransientService
 {
 	protected override async Task ExecuteAsync()

@@ -10,7 +10,8 @@ public class Sng_AuthProject_OpenSolution : SingletonService
 	{
 		var sngConfig = Resolve<Sng_Config_SoftecAuth>();
 		var sngOpenInRider = Resolve<Sng_OpenInRider>();
-		await sngOpenInRider.OpenSolutionAsync(sngConfig.SlnFilePath);
 		_ = Dialog.Add.TextToSpeakAsync("Opening Auth project in Rider");
+		await sngOpenInRider.OpenSolutionAsync(sngConfig.SlnFilePath);
+		await Dialog.PauseAsync("You are done!");
 	}
 }
