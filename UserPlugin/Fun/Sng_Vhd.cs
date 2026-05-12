@@ -8,11 +8,17 @@ public class Sng_Vhd : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+		if (DriveInfo.GetDrives().All(drive => drive.Name != "J"))
+		{
+			_ = Dialog.Add.TextToSpeakAsync("This activity is intended only for your personal machine.");
+			return;
+		}
+
 		await RunVhdAsync();
 		await RunDesktopsAsync();
 	}
 	
-	private async Task RunDesktopsAsync()
+	private async Task RunDesktopsAsync() 
 	{
 		var desktopsPath = "J:\\Toolbox\\Software\\Usabilitty\\Multiple Desktop\\Desktops64.exe";
 		
@@ -24,7 +30,7 @@ public class Sng_Vhd : SingletonService
 		var process = new Process
 		{
 			StartInfo = new ProcessStartInfo
-			{
+			{ 
 				FileName = desktopsPath,
 				Arguments = "--verbose",
 				UseShellExecute = false,
