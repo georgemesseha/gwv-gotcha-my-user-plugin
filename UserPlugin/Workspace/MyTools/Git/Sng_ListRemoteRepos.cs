@@ -9,6 +9,6 @@ public class Sng_ListRemoteRepos : SingletonService
 	{
 		var git = Resolve<Sng_Git>();
 		await git.PrintCommand_GetRemoteReposAsync();
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

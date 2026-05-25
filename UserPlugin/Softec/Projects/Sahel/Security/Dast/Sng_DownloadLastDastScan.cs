@@ -10,6 +10,6 @@ public class Sng_DownloadLastDastScan : SingletonService
 		await Dialog.Add.WebPageAsync("Sahell DAST Overview",
 		                              "https://www.notion.so/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link");
 
-		await Dialog.PauseAsync("You're done.");
+		await PauseAsync("You're done.");
 	}
 }

@@ -11,6 +11,6 @@ public class Sng_FindProcessWhosePort : SingletonService
 
 		await network.FindProcessWhosePortAsync(5101);
 		await network.PrintCommand_FindProcessWhosePort();
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

@@ -11,7 +11,7 @@ public class Sng_Overview : SingletonService
 		await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		                              commonTabs.Url_SoftecAuthProjectMainPage);
 
-		await Dialog.PauseAsync();
+		await PauseAsync();
 
 	}
 }

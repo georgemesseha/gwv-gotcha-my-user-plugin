@@ -9,6 +9,6 @@ public class Sng_ChangeRemoteOrigin : SingletonService
 	{
 		var git = Resolve<Sng_Git>();
 		await git.PrintCommand_SetRemoteOriginAsync();
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

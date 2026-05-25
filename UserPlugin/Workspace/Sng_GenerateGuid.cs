@@ -7,6 +7,6 @@ public class Sng_GenerateGuid : SingletonService
 	{
 		_ = Dialog.Add.TextToSpeakAsync("New Guid on the clipboard");
 		await Clipboard.SetTextAsync(Guid.NewGuid().ToString());
-		await Dialog.PauseAsync("Press Enter to exit");
+		await PauseAsync("Press Enter to exit");
 	}
 }

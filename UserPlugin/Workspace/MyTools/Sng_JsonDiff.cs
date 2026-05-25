@@ -6,7 +6,7 @@ public class Sng_JsonDiff : SingletonService
 	protected override async Task ExecuteAsync()    
 	{
 		await Dialog.Add.WebPageAsync("JSON Diff", "https://semanticdiff.com/online-diff/json/?utm_source=chatgpt.com");
-		await Dialog.PauseAsync("You're done");  
+		await PauseAsync("You're done");  
 		
 	}
 }

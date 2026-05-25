@@ -12,6 +12,6 @@ public class Sng_AuthProject_OpenSolution : SingletonService
 		var sngOpenInRider = Resolve<Sng_OpenInRider>();
 		_ = Dialog.Add.TextToSpeakAsync("Opening Auth project in Rider");
 		await sngOpenInRider.OpenSolutionAsync(sngConfig.SlnFilePath);
-		await Dialog.PauseAsync("You are done!");
+		await PauseAsync("You are done!");
 	}
 }

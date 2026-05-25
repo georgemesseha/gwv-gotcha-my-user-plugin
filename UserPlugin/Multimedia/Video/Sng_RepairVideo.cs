@@ -10,6 +10,6 @@ public class Sng_RepairVideo : SingletonService
 		var video = Resolve<Sng_VideoEditor>();
 		_ = video.RepairVideosInDirectoryOnClipboardAsync();
         await this.Dialog.Add.InfoAsync("Repairing videos. Keep your eyes on the terminal running the process.");
-        await this.Dialog.PauseAsync("Has the process in terminal completed?");
+        await this.PauseAsync("Has the process in terminal completed?");
 	}
 }

@@ -13,7 +13,7 @@ public class Sng_OpenSoftecMail : SingletonService
 	protected override async Task ExecuteAsync()
 	{
 		await OpenSideViewForSoftecMailAsync();
-		await Dialog.PauseAsync("Done?");
+		await PauseAsync("Done?");
 		
 	}
 	

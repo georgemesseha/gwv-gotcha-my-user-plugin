@@ -13,6 +13,6 @@ public class Sng_SvgSearch : SingletonService
 	protected override async Task ExecuteAsync()
 	{
 		await OpenSvgSearchAsync();
-		await Dialog.PauseAsync(); 
+		await PauseAsync(); 
 	}
 }

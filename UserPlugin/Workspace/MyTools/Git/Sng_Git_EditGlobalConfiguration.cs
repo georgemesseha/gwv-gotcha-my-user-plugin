@@ -7,6 +7,6 @@ public class Sng_Git_EditGlobalConfiguration : SingletonService
 	{
 		await Run.Command.NonInteractiveAsync("git config --global --replace-all core.editor \"code --wait\"; git config --global -e",
 		                                "C:\\");
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

@@ -11,15 +11,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3d13e87-9ae7-49d4-a644-ac70e770e3a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/-activities-meta-data-/j6w1f4v.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-activities-meta-data-/uj7t3a6x.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-activities-meta-data-/w5e7h6a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DoSastScan.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workspace/Sng_Tasks.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workspace/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UserPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UserPlugin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Family/Sng_KidsPocketMoney.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Family/Sng_KidsPocketMoney.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fun/Sng_Vhd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fun/Sng_Vhd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fun/Sng_ViolinTuner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fun/Sng_ViolinTuner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabitBuilding/Sng_OrganizeProjectOnNotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabitBuilding/Sng_OrganizeProjectOnNotion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabitBuilding/Sng_StartNewProject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabitBuilding/Sng_StartNewProject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowledgeRecall/Sng_KnowledgeRecall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/KnowledgeRecall/Sng_KnowledgeRecall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multimedia/Video/Sng_RepairVideo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Multimedia/Video/Sng_RepairVideo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multimedia/Video/Sng_SplitVideo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Multimedia/Video/Sng_SplitVideo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My Projects/Gotcha/LegacyTypeScriptGlobalTool/LegacyTypeScriptTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My Projects/Gotcha/LegacyTypeScriptGlobalTool/LegacyTypeScriptTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My Projects/Gotcha/Plugin/Development/Sng_OpenRemoteRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My Projects/Gotcha/Plugin/Development/Sng_OpenRemoteRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My Projects/Gotcha/Product/Development/Sng_OpenSolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My Projects/Gotcha/Product/Development/Sng_OpenSolution.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My Projects/Gotcha/Product/Sng_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My Projects/Gotcha/Product/Sng_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My Projects/Youtuber/Sng_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My Projects/Youtuber/Sng_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Root/Sng_Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Root/Sng_Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/AgenticAI/Sng_AgenticAiProject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/AgenticAI/Sng_AgenticAiProject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Softec/Projects/Auth/Development/Sng_AuthProject_OpenSolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Auth/Development/Sng_AuthProject_OpenSolution.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_GenericServices/Configuration/Sng_Config_Gotcha.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_GenericServices/Configuration/Sng_Config_Gotcha.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Auth/Sng_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Auth/Sng_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Deployment/Interface/Testing/Sng_Backend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Deployment/Interface/Testing/Sng_Backend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Deployment/Interface/Testing/Sng_Frontend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Deployment/Interface/Testing/Sng_Frontend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Development/Trn_Sahel_OpenPullRequestsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Development/Trn_Sahel_OpenPullRequestsPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DoDastScan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DoDastScan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DoSastScan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DoSastScan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DownloadLastDastScan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Security/Dast/Sng_DownloadLastDastScan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sahel/Trn_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sahel/Trn_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/ScanDeceiver/Development/Sng_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/ScanDeceiver/Development/Sng_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/ScanDeceiver/Publishing/Sng_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/ScanDeceiver/Publishing/Sng_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/ScanDeceiver/Sng_Overview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/ScanDeceiver/Sng_Overview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sng_AllProjects_ManageConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sng_AllProjects_ManageConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Projects/Sng_AuthorizeKubernetesLens.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Projects/Sng_AuthorizeKubernetesLens.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Sng_OpenSoftecMail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Sng_OpenSoftecMail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Trn_Softec_Eod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Trn_Softec_Eod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Trn_Softec_Sod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Trn_Softec_Sod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softec/Trn_Softec_VacationRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Softec/Trn_Softec_VacationRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Docker/Sng_ExportImageToTar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Docker/Sng_ExportImageToTar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_ChangeRemoteOrigin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_ChangeRemoteOrigin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_Git_EditGlobalConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_Git_EditGlobalConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_ListRemoteRepos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_ListRemoteRepos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_UntrackFiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Git/Sng_UntrackFiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Network/Sng_FindProcessWhosePort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Network/Sng_FindProcessWhosePort.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_Base64EncoderDecoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_Base64EncoderDecoder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_GlyphSearch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_GlyphSearch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_JsonDiff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_JsonDiff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_JsonViewer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_JsonViewer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_RegexTester.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_RegexTester.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_SvgSearch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_SvgSearch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_TextCompare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_TextCompare.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/Sng_WhoIsIpOrDomain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/Sng_WhoIsIpOrDomain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/MyTools/VSCode/Sng_CreateCustomSnippet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/MyTools/VSCode/Sng_CreateCustomSnippet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/PersonalLaptop/Sng_DownloadDrivers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/PersonalLaptop/Sng_DownloadDrivers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/Sng_GenerateGuid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/Sng_GenerateGuid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/Sng_Tasks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/Sng_Tasks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_GenericServices/Sng_Git.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_GenericServices/Sng_Git.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +137,7 @@
       <workItem from="1769882937882" duration="102000" />
       <workItem from="1778224522261" duration="52000" />
       <workItem from="1778479001301" duration="6673000" />
+      <workItem from="1778686102601" duration="8000" />
     </task>
     <servers />
   </component>

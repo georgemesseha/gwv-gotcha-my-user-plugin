@@ -7,6 +7,6 @@ public class Sng_DownloadDrivers : SingletonService
 	{
 		_ = Dialog.Add.TextToSpeakAsync("Openning drivers resource page in default browser");
 		await DefaultBrowser.OpenAsync("https://www.dell.com/support/product-details/en-us/product/inspiron-15-5570-laptop/drivers");
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

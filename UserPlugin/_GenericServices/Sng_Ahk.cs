@@ -15,7 +15,7 @@ public class Sng_AutoHotKey : SingletonService
 		}
 	}
 	
-	public void RunAhkScript(string ahkFilePath)
+	public async Task RunAhkScriptAsync(string ahkFilePath)
 	{
 		var proc = new Process
 		{
@@ -25,6 +25,14 @@ public class Sng_AutoHotKey : SingletonService
 				UseShellExecute = true  // Use shell execute to open with default app
 			}
 		};
+
+		await Task.Run(() =>
+		               {
 		proc.Start();
+		// proc.WaitForExit();
+
+		               });
+		
+		// await Run.Command.NonInteractiveAsync(ahkFilePath, "C:/");
 	}
 }

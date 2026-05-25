@@ -7,6 +7,6 @@ public class Sng_Overview : SingletonService
 	{
 		await
 			Dialog.Add.WebPageAsync("Overview", "https://www.notion.so/Youtuber-Project-33d6ea6ef60880c2a8cdd227309ea415?source=copy_link");
-		await Dialog.PauseAsync("You're done");
+		await PauseAsync("You're done");
 	}
 }

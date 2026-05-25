@@ -42,7 +42,7 @@ public class Sng_Vhd : SingletonService
 		process.Start();
 
 		string output = await process.StandardOutput.ReadToEndAsync();
-		await Dialog.PauseAsync(output);
+		await PauseAsync(output);
 	}
 	
 	private async Task RunVhdAsync()
@@ -70,6 +70,6 @@ public class Sng_Vhd : SingletonService
 		process.Start();
 
 		string output = await process.StandardOutput.ReadToEndAsync();
-		await Dialog.PauseAsync(output);
+		await PauseAsync(output);
 	}
 }

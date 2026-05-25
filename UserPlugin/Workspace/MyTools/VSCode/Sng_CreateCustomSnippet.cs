@@ -7,6 +7,6 @@ public class Sng_CreateCustomSnippet : SingletonService
 	{
 		await Dialog.Add.WebPageAsync("How to create a VSCode snippet",
 		                                   "https://www.notion.so/vscode-code-snippets-syntax-06411fd9411549c4aadbe118e100f682?source=copy_link");
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

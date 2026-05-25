@@ -10,6 +10,6 @@ public class Sng_OpenSolution : TransientService
 	{
 		var gotchaSlnFilePath = Resolve<Sng_Config_Gotcha>().GotchaSlnFilePath;
 		_ = Resolve<Sng_OpenInRider>().OpenSolutionAsync(gotchaSlnFilePath);
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 } 

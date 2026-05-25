@@ -10,6 +10,6 @@ public class LegacyTypeScriptTool : SingletonService
 		_ = Dialog.Add.TextToSpeakAsync("Opening in VSCode");
 		var vscode = Resolve<Sng_OpenInVsCode>();
 		_ = vscode.OpenDirectoryAsync("E:\\_MyProjects\\_MyNodeProjects\\wv-gotcha");
-		await Dialog.PauseAsync();
+		await PauseAsync();
 	}
 }

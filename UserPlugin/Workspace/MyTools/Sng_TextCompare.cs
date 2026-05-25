@@ -6,6 +6,6 @@ public class Sng_TextCompare : SingletonService
 	protected override async Task ExecuteAsync()
 	{
 		await Dialog.Add.WebPageAsync("Compare Text", "https://www.diffchecker.com");
-		await Dialog.PauseAsync("You're done");
+		await PauseAsync("You're done");
 	}
 }

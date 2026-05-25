@@ -15,12 +15,12 @@ public class Trn_Softec_Sod : TransientService
 		await Dialog.Add.WebPageAsync(tabPortal, config.PortalUrl);
 		
 		_ = Dialog.Add.TextToSpeakAsync("Clock in");
-		await Dialog.PauseAsync();
+		await PauseAsync();
 		
 		await Dialog.Add.WebPageAsync(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
 		
 		_ = Dialog.Add.TextToSpeakAsync("Recall your tasks");
-		await Dialog.PauseAsync();
+		await PauseAsync();
 		
 		
 		
