@@ -41,12 +41,12 @@ public interface ICommandRunner
     Process? RunCmdInteractive(
         string command,
         string? workingDirectory = null,
-        bool keepOpen = true);
+        bool allowUserCommandsAfterRun = true);
 
     Process? RunPowerShellInteractive(
         string command,
         string? workingDirectory = null,
-        bool keepOpen = true);
+        bool allowUserCommandsAfterRun = true);
 
     void OpenWithDefaultApp(
         string pathOrUrl,
@@ -86,7 +86,7 @@ public sealed class CommandRunner : ICommandRunner
         CancellationToken ct = default)
     {
         return RunNonInteractiveAsync(
-            CreateCmdStartInfo(command, workingDirectory, environment, interactive: false, keepOpen: false),
+            CreateCmdStartInfo(command, workingDirectory, environment, interactive: false, allowUserCommandsAfterRun: false),
             standardInput,
             onStdOut,
             onStdErr,
@@ -103,7 +103,7 @@ public sealed class CommandRunner : ICommandRunner
         CancellationToken ct = default)
     {
         return RunNonInteractiveAsync(
-            CreatePowerShellStartInfo(command, workingDirectory, environment, interactive: false, keepOpen: false),
+            CreatePowerShellStartInfo(command, workingDirectory, environment, interactive: false, allowUserCommandsAfterRun: false),
             standardInput,
             onStdOut,
             onStdErr,
@@ -113,27 +113,27 @@ public sealed class CommandRunner : ICommandRunner
     public Process? RunCmdInteractive(
         string command,
         string? workingDirectory = null,
-        bool keepOpen = true)
+        bool allowUserCommandsAfterRun = true)
     {
         return Process.Start(CreateCmdStartInfo(
             command,
             workingDirectory,
             environment: null,
             interactive: true,
-            keepOpen: keepOpen));
+            allowUserCommandsAfterRun: allowUserCommandsAfterRun));
     }
 
     public Process? RunPowerShellInteractive(
         string command,
         string? workingDirectory = null,
-        bool keepOpen = true)
+        bool allowUserCommandsAfterRun = true)
     {
         return Process.Start(CreatePowerShellStartInfo(
             command,
             workingDirectory,
             environment: null,
             interactive: true,
-            keepOpen: keepOpen));
+            allowUserCommandsAfterRun: allowUserCommandsAfterRun));
     }
 
     public void OpenWithDefaultApp(
@@ -217,11 +217,11 @@ public sealed class CommandRunner : ICommandRunner
         string? workingDirectory,
         IReadOnlyDictionary<string, string>? environment,
         bool interactive,
-        bool keepOpen)
+        bool allowUserCommandsAfterRun)
     {
         var commandWithEcho = BuildCmdCommandWithEcho(command);
         var args = interactive
-            ? keepOpen ? $"/k {commandWithEcho}" : $"/c {commandWithEcho}"
+            ? allowUserCommandsAfterRun ? $"/k {commandWithEcho}" : $"/c {commandWithEcho}"
             : $"/d /s /c \"{commandWithEcho}\"";
 
         return interactive
@@ -234,13 +234,13 @@ public sealed class CommandRunner : ICommandRunner
         string? workingDirectory,
         IReadOnlyDictionary<string, string>? environment,
         bool interactive,
-        bool keepOpen)
+        bool allowUserCommandsAfterRun)
     {
         var commandWithEcho = BuildPowerShellCommandWithEcho(command);
         var encodedCommand = Convert.ToBase64String(
             Encoding.Unicode.GetBytes(commandWithEcho));
 
-        var keepOpenArg = interactive && keepOpen
+        var keepOpenArg = interactive && allowUserCommandsAfterRun
             ? "-NoExit "
             : "";
 

@@ -10,7 +10,8 @@ public class TestingRunner : SingletonService
     {
 	    var runner = new CommandRunner();
 
-	    runner.RunCmdInteractive("ng new", "D:\\Test");
+	    runner.OpenWithDefaultApp("codex:");
+	    runner.RunPowerShellInteractive("ng new", "D:\\Test");
 
 	    await PauseAsync("You're done");
     }
