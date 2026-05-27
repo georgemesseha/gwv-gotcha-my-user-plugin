@@ -1,5 +1,5 @@
 
-using YourApp.Processes;
+using UserPlugin.__TEST;
 
 namespace UserPlugin._Draft;
 
@@ -8,10 +8,9 @@ public class TestingRunner : SingletonService
 {
     protected override async Task ExecuteAsync()
     {
-	    var runner = new CommandRunner();
+	    // var runner = new CommandRunner();
 
-	    runner.OpenWithDefaultApp("codex:");
-	    runner.RunPowerShellInteractive("ng new", "D:\\Test");
+	    External.RunPowerShellInteractive("ng new", "D:\\Test");
 
 	    await PauseAsync("You're done");
     }
