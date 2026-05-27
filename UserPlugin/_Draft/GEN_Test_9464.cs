@@ -1,8 +1,8 @@
 
-namespace UserPlugin.Family;
+namespace UserPlugin._Draft;
 
-[ManualTrigger("m6v9v9i3y6v9a1")]
-public class FormalInfo : SingletonService 
+[ManualTrigger("d7o1j6a8v1s9w8")]
+public class GEN_Test_9464 : SingletonService 
 {
     protected override async Task ExecuteAsync()
 	{

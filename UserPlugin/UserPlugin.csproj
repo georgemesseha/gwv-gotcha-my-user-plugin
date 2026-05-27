@@ -51,7 +51,7 @@
 
 
     <ItemGroup>
-      <Folder Include="Draft\" />
+      <Folder Include="_Draft\" />
       <Folder Include="Multimedia\" />
       <Folder Include="Softec\Projects\Sahel\Security\Sast\" />
     </ItemGroup>

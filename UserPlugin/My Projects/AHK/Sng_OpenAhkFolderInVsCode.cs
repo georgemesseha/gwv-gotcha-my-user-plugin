@@ -19,7 +19,5 @@ public class Sng_OpenAhkFolderInVsCode : SingletonService
 		}
 		
 		await openInVsCode.OpenDirectoryAsync(ahkFolderPath);
-		
-
 	}
 }
