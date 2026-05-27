@@ -55,6 +55,9 @@ public interface ICommandRunner
 
 public sealed class CommandRunner : ICommandRunner
 {
+    private const string AnsiGreen = "\u001b[32m";
+    private const string AnsiReset = "\u001b[0m";
+
     public Task<CommandRunResult> RunExecutableAsync(
         string fileName,
         string? arguments = null,
@@ -216,9 +219,10 @@ public sealed class CommandRunner : ICommandRunner
         bool interactive,
         bool keepOpen)
     {
+        var commandWithEcho = BuildCmdCommandWithEcho(command);
         var args = interactive
-            ? keepOpen ? $"/k {command}" : $"/c {command}"
-            : $"/d /s /c \"{command}\"";
+            ? keepOpen ? $"/k {commandWithEcho}" : $"/c {commandWithEcho}"
+            : $"/d /s /c \"{commandWithEcho}\"";
 
         return interactive
             ? CreateBaseInteractiveStartInfo("cmd.exe", args, workingDirectory)
@@ -232,8 +236,9 @@ public sealed class CommandRunner : ICommandRunner
         bool interactive,
         bool keepOpen)
     {
+        var commandWithEcho = BuildPowerShellCommandWithEcho(command);
         var encodedCommand = Convert.ToBase64String(
-            Encoding.Unicode.GetBytes(command));
+            Encoding.Unicode.GetBytes(commandWithEcho));
 
         var keepOpenArg = interactive && keepOpen
             ? "-NoExit "
@@ -290,5 +295,39 @@ public sealed class CommandRunner : ICommandRunner
             CreateNoWindow = false,
             WindowStyle = ProcessWindowStyle.Normal
         };
+    }
+
+    private static string BuildCmdCommandWithEcho(string command)
+    {
+        var displayCommand = EscapeCmdEchoText($"{AnsiGreen}{command}{AnsiReset}");
+
+        return $"echo({displayCommand} & {command}";
+    }
+
+    private static string BuildPowerShellCommandWithEcho(string command)
+    {
+        var displayCommand = EscapePowerShellSingleQuotedString($"{AnsiGreen}{command}{AnsiReset}");
+
+        return $"Write-Output '{displayCommand}'; {command}";
+    }
+
+    private static string EscapeCmdEchoText(string text)
+    {
+        var builder = new StringBuilder(text.Length);
+
+        foreach (var ch in text)
+        {
+            if (ch is '^' or '&' or '|' or '<' or '>')
+                builder.Append('^');
+
+            builder.Append(ch);
+        }
+
+        return builder.ToString().Replace("%", "^%");
+    }
+
+    private static string EscapePowerShellSingleQuotedString(string text)
+    {
+        return text.Replace("'", "''");
     }
 }
