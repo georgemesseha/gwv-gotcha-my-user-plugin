@@ -4,7 +4,7 @@ public class Sng_Network : SingletonService
 {
 	public async Task FindProcessWhosePortAsync(int port)
 	{
-		await Run.Command.InteractiveAsync($"netstat -aon | findstr :{port}", "C:\\");
+		External.RunPowerShellInteractive($"netstat -aon | findstr :{port}", "C:\\");
 	}
 
 	public async Task PrintCommand_FindProcessWhosePort()

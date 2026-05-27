@@ -5,8 +5,8 @@ public class Sng_ListGloballyInstalledPackages : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-
-		await Run.Command.InteractiveAsync("npm list -g", "C:\\");
-		// await Run.Command.InteractiveAsync("npm list -g", "C:\\");
+		External.RunPowerShellInteractive("npm list -g", "C:\\");
+		await PauseAsync("Done with the terminal?");
+		
 	}
 }

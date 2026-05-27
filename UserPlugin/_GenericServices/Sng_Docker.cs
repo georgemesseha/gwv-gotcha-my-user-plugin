@@ -6,6 +6,9 @@ public class Sng_Docker : SingletonService
 	{
 		var dt = DateTime.Now;
 		var dstnFile = Path.Join(dstDir, $"{imageName}_{dt:yyyyMMdd_HHmmss}.tar");
-		await Run.Command.InteractiveAsync($"docker save {imageName} {dstnFile}", "C:\\");
+		
+		//totest
+		// await Run.Command.InteractiveAsync($"docker save {imageName} {dstnFile}", "C:\\");
+		External.RunPowerShellInteractive($"docker save {imageName} {dstnFile}", "C:\\");
 	}
 }

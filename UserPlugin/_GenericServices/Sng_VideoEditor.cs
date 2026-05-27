@@ -324,8 +324,8 @@ public class Sng_VideoEditor : SingletonService
 		
 		_ = Dialog.Add.TextToSpeakAsync("It could be a lengthy operation. Dismiss on completion. And find gain directory on clipboard.");
 		
-		await Run.Command.InteractiveAsync(commands.ToString(), 
-			                                      dirPath);
+		External.RunPowerShellInteractive(commands.ToString(), dirPath);
+		await PauseAsync("Done with the terminal?");
 	} 
 
 	public async Task RepairVideosInDirectoryOnClipboardAsync()

@@ -26,7 +26,9 @@ public class Trigger1 : TransientService
 			Console.Beep(200, 300);
 		}
 
-		await Run.Command.InteractiveAsync("dir", "");
+
+		External.RunPowerShellInteractive("dir", "");
+		await PauseAsync("Done with the terminal?");
 		// throw new Exception("This is an intended exception");
 		// Context.Services.Clipboard.SetText("This text is from the plug-in");
 		await Dialog.Add.TextToSpeakAsync("Test");
