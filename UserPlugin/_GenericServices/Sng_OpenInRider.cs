@@ -15,11 +15,11 @@ public class Sng_OpenInRider : SingletonService
 		// await RunExternalAsync("notepad", "");
 		
 		
-
-		await Run.Command.NonInteractiveAsync($"rider64 \"{slnFilePath}\"", 
-		                                          file.Directory!.FullName);
+		//totest
 		// await Run.Command.NonInteractiveAsync($"rider64 \"{slnFilePath}\"", 
 		//                                           file.Directory!.FullName);
+		await External.RunPowerShellAsync($"rider64 \"{slnFilePath}\"", 
+		                                      file.Directory!.FullName);
 
 	}
 
@@ -33,10 +33,16 @@ public class Sng_OpenInRider : SingletonService
 		}
 		
 		
-		await Run.Command.NonInteractiveAsync($"rider64 \"{dirPath}\"", 
-		                                          dirPath,
-		                                          null,
-		                                          null);
+		// await Run.Command.NonInteractiveAsync($"rider64 \"{dirPath}\"", 
+		//                                           dirPath,
+		//                                           null,
+		//                                           null);
+		
+		//totest
+		await External.RunPowerShellAsync($"rider64 \"{dirPath}\"", 
+		                                      dirPath,
+		                                      null,
+		                                      null);
 	}
 	
 	public async Task OpenFileAsync(string filePath)
@@ -48,10 +54,14 @@ public class Sng_OpenInRider : SingletonService
 				InvalidOperationException($"File path [{filePath}] provided to {this.GetType()}.{nameof(OpenFileAsync)} doesn't exist");
 		}
 		
+		//
+		// await Run.Command.NonInteractiveAsync($"rider64 \"{file.FullName}\"", 
+		//                                           file.DirectoryName,
+		//                                           null,
+		//                                           null);
 		
-		await Run.Command.NonInteractiveAsync($"rider64 \"{file.FullName}\"", 
-		                                          file.DirectoryName,
-		                                          null,
-		                                          null);
+		//totest
+		await External.RunPowerShellAsync($"rider64 \"{file.FullName}\"", 
+		                                      file.DirectoryName);
 	}
 }

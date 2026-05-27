@@ -5,6 +5,7 @@ public class Sng_ListDirectDependencies : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+		await External.RunCmdAsync("npm list --depth=0");
 		External.RunPowerShellInteractive("npm list --depth=0", "C:\\");
 		await PauseAsync("Done with the terminal?");
 	}

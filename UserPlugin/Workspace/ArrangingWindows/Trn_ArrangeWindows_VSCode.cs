@@ -15,7 +15,7 @@ public class Trn_ArrangeWindows_VSCode : TransientService
 		// int count = await base.WindowManager.ArrangeWindowsOfAsync("code");
 		if (windows.Length == 0)
 		{
-			_ = Run.Command.NonInteractiveAsync("code .", "C:\\", null, null);
+			_ = External.RunPowerShellAsync("code .", "C:\\", null, null);
 			_ = Dialog.Add.TextToSpeakAsync("Creating a new instance.");
 		}
 		StatusMessage = $"Arranged {windows.Length} VSCode windows";

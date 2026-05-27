@@ -27,14 +27,14 @@ public class Sng_Test : SingletonService
 		await PauseAsync("You're done");
 		var teste = await Clipboard.GetTextAsync(); 
 		
-		await Run.Command.NonInteractiveAsync("dir", "D:\\", stdOut =>
-		                                                         {
-			                                                         Dialog.Add.InfoAsync(stdOut); 
-		                                                         },
-		                                          stdErr =>
-		                                          {
-			                                          Dialog.Add.ErrorNotationAsync(stdErr);
-		                                          });
+		// await Run.Command.NonInteractiveAsync("dir", "D:\\", stdOut =>
+		//                                                          {
+		// 	                                                         Dialog.Add.InfoAsync(stdOut); 
+		//                                                          },
+		//                                           stdErr =>
+		//                                           {
+		// 	                                          Dialog.Add.ErrorNotationAsync(stdErr);
+		//                                           });
 		
 		
 		await PauseAsync(); 

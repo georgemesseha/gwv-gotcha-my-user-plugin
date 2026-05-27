@@ -23,9 +23,11 @@ public class Sng_OpenInVsCode : SingletonService
 		//                                            null,
 		//                                            null); 
 		
-		await this.Run.Command.NonInteractiveAsync($"code \"{dirPath}\"", 
-		                                           dirPath); 
-		
+		//totest
+		// await this.Run.Command.NonInteractiveAsync($"code \"{dirPath}\"", 
+		//                                            dirPath); 
+		await External.RunPowerShellAsync("code", dirPath, dirPath);
+
 		//
 		// await Run.Command.NonInteractiveAsync($"code \"{dirPath}\"", 
 		//                                           dirPath,

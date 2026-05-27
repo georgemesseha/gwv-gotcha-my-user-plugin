@@ -5,8 +5,7 @@ public class Sng_Git_EditGlobalConfiguration : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Run.Command.NonInteractiveAsync("git config --global --replace-all core.editor \"code --wait\"; git config --global -e",
-		                                "C:\\");
+		await External.RunPowerShellAsync("git config --global --replace-all core.editor \"code --wait\"; git config --global -e", "C:\\");
 		await PauseAsync();
 	}
 }
