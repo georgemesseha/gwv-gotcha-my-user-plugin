@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.My_Projects.Gotcha.Plugin.Development;
+namespace UserPlugin.MyProjects.Gotcha.Plugin.Development;
 
 [ManualTrigger("8i3h5d", "Manage Git repo", "Opens plugin Git repo in vscode #plg")]
 public class Sng_ManageGitRepo : TransientService

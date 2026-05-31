@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.My_Projects.Gotcha.Plugin.Development;
+namespace UserPlugin.MyProjects.Gotcha.Plugin.Development;
 
 [ManualTrigger("d6g8d7h", "Open solution", "Opens your personal Gotcha's plug-in solution in rider #.sln #plg")]
 public class Sng_OpenSolution : SingletonService

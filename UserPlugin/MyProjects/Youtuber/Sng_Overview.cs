@@ -1,4 +1,4 @@
-﻿namespace UserPlugin.My_Projects.Youtuber;
+﻿namespace UserPlugin.MyProjects.Youtuber;
 
 [ManualTrigger("u0s1r6f", "Overview", "Overview")]
 public class Sng_Overview : SingletonService

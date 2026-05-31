@@ -1,5 +1,5 @@
 ﻿
-namespace UserPlugin.My_Projects.Gotcha.Product;
+namespace UserPlugin.MyProjects.Gotcha.Product;
 
 [ManualTrigger("f1o2a5", "Overview", "Gotcha solution Overview")]
 public class Sng_Overview : SingletonService

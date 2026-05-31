@@ -1,8 +1,8 @@
 
-namespace UserPlugin._Draft;
+namespace UserPlugin.Workspace.MyTools;
 
 [ManualTrigger("b1l5j4j9l0m5v2")]
-public class GEN_POpenKoala_1768 : SingletonService 
+public class OpenKoala : SingletonService 
 {
     protected override async Task ExecuteAsync()
 	{

@@ -1,6 +1,6 @@
 ﻿using UserPlugin._GenericServices;
 
-namespace UserPlugin.My_Projects.AHK;
+namespace UserPlugin.MyProjects.AHK;
 
 [ManualTrigger("u3o2d4l", "Open AHK Folder in VSCode", "Open AutoHotkey Folder in VSCode. Automation")]
 public class Sng_OpenAhkFolderInVsCode : SingletonService

@@ -1,7 +1,7 @@
 ﻿using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
-namespace UserPlugin.My_Projects.Gotcha.Product.Development;
+namespace UserPlugin.MyProjects.Gotcha.Product.Development;
 
 [ManualTrigger("s3f0n4p", "Open solution", "Opens Gotcha solution in rider #.sln")]
 public class Sng_OpenSolution : TransientService
