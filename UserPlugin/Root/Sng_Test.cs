@@ -18,6 +18,27 @@ public class Sng_Test : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+		DateTime dueTime = DateTime.Now.AddSeconds(10);
+
+
+		await External.RunAndForgetAsync("koala", ".");
+
+
+		await PauseAsync();
+		async Task<(bool success, string statusMessage)> SuccessChecker()
+		{
+			var success = (dueTime - DateTime.Now) <= TimeSpan.FromSeconds(5);
+			if (success) return (true, "Eventually found it!");
+			// return false;
+			return (false, "Still waiting!");
+		}
+
+		await WaitUntilAsync("Waiting for the Lens window to show up", 
+		                     SuccessChecker, 
+		                     TimeSpan.FromSeconds(0.5), 
+		                     TimeSpan.FromSeconds(10));
+		
+		
 		var test = await Clipboard.GetTextAsync(); 
 		await Dialog.Add.InfoAsync("Hello World");
 		
