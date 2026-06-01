@@ -18,7 +18,7 @@ public class Sng_OpenInRider : SingletonService
 		//totest
 		// await Run.Command.NonInteractiveAsync($"rider64 \"{slnFilePath}\"", 
 		//                                           file.Directory!.FullName);
-		await External.RunPowerShellAsync($"rider64 \"{slnFilePath}\"", 
+		_ = External.RunPowerShellAsync($"rider64 \"{slnFilePath}\"", 
 		                                      file.Directory!.FullName);
 
 	}

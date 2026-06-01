@@ -11,7 +11,9 @@ public class Trn_Softec_Eod : TransientService
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
 		await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
-		await Dialog.Add.WebPageAsync(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
+		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
+
+		
 		await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
 		
 
@@ -28,7 +30,9 @@ public class Trn_Softec_Eod : TransientService
 		_ = Dialog.Add.TextToSpeakAsync("Review your report.");
 		await PauseAsync();
 
-		await Resolve<Sng_Softec_OpenSafeCityPortal>().OpenAsync(); 
+		await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
+
+		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Clock out and paste your report");
 		await PauseAsync();
 		

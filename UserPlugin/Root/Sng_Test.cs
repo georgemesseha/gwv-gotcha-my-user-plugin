@@ -1,4 +1,5 @@
-﻿using UserPlugin._GenericServices;
+﻿using System.Diagnostics;
+using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 using UserPlugin.Softec.Projects.AgenticAI;
 
@@ -20,6 +21,18 @@ public class Sng_Test : SingletonService
 	{
 		DateTime dueTime = DateTime.Now.AddSeconds(10);
 
+		await GrabAppAsync("Postman", WindowPicker, FallbackAction);
+
+		async Task FallbackAction()
+		{
+			await External.RunAndForgetAsync("postman", ".");
+		}
+
+		bool WindowPicker(string title, uint processId)
+		{
+			var process = Process.GetProcessById((int)processId);
+			return (process.ProcessName.ToLower() == "postman") ;
+		}
 
 		await External.RunAndForgetAsync("koala", ".");
 
@@ -79,13 +92,9 @@ public class Sng_Test : SingletonService
 		
 		
 		
-		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, async @delegate =>
-		                                    {
-			                                    Console.Beep();
-			                                    //await Dialog.Add.TextToSpeakAsync("Window not found from the plug-in");
-		                                    });
+		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, () => Task.CompletedTask);
 		await PauseAsync();
-		await Dialog.Add.WindowGrabberAsync("Vivaldi", IsVivaldi, @delegate => { });
+		await Dialog.Add.WindowGrabberAsync("Vivaldi", IsVivaldi, () => Task.CompletedTask);
 		// await PauseAsync();
 		// return;
 		
@@ -106,11 +115,7 @@ public class Sng_Test : SingletonService
 		await Dialog.Add.InfoAsync("This is a modeless message box from the service direct method");
 		await PauseAsync("Press OK when ready");
 		
-		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
-		                                    {
-			                                    Console.Beep();
-			                                    //Dialog.Add.TextToSpeakAsync("Window not found from the plugin");
-		                                    });
+		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, ()=>Task.CompletedTask);
 		
 		// if (result.isSkipped)
 		// {
@@ -126,10 +131,7 @@ public class Sng_Test : SingletonService
 		
 		  
 		
-		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, @delegate =>
-		                                    {
-			                                    Dialog.Add.TextToSpeakAsync("Window not found from the plugin");
-		                                    });
+		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, ()=>Task.CompletedTask);
 		
 		// await ReportErrorAsync("This is an error from the service direct method");
 

@@ -1,4 +1,5 @@
 ﻿
+using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec;
@@ -12,7 +13,10 @@ public class Trn_Softec_Sod : TransientService
 	protected override async Task ExecuteAsync()
 	{
 		var config = Resolve<Sng_Config_Softec>();
-		await Dialog.Add.WebPageAsync(tabPortal, config.PortalUrl);
+		// await Dialog.Add.WebPageAsync(tabPortal, config.PortalUrl);
+		await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
+		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
+		
 		
 		_ = Dialog.Add.TextToSpeakAsync("Clock in");
 		await PauseAsync();

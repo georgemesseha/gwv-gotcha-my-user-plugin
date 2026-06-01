@@ -10,6 +10,9 @@ public class Sng_Config_Sahel : SingletonService
 	
 	
 	public string BackendDirPath => Path.Join(MainProjectPath, "Backend");
+	
+	public string BackendCsprojDirPath => Path.Join(BackendDirPath, "Sahel");
+	public string BackendCsprojPath => Path.Join(BackendDirPath, "Sahel.csproj");
 	public string FrontendDirPath => Path.Join(MainProjectPath, "Frontend");
 	public string SlnFilePath => Path.Join(BackendDirPath, "Sahel", "Sahel.sln");
 
