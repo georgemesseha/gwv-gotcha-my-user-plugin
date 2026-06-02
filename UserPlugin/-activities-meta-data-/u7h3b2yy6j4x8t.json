@@ -3,5 +3,5 @@
   "Title": "Check third party vulnerability locally",
   "Description": "Check third party vulnerability locally",
   "GuidePageUrl": "https://www.notion.so/Saaed-Auth-Check-third-party-vulnerability-3726ea6ef6088050b5b4d79c0c3a7d5b?source=copy_link",
-  "PauseOnGuidePage": true
+  "PauseOnGuidePage": false
 }

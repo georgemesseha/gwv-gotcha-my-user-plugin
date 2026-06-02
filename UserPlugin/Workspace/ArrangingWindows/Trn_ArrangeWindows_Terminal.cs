@@ -12,7 +12,7 @@ public class Trn_ArrangeWindows_Terminal : TransientService
 	{
 		bool isTargetWindow(IWindow window)
 		{
-			return new string[] { "windowsterminal", "cmd" }.Any(name => window.Process.ProcessName.ToLower() == name);
+			return new string[] { "windowsterminal", "cmd", "pwsh", "powershell" }.Any(name => window.Process.ProcessName.ToLower() == name);
 		}
 		var windows = await base.WindowManager.ArrangeWindowsAsync(isTargetWindow);
 		

@@ -92,9 +92,7 @@ public class Sng_Test : SingletonService
 		
 		
 		
-		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, () => Task.CompletedTask);
-		await PauseAsync();
-		await Dialog.Add.WindowGrabberAsync("Vivaldi", IsVivaldi, () => Task.CompletedTask);
+
 		// await PauseAsync();
 		// return;
 		
@@ -115,7 +113,6 @@ public class Sng_Test : SingletonService
 		await Dialog.Add.InfoAsync("This is a modeless message box from the service direct method");
 		await PauseAsync("Press OK when ready");
 		
-		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, ()=>Task.CompletedTask);
 		
 		// if (result.isSkipped)
 		// {
@@ -125,13 +122,11 @@ public class Sng_Test : SingletonService
 		// {
 			await PauseAsync($"You selected {result.selectedOption}");
 			
-			await Dialog.Add.WindowGrabberAsync("Vivaldi", IsVivaldi, null);
 		// }
 		await PauseAsync($"You selected {result.selectedOption}");
 		
 		  
 		
-		await Dialog.Add.WindowGrabberAsync("My Company Mail", IsOutlookPwaWindow, ()=>Task.CompletedTask);
 		
 		// await ReportErrorAsync("This is an error from the service direct method");
 

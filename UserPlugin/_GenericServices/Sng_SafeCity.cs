@@ -26,7 +26,7 @@ public class Sng_SafeCity : SingletonService
 		title = title.ToLower();
 		return (
 			       (
-				       (title.Contains("safe") && title.Contains("city")) || 
+				       // (title.Contains("safe") && title.Contains("city")) || 
 				       title.Contains("scg")
 				       ) && title.Contains("portal")
 			       );
