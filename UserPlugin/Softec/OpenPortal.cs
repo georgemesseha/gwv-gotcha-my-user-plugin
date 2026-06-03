@@ -11,7 +11,7 @@ public class OpenPortal : SingletonService
 		// await DefaultBrowser.OpenAsync("notion://app.notion.com/new");
 		
         //notion://app.notion.com/p/Create-a-DbContext-for-code-first-approach-3726ea6ef60880179c0cc90247680d01?source=copy_link
-		await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
+		// await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
 		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
 
 		await PauseAsync();

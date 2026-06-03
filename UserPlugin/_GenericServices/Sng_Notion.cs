@@ -6,6 +6,7 @@ public class Sng_Notion : SingletonService
 {
 	
 	private string _lastPageUrl = string.Empty;
+	private string _lastHandleTitle = string.Empty;
 	
 	public async Task GrabNotion(string pageId, string handleTitle)
 	{
@@ -16,21 +17,31 @@ public class Sng_Notion : SingletonService
 			FileName = _lastPageUrl,
 			UseShellExecute = true
 		});
-		await GrabAppAsync(handleTitle, 
+		await CaptureWindowAsync(handleTitle, 
 		                   WindowPicker, 
 		                   FallbackAction,
 		                   OnRestore);
 	}
 
-	private Task OnRestore()
+	private async Task OnRestore()
 	{
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = _lastPageUrl,
 			UseShellExecute = true
-		});
-
-		return Task.CompletedTask;
+		}); 
+		
+		
+		
+		// Process.Start(new ProcessStartInfo
+		// {
+		// 	FileName = _lastPageUrl,
+		// 	UseShellExecute = true
+		// });
+		// await GrabAppAsync(_lastHandleTitle, 
+		//                    WindowPicker, 
+		//                    FallbackAction,
+		//                    OnRestore);
 	}
 	
 	private bool WindowPicker(string title, uint processId)

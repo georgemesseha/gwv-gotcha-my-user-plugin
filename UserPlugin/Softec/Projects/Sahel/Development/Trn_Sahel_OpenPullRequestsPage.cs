@@ -1,5 +1,6 @@
 ﻿
 
+using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
 
 namespace UserPlugin.Softec.Projects.Sahel.Development;
@@ -11,7 +12,10 @@ public class Trn_Sahel_OpenPullRequestsPage : TransientService
 	{
 		var config = Resolve<Sng_Config_Sahel>();
 		var prUrl = config.PullRequestsUrl;
-		await Dialog.Add.WebPageAsync("Sahel PRs", prUrl);
+		// await Dialog.Add.WebPageAsync("Sahel PRs", prUrl);
+		
+		Resolve<Trn_Edge>().OpenAsync(prUrl);
+		
 		await PauseAsync("You're done. Exit?");
 
 	}

@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using UserPlugin._GenericServices;
 using UserPlugin._GenericServices.Configuration;
-using UserPlugin.Softec.Projects.AgenticAI;
 
 namespace UserPlugin.Root;
 
@@ -21,7 +20,7 @@ public class Sng_Test : SingletonService
 	{
 		DateTime dueTime = DateTime.Now.AddSeconds(10);
 
-		await GrabAppAsync("Postman", WindowPicker, FallbackAction);
+		await CaptureWindowAsync("Postman", WindowPicker, FallbackAction);
 
 		async Task FallbackAction()
 		{
@@ -86,7 +85,9 @@ public class Sng_Test : SingletonService
 		await PauseAsync();
 		
 		
-		await Dialog.Add.WebPageAsync("Google", "Https://www.google.com");
+		Resolve<Trn_Edge>().OpenAsync("https://www.google.com");
+		
+		// await Dialog.Add.WebPageAsync("Google", "Https://www.google.com");
 		await PauseAsync();
 		
 		

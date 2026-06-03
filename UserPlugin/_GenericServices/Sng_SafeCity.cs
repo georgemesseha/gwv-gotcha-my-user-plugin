@@ -6,7 +6,7 @@ public class Sng_SafeCity : SingletonService
 {
 	public async Task OpenPortalPwaAsync()
 	{
-		await GrabAppAsync("Safe City Portal", WindowPicker, FallbackAction);
+		await CaptureWindowAsync("Safe City Portal", WindowPicker, FallbackAction);
 	}
 	
 	private async Task FallbackAction()
