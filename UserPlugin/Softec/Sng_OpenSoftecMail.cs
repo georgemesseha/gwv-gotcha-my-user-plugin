@@ -14,18 +14,13 @@ public class Sng_OpenSoftecMail : SingletonService
 	
 	protected override async Task ExecuteAsync()
 	{
-		async Task FallbackAction()
-		{
-			await OpenSoftecMailPwaAsync();
-		}
-		await GrabAppAsync("Softec Mail", IsSoftecMailPwa, FallbackAction);
 
-		
 
-		
+		await OpenSoftecMailPwaAsync();
 		await PauseAsync("Done?");
 		
 	}
+	
 	
 	// public async Task OpenSideViewForSoftecMailAsync()
 	// {
@@ -33,6 +28,15 @@ public class Sng_OpenSoftecMail : SingletonService
 	// }
 	
 	public async Task OpenSoftecMailPwaAsync()
+	{
+		async Task FallbackAction()
+		{
+			await _OpenNewEdgeWindow();
+		}
+		await CaptureWindowAsync("Softec Mail", IsSoftecMailPwa, FallbackAction);
+	}
+	
+	private async Task _OpenNewEdgeWindow()
 	{
 		Process.Start(new ProcessStartInfo
 		{

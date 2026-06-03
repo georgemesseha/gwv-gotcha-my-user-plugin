@@ -1,12 +1,15 @@
-﻿namespace UserPlugin.Workspace.MyTools.VSCode;
+﻿using UserPlugin._GenericServices;
+
+namespace UserPlugin.Workspace.MyTools.VSCode;
 
 [ManualTrigger("o4p61l", "Create custom snippet", "Creates a custom snippet in VSCode")]
 public class Sng_CreateCustomSnippet : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Dialog.Add.WebPageAsync("How to create a VSCode snippet",
-		                                   "https://www.notion.so/vscode-code-snippets-syntax-06411fd9411549c4aadbe118e100f682?source=copy_link");
+		await Resolve<Sng_Notion>().GrabNotion("06411fd9411549c4aadbe118e100f682", "VSCode Snippets Syntax");
+		// await Dialog.Add.WebPageAsync("How to create a VSCode snippet",
+		//                                    "https://www.notion.so/vscode-code-snippets-syntax-06411fd9411549c4aadbe118e100f682?source=copy_link");
 		await PauseAsync();
 	}
 }

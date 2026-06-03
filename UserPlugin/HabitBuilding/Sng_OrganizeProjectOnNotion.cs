@@ -9,7 +9,9 @@ public class Sng_OrganizeProjectOnNotion : SingletonService
 	protected override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
-		await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, commonTabs.Url_SoftecAuthProjectMainPage);
+		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, commonTabs.Url_SoftecAuthProjectMainPage);
+		await Resolve<Sng_Notion>().GrabNotion("9d397c27567e4490a2d8b98cbe0f4640", commonTabs.Tab_SoftecAuthProjectMainPage);
+		
 		await Dialog.Add.TextToSpeakAsync("You mainly aim to have your clean view of the project like this");
 		await Dialog.Add.TextToSpeakAsync("It's actually a filtered view of your main DB");
 		await PauseAsync();
@@ -20,6 +22,7 @@ public class Sng_OrganizeProjectOnNotion : SingletonService
 		await PauseAsync();
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, commonTabs.Url_SoftecAuthProjectMainPage);
 		await Resolve<Sng_Notion>().GrabNotion(commonTabs.SoftecAuthProjectNotionPageId, commonTabs.Tab_SoftecAuthProjectMainPage);
+		
 		
 		await Dialog.Add.TextToSpeakAsync("Fortunately, you have to do this for the first page, then adding a page from this view, the tag will be added automatically.");
 		await PauseAsync();

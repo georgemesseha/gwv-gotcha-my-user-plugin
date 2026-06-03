@@ -10,11 +10,13 @@ public class Trn_Softec_Eod : TransientService
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
+		Resolve<Trn_Edge>().OpenAsync(commonTabs.Url_ChatGPT, commonTabs.Tab_ChatGPT);
+		// await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
 
 		
-		await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
+		await Resolve<Sng_Notion>().GrabNotion("3016ea6ef608801a8a16cb167299e695", "Daily Report Notes");
+		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
 		
 
 		_ = Dialog.Add.TextToSpeakAsync("Prepare your report then resume the conversation.");
@@ -22,15 +24,22 @@ public class Trn_Softec_Eod : TransientService
 		_ = Dialog.Add.TextToSpeakAsync("Copy your report.");
 		await PauseAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Let ChatGPT polish your report!");
-		await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
+		
+		
+		Resolve<Trn_Edge>().OpenAsync(commonTabs.Url_ChatGPT);
+		// await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
 		await PauseAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Update the polished report in your Notion page.");
-		await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
+		
+		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
+		await Resolve<Sng_Notion>().GrabNotion("3016ea6ef608801a8a16cb167299e695", "Daily Report Notes");
+		
 		await PauseAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Review your report.");
 		await PauseAsync();
 
-		await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
+		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
+		// await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
 
 		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Clock out and paste your report");

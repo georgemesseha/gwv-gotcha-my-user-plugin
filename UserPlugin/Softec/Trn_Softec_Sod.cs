@@ -14,14 +14,15 @@ public class Trn_Softec_Sod : TransientService
 	{
 		var config = Resolve<Sng_Config_Softec>();
 		// await Dialog.Add.WebPageAsync(tabPortal, config.PortalUrl);
-		await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
+		// await DefaultBrowser.OpenAsync("https://safecityportal.com/stream/");
 		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
 		
 		
 		_ = Dialog.Add.TextToSpeakAsync("Clock in");
 		await PauseAsync();
 		
-		await Dialog.Add.WebPageAsync(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
+		await Resolve<Sng_Notion>().GrabNotion("e180470b73314986ad21b98d61b877be", tabTasks);
+		// await Dialog.Add.WebPageAsync(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
 		
 		_ = Dialog.Add.TextToSpeakAsync("Recall your tasks");
 		await PauseAsync();

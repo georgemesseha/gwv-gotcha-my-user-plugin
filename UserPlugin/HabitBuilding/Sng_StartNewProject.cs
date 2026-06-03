@@ -1,4 +1,6 @@
 ﻿
+using UserPlugin._GenericServices;
+
 namespace UserPlugin.HabitBuilding;
 
 [ManualTrigger("o1s6c7a", "💻 Start a new project", "Start a new project #create #notion")]
@@ -7,8 +9,10 @@ public class Sng_StartNewProject : SingletonService
 	protected override async Task ExecuteAsync()
 	{
 		// await Dialog.Add.WebPageAsync()
-		await Dialog.Add.WebPageAsync("Sample",
-		               "https://www.notion.so/9d397c27567e4490a2d8b98cbe0f4640?v=32e6ea6ef608805cbd14000cf1cb5b33&source=copy_link");
+		// await Dialog.Add.WebPageAsync("Sample",
+		//                "https://www.notion.so/9d397c27567e4490a2d8b98cbe0f4640?v=32e6ea6ef608805cbd14000cf1cb5b33&source=copy_link");
+		await Resolve<Sng_Notion>().GrabNotion("9d397c27567e4490a2d8b98cbe0f4640", "Sample");
+		
 
 		await Dialog.Add.TextToSpeakAsync("Remember you almost need the following items for every project");
 		await Dialog.Add.TextToSpeakAsync("1. Repos");

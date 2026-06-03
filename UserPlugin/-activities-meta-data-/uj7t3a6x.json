@@ -1,7 +1,7 @@
 ﻿{
   "Uid": "uj7t3a6x",
   "Title": "Do SAST Scan through the pipeline",
-  "Description": "Statically scans the code for security vulnerabilities @CI",
+  "Description": "Statically scans the code for security vulnerabilities @CI #scan",
   "GuidePageUrl": "",
   "PauseOnGuidePage": true
 }
