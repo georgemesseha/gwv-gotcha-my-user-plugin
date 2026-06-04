@@ -18,6 +18,16 @@ public class Sng_Test : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+		// https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link#3566ea6ef6088067a388c07cbeba7ee7
+		// https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link
+		// https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link#3566ea6ef6088067a388c07cbeba7ee7
+
+		var notionBlockUrl =
+			"https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link#3566ea6ef6088067a388c07cbeba7ee7";
+		await Notion.OpenAsync(notionBlockUrl, 
+		                       "Overview");
+		await PauseAsync("Back from Notion");
+		
 		DateTime dueTime = DateTime.Now.AddSeconds(10);
 
 		await CaptureWindowAsync("Postman", WindowPicker, FallbackAction);
@@ -85,7 +95,7 @@ public class Sng_Test : SingletonService
 		await PauseAsync();
 		
 		
-		Resolve<Trn_Edge>().OpenAsync("https://www.google.com");
+		await Resolve<Trn_Edge>().OpenAsync("https://www.google.com", "Google", "google");
 		
 		// await Dialog.Add.WebPageAsync("Google", "Https://www.google.com");
 		await PauseAsync();

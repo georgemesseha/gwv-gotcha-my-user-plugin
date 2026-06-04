@@ -9,7 +9,7 @@ public class Sng_DoSastScan : SingletonService
 	{
 		await this.DefaultBrowser.OpenAsync("https://dev.azure.com/SoftecMEA/Sahel/_build?definitionId=620");
 		// await Dialog.Add.WebPageAsync("SAST Scan Instructions", "https://www.notion.so/Run-SAST-pipeline-scan-2566ea6ef608809ba8fdd7299c09e299?source=copy_link");
-		await Resolve<Sng_Notion>().GrabNotion("2566ea6ef608809ba8fdd7299c09e299", "SAST Scan Instructions");
+		await Notion.OpenAsync("2566ea6ef608809ba8fdd7299c09e299", "SAST Scan Instructions");
 		await PauseAsync("You are done!"); 
 	}
 }  

@@ -14,7 +14,7 @@ public class Trn_Sahel_OpenPullRequestsPage : TransientService
 		var prUrl = config.PullRequestsUrl;
 		// await Dialog.Add.WebPageAsync("Sahel PRs", prUrl);
 		
-		Resolve<Trn_Edge>().OpenAsync(prUrl);
+		await Resolve<Trn_Edge>().OpenAsync(prUrl, "Sahel PRs", "devops", "azure");
 		
 		await PauseAsync("You're done. Exit?");
 

@@ -10,12 +10,9 @@ public class Trn_Softec_Eod : TransientService
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		Resolve<Trn_Edge>().OpenAsync(commonTabs.Url_ChatGPT, commonTabs.Tab_ChatGPT);
-		// await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
-		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SafeCityPortal, commonTabs.Url_SafeCityPortal);
-
-		
-		await Resolve<Sng_Notion>().GrabNotion("3016ea6ef608801a8a16cb167299e695", "Daily Report Notes");
+		await Edge.OpenAsync(commonTabs.Url_ChatGPT, commonTabs.Tab_ChatGPT, "gpt"); 
+			
+		await Notion.OpenAsync("3016ea6ef608801a8a16cb167299e695", "Daily Report Draft");
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
 		
 
@@ -26,13 +23,13 @@ public class Trn_Softec_Eod : TransientService
 		_ = Dialog.Add.TextToSpeakAsync("Let ChatGPT polish your report!");
 		
 		
-		Resolve<Trn_Edge>().OpenAsync(commonTabs.Url_ChatGPT);
+		await Resolve<Trn_Edge>().OpenAsync(commonTabs.Url_ChatGPT, "Chat GPT > Refine report", "chat", "gpt");
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_ChatGPT, commonTabs.Url_ChatGPT);
 		await PauseAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Update the polished report in your Notion page.");
 		
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SaaedDailyReport, commonTabs.Url_SaaedDailyReport);
-		await Resolve<Sng_Notion>().GrabNotion("3016ea6ef608801a8a16cb167299e695", "Daily Report Notes");
+		await Notion.OpenAsync("3016ea6ef608801a8a16cb167299e695", "Daily Report Notes");
 		
 		await PauseAsync();
 		_ = Dialog.Add.TextToSpeakAsync("Review your report.");

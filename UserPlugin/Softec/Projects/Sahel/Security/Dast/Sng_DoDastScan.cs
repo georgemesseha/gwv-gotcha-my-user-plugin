@@ -7,13 +7,13 @@ public class Sng_DoDastScan : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Resolve<Sng_Notion>().GrabNotion("3566ea6ef608802a997cf2fec0ace815", "Sahell DAST Overview");
+		await Notion.OpenAsync("3566ea6ef608802a997cf2fec0ace815", "Sahell DAST Overview");
 		// await Dialog.Add.WebPageAsync("Sahell DAST Overview",
 		//                               "https://www.notion.so/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link");
 		//
 		
 		// _ = Dialog.Add.WebPageAsync("VeraCode", "https://web.analysiscenter.veracode.com/app/dae/targets");
-		Resolve<Trn_Edge>().OpenAsync("https://web.analysiscenter.veracode.com/app/dae/targets");
+		await Resolve<Trn_Edge>().OpenAsync("https://web.analysiscenter.veracode.com/app/dae/targets", "VeraCode", "veracode");
 		
 		await Dialog.Add.InfoAsync("You will need to use Google Authenticator");
 		await PauseAsync("Press OK when you are logged in");

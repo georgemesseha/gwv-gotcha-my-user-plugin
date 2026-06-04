@@ -16,13 +16,13 @@ public class Trn_Softec_VacationRequest : TransientService
 	
 	string Url_PortalUiFlowOfVacationRequest => "https://www.notion.so/Softec-Send-vacation-request-email-1ba6ea6ef608800d9948c82b21e362f4?source=copy_link#32e6ea6ef60880888e40db1c93c3ff0a";
 	
-	string NotionId_VacationRequestInstructions => "1ba6ea6ef608800d9948c82b21e362f4";
+	string NotionId_VacationRequestInstructions => "https://app.notion.com/p/Softec-Send-vacation-request-email-1ba6ea6ef608800d9948c82b21e362f4?source=copy_link#32e6ea6ef60880888e40db1c93c3ff0a";
 	
 	protected override async Task ExecuteAsync()
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		await Resolve<Sng_Notion>().GrabNotion(commonTabs.NotionId_VacationRequestInstructions, Tab_VacationRequest);
+		await Notion.OpenAsync(commonTabs.NotionId_VacationRequestInstructions, Tab_VacationRequest);
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_VacationRequestInstructions, 
 		//                commonTabs.Url_VacationRequestInstructions);
 		
@@ -36,14 +36,14 @@ public class Trn_Softec_VacationRequest : TransientService
 
 		_ = Dialog.Add.TextToSpeakAsync("Recall the UI flow on the portal on the left!");
 		
-		await Resolve<Sng_Notion>().GrabNotion(NotionId_VacationRequestInstructions, Tab_PortalVacationRequestUIFlow);
+		await Notion.OpenAsync(NotionId_VacationRequestInstructions, Tab_PortalVacationRequestUIFlow);
 		
 		// await Dialog.Add.WebPageAsync(Tab_PortalVacationRequestUIFlow, Url_PortalUiFlowOfVacationRequest);
 		await PauseAsync("Yes I recalled it");
 
 		await PauseAsync("Yes I recalled it");
 		
-		await Resolve<Sng_Notion>().GrabNotion(NotionId_PortalVacationRequestUIFlow, Tab_PortalVacationRequestUIFlow);
+		await Notion.OpenAsync(NotionId_PortalVacationRequestUIFlow, Tab_PortalVacationRequestUIFlow);
 		// await Dialog.Add.WebPageAsync(tabPortalVacationRequest, Url_PortalVacationRequestUIFlow);
 		
 		
@@ -55,7 +55,7 @@ public class Trn_Softec_VacationRequest : TransientService
 		await PauseAsync();
 		
 		
-		await Resolve<Sng_Notion>().GrabNotion(NotionId_VacationRequestInstructions, Tab_PortalVacationRequestUIFlow);
+		await Notion.OpenAsync(NotionId_VacationRequestInstructions, Tab_PortalVacationRequestUIFlow);
 		
 		// await Dialog.Add.WebPageAsync(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
 		await Dialog.Add.TextToSpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");

@@ -8,7 +8,7 @@ public class Sng_Notion : SingletonService
 	private string _lastPageUrl = string.Empty;
 	private string _lastHandleTitle = string.Empty;
 	
-	public async Task GrabNotion(string pageId, string handleTitle)
+	public async Task OpenAsync(string pageId, string handleTitle)
 	{
 		_lastPageUrl = $"notion://app.notion.com/{pageId}";
 		// await DefaultBrowser.OpenAsync(url);

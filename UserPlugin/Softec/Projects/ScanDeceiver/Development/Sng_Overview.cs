@@ -7,7 +7,7 @@ public class Sng_Overview : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Resolve<Sng_Notion>().GrabNotion("3356ea6ef608809f98ffcd8369749312", "ScanDeceiver Project Overview");
+		await Notion.OpenAsync("3356ea6ef608809f98ffcd8369749312", "ScanDeceiver Project Overview");
 		// await Dialog.Add.WebPageAsync("Develop", "https://www.notion.so/Develop-3356ea6ef608809f98ffcd8369749312?v=32e6ea6ef608805cbd14000cf1cb5b33&source=copy_link");
 		// await RouteAsync("Action?", false,
 		//                  ("Open Solution", typeof(Sng_OpenSolution))

@@ -10,18 +10,18 @@ public class Sng_OrganizeProjectOnNotion : SingletonService
 	{
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, commonTabs.Url_SoftecAuthProjectMainPage);
-		await Resolve<Sng_Notion>().GrabNotion("9d397c27567e4490a2d8b98cbe0f4640", commonTabs.Tab_SoftecAuthProjectMainPage);
+		await Notion.OpenAsync("9d397c27567e4490a2d8b98cbe0f4640", commonTabs.Tab_SoftecAuthProjectMainPage);
 		
 		await Dialog.Add.TextToSpeakAsync("You mainly aim to have your clean view of the project like this");
 		await Dialog.Add.TextToSpeakAsync("It's actually a filtered view of your main DB");
 		await PauseAsync();
 		// await Dialog.Add.WebPageAsync("Page Sample", "https://www.notion.so/Softec-Auth-Repos-32e6ea6ef60880d88ceacd5b7ae374d4?v=b4be136bb3004fae8eee39279d619d40&source=copy_link");
-		await Resolve<Sng_Notion>().GrabNotion("32e6ea6ef60880d88ceacd5b7ae374d4", "Page Sample");
+		await Notion.OpenAsync("32e6ea6ef60880d88ceacd5b7ae374d4", "Page Sample");
 		
 		await Dialog.Add.TextToSpeakAsync("To achieve this, you need to have a tag like (Softec.Auth) for the project assigned to all the pages belongs to the project");
 		await PauseAsync();
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, commonTabs.Url_SoftecAuthProjectMainPage);
-		await Resolve<Sng_Notion>().GrabNotion(commonTabs.SoftecAuthProjectNotionPageId, commonTabs.Tab_SoftecAuthProjectMainPage);
+		await Notion.OpenAsync(commonTabs.SoftecAuthProjectNotionPageId, commonTabs.Tab_SoftecAuthProjectMainPage);
 		
 		
 		await Dialog.Add.TextToSpeakAsync("Fortunately, you have to do this for the first page, then adding a page from this view, the tag will be added automatically.");

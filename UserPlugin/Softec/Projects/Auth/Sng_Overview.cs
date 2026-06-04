@@ -9,7 +9,7 @@ public class Sng_Overview : SingletonService
 	{ 
 		var commonTabs = Resolve<Sng_CommonTabs>();
 		
-		await Resolve<Sng_Notion>().GrabNotion(commonTabs.NotionId_SoftecAuthProject, commonTabs.Tab_SoftecAuthProjectMainPage);
+		await Notion.OpenAsync(commonTabs.NotionId_SoftecAuthProject, commonTabs.Tab_SoftecAuthProjectMainPage);
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		//                               commonTabs.Url_SoftecAuthProjectMainPage);
 

@@ -12,7 +12,7 @@ public class Sng_DownloadLastDastScan : SingletonService
 		
 		await Dialog.Add.InfoAsync("Use the information on the right side, on the page opened in the default browser");
 
-		await Resolve<Sng_Notion>().GrabNotion("3566ea6ef608802a997cf2fec0ace815", "Sahell DAST Overview");
+		await Notion.OpenAsync("3566ea6ef608802a997cf2fec0ace815", "Sahell DAST Overview");
 		// await Dialog.Add.WebPageAsync("Sahell DAST Overview",
 		//                               "https://www.notion.so/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link");
 

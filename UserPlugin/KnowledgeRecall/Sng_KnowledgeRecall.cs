@@ -17,7 +17,7 @@ public class Sng_KnowledgeRecall : SingletonService
 		
 		// await Dialog.Add.WebPageAsync(commonTabs.Tab_SoftecAuthProjectMainPage, 
 		//                commonTabs.Url_SoftecAuthProjectMainPage);
-		await Resolve<Sng_Notion>().GrabNotion(commonTabs.NotionId_SoftecAuthProject, commonTabs.Tab_SoftecAuthProjectMainPage);
+		await Notion.OpenAsync(commonTabs.NotionId_SoftecAuthProject, commonTabs.Tab_SoftecAuthProjectMainPage);
 		
 
 		await Dialog.Add.TextToSpeakAsync("Like you did for documenting Auth project, but the knowledge base should be categorized in a hierarchical manner.");

@@ -7,7 +7,7 @@ public class Sng_CreateCustomSnippet : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Resolve<Sng_Notion>().GrabNotion("06411fd9411549c4aadbe118e100f682", "VSCode Snippets Syntax");
+		await Notion.OpenAsync("06411fd9411549c4aadbe118e100f682", "VSCode Snippets Syntax");
 		// await Dialog.Add.WebPageAsync("How to create a VSCode snippet",
 		//                                    "https://www.notion.so/vscode-code-snippets-syntax-06411fd9411549c4aadbe118e100f682?source=copy_link");
 		await PauseAsync();

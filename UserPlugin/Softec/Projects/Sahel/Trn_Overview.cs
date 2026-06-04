@@ -10,7 +10,7 @@ public class Trn_Overview : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Resolve<Sng_Notion>().GrabNotion("32f6ea6ef608803bb780deacf4e51ebf", "Sahel Project Overview");
+		await Notion.OpenAsync("32f6ea6ef608803bb780deacf4e51ebf", "Sahel Project Overview");
 		// await Dialog.Add.WebPageAsync("Sahel Project Overview", "https://www.notion.so/Sahel-Project-32f6ea6ef608803bb780deacf4e51ebf?source=copy_link");
 		await PauseAsync("Press Enter to exit");
 	}

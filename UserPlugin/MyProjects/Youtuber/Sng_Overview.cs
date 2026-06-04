@@ -10,7 +10,7 @@ public class Sng_Overview : SingletonService
 		// await
 		// 	Dialog.Add.WebPageAsync("Overview", "https://www.notion.so/Youtuber-Project-33d6ea6ef60880c2a8cdd227309ea415?source=copy_link");
 		//
-		await Resolve<Sng_Notion>().GrabNotion("33d6ea6ef60880c2a8cdd227309ea415", "Overview");
+		await Notion.OpenAsync("33d6ea6ef60880c2a8cdd227309ea415", "Overview");
 		
 		await PauseAsync("You're done");
 	}

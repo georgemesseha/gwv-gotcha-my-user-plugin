@@ -21,7 +21,7 @@ public class Trn_Softec_Sod : TransientService
 		_ = Dialog.Add.TextToSpeakAsync("Clock in");
 		await PauseAsync();
 		
-		await Resolve<Sng_Notion>().GrabNotion("e180470b73314986ad21b98d61b877be", tabTasks);
+		await Notion.OpenAsync("e180470b73314986ad21b98d61b877be", tabTasks);
 		// await Dialog.Add.WebPageAsync(tabTasks,"https://www.notion.so/Tasks-e180470b73314986ad21b98d61b877be?source=copy_link");
 		
 		_ = Dialog.Add.TextToSpeakAsync("Recall your tasks");
