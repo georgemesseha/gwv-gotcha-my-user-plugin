@@ -9,7 +9,7 @@ public class Sng_WhoIsIpOrDomain : SingletonService
 	{
 		await Dialog.Add.InfoAsync("Opening whois in default browser");
 		
-		await Resolve<Trn_Edge>().OpenAsync("https://whatismyipaddress.com", "what", "ip", "address");
+		await Edge.OpenAsync("https://whatismyipaddress.com", "What is My IP?");
 		
 		// await Dialog.Add.WebPageAsync("Who is?", "https://whatismyipaddress.com");
 		await PauseAsync(); 

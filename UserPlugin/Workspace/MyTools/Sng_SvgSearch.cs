@@ -8,8 +8,8 @@ public class Sng_SvgSearch : SingletonService
 	public async Task OpenSvgSearchAsync()
 	{
 		
-		await Edge.OpenAsync("https://uxwing.com", "UX Wing", "download", "icons", "svg", "High-Quality");
-		await Edge.OpenAsync("https://www.svgrepo.com", "SVG Repo", "svg", "vectors", "icons", "repo");
+		await Edge.OpenAsync("https://uxwing.com", "UX Wing", "svg"); 
+		await Edge.OpenAsync("https://www.svgrepo.com", "SVG Repo", "svg");
 
 
 		// await Dialog.Add.WebPageAsync("UX Wing", "https://uxwing.com");	 

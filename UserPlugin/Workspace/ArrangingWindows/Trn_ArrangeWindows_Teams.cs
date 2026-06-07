@@ -9,7 +9,8 @@ public class Trn_ArrangeWindows_Teams : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		var windows = await base.WindowManager.ArrangeWindowsAsync(w => w.Process.ProcessName == "ms-teams");
+		var windows = await base.WindowManager.ArrangeWindowsAsync(w => w.Process.ProcessName == "ms-teams"
+		                                                                && w.ClassName == "TeamsWebView");
 		
 		// int count = await base.WindowManager.ArrangeWindowsOfAsync( "ms-teams");
 		if (windows.Length == 0)

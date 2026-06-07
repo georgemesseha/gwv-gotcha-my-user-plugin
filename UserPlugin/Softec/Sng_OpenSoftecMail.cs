@@ -29,15 +29,14 @@ public class Sng_OpenSoftecMail : SingletonService
 	
 	public async Task OpenSoftecMailPwaAsync()
 	{
-		async Task FallbackAction()
-		{
-			await _OpenNewEdgeWindow();
-		}
-		await CaptureWindowAsync("Softec Mail", IsSoftecMailPwa, FallbackAction);
+		var windowAgent = GetWindowAgent("Softec Mail", IsSoftecMailPwa, OnEnsureWindow);
+		await windowAgent.CaptureAsync();
+		// await CaptureWindowAsync("Softec Mail", IsSoftecMailPwa, FallbackAction);
 	}
 	
-	private async Task _OpenNewEdgeWindow()
+	private async Task OnEnsureWindow(bool windowAlreadyExists)
 	{
+		if (windowAlreadyExists) return;
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = "msedge",

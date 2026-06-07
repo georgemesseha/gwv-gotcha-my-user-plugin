@@ -8,8 +8,9 @@ public class Sng_GlyphSearch : SingletonService
 	public async Task OpenSvgSearchAsync()
 	{
 		// await DefaultBrowser.OpenAsync("https://glyphsearch.com/");
-		Resolve<Trn_Edge>().OpenAsync("https://glyphsearch.com/", "Glyph Search");
+		await Edge.OpenAsync("https://glyphsearch.com/",  "Glyph Search");
 		// await Dialog.Add.WebPageAsync("Glyph Search", "https://glyphsearch.com/");	
+		await PauseAsync();
 	}
 	
 	protected override async Task ExecuteAsync()

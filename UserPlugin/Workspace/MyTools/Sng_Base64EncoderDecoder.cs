@@ -9,7 +9,7 @@ public class Sng_Base64EncoderDecoder : SingletonService
 	{
 		await Dialog.Add.InfoAsync("Opening base64 encoder/decoder in default browser");
 		// await Dialog.Add.WebPageAsync("Base64", "https://www.utilities-online.info/base64");
-		await Resolve<Trn_Edge>().OpenAsync("https://www.utilities-online.info/base64", "base64", "encode");
+		await Edge.OpenAsync("https://www.utilities-online.info/base64", "Base64 Encoder/Decoder");
 		
 		await PauseAsync(); 
 	}

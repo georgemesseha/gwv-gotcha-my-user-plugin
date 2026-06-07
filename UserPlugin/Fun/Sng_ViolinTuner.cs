@@ -7,7 +7,7 @@ public class Sng_ViolinTuner : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		Resolve<Trn_Edge>().OpenAsync("https://www.violinlounge.com/free-online-violin-tuner-with-mic-and-tuning-notes", "Violin tuner");
+		await Edge.OpenAsync("https://www.violinlounge.com/free-online-violin-tuner-with-mic-and-tuning-notes", "Violin tuner");
 		// await Dialog.Add.TextToSpeakAsync("Enjoy violin tuner");
 		// await Dialog.Add.WebPageAsync("Violin tuner", "https://www.violinlounge.com/free-online-violin-tuner-with-mic-and-tuning-notes");
 		// await PauseAsync("You're done"); 

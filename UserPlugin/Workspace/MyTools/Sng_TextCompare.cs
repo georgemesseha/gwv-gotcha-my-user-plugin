@@ -7,9 +7,7 @@ public class Sng_TextCompare : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
-		await Resolve<Trn_Edge>().OpenAsync("https://www.diffchecker.com", "compare", "text", "find");
-
-		// await Dialog.Add.WebPageAsync("Compare Text", "https://www.diffchecker.com");
+		await Edge.OpenAsync("https://www.diffchecker.com", "Compare Text");
 		await PauseAsync("You're done");
 	}
 }

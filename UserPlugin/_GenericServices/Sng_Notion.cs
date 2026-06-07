@@ -6,7 +6,6 @@ public class Sng_Notion : SingletonService
 {
 	
 	private string _lastPageUrl = string.Empty;
-	private string _lastHandleTitle = string.Empty;
 	
 	public async Task OpenAsync(string pageId, string handleTitle)
 	{
@@ -17,10 +16,8 @@ public class Sng_Notion : SingletonService
 			FileName = _lastPageUrl,
 			UseShellExecute = true
 		});
-		await CaptureWindowAsync(handleTitle, 
-		                   WindowPicker, 
-		                   FallbackAction,
-		                   OnRestore);
+		var windowAgent = GetWindowAgent(handleTitle, WindowPicker, FallbackAction);
+		await windowAgent.CaptureAsync();
 	}
 
 	private async Task OnRestore()
@@ -51,7 +48,7 @@ public class Sng_Notion : SingletonService
 	}
 	
 	
-	private async Task FallbackAction()
+	private async Task FallbackAction(bool windowAlreadyExists)
 	{
 		// await External.RunAndForgetAsync("notion");
 		Process.Start(new ProcessStartInfo

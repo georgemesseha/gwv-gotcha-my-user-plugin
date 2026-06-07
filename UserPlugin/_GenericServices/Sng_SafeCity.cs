@@ -6,11 +6,13 @@ public class Sng_SafeCity : SingletonService
 {
 	public async Task OpenPortalPwaAsync()
 	{
-		await CaptureWindowAsync("Safe City Portal", WindowPicker, FallbackAction);
+		var windowAgent = GetWindowAgent("Safe City Portal", WindowPicker, OnEnsureWindow);
+		await windowAgent.CaptureAsync();
 	}
 	
-	private async Task FallbackAction()
+	private async Task OnEnsureWindow(bool windowAlreadyExists)
 	{
+		if (windowAlreadyExists) return;
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = "msedge",

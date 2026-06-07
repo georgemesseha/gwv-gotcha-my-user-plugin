@@ -1,6 +1,7 @@
-{
+﻿{
   "Uid": "o7k6q5s",
   "Title": "Task Board",
   "Description": "Opens the new task board",
-  "GuidePageUrl": null
+  "GuidePageUrl": "",
+  "PauseOnGuidePage": false
 }

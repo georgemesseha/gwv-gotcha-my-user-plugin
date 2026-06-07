@@ -8,7 +8,7 @@ public class Sng_DownloadLastDastScan : SingletonService
 	protected override async Task ExecuteAsync()
 	{
 		// await DefaultBrowser.OpenAsync("https://web.analysiscenter.veracode.com");
-		Resolve<Trn_Edge>().OpenAsync("https://web.analysiscenter.veracode.com", "veracode", "platform");
+		await Edge.OpenAsync("https://web.analysiscenter.veracode.com", "veracode");
 		
 		await Dialog.Add.InfoAsync("Use the information on the right side, on the page opened in the default browser");
 

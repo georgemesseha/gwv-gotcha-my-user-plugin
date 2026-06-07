@@ -13,7 +13,7 @@ public class Sng_DoDastScan : SingletonService
 		//
 		
 		// _ = Dialog.Add.WebPageAsync("VeraCode", "https://web.analysiscenter.veracode.com/app/dae/targets");
-		await Resolve<Trn_Edge>().OpenAsync("https://web.analysiscenter.veracode.com/app/dae/targets", "VeraCode", "veracode");
+		await Edge.OpenAsync("https://web.analysiscenter.veracode.com/app/dae/targets", "VeraCode");
 		
 		await Dialog.Add.InfoAsync("You will need to use Google Authenticator");
 		await PauseAsync("Press OK when you are logged in");
