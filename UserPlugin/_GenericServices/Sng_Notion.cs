@@ -16,7 +16,7 @@ public class Sng_Notion : SingletonService
 			FileName = _lastPageUrl,
 			UseShellExecute = true
 		});
-		var windowAgent = GetWindowAgent(handleTitle, WindowPicker, FallbackAction);
+		var windowAgent = WindowManager.GetWindowAgent(handleTitle, WindowPicker, FallbackAction);
 		await windowAgent.CaptureAsync();
 	}
 

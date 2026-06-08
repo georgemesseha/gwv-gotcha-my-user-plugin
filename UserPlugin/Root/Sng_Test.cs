@@ -30,7 +30,7 @@ public class Sng_Test : SingletonService
 		
 		DateTime dueTime = DateTime.Now.AddSeconds(10);
 
-		var windowAgent = GetWindowAgent("PostMan", WindowPicker, FallbackAction);
+		var windowAgent = WindowManager.GetWindowAgent("PostMan", WindowPicker, FallbackAction);
 		await windowAgent.CaptureAsync();
 		
 		async Task FallbackAction(bool windowAlreadyExists)

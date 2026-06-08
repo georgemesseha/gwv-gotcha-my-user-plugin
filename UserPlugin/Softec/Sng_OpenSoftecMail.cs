@@ -14,22 +14,16 @@ public class Sng_OpenSoftecMail : SingletonService
 	
 	protected override async Task ExecuteAsync()
 	{
-
-
 		await OpenSoftecMailPwaAsync();
+		await Edge.OpenAsync("https://mail.google.com/mail/u/2/#inbox", "Gmail", "inbox");
+		await Dialog.Add.InfoAsync("Login by g.saeed@safecity.com");
 		await PauseAsync("Done?");
-		
 	}
 	
 	
-	// public async Task OpenSideViewForSoftecMailAsync()
-	// {
-	// 	await Dialog.Add.WebPageAsync(tabSoftecMail, urlSoftecMail);
-	// }
-	
 	public async Task OpenSoftecMailPwaAsync()
 	{
-		var windowAgent = GetWindowAgent("Softec Mail", IsSoftecMailPwa, OnEnsureWindow);
+		var windowAgent = WindowManager.GetWindowAgent("Softec Mail", IsSoftecMailPwa, OnEnsureWindow);
 		await windowAgent.CaptureAsync();
 		// await CaptureWindowAsync("Softec Mail", IsSoftecMailPwa, FallbackAction);
 	}

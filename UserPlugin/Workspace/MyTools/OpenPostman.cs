@@ -9,7 +9,7 @@ public class OpenPostman : SingletonService
     protected override async Task ExecuteAsync()
 	{
 		_ = Dialog.Add.TextToSpeakAsync("Opening Postman");
-		var windowAgent = GetWindowAgent("Postman", WindowPicker, EnsureWindow);
+		var windowAgent = WindowManager.GetWindowAgent("Postman", WindowPicker, EnsureWindow);
 		await windowAgent.CaptureAsync();
 		await PauseAsync();
 	}

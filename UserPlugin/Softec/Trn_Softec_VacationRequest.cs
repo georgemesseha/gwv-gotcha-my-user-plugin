@@ -20,49 +20,32 @@ public class Trn_Softec_VacationRequest : TransientService
 	
 	protected override async Task ExecuteAsync()
 	{
-		var commonTabs = Resolve<Sng_CommonTabs>();
-		
-		await Notion.OpenAsync(commonTabs.NotionId_VacationRequestInstructions, Tab_VacationRequest);
-		// await Dialog.Add.WebPageAsync(commonTabs.Tab_VacationRequestInstructions, 
-		//                commonTabs.Url_VacationRequestInstructions);
-		
-		
+		_ = Dialog.Add.TextToSpeakAsync("Fill in a Leave request.");
 		await Resolve<Sng_SafeCity>().OpenPortalPwaAsync();
-		// await Dialog.Add.WebPageAsync(tabPortalVacationRequest, commonTabs.Url_SafeCityPortal);
+		await PauseAsync();
 		
-		
-		_ = Dialog.Add.TextToSpeakAsync("Sign in if needed");
-		await PauseAsync("Done?");
-
-		_ = Dialog.Add.TextToSpeakAsync("Recall the UI flow on the portal on the left!");
-		
-		await Notion.OpenAsync(NotionId_VacationRequestInstructions, Tab_PortalVacationRequestUIFlow);
-		
-		// await Dialog.Add.WebPageAsync(Tab_PortalVacationRequestUIFlow, Url_PortalUiFlowOfVacationRequest);
-		await PauseAsync("Yes I recalled it");
-
-		await PauseAsync("Yes I recalled it");
-		
-		await Notion.OpenAsync(NotionId_PortalVacationRequestUIFlow, Tab_PortalVacationRequestUIFlow);
-		// await Dialog.Add.WebPageAsync(tabPortalVacationRequest, Url_PortalVacationRequestUIFlow);
-		
-		
-		_ = Dialog.Add.TextToSpeakAsync("Request the vacation.");
-		await PauseAsync("Done with request vacation?");
-
-		// Resolve<Sng_OpenSoftecMail>().OpenSideViewForSoftecMail();
 		await Resolve<Sng_OpenSoftecMail>().OpenSoftecMailPwaAsync();
+		_ = Dialog.Add.TextToSpeakAsync("Start a new message");
+		await PauseAsync();
+		
+		_ = Dialog.Add.TextToSpeakAsync("Fill the 'Mail To' field");
+		_ = Dialog.Add.CodeSnippetAsync("Mail To", "ahmed.fares@softec.com; hr@softec.com");
 		await PauseAsync();
 		
 		
-		await Notion.OpenAsync(NotionId_VacationRequestInstructions, Tab_PortalVacationRequestUIFlow);
+		_ = Dialog.Add.TextToSpeakAsync("Fill the 'Subject' field");
+		_ = Dialog.Add.CodeSnippetAsync("Mail Subject", "Vacation Request");
+		await PauseAsync();
 		
-		// await Dialog.Add.WebPageAsync(Tab_VacationRequest, Url_PortalVacationRequestUIFlow);
-		await Dialog.Add.TextToSpeakAsync("You got both tabs for the vacation request instructions and the Softec mail. Find your way.");
+		_ = Dialog.Add.TextToSpeakAsync("Update your own records with this vacation!");
+		await Notion.OpenAsync("https://app.notion.com/p/Softec-Send-vacation-request-email-1ba6ea6ef608800d9948c82b21e362f4?source=copy_link#1ba6ea6ef60880ddbea8cb8fa6ecb201", 
+		                       Tab_PortalVacationRequestUIFlow);
+		await PauseAsync();
 		
-		
-		await PauseAsync("You're done. Exit?");
-		// Context.Dialog.Dismiss();
+		_ = Dialog.Add.TextToSpeakAsync("You're done with vacation request");
+
+		await PauseAsync("Exit?");
+
 
 	}
 }

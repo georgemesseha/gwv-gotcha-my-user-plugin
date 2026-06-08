@@ -6,7 +6,7 @@ public class Sng_SafeCity : SingletonService
 {
 	public async Task OpenPortalPwaAsync()
 	{
-		var windowAgent = GetWindowAgent("Safe City Portal", WindowPicker, OnEnsureWindow);
+		var windowAgent = WindowManager.GetWindowAgent("Safe City Portal", WindowPicker, OnEnsureWindow);
 		await windowAgent.CaptureAsync();
 	}
 	

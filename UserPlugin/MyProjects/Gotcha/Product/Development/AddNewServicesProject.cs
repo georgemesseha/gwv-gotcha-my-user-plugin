@@ -1,8 +1,8 @@
 
-namespace UserPlugin.Softec.Projects.Auth.Development;
+namespace UserPlugin.MyProjects.Gotcha.Product.Development;
 
 [ManualTrigger("u5j5e4q7p7o5k4")]
-public class GEN_PAddNewServicesProject_3586 : SingletonService 
+public class AddNewServicesProject : SingletonService 
 {
     protected override async Task ExecuteAsync()
 	{
