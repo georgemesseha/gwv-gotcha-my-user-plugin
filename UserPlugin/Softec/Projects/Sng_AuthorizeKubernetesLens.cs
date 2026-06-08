@@ -9,7 +9,11 @@ public class Sng_AuthorizeKubernetesLens : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+<<<<<<< HEAD
 		await Notion.OpenAsync("32f6ea6ef60880c7bfbeddf361c3c802", "Authorize Kubernetes Lens");
+=======
+		await Resolve<Sng_Notion>().GrabNotion("32f6ea6ef60880c7bfbeddf361c3c802", "Authorize Kubernetes Lens");
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		
 		// await Dialog.Add.WebPageAsync("Authorize Kubernetes Lens", "https://www.notion.so/All-Softec-Projects-Config-32f6ea6ef60880c7bfbeddf361c3c802?source=copy_link#32f6ea6ef6088027ac2be452a8b85db8");
 		await PauseAsync("Check the document and press enter to exit");

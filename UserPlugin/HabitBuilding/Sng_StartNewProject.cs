@@ -11,7 +11,11 @@ public class Sng_StartNewProject : SingletonService
 		// await Dialog.Add.WebPageAsync()
 		// await Dialog.Add.WebPageAsync("Sample",
 		//                "https://www.notion.so/9d397c27567e4490a2d8b98cbe0f4640?v=32e6ea6ef608805cbd14000cf1cb5b33&source=copy_link");
+<<<<<<< HEAD
 		await Notion.OpenAsync("9d397c27567e4490a2d8b98cbe0f4640", "Sample");
+=======
+		await Resolve<Sng_Notion>().GrabNotion("9d397c27567e4490a2d8b98cbe0f4640", "Sample");
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		
 
 		await Dialog.Add.TextToSpeakAsync("Remember you almost need the following items for every project");

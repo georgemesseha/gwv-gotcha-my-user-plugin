@@ -14,12 +14,19 @@ public class Sng_OpenSoftecMail : SingletonService
 	
 	protected override async Task ExecuteAsync()
 	{
+<<<<<<< HEAD
 		await OpenSoftecMailPwaAsync();
 		await Edge.OpenAsync("https://mail.google.com/mail/u/2/#inbox", "Gmail", "inbox");
 		await Dialog.Add.InfoAsync("Login by g.saeed@safecity.com");
+=======
+
+
+		await OpenSoftecMailPwaAsync();
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		await PauseAsync("Done?");
 	}
 	
+<<<<<<< HEAD
 	
 	public async Task OpenSoftecMailPwaAsync()
 	{
@@ -31,6 +38,25 @@ public class Sng_OpenSoftecMail : SingletonService
 	private async Task OnEnsureWindow(bool windowAlreadyExists)
 	{
 		if (windowAlreadyExists) return;
+=======
+	
+	// public async Task OpenSideViewForSoftecMailAsync()
+	// {
+	// 	await Dialog.Add.WebPageAsync(tabSoftecMail, urlSoftecMail);
+	// }
+	
+	public async Task OpenSoftecMailPwaAsync()
+	{
+		async Task FallbackAction()
+		{
+			await _OpenNewEdgeWindow();
+		}
+		await CaptureWindowAsync("Softec Mail", IsSoftecMailPwa, FallbackAction);
+	}
+	
+	private async Task _OpenNewEdgeWindow()
+	{
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = "msedge",

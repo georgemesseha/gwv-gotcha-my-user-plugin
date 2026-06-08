@@ -30,10 +30,16 @@ public class Sng_Test : SingletonService
 		
 		DateTime dueTime = DateTime.Now.AddSeconds(10);
 
+<<<<<<< HEAD
 		var windowAgent = WindowManager.GetWindowAgent("PostMan", WindowPicker, FallbackAction);
 		await windowAgent.CaptureAsync();
 		
 		async Task FallbackAction(bool windowAlreadyExists)
+=======
+		await CaptureWindowAsync("Postman", WindowPicker, FallbackAction);
+
+		async Task FallbackAction()
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		{
 			if (windowAlreadyExists) return;
 			await External.RunAndForgetAsync("postman", ".");
@@ -97,7 +103,11 @@ public class Sng_Test : SingletonService
 		await PauseAsync();
 		
 		
+<<<<<<< HEAD
 		// await Edge.OpenAsync("https://www.google.com", "Google", "google");
+=======
+		Resolve<Trn_Edge>().OpenAsync("https://www.google.com");
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		
 		// await Dialog.Add.WebPageAsync("Google", "Https://www.google.com");
 		await PauseAsync();

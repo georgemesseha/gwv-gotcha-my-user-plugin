@@ -13,9 +13,14 @@ public class Trn_Sahel_OpenPullRequestsPage : TransientService
 		var config = Resolve<Sng_Config_Sahel>();
 		var prUrl = config.PullRequestsUrl;
 		// await Dialog.Add.WebPageAsync("Sahel PRs", prUrl);
+<<<<<<< HEAD
 
 		
 		await Edge.OpenAsync(prUrl, "Sahel PRs");
+=======
+		
+		Resolve<Trn_Edge>().OpenAsync(prUrl);
+>>>>>>> 63f549c01880ff908bec2b9b85f35eddacb85880
 		
 		await PauseAsync("You're done. Exit?");
 
