@@ -1,4 +1,6 @@
 ﻿
+using Gwv.Gotcha.Services;
+
 namespace UserPlugin.Workspace.ArrangingWindows;
 
 [ManualTrigger("c0m8l7p", "Edge", 
@@ -8,15 +10,16 @@ public class Trn_ArrangeWindows_Edge : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
-		var windows = await base.WindowManager.ArrangeWindowsAsync(w => w.Process.ProcessName == "msedge");
-		
-		// int count = await base.WindowManager.ArrangeWindowsOfAsync("msedge");
-		if (windows.Length == 0)
+		await ArrangeWindowsAsync();
+	}
+
+	public async Task ArrangeWindowsAsync()
+	{
+		bool isTargetWindow(IWindow window)
 		{
-			_ = Dialog.Add.TextToSpeakAsync("No Edge windows found");
+			return new string[] { "msedge" }.Any(name => window.Process.ProcessName.ToLower() == name);
 		}
-		StatusMessage = $"Arranged {windows.Length} Notion windows"; 
-		
+		var windows = await base.WindowManager.ArrangeWindowsAsync(isTargetWindow);
 		
 	}
 }  

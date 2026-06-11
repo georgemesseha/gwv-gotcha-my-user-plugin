@@ -11,6 +11,11 @@ public class Trn_ArrangeWindows_Rider : TransientService
 {
 	protected override async Task ExecuteAsync()
 	{
+		await ArrangeWindowsAsync();
+	}
+	
+	public async Task ArrangeWindowsAsync()
+	{
 		bool isTargetWindow(IWindow window)
 		{
 			return new string[] { "rider64", "java" }.Any(name => window.Process.ProcessName.ToLower() == name);

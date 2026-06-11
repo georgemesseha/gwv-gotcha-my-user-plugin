@@ -7,6 +7,18 @@ public class Sng_OpenInVsCode : SingletonService
 	{
 		throw new NotImplementedException(); 
 	}
+
+	public async Task OpenFileAsync(string filePath)
+	{
+		if (File.Exists(filePath) == false)
+		{
+			_ = Dialog.Add.TextToSpeakAsync("File doesn't exist");
+		}
+
+		// await External.RunAndForgetAsync("code", $"\"{filePath}\"");
+		await External.RunAndForgetAsync("code", filePath);
+
+	}
 	
 	public async Task OpenDirectoryAsync(string dirPath)
 	{

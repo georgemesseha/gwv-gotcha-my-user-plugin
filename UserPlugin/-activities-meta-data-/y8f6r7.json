@@ -1,6 +1,7 @@
-{
+﻿{
   "Uid": "y8f6r7",
-  "Title": "Organize a project On Notion",
+  "Title": "🖋️ Organize a project On Notion",
   "Description": "Recall #learn #remember how to Organize a project On Notion",
-  "GuidePageUrl": null
+  "GuidePageUrl": "",
+  "PauseOnGuidePage": true
 }

@@ -1,6 +1,7 @@
-{
+﻿{
   "Uid": "b8x7x9i",
-  "Title": "Split Video",
+  "Title": "✂️ Split Video",
   "Description": "Split Video, trim, cut, clip",
-  "GuidePageUrl": null
+  "GuidePageUrl": "",
+  "PauseOnGuidePage": true
 }

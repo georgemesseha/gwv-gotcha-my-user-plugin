@@ -18,6 +18,10 @@ public class Sng_Test : SingletonService
 {
 	protected override async Task ExecuteAsync()
 	{
+
+		await Dialog.AskUser.ForStringAsync("Should show the default value as 'George'", s => "",
+		                              "This is the default value from code");
+		
 		// https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link#3566ea6ef6088067a388c07cbeba7ee7
 		// https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link
 		// https://app.notion.com/p/Sahell-DAST-3566ea6ef608802a997cf2fec0ace815?source=copy_link#3566ea6ef6088067a388c07cbeba7ee7

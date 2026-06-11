@@ -1,6 +1,7 @@
-{
+﻿{
   "Uid": "k5c1e0p",
   "Title": "Open solution",
-  "Description": "Open solution #.sln",
-  "GuidePageUrl": null
+  "Description": "Open solution #.sln #rider",
+  "GuidePageUrl": "",
+  "PauseOnGuidePage": true
 }

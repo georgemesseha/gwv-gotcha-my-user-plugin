@@ -7,7 +7,7 @@ public class Sng_JsonDiff : SingletonService
 {   
 	protected override async Task ExecuteAsync()    
 	{
-		await Edge.OpenAsync("https://semanticdiff.com/online-diff/json/?utm_source=chatgpt.com", "json");
+		await Edge.OpenAsync("https://semanticdiff.com/online-diff/json/?utm_source=chatgpt.com", "JSON Diff", "semantic");
 		
 		// await Dialog.Add.WebPageAsync("JSON Diff", "https://semanticdiff.com/online-diff/json/?utm_source=chatgpt.com");
 		await PauseAsync("You're done");  
